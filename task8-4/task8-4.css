@@ -1,0 +1,66 @@
+.layout>div{
+	margin: 20px auto;
+}
+
+.one{
+	height: 0;
+	width: 0;
+	border-top: 50px solid blue;
+	border-bottom: 50px solid green;
+	border-left: 50px solid red;
+	border-right: 50px solid yellow;
+}
+
+.blue{
+	height: 0;
+	width: 0;
+	border-top: 50px solid blue;
+	border-bottom: 50px solid transparent;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+}
+
+.red{
+	height: 0;
+	width: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 50px solid red;
+	border-right: 50px solid transparent;
+}
+
+.yellow{
+	height: 0;
+	width: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 50px solid transparent;
+	border-right: 50px solid yellow;
+}
+
+.green{
+	height: 0;
+	width: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid green;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+}
+
+.hred{
+	height: 0;
+	width: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid red;
+	border-left: 50px solid red;
+	border-right: 50px solid transparent;
+}
+
+.hgreen{
+	height: 0;
+	width: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid green;
+	border-left: 50px solid transparent;
+	border-right: 50px solid green;
+}
