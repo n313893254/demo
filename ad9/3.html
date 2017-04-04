@@ -1,0 +1,31 @@
+<ul class="ct">
+    <li data-img="http://omph2coqc.bkt.clouddn.com/48768163_p1_master1200.jpg
+        ">鼠标放置查看图片1</li>
+    <li data-img="http://omph2coqc.bkt.clouddn.com/52929282_p11_master1200.jpg">鼠标放置查看图片2</li>
+    <li data-img="http://omph2coqc.bkt.clouddn.com/49445956_p3_master1200.jpg">鼠标放置查看图片3</li>
+</ul>
+<div class="img-preview"></div>
+<script>
+    function $$ (id)
+    {
+        return document.querySelectorAll(id);
+    }
+
+    function $ (id)
+    {
+        return document.querySelector(id);
+    }
+
+    var ct = $('.ct')
+    var lists = $$('.ct > li');
+    var preview = $('.img-preview');
+    //var img = document.createElement('img');
+
+    for(var i = 0; i < lists.length; i++)
+    {
+        lists[i].addEventListener('mouseenter', function(){
+            var dataImg = this.getAttribute('data-img');
+            preview.innerHTML = '<img src="' + dataImg + '">'
+        });        
+    }
+</script>

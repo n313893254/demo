@@ -1,0 +1,20 @@
+<ul class="ct">
+    <li>这里是</li>
+    <li>饥人谷</li>
+    <li>前端6班</li>
+</ul>
+<script>
+    var lists = $$('.ct li');
+
+    for(var i = 0; i<lists.length; i++)
+    {
+        lists[i].addEventListener('click', function(e){
+            console.log(e.target.innerText);
+        })
+    }
+
+    function $$ (id)
+    {
+        return document.querySelectorAll(id);
+    }
+</script>

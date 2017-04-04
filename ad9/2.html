@@ -1,0 +1,61 @@
+<ul class="ct">
+  <li>这里是</li>
+  <li>饥人谷</li>
+  <li>任务班</li>
+</ul>
+<input class="ipt-add-content" placeholder="添加内容"/>
+<button id="btn-add-start">开头添加</button>
+<button id="btn-add-end">结尾添加</button>
+<script>
+  function $$ (id)
+  {
+      return document.querySelectorAll(id);
+  }
+
+  function $ (id)
+  {
+      return document.querySelector(id);
+  }
+
+  var addBtnStar = $('#btn-add-start');
+  var addBtnEnd = $('#btn-add-end');
+  var inputEle = $('.ipt-add-content');
+  var ulEle = $('.ct');
+  var lists = $$('.ct > li');
+  var newEle;
+
+  for(var i = 0; i < lists.length; i++)
+  {
+      lists[i].addEventListener('click', function(e) {
+          console.log(e.target.innerText);
+      })
+  }
+
+  inputEle.addEventListener('change', function(e){
+      newEle = document.createElement('li');
+      newEle.innerHTML = this.value;
+      console.log(newEle);
+  })
+
+  addBtnStar.addEventListener('click', function(e){
+      if (newEle) 
+      {
+          var temp = newEle.cloneNode(true);
+          ulEle.insertBefore(temp, ulEle.firstChild);
+          temp.addEventListener('click', function(e) {
+              console.log(e.target.innerText);
+          })
+      }
+  })
+
+  addBtnEnd.addEventListener('click', function(e){
+      if (newEle) 
+      {
+          var temp = newEle.cloneNode(true);
+          ulEle.appendChild(temp);
+          temp.addEventListener('click', function(e) {
+              console.log(e.target.innerText);
+          })
+      }
+  })
+</script>

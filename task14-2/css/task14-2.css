@@ -1,0 +1,140 @@
+.layout {
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 40px;
+	line-height: 2em;
+	font-family: arial;
+}
+
+h3, ul, p, div, h4 {
+	padding: 0 0;
+	margin: 0 0;
+}
+
+#header:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.person {
+	width: 45%;
+	float: left;
+}
+
+.person img {
+	width: 150px;
+	height: 160px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+.person .name {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 60px;
+}
+
+.contacts {
+	width: 45%;
+	float: right;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.contacts h3 {
+	border-bottom: 5px solid black;
+}
+
+.title {
+	border-bottom: 5px solid #ccc;
+	width: 300px;
+}
+
+.content {
+	border-left: 1px solid balck;
+	margin-left: 10px;
+	padding-left: 30px;
+	margin-top: 10px;
+}
+
+#footer:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#footer .practic {
+	width: 40%;
+	float: left;
+}
+
+#footer .skill {
+	width: 40%;
+	float: right;
+}
+
+.skill ul {
+	display: inline-block;
+	margin-right: 40px;
+}
+
+span {
+	color: gray;
+}
+
+.content>h4:before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: black;
+	border-radius: 50%;
+	margin-left: -37px;
+	margin-right: 23px;
+}
+
+@font-face {
+  font-family: 'icon';  /* project id 256894 */
+  src: url('//at.alicdn.com/t/font_pr1lpln0hi7zm2t9.eot');
+  src: url('//at.alicdn.com/t/font_pr1lpln0hi7zm2t9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_pr1lpln0hi7zm2t9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_pr1lpln0hi7zm2t9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_pr1lpln0hi7zm2t9.svg#iconfont') format('svg');
+}
+
+.icon {
+  font-family: "icon"!important;
+  font-size: normal;
+}
+
+.practic li:before {
+	content: "\e6fd";
+	display: inline-block;
+	float: left;
+}
+
+.skill li:before {
+	content: "\e6fd";
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.practic h4,
+.practic p {
+	margin-left: 40px;
+}
+
+.skill li {
+	padding-bottom: 20px;
+}
+
+
+

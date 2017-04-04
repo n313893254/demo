@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<head>
+    <title>loadMore</title>
+    <meta charset="UTF-8">
+    <style>
+        ul,
+        li {
+            padding: 0;
+            margin: 0;
+        }
+        #ct li {
+            list-style: none;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #load-more {
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+            cursor: pointer;
+        }
+        #load-more img {
+            width: 40px;
+            height: 40px;
+        }
+        .btn {
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            width: 80px;
+            border: 1px solid #e27272;
+            border-radius: 3px;
+            text-align: center;
+            text-decoration: none;
+            color: #e27272;
+        }
+        .btn:hover {
+            background: green;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="ct"></ul>
+    <a id="load-more" class="btn" href="#">加载更多</a>
+</body>
+<script>
+	var btn = document.querySelector("#load-more");
+	var ct = document.querySelector("#ct");
+	var pageIndex = 0;
+	var isDataArrive = true;
+
+	btn.addEventListener('click', function(e) {
+		e.preventDefault();
+		if (!isDataArrive) 
+		{
+			return;
+		}
+
+		loadData (function(news){
+
+			renderPage(news);
+			pageIndex += 5;
+			isDataArrive = true;
+		})
+		isDataArrive = false;
+	})
+
+	function loadData (callback) {
+		ajax({
+			type: 'get',
+			url: '/loadMore',
+			dataType: 'json',
+			data: {
+				index: pageIndex,
+				length: 5
+			},
+			success: callback,
+			error: function() {
+				console.log('error');
+			}
+		})
+	}
+
+	function renderPage (news) {
+
+		var fragment = document.createDocumentFragment();
+
+		for (var i =0; i < news.length; i++) 
+		{
+			var node = document.createElement('li');
+			node.innerText = news[i];
+			fragment.appendChild(node);
+		}
+
+		ct.appendChild(fragment);
+	}
+
+
+
+	function ajax(opts){
+	    opts.success = opts.success || function () {};
+	    opts.error = opts.error || function () {};
+	    opts.type = opts.type || 'get';
+	    opts.dataType = opts.dataType || {};
+	    opts.data = opts.data || {};
+	    var dataStr = '';
+	    for (var key in opts.data)
+	    {
+	    	dataStr += key + '=' + opts.data[key] + '&';
+	    }
+	    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function () {
+	    	if (xmlhttp.readyState == 4) {
+	    		if (xmlhttp.status == 200 || xmlhttp.status == 304) {
+	    			if (opts.dataType === 'text') {
+	    				opts.success(xmlhttp.responseText);
+	    			}
+	    			if (opts.dataType === 'json') {
+	    				var json = JSON.parse(xmlhttp.responseText);
+	    				opts.success(json);
+	    			}
+	    		}
+	    		else 
+	    		{
+	    			opts.error();
+	    		}
+	    		isDataArrive = true;
+	    	}
+	    };
+
+	    dataStr = dataStr.substr(0, dataStr.length - 1);
+
+	    if (opts.type.toLowerCase() === 'post')
+	    {
+	    	xmlhttp.open(opts.type, opts.url, true);
+	    	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	    	xmlhttp.send(dataStr);
+	    }
+	    if (opts.type.toLowerCase() === 'get')
+	    {
+	    	xmlhttp.open(opts.type, opts.url + '?' + dataStr, true);
+	    	xmlhttp.send();
+	    }
+	}
+</script>
+</html>
+
