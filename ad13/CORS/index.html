@@ -25,7 +25,7 @@
   
   $('.change').addEventListener('click', function(){
     var xhr = new XMLHttpRequest();
-    xhr.open('get', 'http://b.jrg.com:8080/getNews', true);
+    xhr.open('get', 'http://b.poi.com:8080/getNews', true);
     xhr.send();
     xhr.onreadystatechange = function(){
       if(xhr.readyState === 4 && xhr.status === 200){

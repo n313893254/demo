@@ -25,23 +25,22 @@
 </style>
 
 <div class="ct">
-  <h1>使用postMessage实现跨域</h1>
+  <h1>使用降域实现跨域</h1>
   <div class="main">
     <input type="text" placeholder="http://a.jrg.com:8080/a.html">
   </div>
 
-  <iframe src="http://localhost:8080/b.html" frameborder="0" ></iframe>
+  <iframe src="http://b.poi.com:8080/b.html" frameborder="0" ></iframe>
 
 </div>
 
 
 <script>
 //URL: http://a.jrg.com:8080/a.html
-$('.main input').addEventListener('input', function(){
+document.querySelector('.main input').addEventListener('input', function(){
   console.log(this.value);
-  window.frames[0].postMessage(this.value,'*');
+  window.frames[0].document.querySelector('input').value = this.value;
 })
-window.addEventListener('message',function(e) {
-    $('.main input').value = e.data
-    console.log(e.data);
-});
+document.domain = "poi.com"
+</script>
+</html>
