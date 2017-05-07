@@ -5,7 +5,9 @@ require.config({
   }
 });
 
-require(['jquery', 'gotop', 'carousel'], function($, GoTop, Carousel) {
+require(['jquery', 'gotop', 'carousel', 'loadmore', 'waterfall'], function($, GoTop, Carousel, LoadMore, Waterfall) {
   new GoTop('div', 'a');
   Carousel.init($('.carousel'));
+  new Waterfall($('.ship .show'));
+  LoadMore.init($('.ship .show'));
 });
