@@ -2,15 +2,16 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="index.css">
 	</head>
 <body>
 	<div id="app">
 		<div class="newTask">
-			<input type="text" v-model="newTodo" @keypress.enter="addTodo">
+			<input type="text" v-model="newTodo" @keypress.enter="addTodo" placeholder="按Enter完成输入">
 		</div>
 		<ol class="todos">
 			<li v-for="todo in todoList">
-				<input type="checkbox" v-model="todo.done">
+				<input type="checkbox" v-model="todo.done" >
 				{{ todo.title }}
 				<span v-if="todo.done" >已完成</span>
 				<span v-else="todo.done" >未完成</span>
