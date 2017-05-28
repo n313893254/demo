@@ -12,10 +12,10 @@
 			<li v-for="todo in todoList">
 				<input type="checkbox" v-model="todo.done">
 				{{ todo.title }}
-				<span v-if="todo.done">已完成</span>
-				<span v-else="todo.done">未完成</span>
-
+				<span v-if="todo.done" >已完成</span>
+				<span v-else="todo.done" >未完成</span>
 				<button @click="removeTodo(todo)">X</button>
+				<span>{{ todo.createdAt }}</span>
 			</li>
 		</ol>
 	</div>

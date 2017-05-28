@@ -31,7 +31,7 @@ var app = new Vue({
     addTodo: function() {
       this.todoList.push({
         title: this.newTodo,
-        createdAt: new Date(),
+        createdAt: '待办事项创建于' + new Date(),
         done: false
       })
       //加入数组后置空

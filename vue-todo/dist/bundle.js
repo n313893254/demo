@@ -9790,9 +9790,11 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     this.newTodo = oldUserInput || [];
 
     window.onbeforeunload = ()=>{
+      //保存todo
       let dataString = JSON.stringify(this.todoList);
       window.localStorage.setItem('myTodos', dataString);
 
+      //保存input
       let userInput = this.newTodo;
       window.localStorage.setItem('userInput', userInput);
     }
@@ -9803,7 +9805,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     addTodo: function() {
       this.todoList.push({
         title: this.newTodo,
-        createdAt: new Date(),
+        createdAt: '待办事项创建于' + new Date(),
         done: false
       })
       //加入数组后置空
