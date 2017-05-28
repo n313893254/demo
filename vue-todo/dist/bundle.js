@@ -9780,7 +9780,20 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     newTodo: '',
     todoList: []
   },
+
+  created: function() {
+    let oldDataString = window.localStorage.getItem('myTodos');
+    let oldData = JSON.parse(oldDataString);
+    this.todoList = oldData || [];
+
+    window.onbeforeunload = ()=>{
+      let dataString = JSON.stringify(this.todoList);
+      window.localStorage.setItem('myTodos', dataString);
+    }
+  },
+
   methods: {
+    //增加待办
     addTodo: function() {
       this.todoList.push({
         title: this.newTodo,
@@ -9789,6 +9802,12 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       })
       //加入数组后置空
       this.newTodo = ''
+    },
+
+    //删除待办
+    removeTodo: function(todo) {
+      let index = this.todoList.indexOf(todo);
+      this.todoList.splice(index, 1);
     }
   }
 })

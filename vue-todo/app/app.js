@@ -6,6 +6,18 @@ var app = new Vue({
     newTodo: '',
     todoList: []
   },
+
+  created: function() {
+    let oldDataString = window.localStorage.getItem('myTodos');
+    let oldData = JSON.parse(oldDataString);
+    this.todoList = oldData || [];
+
+    window.onbeforeunload = ()=>{
+      let dataString = JSON.stringify(this.todoList);
+      window.localStorage.setItem('myTodos', dataString);
+    }
+  },
+
   methods: {
     //增加待办
     addTodo: function() {
