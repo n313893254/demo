@@ -9786,9 +9786,15 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     let oldData = JSON.parse(oldDataString);
     this.todoList = oldData || [];
 
+    let oldUserInput = window.localStorage.getItem('userInput');
+    this.newTodo = oldUserInput || [];
+
     window.onbeforeunload = ()=>{
       let dataString = JSON.stringify(this.todoList);
       window.localStorage.setItem('myTodos', dataString);
+
+      let userInput = this.newTodo;
+      window.localStorage.setItem('userInput', userInput);
     }
   },
 
@@ -9801,7 +9807,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
         done: false
       })
       //加入数组后置空
-      this.newTodo = ''
+      this.newTodo = '';
     },
 
     //删除待办

@@ -12,9 +12,17 @@ var app = new Vue({
     let oldData = JSON.parse(oldDataString);
     this.todoList = oldData || [];
 
+    let oldUserInput = window.localStorage.getItem('userInput');
+    this.newTodo = oldUserInput || [];
+
     window.onbeforeunload = ()=>{
+      //保存todo
       let dataString = JSON.stringify(this.todoList);
       window.localStorage.setItem('myTodos', dataString);
+
+      //保存input
+      let userInput = this.newTodo;
+      window.localStorage.setItem('userInput', userInput);
     }
   },
 
@@ -27,7 +35,7 @@ var app = new Vue({
         done: false
       })
       //加入数组后置空
-      this.newTodo = ''
+      this.newTodo = '';
     },
 
     //删除待办
