@@ -24649,6 +24649,13 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     getCurrentUser: function() {
       let {id, createdAt, attributes: {username}} = __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.current();
       return {id, username, createdAt};
+    },
+
+    //登出
+    logout: function () {
+      __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.logOut();
+      this.currentUser = null;
+      window.location.reload();
     }
   }
 })

@@ -46,3 +46,8 @@ body {
   min-width: 500px;
   margin-left: 177px;
 }
+
+.menu {
+  background-color: #353d40;
+  color: #a0a9ad;
+}

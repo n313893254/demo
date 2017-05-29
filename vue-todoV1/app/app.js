@@ -91,6 +91,13 @@ var app = new Vue({
     getCurrentUser: function() {
       let {id, createdAt, attributes: {username}} = AV.User.current();
       return {id, username, createdAt};
+    },
+
+    //登出
+    logout: function () {
+      AV.User.logOut();
+      this.currentUser = null;
+      window.location.reload();
     }
   }
 })
