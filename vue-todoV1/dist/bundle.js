@@ -24623,7 +24623,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       this.todoList.splice(index, 1);
     },
 
-    //登录
+    //注册
     signUp: function () {
       let user = new __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User();
       user.setUsername(this.formData.username);
@@ -24631,6 +24631,15 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       user.signUp().then(function (loginedUser) {
         console.log(loginedUser);
       }, function(error) {
+
+      });
+    },
+
+    //登录
+    login: function(){
+      __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.logIn(this.formData.username, this.formData.password).then(function (loginedUser) {
+        console.log(loginedUser);
+      }, function (error) {
 
       });
     }
