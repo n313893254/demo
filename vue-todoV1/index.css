@@ -18,16 +18,11 @@ body {
   padding-top: 10px;
 }
 
-.newTask {
-  padding-left: 68px;
-}
 
 .newTask input {
   display: inline-block;
-  width: 500px;
+  width: 94%;
   height: 34px;
-  min-width: 500px;
-  margin-left: 88px;
   border: none;
   border-bottom: 1px dashed #d9d9d9;
   border-radius: 0;
@@ -41,10 +36,9 @@ body {
   cursor: pointer;
   padding: 6px 12px;
   display: inline-block;
-  width: 500px;
+  width: 94%;
   height: 34px;
-  min-width: 500px;
-  margin-left: 177px;
+  margin-left: 20px;
 }
 
 .menu {
@@ -56,6 +50,13 @@ body {
   width: 400px;
   height: 600px;
   margin: 50px auto;
+}
+
+#todo {
+  width: 400px;
+  height: 600px;
+  margin: 50px auto;
+  border: 1px solid grey;
 }
 
 
