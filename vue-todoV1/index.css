@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  color: rgb(64, 64, 64);
+  font-family: "Helvetica Neue", Helvetica, 微软雅黑, Arial, sans-serif;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 0;
+}
+
+#app {
+  font-size: 14px;
+  line-height: 1.5;
+  height: 850px;
+  padding-top: 10px;
+}
+
+.newTask {
+  padding-left: 68px;
+}
+
+.newTask input {
+  display: inline-block;
+  width: 500px;
+  height: 34px;
+  min-width: 500px;
+  margin-left: 88px;
+  border: none;
+  border-bottom: 1px dashed #d9d9d9;
+  border-radius: 0;
+  padding: 6px 12px;
+  color: #555;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.todos {
+  margin-bottom: 3px;
+  cursor: pointer;
+  padding: 6px 12px;
+  display: inline-block;
+  width: 500px;
+  height: 34px;
+  min-width: 500px;
+  margin-left: 177px;
+}
