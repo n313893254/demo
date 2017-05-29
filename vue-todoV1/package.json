@@ -10,9 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "leancloud-storage": "^2.4.0"
   },
-  "repository": {
-  },
+  "repository": {},
   "devDependencies": {
     "webpack": "^2.6.0"
   }

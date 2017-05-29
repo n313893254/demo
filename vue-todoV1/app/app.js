@@ -1,11 +1,31 @@
 import Vue from 'vue'
+import AV from 'leancloud-storage'
+
+var APP_ID = '1HFk15qgrkcry6Xjq8BSCLHu-gzGzoHsz';
+var APP_KEY = 'oCdUooAairIUrKxIACARN2po';
+AV.init({
+  appId: APP_ID,
+  appKey: APP_KEY
+});
+
+var TestObject = AV.Object.extend('TestObject');
+// var testObject = new TestObject();
+// testObject.save({
+//   words: 'hello world'
+// }).then(function(object) {
+//   alert('leancloud rocks')
+// })
 
 var app = new Vue({
   el: '#app',
   data: {
     newTodo: '',
     todoList: [],
-    actionType: 'signUp'
+    actionType: 'signUp',
+    formData: {
+      username: '',
+      password: ''
+    }
   },
 
   created: function() {
@@ -43,6 +63,18 @@ var app = new Vue({
     removeTodo: function(todo) {
       let index = this.todoList.indexOf(todo);
       this.todoList.splice(index, 1);
+    },
+
+    //登录
+    signUp: function () {
+      let user = new AV.User();
+      user.setUsername(this.formData.username);
+      user.setPassword(this.formData.password);
+      user.signUp().then(function (loginedUser) {
+        console.log(loginedUser);
+      }, function(error) {
+
+      });
     }
   }
 })
