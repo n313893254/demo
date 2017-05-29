@@ -24579,6 +24579,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   data: {
     newTodo: '',
     todoList: [],
+    currentUser: null,
     actionType: 'signUp',
     formData: {
       username: '',
@@ -24628,20 +24629,26 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       let user = new __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User();
       user.setUsername(this.formData.username);
       user.setPassword(this.formData.password);
-      user.signUp().then(function (loginedUser) {
-        console.log(loginedUser);
-      }, function(error) {
-
+      user.signUp().then((loginedUser) => {
+        this.currentUser = this.getCurrentUser();
+      }, (error) => {
+        alert('注册失败');
       });
     },
 
     //登录
     login: function(){
-      __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.logIn(this.formData.username, this.formData.password).then(function (loginedUser) {
-        console.log(loginedUser);
+      __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.logIn(this.formData.username, this.formData.password).then((loginedUser) => {
+        this.currentUser = this.getCurrentUser();
       }, function (error) {
-
+        alert('登录失败');
       });
+    },
+
+    //获取当前用户名
+    getCurrentUser: function() {
+      let {id, createdAt, attributes: {username}} = __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.current();
+      return {id, username, createdAt};
     }
   }
 })
