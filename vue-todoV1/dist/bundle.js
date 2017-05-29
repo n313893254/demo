@@ -24566,14 +24566,6 @@ __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.init({
   appKey: APP_KEY
 });
 
-var TestObject = __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.Object.extend('TestObject');
-// var testObject = new TestObject();
-// testObject.save({
-//   words: 'hello world'
-// }).then(function(object) {
-//   alert('leancloud rocks')
-// })
-
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#app',
   data: {
@@ -24594,6 +24586,8 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 
     let oldUserInput = window.localStorage.getItem('userInput');
     this.newTodo = oldUserInput || [];
+
+    this.currentUser = this.getCurrentUser();
 
     window.onbeforeunload = ()=>{
       //保存todo
@@ -24647,8 +24641,13 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 
     //获取当前用户名
     getCurrentUser: function() {
-      let {id, createdAt, attributes: {username}} = __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.current();
-      return {id, username, createdAt};
+      let current = __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.current();
+      if (current) {
+        let {id, createdAt, attributes: {username}} = __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.current();
+        return {id, username, createdAt};
+      } else {
+        return null;
+      }
     },
 
     //登出

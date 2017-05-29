@@ -8,14 +8,6 @@ AV.init({
   appKey: APP_KEY
 });
 
-var TestObject = AV.Object.extend('TestObject');
-// var testObject = new TestObject();
-// testObject.save({
-//   words: 'hello world'
-// }).then(function(object) {
-//   alert('leancloud rocks')
-// })
-
 var app = new Vue({
   el: '#app',
   data: {
@@ -36,6 +28,8 @@ var app = new Vue({
 
     let oldUserInput = window.localStorage.getItem('userInput');
     this.newTodo = oldUserInput || [];
+
+    this.currentUser = this.getCurrentUser();
 
     window.onbeforeunload = ()=>{
       //保存todo
@@ -89,8 +83,13 @@ var app = new Vue({
 
     //获取当前用户名
     getCurrentUser: function() {
-      let {id, createdAt, attributes: {username}} = AV.User.current();
-      return {id, username, createdAt};
+      let current = AV.User.current();
+      if (current) {
+        let {id, createdAt, attributes: {username}} = AV.User.current();
+        return {id, username, createdAt};
+      } else {
+        return null;
+      }
     },
 
     //登出
