@@ -7,11 +7,12 @@
 </template>
 
 <script>
+import './assets/reset.css'
+import 'normalize.css/normalize.css'
+
 import Topbar from './components/Topbar'
 import ResumePreview from './components/ResumePreview.vue'
 import ResumeEditor from './components/ResumeEditor.vue'
-
-import './assets/reset.css'
 
 export default {
   name: 'app',
