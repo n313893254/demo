@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <p>{{ text }}</p>
+    <Topbar/>
+    <ResumePreview/>
   </div>
 </template>
 
 <script>
+import Topbar from './components/Topbar'
+import ResumePreview from './components/ResumePreview.vue'
 export default {
   name: 'app',
   data: function () {
     return {
       text: '你好'
     }
-  }
+  },
+  components: {Topbar, ResumePreview}
 }
 </script>
 
