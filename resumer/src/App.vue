@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+  <div class="page">
     <header>
       <Topbar/>
     </header>
     <main>
-      <ResumePreview/>
       <ResumeEditor/>
+      <ResumePreview/>
     </main>
   </div>
 </template>
