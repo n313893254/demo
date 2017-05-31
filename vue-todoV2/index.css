@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  color: rgb(64, 64, 64);
+  font-family: "Helvetica Neue", Helvetica, 微软雅黑, Arial, sans-serif;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 0;
+}
+
+#app {
+  font-size: 14px;
+  line-height: 1.5;
+  height: 850px;
+  padding-top: 10px;
+}
+
+
+.newTask input {
+  display: inline-block;
+  width: 94%;
+  height: 34px;
+  border: none;
+  border-bottom: 1px dashed #d9d9d9;
+  border-radius: 0;
+  padding: 6px 12px;
+  color: #555;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.todos {
+  margin-bottom: 3px;
+  cursor: pointer;
+  padding: 6px 12px;
+  display: inline-block;
+  width: 94%;
+  height: 34px;
+  margin-left: 20px;
+}
+
+.menu {
+  background-color: #353d40;
+  color: #a0a9ad;
+}
+
+#signInAndSignup {
+  width: 400px;
+  height: 600px;
+  margin: 50px auto;
+}
+
+#todo {
+  width: 400px;
+  height: 600px;
+  margin: 50px auto;
+  border: 1px solid grey;
+}
+
+
+.formRow input {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.formActions input {
+  padding: 5px 20px;
+  width: 107%;
+  height: 34px;
+  cursor: pointer;
+  background-color: #00C0EE;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  margin: 20px auto;
+}
