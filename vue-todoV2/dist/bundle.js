@@ -24580,47 +24580,70 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   },
 
   created: function() {
-    let oldDataString = window.localStorage.getItem('myTodos');
-    let oldData = JSON.parse(oldDataString);
-    this.todoList = oldData || [];
 
     let oldUserInput = window.localStorage.getItem('userInput');
     this.newTodo = oldUserInput || [];
 
     this.currentUser = this.getCurrentUser();
 
-    // window.onbeforeunload = ()=>{
-    //   //保存todo
-    //   let dataString = JSON.stringify(this.todoList);
-    //
-    //   var AVTodos = AV.object.extend('AllTodos');
-    //   var avTodos = new avTodos();
-    //   avTodos.set('content', dataString);
-    //   avTodos.save().then(function (todo) {
-    //     console.log('保存成功');
-    //   }, function (error) {
-    //     console.error('保存失败');
-    //   })
-    //
-    //   //保存input
-    //   let userInput = this.newTodo;
-    //   window.localStorage.setItem('userInput', userInput);
-    // }
+    if(this.currentUser) {
+      var query = new __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.Query('AllTodos');
+      query.find()
+        .then((todos) => {
+          let avAllTodos = todos[0];
+          let id = avAllTodos.id;
+          this.todoList = JSON.parse(avAllTodos.attributes.content);
+          this.todoList.id = id;
+        }, function (error) {
+          console.error(error);
+        })
+    }
+
+    window.onbeforeunload = ()=>{
+      //保存input
+      let userInput = this.newTodo;
+      window.localStorage.setItem('userInput', userInput);
+    }
   },
 
   methods: {
+    //更新todo
+    updateTodos: function () {
+      let dataString = JSON.stringify(this.todoList);
+      let avTodos = __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.Object.createWithoutData('AllTodos', this.todoList.id);
+      avTodos.set('content', dataString);
+      avTodos.save().then(() => {
+        console.log('更新成功');
+      })
+    },
 
     // 保存todo
     saveTodos: function() {
       let dataString = JSON.stringify(this.todoList);
       var AVTodos = __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.Object.extend('AllTodos');
       var avTodos = new AVTodos();
+
+      var acl = new __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.ACL();
+      acl.setReadAccess(__WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.current(), true);
+      acl.setWriteAccess(__WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.current(), true);
+
       avTodos.set('content', dataString);
-      avTodos.save().then(function (todo) {
+      avTodos.setACL(acl);
+      avTodos.save().then( (todo) => {
+        this.todoList.id = todo.id;
         alert('保存成功');
       }, function (error) {
         alert('保存失败');
       })
+    },
+
+    //选择更新或保存
+    saveOrUpdateTodos: function () {
+      if(this.todoList.id) {
+        this.updateTodos();
+      } else {
+        this.saveTodos();
+      }
     },
 
     //增加待办
@@ -24632,14 +24655,14 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       })
       //加入数组后置空
       this.newTodo = '';
-      this.saveTodos();
+      this.saveOrUpdateTodos();
     },
 
     //删除待办
     removeTodo: function(todo) {
       let index = this.todoList.indexOf(todo);
       this.todoList.splice(index, 1);
-      this.saveTodos();
+      this.saveOrUpdateTodos();
     },
 
     //注册
