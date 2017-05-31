@@ -24585,19 +24585,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     this.newTodo = oldUserInput || [];
 
     this.currentUser = this.getCurrentUser();
-
-    if(this.currentUser) {
-      var query = new __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.Query('AllTodos');
-      query.find()
-        .then((todos) => {
-          let avAllTodos = todos[0];
-          let id = avAllTodos.id;
-          this.todoList = JSON.parse(avAllTodos.attributes.content);
-          this.todoList.id = id;
-        }, function (error) {
-          console.error(error);
-        })
-    }
+    this.fetchTodos();
 
     window.onbeforeunload = ()=>{
       //保存input
@@ -24607,6 +24595,22 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   },
 
   methods: {
+
+    fetchTodos: function() {
+      if(this.currentUser) {
+        var query = new __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.Query('AllTodos');
+        query.find()
+          .then((todos) => {
+            let avAllTodos = todos[0];
+            let id = avAllTodos.id;
+            this.todoList = JSON.parse(avAllTodos.attributes.content);
+            this.todoList.id = id;
+          }, function (error) {
+            console.error(error);
+          })
+      }
+    },
+
     //更新todo
     updateTodos: function () {
       let dataString = JSON.stringify(this.todoList);
@@ -24631,7 +24635,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       avTodos.setACL(acl);
       avTodos.save().then( (todo) => {
         this.todoList.id = todo.id;
-        alert('保存成功');
+        console.log('保存成功');
       }, function (error) {
         alert('保存失败');
       })
@@ -24674,6 +24678,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
         this.currentUser = this.getCurrentUser();
       }, (error) => {
         alert('注册失败');
+        console.log(error);
       });
     },
 
@@ -24681,8 +24686,10 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     login: function(){
       __WEBPACK_IMPORTED_MODULE_1_leancloud_storage___default.a.User.logIn(this.formData.username, this.formData.password).then((loginedUser) => {
         this.currentUser = this.getCurrentUser();
+        this.fetchTodos();
       }, function (error) {
         alert('登录失败');
+        console.log(error);
       });
     },
 
