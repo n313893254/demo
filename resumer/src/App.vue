@@ -45,9 +45,9 @@ export default {
     max-width: 1440px;
     margin-top: 16px;
     margin-bottom: 16px;
-    margin: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 16px;
     width: 100%;
     align-self: center;
   }
@@ -58,7 +58,8 @@ export default {
   }
 
   #resumePreview {
-    width: 61.66667%;
+    flex-grow: 1;
+    margin-left: 16px;
     background: #777;
   }
 </style>
