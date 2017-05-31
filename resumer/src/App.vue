@@ -48,6 +48,8 @@ export default {
     margin: 0;
     display: flex;
     justify-content: space-around;
+    width: 100%;
+    align-self: center;
   }
 
   #resumeEditor {
