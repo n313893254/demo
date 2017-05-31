@@ -10,6 +10,9 @@
 import Topbar from './components/Topbar'
 import ResumePreview from './components/ResumePreview.vue'
 import ResumeEditor from './components/ResumeEditor.vue'
+
+import './assets/reset.css'
+
 export default {
   name: 'app',
   data: function () {
@@ -22,7 +25,5 @@ export default {
 </script>
 
 <style>
-p {
-  color: red;
-}
+
 </style>
