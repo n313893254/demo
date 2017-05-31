@@ -22,9 +22,6 @@ var app = new Vue({
   },
 
   created: function() {
-    let oldDataString = window.localStorage.getItem('myTodos');
-    let oldData = JSON.parse(oldDataString);
-    this.todoList = oldData || [];
 
     let oldUserInput = window.localStorage.getItem('userInput');
     this.newTodo = oldUserInput || [];
@@ -32,10 +29,6 @@ var app = new Vue({
     this.currentUser = this.getCurrentUser();
 
     window.onbeforeunload = ()=>{
-      //保存todo
-      let dataString = JSON.stringify(this.todoList);
-      window.localStorage.setItem('myTodos', dataString);
-
       //保存input
       let userInput = this.newTodo;
       window.localStorage.setItem('userInput', userInput);
@@ -43,6 +36,20 @@ var app = new Vue({
   },
 
   methods: {
+
+    // 保存todo
+    saveTodos: function() {
+      let dataString = JSON.stringify(this.todoList);
+      var AVTodos = AV.Object.extend('AllTodos');
+      var avTodos = new AVTodos();
+      avTodos.set('content', dataString);
+      avTodos.save().then(function (todo) {
+        alert('保存成功');
+      }, function (error) {
+        alert('保存失败');
+      })
+    },
+
     //增加待办
     addTodo: function() {
       this.todoList.push({
@@ -52,12 +59,14 @@ var app = new Vue({
       })
       //加入数组后置空
       this.newTodo = '';
+      this.saveTodos();
     },
 
     //删除待办
     removeTodo: function(todo) {
       let index = this.todoList.indexOf(todo);
       this.todoList.splice(index, 1);
+      this.saveTodos();
     },
 
     //注册
