@@ -2,17 +2,16 @@
   <div id="resumeEditor">
     <nav>
       <ol>
-        <li v-for="(item, index) in resume.visibleItems"
-          :class="{active: item === selected}"
-          @click="selected = item"
-          >
+        <li v-for="(item, index) in resume.config"
+          :class="{active: item.field === selected}"
+          @click="selected = item.field">
           {{ index }}
         </li>
       </ol>
     </nav>
     <ol class="panels">
-      <li v-for="item in resume.visibleItems" v-show="item === selected">
-        {{ resume[item] }}
+      <li v-for="item in resume.config" v-show="item.field === selected">
+        {{ resume[item.field] }}
       </li>
     </ol>
   </div>
@@ -25,7 +24,14 @@
       return {
         selected: 'profile',
         resume: {
-          visibleItems: ['profile', 'work history', 'eduaction', 'projects', 'awards', 'contacts', 'other'],
+          config: [
+            { field: 'profile', icon: 'id' },
+            { field: 'work history', icon: 'work' },
+            { field: 'eduaction', icon: 'book' },
+            { field: 'projects', icon: 'heart' },
+            { field: 'awards', icon: 'cup' },
+            { field: 'contacts', icon: 'phone' }
+          ],
           profile: {
             name: '',
             city: '',
