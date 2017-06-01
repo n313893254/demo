@@ -11,7 +11,10 @@
     </nav>
     <ol class="panels">
       <li v-for="item in resume.config" v-show="item.field === selected">
-        {{resume[item.field]}}
+        <div class="resumeField" v-for="(value, key) in resume[item.field]">
+          <label> {{ key }} </label>
+          <input type="text" v-model="resume[item.field][key]">
+        </div>
       </li>
     </ol>
   </div>
@@ -48,7 +51,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   #resumeEditor {
     background: #fff;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
@@ -74,12 +77,31 @@
         }
       }
     }
-  svg.icon {
-    width: 24px;
-    height: 24px;
+    > .panels {
+      flex-grow: 1;
+      > li {
+        padding: 24px;
+      }
+    }
+    svg.icon {
+      width: 24px;
+      height: 24px;
+    }
   }
-}
-ol {
-  list-style: none;
-}
+  ol {
+    list-style: none;
+  }
+  .resumeField {
+    > label {
+      display: block;
+    }
+    input[type=text] {
+      margin: 16px 0;
+      border: 1px solid #ddd;
+      box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+      width: 100%;
+      height: 40px;
+      padding: 0 8px;
+    }
+  }
 </style>
