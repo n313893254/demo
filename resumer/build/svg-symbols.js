@@ -20,7 +20,7 @@ let symbols = svgFiles.map(function (filename) {
     .replace(/stroke=".+?"/g, '')
     .replace(/<svg /, `<svg id="icon-${name}" `)
     .replace(/\bsvg\b/g, 'symbol')
-    .replace(/\s{2,}/g, '')
+    .replace(/\s{2,}/g, ' ')
 }).join('\n')
 
 let js = `export default \`<svg style="display:none">\n${symbols}\n</svg>\`\n`

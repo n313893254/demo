@@ -11,8 +11,9 @@
 </template>
 
 <script>
-import './assets/reset.css'
+
 import 'normalize.css/normalize.css'
+import './assets/reset.css'
 
 import Topbar from './components/Topbar'
 import ResumePreview from './components/ResumePreview.vue'
@@ -26,7 +27,7 @@ export default {
       text: '你好'
     }
   },
-  components: {Topbar, ResumePreview, ResumeEditor},
+  components: {Topbar, ResumeEditor, ResumePreview},
   created () {
     document.body.insertAdjacentHTML('afterbegin', icons)
   }
@@ -58,10 +59,16 @@ export default {
     width: 35%;
     background: #444;
   }
-
   #resumePreview {
     flex-grow: 1;
     margin-left: 16px;
     background: #777;
+  }
+  svg.icon {
+    height: 1em;
+    width: 1em;
+    fill: currentColor;
+    vertical-align: -0.1em;
+    font-size: 16px;
   }
 </style>
