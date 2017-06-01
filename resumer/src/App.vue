@@ -29,18 +29,16 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   .page {
     height: 100vh;
     display: flex;
     flex-direction: column;
     background: #EAEBEC;
-  }
-  .page>main {
-    flex-grow: 1;
-  }
-
-  .page>main {
+    >main {
+      flex-grow: 1;
+    }
+    >main {
     min-width: 1024px;
     max-width: 1440px;
     margin-top: 16px;
@@ -50,8 +48,8 @@ export default {
     padding: 0 16px;
     width: 100%;
     align-self: center;
+    }
   }
-
   #resumeEditor {
     width: 35%;
     background: #444;
