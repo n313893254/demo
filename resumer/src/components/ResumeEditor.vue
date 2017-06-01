@@ -2,23 +2,18 @@
   <div id="resumeEditor">
     <nav>
       <ol>
-        <li class="active"> x </li>
-        <li> x </li>
-        <li> x </li>
-        <li> x </li>
-        <li> x </li>
-        <li> x </li>
-        <li> x </li>
+        <li v-for="(item, index) in resume.visibleItems"
+          :class="{active: item === selected}"
+          @click="selected = item"
+          >
+          {{ index }}
+        </li>
       </ol>
     </nav>
     <ol class="panels">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
+      <li v-for="item in resume.visibleItems" v-show="item === selected">
+        {{ resume[item] }}
+      </li>
     </ol>
   </div>
 </template>
@@ -27,7 +22,23 @@
   export default {
     name: 'ResumeEditor',
     data () {
-      return {}
+      return {
+        selected: 'bio',
+        resume: {
+          visibleItems: ['bio', 'work history', 'eduaction', 'projects', 'awards', 'contacts', 'other'],
+          bio: {
+            name: '',
+            city: '',
+            title: ''
+          },
+          'work history': [],
+          eduaction: [],
+          projects: [],
+          awards: [],
+          contacts: [],
+          others: []
+        }
+      }
     }
   }
 </script>
@@ -38,6 +49,7 @@
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: row;
+    overflow: auto;
     > nav {
       width: 80px;
       background: black;
