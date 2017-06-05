@@ -46,6 +46,9 @@ export default new Vuex.Store({
   mutations: {
     switchTab (state, payload) {
       state.selected = payload
+    },
+    updateResume (state, {field, subfield, value}) {
+      state.resume[field][subfield] = value
     }
   }
 })
