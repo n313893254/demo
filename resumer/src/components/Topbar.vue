@@ -20,7 +20,7 @@
     </MyDialog>
     <MyDialog title="登录" :visible="signInDialogVisible"
       @close="signInDialogVisible = false">
-      <SignInForm />
+      <SignInForm @success="signIn($event)"/>
     </MyDialog>
   </div>
 </template>
@@ -53,6 +53,7 @@ export default {
   methods: {
     signIn (user) {
       this.signUpDialogVisible = false
+      this.signInDialogVisible = false
       this.$store.commit('setUser', user)
     },
     signOut () {
