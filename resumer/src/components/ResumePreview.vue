@@ -36,7 +36,7 @@
       <ol>
         <li v-for="item in resume.education">
           <h3>{{ item.school }}
-            <p v-show="item.content"> - {{ item.content }}</p>
+            <span v-show="item.content"> - {{ item.content }}</span>
           </h3>
         </li>
       </ol>
@@ -47,7 +47,7 @@
       <ol>
         <li v-for="item in resume.awards">
           <h3>{{ item.name }}</h3>
-          <p v-show="item.conent">{{ item.content }}</p>
+          <p v-show="item.content">{{ item.content }}</p>
         </li>
       </ol>
     </section>

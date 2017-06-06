@@ -109,4 +109,9 @@
       padding: 0 8px;
     }
   }
+  hr{
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 24px 0;
+  }
 </style>
