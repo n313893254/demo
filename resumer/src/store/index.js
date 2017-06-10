@@ -19,17 +19,21 @@ export default new Vuex.Store({
         { field: 'projects', icon: 'heart', type: 'array', keys: ['name', 'details'] },
         { field: 'awards', icon: 'cup', type: 'array', keys: ['name', 'details'] },
         { field: 'contacts', icon: 'phone', type: 'array', keys: ['contact', 'content'] }
-      ],
-      profile: {},
-      workHistory: [],
-      education: [],
-      projects: [],
-      awards: [],
-      contacts: []
+      ]
     }
   },
   mutations: {
     initState (state, payload) {
+      state.resume.config.map((item) => {
+        if (item.type === 'array') {
+          Vue.set(state.resume, item.field, [])
+        } else {
+          Vue.set(state.resume, item.field, {})
+          item.keys.map((key) => {
+            Vue.set(state.resume[item.field], key, '')
+          })
+        }
+      })
       Object.assign(state, payload)
     },
     switchTab (state, payload) {
