@@ -20,7 +20,7 @@
             </div>
             <hr>
           </div>
-          <button @click="addResumeSubfied(item.field)">新增</button>
+          <button @click="addResumeSubfield(item.field)">新增</button>
         </div>
         <div v-else class="resumeField" v-for="(value, key) in resume[item.field]">
           <label> {{ key }} </label>
@@ -57,8 +57,8 @@
           value
         })
       },
-      addResumeSubfied (field) {
-        console.log(field)
+      addResumeSubfield (field) {
+        this.$store.commit('addResumeSubfield', {field})
       }
     }
   }

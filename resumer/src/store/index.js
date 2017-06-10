@@ -12,7 +12,7 @@ export default new Vuex.Store({
       username: ''
     },
     resumeConfig: [
-      { field: 'profile', icon: 'id', key: ['name', 'city', 'title', 'birthday'] },
+      { field: 'profile', icon: 'id', keys: ['name', 'city', 'title', 'birthday'] },
       { field: 'workHistory', icon: 'work', type: 'array', keys: ['company', 'details'] },
       { field: 'education', icon: 'book', type: 'array', keys: ['school', 'details'] },
       { field: 'projects', icon: 'heart', type: 'array', keys: ['name', 'details'] },
@@ -48,6 +48,13 @@ export default new Vuex.Store({
     },
     removeUser (state) {
       state.user.id = ''
+    },
+    addResumeSubfield (state, {field}) {
+      let empty = {}
+      state.resume[field].push(empty)
+      state.resumeConfig.filter((i) => i.field === field)[0].keys.map((key) => {
+        Vue.set(empty, key, '')
+      })
     }
   }
 })
