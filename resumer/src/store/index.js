@@ -17,7 +17,7 @@ export default new Vuex.Store({
       { field: 'education', icon: 'book', type: 'array', keys: ['school', 'details'] },
       { field: 'projects', icon: 'heart', type: 'array', keys: ['name', 'details'] },
       { field: 'awards', icon: 'cup', type: 'array', keys: ['name', 'details'] },
-      { field: 'contacts', icon: 'phone', type: 'array', keys: ['contact', 'content'] }
+      { field: 'contacts', icon: 'phone', type: 'array', keys: ['contact', 'details'] }
     ],
     resume: {}
   },
