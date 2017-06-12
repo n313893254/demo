@@ -18,8 +18,8 @@ import 'normalize.css/normalize.css'
 import './assets/reset.css'
 
 import Topbar from './components/Topbar'
-import ResumePreview from './components/ResumePreview.vue'
 import ResumeEditor from './components/ResumeEditor.vue'
+import ResumePreview from './components/ResumePreview.vue'
 import icons from './assets/icons'
 
 import store from './store/index'
@@ -37,6 +37,9 @@ export default {
     }
     this.$store.commit('initState', state)
     this.$store.commit('setUser', getAVUser())
+    this.$store.dispatch('fetchResume').then(() => {
+      this.$store.commit('initState', state)
+    })
   }
 }
 </script>
