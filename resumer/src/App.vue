@@ -1,14 +1,6 @@
 <template>
   <div>
-    <div class="page">
-      <header>
-        <Topbar/>
-      </header>
-      <main>
-        <ResumeEditor/>
-        <ResumePreview/>
-      </main>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -17,20 +9,14 @@
 import 'normalize.css/normalize.css'
 import './assets/reset.css'
 
-import Topbar from './components/Topbar'
-import ResumeEditor from './components/ResumeEditor.vue'
-import ResumePreview from './components/ResumePreview.vue'
 import icons from './assets/icons'
 
-import store from './store/index'
 import getAVUser from './lib/getAVUser'
 
 document.body.insertAdjacentHTML('afterbegin', icons)
 
 export default {
   name: 'app',
-  store,
-  components: {Topbar, ResumeEditor, ResumePreview},
   created () {
     this.$store.commit('initState')
     let user = getAVUser()
