@@ -1,14 +1,31 @@
-section {
+body {
+  margin: 0 auto;
   display: flex;
 }
 
 article {
-  height: 300px;
-  flex: 1;
+  height: 550px;
+  flex: 1 0;
+
+  margin: 0.5rem;
+  padding: 1rem;
   border: 1px solid black;
+  border-radius: 1rem;
   transition: 1s all;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0);
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4);)
 }
 
 article:hover {
-  flex: 2;
+  flex: 1 600px;
+  color: rgba(0, 0, 0, 1);
+}
+
+article:nth-child(2n) {
+  background: #f00;
+}
+
+article:nth-child(2n+1) {
+  background: #aaf;
 }
