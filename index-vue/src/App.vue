@@ -1,10 +1,18 @@
 <template>
   <div id="app">
-    <Topbar/>
+    <header>
+      <Topbar/>
+    </header>
+    <main>
+      
+    </main>
   </div>
 </template>
 
 <script>
+import './assets/reset.css'
+import 'normalize.css/normalize.css'
+
 import Topbar from './components/Topbar'
 
 export default {
