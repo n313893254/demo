@@ -3,11 +3,11 @@
     <div class="wrapper">
       <span class="logo">Kancollect</span>
       <div class="action">
-        <span>日常</span>
-        <span>舰娘</span>
-        <span>时间轴</span>
-        <span>主力舰队</span>
-        <span>提督热线</span>
+        <el-button>日常</el-button>
+        <el-button>舰娘</el-button>
+        <el-button>时间轴</el-button>
+        <el-button>主力舰队</el-button>
+        <el-button>提督热线</el-button>
       </div>
     </div>
   </div>
