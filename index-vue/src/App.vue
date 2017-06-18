@@ -2,6 +2,7 @@
   <div id="app">
     <header>
       <Topbar/>
+      <Carousel/>
     </header>
     <main>
 
@@ -14,10 +15,11 @@ import './assets/reset.css'
 import 'normalize.css/normalize.css'
 
 import Topbar from './components/Topbar'
+import Carousel from './components/Carousel'
 
 export default {
   name: 'app',
-  components: { Topbar }
+  components: { Topbar, Carousel }
 }
 </script>
 

@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import { Button, Select, Dialog, Menu, MenuItem, Row, Col } from 'element-ui'
 import App from './App'
-import Topbar from './components/Topbar'
 
 Vue.config.productionTip = false
 
@@ -18,7 +17,6 @@ Vue.use(Col)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  Topbar,
   template: '<App/>',
   components: { App }
 })
