@@ -4,11 +4,11 @@
       <el-col :span="24">
         <el-menu theme="light" mode="horizontal" class="nav">
           <span class="logo">Kancollect</span>
-          <el-menu-item index="">日常</el-menu-item>
-          <el-menu-item index="">舰娘</el-menu-item>
-          <el-menu-item index="">时间轴</el-menu-item>
-          <el-menu-item index="">主力舰队</el-menu-item>
           <el-menu-item index="">提督热线</el-menu-item>
+          <el-menu-item index="">主力舰队</el-menu-item>
+          <el-menu-item index="">时间轴</el-menu-item>
+          <el-menu-item index="">舰娘</el-menu-item>
+          <el-menu-item index="">日常</el-menu-item>
         </el-menu>
       </el-col>
     </el-row>
