@@ -5,7 +5,7 @@
       <Carousel/>
     </header>
     <main>
-
+      <Daily/>
     </main>
   </div>
 </template>
@@ -16,10 +16,11 @@ import 'normalize.css/normalize.css'
 
 import Topbar from './components/Topbar'
 import Carousel from './components/Carousel'
+import Daily from './components/Daily'
 
 export default {
   name: 'app',
-  components: { Topbar, Carousel }
+  components: { Topbar, Carousel, Daily }
 }
 </script>
 
