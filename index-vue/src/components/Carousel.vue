@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="carousel">
-    <el-carousel trigger="click" height="700px">
+    <el-carousel trigger="click" height="600px">
       <el-carousel-item v-for="item in images" :key="item">
         <img :src="item.url" alt="">
       </el-carousel-item>
@@ -33,7 +33,7 @@ export default {
 <style lang="scss" scoped>
 #carousel {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2px auto;
   img {
     width: 100%;
   }
