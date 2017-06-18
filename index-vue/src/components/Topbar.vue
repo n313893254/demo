@@ -1,15 +1,17 @@
 <template lang="html">
   <div id="topbar">
-    <div class="wrapper">
-      <span class="logo">Kancollect</span>
-      <div class="action">
-        <el-button>日常</el-button>
-        <el-button>舰娘</el-button>
-        <el-button>时间轴</el-button>
-        <el-button>主力舰队</el-button>
-        <el-button>提督热线</el-button>
-      </div>
-    </div>
+    <el-row>
+      <el-col :span="24">
+        <el-menu theme="light" mode="horizontal" class="nav">
+          <span class="logo">Kancollect</span>
+          <el-menu-item index="">日常</el-menu-item>
+          <el-menu-item index="">舰娘</el-menu-item>
+          <el-menu-item index="">时间轴</el-menu-item>
+          <el-menu-item index="">主力舰队</el-menu-item>
+          <el-menu-item index="">提督热线</el-menu-item>
+        </el-menu>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -24,5 +26,19 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss" scoped>
+#topbar {
+  .el-row {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+    .logo {
+      font-size: 24px;
+      color: #000;
+      line-height: 60px;
+      margin-left: 20px;
+    }
+    .el-menu-item {
+      float: right;
+    }
+  }
+}
 </style>

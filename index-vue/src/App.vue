@@ -4,7 +4,7 @@
       <Topbar/>
     </header>
     <main>
-      
+
     </main>
   </div>
 </template>
@@ -22,5 +22,7 @@ export default {
 </script>
 
 <style>
-#app {}
+#app {
+  min-width: 900px;
+}
 </style>
