@@ -34,8 +34,11 @@ export default {
 #carousel {
   max-width: 1200px;
   margin: 2px auto;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
   img {
     width: 100%;
+    opacity: 0.9;
   }
 }
 </style>
