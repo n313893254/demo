@@ -32,6 +32,8 @@ export default {
 
 <style lang="scss" scoped>
 #carousel {
+  max-width: 1200px;
+  margin: 0 auto;
   img {
     width: 100%;
   }
