@@ -3,6 +3,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  color: #333;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background: white;
+  margin: 2em;
+  padding: 0 1em;
+  min-width: 32em;
+  min-height: 20em;
+  box-shadow: 0 0 1em hsla(0, 0%, 0%, 0.15);
 }
 
 
