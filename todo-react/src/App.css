@@ -15,7 +15,7 @@
 
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 
   border: 1px solid #aaa;
@@ -28,6 +28,13 @@
 
 }
 
+.App > .todoWrapper > li:nth-child(odd) {
+  background: #eee;
+}
+
+.App > .todoWrapper > li:nth-child(even) {
+  background: transparent;
+}
 
 /*.App {
   text-align: center;
