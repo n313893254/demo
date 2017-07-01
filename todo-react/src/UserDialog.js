@@ -21,7 +21,7 @@ export default class UserDialog extends Component {
   }
 
   signUp (e) {
-    e.preventDefalut()
+    e.preventDefault()
     let {username, password} = this.state.formData
     let success = (user) => {
       this.props.onSignUp.call(null, user)
