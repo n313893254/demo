@@ -10,6 +10,7 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
+      user: {},
       newTodo: '',
       todoList: []
     }
@@ -28,7 +29,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>我的代办</h1>
+        <h1>{this.state.user.username || '我'}的待办</h1>
         <div className="inputWrapper">
           <TodoInput content={this.state.newTodo}
             onSubmit={this.addTodo.bind(this)}
@@ -37,7 +38,7 @@ class App extends Component {
         <ol className="todoWrapper">
           {todos}
         </ol>
-        <UserDialog />
+        {this.state.user.id ? null : <UserDialog onSignUp={this.onSignUp.bind(this)}/>}
       </div>
     );
   }
@@ -73,6 +74,12 @@ class App extends Component {
   }
 
   componentDidUpdate () {
+  }
+
+  onSignUp (user) {
+    let stateCopy = JSON.parse(JSON.stringify(this.state))
+    stateCopy.user = user
+    this.setState(stateCopy)
   }
 }
 
