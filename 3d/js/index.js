@@ -49,13 +49,12 @@ $(function () {
   })
 
   $(".item.action").on('click', function () {
-    $("nav .menu").toggleClass('active')
+    $("nav .menu").fadeToggle()
     if ($(this).text() != 'X') {
       $(this).text('X')
     } else {
       $(this).text('导航菜单')
     }
-
   })
 
   // $('.pic img').on('click', function () {
