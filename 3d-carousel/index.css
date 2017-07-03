@@ -1,0 +1,82 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-bottom,
+.carousel-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 600px;
+  min-width: 800px;
+}
+
+.carousel-bottom div {
+  height: 200px;
+  width: 150px;
+  background: grey;
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+.carousel-up div {
+  height: 150px;
+  width: 100px;
+  background: blue;
+  display: inline-block;
+  margin: 5px 5px;
+}
+
+.carousel .center {
+  background: red;
+  order: 3;
+}
+
+.carousel .left-middle {
+  transform: translateY(-90px) rotateY(30deg);
+  order: 2;
+}
+
+.carousel .left {
+  transform: translateY(-200px) rotateY(40deg);
+  order: 1;
+}
+
+.carousel .right-middle {
+    transform: translateY(-90px) rotateY(30deg);
+    order: 4;
+}
+
+.carousel .right {
+  transform: translateY(-200px) rotateY(40deg);
+  order: 5;
+}
+
+.carousel .center-back {
+  transform: rotateY(40deg) translateY(125px);
+  background: red;
+  order: 3;
+}
+
+.carousel .left-middle-back {
+  transform: rotateY(40deg) translateY(150px);
+  order: 2;
+}
+
+.carousel .left-back {
+  order: 1;
+  transform: translateY(250px);
+}
+
+.carousel .right-middle-back {
+  transform: rotateY(40deg) translateY(150px);
+    order: 4;
+}
+
+.carousel .right-back {
+  transform: translateY(250px);
+  order: 5;
+}
