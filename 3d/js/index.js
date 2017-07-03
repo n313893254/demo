@@ -6,9 +6,7 @@ $(function () {
   var play = null;
 
   lightbox.option({
-    'fitImagesInViewport': false,
-    'wrapAround': true,
-    'disableScrolling': true
+    'fitImagesInViewport': false
   })
 
   $(".pic img").each(function (i) {

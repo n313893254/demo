@@ -3,13 +3,9 @@
   padding: 0;
 }
 
-.test {
-  height: 1600px;
-}
-
 body {
   background-color: #66677c;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .pic {
