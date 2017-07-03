@@ -5,10 +5,7 @@ $(function () {
   var xN = 0, yN = 0;
   var play = null;
 
-  lightbox.option({
-    'fitImagesInViewport': false
-  })
-
+  //实现3D排列
   $(".pic img").each(function (i) {
     $(this).css({
       'transform': "rotateY("+i*deg+"deg) translateZ(300px);"
@@ -16,6 +13,7 @@ $(function () {
     $(this).attr('ondragstart', 'return false')
   })
 
+  //实现3D拖动旋转
   $(document).mousedown(function (ev) {
     var x_ = ev.clientX;
     var y_ = ev.clientY;
@@ -48,6 +46,26 @@ $(function () {
     }, 30)
   })
 
+  //实现自动旋转
+  var curIdx = 0;
+  var autoPlay = setInterval(function () {
+    curIdx += 1
+    if (curIdx === 10) {
+      curIdx = 0;
+    }
+    $(".pic img").each(function (i) {
+      $(this).css({
+        'transform': "rotateY("+(curIdx+i)*deg+"deg) translateZ(300px);"
+      })
+    })
+  }, 3000)
+
+  //修改默认值，点击全屏大图
+  lightbox.option({
+    'fitImagesInViewport': false
+  })
+
+  //实现菜单弹出
   $(".item.action").on('click', function () {
     $("nav .menu").fadeToggle()
     if ($(this).text() != 'X') {
@@ -57,6 +75,7 @@ $(function () {
     }
   })
 
+  //获取后台数据
   $('.item.load').on('click', function (e) {
     if($(this).data('isLoading')) {
       return
@@ -89,19 +108,4 @@ $(function () {
       $('.pic').html(tbody)
     }
   })
-
-
-
-  var curIdx = 0;
-  var autoPlay = setInterval(function () {
-    curIdx += 1
-    if (curIdx === 10) {
-      curIdx = 0;
-    }
-    $(".pic img").each(function (i) {
-      $(this).css({
-        'transform': "rotateY("+(curIdx+i)*deg+"deg) translateZ(300px);"
-      })
-    })
-  }, 3000)
 })
