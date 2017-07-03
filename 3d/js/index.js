@@ -44,9 +44,9 @@ $(function () {
     }, 30)
   })
 
-  $('.pic img').on('click', function () {
-    $(this).toggleClass('max')
-  })
+  // $('.pic img').on('click', function () {
+  //   $(this).toggleClass('max')
+  // })
 
   var curIdx = 0;
   var autoPlay = setInterval(function () {
