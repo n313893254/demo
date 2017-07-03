@@ -57,14 +57,28 @@ $(function () {
     }
   })
 
-  // $('.pic img').on('click', function () {
-  //   $(this).toggleClass('max')
-  // })
+  $.ajax({
+    url: 'load',
+    dataType: 'json',
+    type: 'get',
+    data: {
+      start: 1
+    },
+    success: function (json) {
+      onSuccess(json)
+    },
+    error: function () {
+      alert('网络异常')
+    }
+  })
+
+  function onSuccess (json) {
+    console.log(json)
+  }
 
   var curIdx = 0;
   var autoPlay = setInterval(function () {
     curIdx += 1
-    console.log(curIdx)
     if (curIdx === 10) {
       curIdx = 0;
     }
