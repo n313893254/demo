@@ -57,24 +57,33 @@ $(function () {
     }
   })
 
-  $.ajax({
-    url: 'load',
-    dataType: 'json',
-    type: 'get',
-    data: {
-      start: 1
-    },
-    success: function (json) {
-      onSuccess(json)
-    },
-    error: function () {
-      alert('网络异常')
+  $('.item.load').on('click', function (e) {
+    $.ajax({
+      url: 'load',
+      dataType: 'json',
+      type: 'get',
+      data: {
+        start: 1
+      },
+      success: function (json) {
+        onSuccess(json)
+      },
+      error: function () {
+        alert('网络异常')
+      }
+    })
+
+    function onSuccess (json) {
+      var tbody = ''
+      for (var i = 0; i < 10; i++) {
+        tbody += '<a href="' + json[i] + '" data-lightbox="1"><img src="' + json[i] + '"></a>'
+      }
+      tbody += '<p></p>' 
+      $('.pic').html(tbody)
     }
   })
 
-  function onSuccess (json) {
-    console.log(json)
-  }
+
 
   var curIdx = 0;
   var autoPlay = setInterval(function () {
