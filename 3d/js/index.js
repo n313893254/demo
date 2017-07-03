@@ -5,6 +5,12 @@ $(function () {
   var xN = 0, yN = 0;
   var play = null;
 
+  lightbox.option({
+    'fitImagesInViewport': false,
+    'wrapAround': true,
+    'disableScrolling': true
+  })
+
   $(".pic img").each(function (i) {
     $(this).css({
       'transform': "rotateY("+i*deg+"deg) translateZ(300px);"
