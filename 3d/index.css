@@ -6,6 +6,7 @@
 body {
   background-color: #66677c;
   overflow: scroll;
+  min-width: 1000px;
 }
 
 .pic {
@@ -41,4 +42,34 @@ body {
 .lightboxOverlay {
   opacity: 0.5;
   background-color: #fff;
+}
+
+nav {
+  position: fixed;
+  border: 1px solid #000;
+  right: 0;
+  bottom: 0;
+  margin: 20px 20px;
+}
+
+nav .menu.active{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+nav .menu {
+  display: none;
+}
+
+nav .item {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #000;
+  margin: 10px;
+}
+
+nav .item.action {
+  cursor: pointer;
 }

@@ -48,6 +48,16 @@ $(function () {
     }, 30)
   })
 
+  $(".item.action").on('click', function () {
+    $("nav .menu").toggleClass('active')
+    if ($(this).text() != 'X') {
+      $(this).text('X')
+    } else {
+      $(this).text('导航菜单')
+    }
+
+  })
+
   // $('.pic img').on('click', function () {
   //   $(this).toggleClass('max')
   // })
