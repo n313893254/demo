@@ -43,4 +43,18 @@ $(function () {
       })
     }, 30)
   })
+
+  var curIdx = 0;
+  var autoPlay = setInterval(function () {
+    curIdx += 1
+    console.log(curIdx)
+    if (curIdx === 10) {
+      curIdx = 0;
+    }
+    $(".pic img").each(function (i) {
+      $(this).css({
+        'transform': "rotateY("+(curIdx+i)*deg+"deg) translateZ(300px);"
+      })
+    })
+  }, 3000)
 })
