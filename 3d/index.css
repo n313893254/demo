@@ -37,3 +37,7 @@ body {
   border-radius: 600px;
   transform: rotateX(90deg);
 }
+
+.lightboxOverlay {
+  opacity: 0.5;
+}
