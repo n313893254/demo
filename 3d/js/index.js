@@ -58,6 +58,11 @@ $(function () {
   })
 
   $('.item.load').on('click', function (e) {
+    if($(this).data('isLoading')) {
+      return
+    }
+    $(this).data('isLoading', true)
+
     $.ajax({
       url: 'load',
       dataType: 'json',
@@ -69,16 +74,18 @@ $(function () {
         onSuccess(json)
       },
       error: function () {
+        $('.item.load').data('isLoading', false)
         alert('网络异常')
       }
     })
 
     function onSuccess (json) {
+      $('.item.load').data('isLoading', false)
       var tbody = ''
       for (var i = 0; i < 10; i++) {
         tbody += '<a href="' + json[i] + '" data-lightbox="1"><img src="' + json[i] + '"></a>'
       }
-      tbody += '<p></p>' 
+      tbody += '<p></p>'
       $('.pic').html(tbody)
     }
   })
