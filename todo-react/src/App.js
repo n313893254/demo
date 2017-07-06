@@ -15,7 +15,7 @@ class App extends Component {
       newTodo: '',
       todoList: []
     }
-    
+
     let user = getCurrentUser()
     if (user) {
       TodoModel.getByUser(user, (todos) => {
@@ -91,8 +91,10 @@ class App extends Component {
   }
 
   delete (event, todo) {
-    todo.deleted = true
-    this.setState(this.state)
+    TodoModel.destroy(todo.id, () => {
+      todo.deleted = true
+      this.setState(this.state)
+    })
   }
 
   componentDidUpdate () {
