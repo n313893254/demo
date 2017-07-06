@@ -1,20 +1,18 @@
 import React, { Component } from 'react'
 import './TodoInput.css'
 
-export default class TodoInput extends Component {
-  render () {
-    return <input className="TodoInput" type="text" value={this.props.content}
-      onKeyPress={this.submit.bind(this)}
-      onChange={this.changeTitle.bind(this)}/>
+function submit (props, e) {
+  if (e.key === 'Enter') {
+    props.onSubmit(e)
   }
+}
 
-  submit (e) {
-    if (e.key === 'Enter') {
-      this.props.onSubmit(e)
-    }
-  }
+function changeTitle (props, e) {
+  props.onChange(e)
+}
 
-  changeTitle (e) {
-    this.props.onChange(e)
-  }
+export default function (props) {
+  return <input className="TodoInput" type="text" value={props.content}
+    onKeyPress={submit.bind(null, props)}
+    onChange={changeTitle.bind(null, props)}/>
 }
