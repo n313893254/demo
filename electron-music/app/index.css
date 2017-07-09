@@ -77,3 +77,59 @@
   padding: 5px 10px 5px 22px;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
+
+.active-item {
+  background: rgba(0, 0, 0, .1);
+  position: relative;
+}
+
+/*.active::before {
+  content: '';
+  width: 3px;
+  height: 20px;
+  background: #d12323;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}*/
+
+.playing-pad {
+  height: 86px;
+  width: 200px;
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.playing-info {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.song-name {
+  color: #444;
+  width: 80px;
+  font-size: 14px;
+}
+
+.singer {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.right-pad {
+  width: calc(100vw - 200px);
+  padding-left: 10px;
+  background: #fafafa;
+}
+
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 65px;
+  border-top: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.48);
+  line-height: 65px;
+  padding-right: 15px;
+}
