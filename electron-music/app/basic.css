@@ -24,7 +24,7 @@ li {
   list-style-type: none;
 }
 
-input {
+input, textarea {
   outline: none;
   border: none;
 }
