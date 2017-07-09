@@ -35,3 +35,45 @@
   width: 200px;
   border-radius: 50px;
 }
+
+.main {
+  height: calc(100vh - 65px - 60px);
+  overflow: hidden;
+  margin-bottom: -65px;
+}
+
+.main-pad {
+  display: inline-block;
+  height: calc(100vh - 65px - 60px);
+}
+
+.left-pad {
+  padding-top: 5px;
+  width: 200px;
+  border-right: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.items-pad {
+  height: calc(100vh - 65px - 60px - 86px);
+  overflow: hidden;
+}
+
+.scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.list-name {
+  font-size: 12px;
+  padding: 0 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.list-item {
+  color: #444;
+  font-size: 13px;
+  padding: 5px 10px 5px 22px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}

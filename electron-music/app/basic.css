@@ -28,3 +28,15 @@ input {
   outline: none;
   border: none;
 }
+
+.no-select {
+  user-select: none;
+}
+
+.f-left, .f-l {
+  float: left;
+}
+
+.f-right, .f-r {
+  float: right;
+}
