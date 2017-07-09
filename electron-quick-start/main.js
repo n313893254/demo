@@ -17,11 +17,12 @@ function createWindow () {
   mainWindow = new BrowserWindow({width, height})
 
   // and load the index.html of the app.
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
+  // mainWindow.loadURL(url.format({
+  //   pathname: path.join(__dirname, 'index.html'),
+  //   protocol: 'file:',
+  //   slashes: true
+  // }))
+  mainWindow.loadURL('https://n313893254.github.io/demo/resumer/dist/index.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
