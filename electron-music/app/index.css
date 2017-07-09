@@ -1,0 +1,13 @@
+.bar-sec {
+  padding-top: 30px;
+  display: inline-block;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.left-sec {
+  position: relative;
+  width: calc(100vw - 60px);
+}
