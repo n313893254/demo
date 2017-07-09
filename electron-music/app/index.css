@@ -1,3 +1,11 @@
+.header {
+  height: 60px;
+  width: 100vw;
+  background-color: #b52820;
+  z-index: 100;
+  cursor: default;
+}
+
 .bar-sec {
   padding-top: 30px;
   display: inline-block;
