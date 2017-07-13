@@ -4,6 +4,7 @@ import Start from '../components/Start'
 import Exhibit from '../components/Exhibit'
 import Chronological from '../components/Chronological'
 import Painting from '../components/Painting'
+import History from '../components/History'
 
 Vue.use(Router)
 
@@ -28,12 +29,12 @@ export default new Router({
       path: '/Painting',
       name: 'Painting',
       component: Painting
+    },
+    {
+      path: '/History',
+      name: 'History',
+      component: History
     }
-    // {
-    //   path: '/History',
-    //   name: 'History',
-    //   component: History
-    // },
     // {
     //   path: '/Research',
     //   name: 'Research',

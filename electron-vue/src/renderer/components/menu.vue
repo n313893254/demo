@@ -3,7 +3,7 @@
     <router-link class="button" to="/exhibit">展厅</router-link>
     <router-link class="button" to="/Chronological">年表</router-link>
     <router-link class="button" to="/">研究</router-link>
-    <router-link class="button" to="/">史料</router-link>
+    <router-link class="button" to="/history">史料</router-link>
     <router-link class="button" to="/painting">画作</router-link>
     <router-link class="button" to="/">搜索</router-link>
     <router-link class="button" to="/">X</router-link>
