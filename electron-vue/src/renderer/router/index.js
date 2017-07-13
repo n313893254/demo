@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Start from '../components/Start'
 import Exhibit from '../components/Exhibit'
 import Chronological from '../components/Chronological'
+import Painting from '../components/Painting'
 
 Vue.use(Router)
 
@@ -22,12 +23,12 @@ export default new Router({
       path: '/Chronological',
       name: 'Chronological',
       component: Chronological
+    },
+    {
+      path: '/Painting',
+      name: 'Painting',
+      component: Painting
     }
-    // {
-    //   path: '/Painting',
-    //   name: 'Painting',
-    //   component: Painting
-    // },
     // {
     //   path: '/History',
     //   name: 'History',
