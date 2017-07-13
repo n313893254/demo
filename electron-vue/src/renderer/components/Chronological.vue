@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <Menu/>
-    <p>展厅desu</p>
+    <p>年表desu</p>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import Menu from './Menu'
 
 export default {
-  name: 'Exhibit',
+  name: 'Chronological',
   components: { Menu }
 }
 </script>
