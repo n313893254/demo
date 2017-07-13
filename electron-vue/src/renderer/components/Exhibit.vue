@@ -1,9 +1,7 @@
-<template>
-  <div>
-    <div class="page">
-      <Menu/>
-      <p>这是start</p>
-    </div>
+<template lang="html">
+  <div class="">
+    <Menu/>
+    <p>展厅</p>
   </div>
 </template>
 
@@ -11,11 +9,10 @@
 import Menu from './Menu'
 
 export default {
-  name: 'Start',
+  name: 'Exhibit',
   components: { Menu }
 }
 </script>
 
-<style>
-
+<style lang="css">
 </style>
