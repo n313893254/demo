@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <Menu/>
-    <p>研究desu</p>
+    <p>研究desu {{ message }}</p>
   </div>
 </template>
 
@@ -10,7 +10,12 @@ import Menu from './Menu'
 
 export default {
   name: 'Research',
-  components: { Menu }
+  components: { Menu },
+  computed: {
+    message () {
+      return this.$store.state.message
+    }
+  }
 }
 </script>
 

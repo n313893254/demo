@@ -2,7 +2,7 @@
   <div>
     <div class="page">
       <Menu/>
-      <p>这是start</p>
+      <p>这是start {{ message }}</p>
     </div>
   </div>
 </template>
@@ -12,7 +12,12 @@ import Menu from './Menu'
 
 export default {
   name: 'Start',
-  components: { Menu }
+  components: { Menu },
+  computed: {
+    message () {
+      return this.$store.state.message
+    }
+  }
 }
 </script>
 
