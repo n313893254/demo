@@ -2,18 +2,17 @@
   <div>
     <div class="page">
       <p>这是start</p>
+      <Menu/>
     </div>
   </div>
 </template>
 
 <script>
-// import Topbar from './Topbar'
-// import ResumeEditor from './ResumeEditor'
-// import ResumePreview from './ResumePreview'
+import Menu from './Menu'
 
 export default {
-  name: 'Start'
-  // components: { Topbar, ResumeEditor, ResumePreview },
+  name: 'Start',
+  components: { Menu }
 }
 </script>
 
