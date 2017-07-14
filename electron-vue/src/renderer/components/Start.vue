@@ -3,6 +3,7 @@
     <div class="page">
       <MenuBar/>
       <p>这是start {{ message }}</p>
+      <p>{{ this.$route.hash }}</p>
     </div>
   </div>
 </template>

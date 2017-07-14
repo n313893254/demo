@@ -59,7 +59,7 @@ export default new Router({
       component: Poetry
     },
     {
-      path: '/Video',
+      path: '/VideoList/Video',
       name: 'Video',
       component: Video
     },

@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <MenuBar/>
-    <p>展厅desu {{ message }}</p>
+    <p>展厅desu {{ this.$route.path }}</p>
   </div>
 </template>
 

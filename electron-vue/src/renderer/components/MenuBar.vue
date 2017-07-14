@@ -6,7 +6,7 @@
     <router-link class="button" to="/history">史料</router-link>
     <router-link class="button" to="/painting">画作</router-link>
     <router-link class="button" to="/Search">搜索</router-link>
-    <router-link class="button" to="/">X</router-link>
+    <router-link class="button" to="/?user=1">X</router-link>
   </div>
 </template>
 
