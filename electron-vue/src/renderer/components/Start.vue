@@ -2,7 +2,7 @@
   <div>
     <div class="page">
       <MenuBar/>
-      <p>这是start {{ message }}</p>
+      <p>这是start页面</p>
       <p>{{ this.$route.hash }}</p>
     </div>
   </div>
