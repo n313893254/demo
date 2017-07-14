@@ -13,8 +13,7 @@ export default new Vuex.Store({
     paintingTitle: '画作',
     paintingList: [
       {field: '书法'}
-    ],
-    count: 0
+    ]
   },
   mutations: {
     setPaintingList (state, title) {

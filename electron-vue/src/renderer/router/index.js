@@ -15,6 +15,7 @@ import Photo from '../components/Photo'
 import VideoList from '../components/VideoList'
 import ArticleDetail from '../components/ArticleDetail'
 import PaintingDisplay from '../components/PaintingDisplay'
+import PaintingDetail from '../components/PaintingDetail'
 
 Vue.use(Router)
 
@@ -89,6 +90,11 @@ export default new Router({
       path: '/Painting/Display',
       name: 'PaintingDisplay',
       component: PaintingDisplay
+    },
+    {
+      path: '/Painting/Display/Detail',
+      name: 'PaintingDetail',
+      component: PaintingDetail
     }
   ]
 })
