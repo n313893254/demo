@@ -3,7 +3,7 @@
     <MenuBar/>
     <p>诗词列表</p>
     <div class="box">
-      <p>这是一篇诗词</p>
+      <router-link class="button" to="/PoetryList/ArticleDetail">这是一个著作</router-link>
     </div>
   </div>
 </template>

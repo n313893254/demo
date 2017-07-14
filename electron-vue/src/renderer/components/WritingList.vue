@@ -3,7 +3,7 @@
     <MenuBar/>
     <p>个人著作列表</p>
     <div class="box">
-      <p>这是一篇著作</p>
+      <router-link class="button" to="/WritingList/ArticleDetail">这是一个著作</router-link>
     </div>
   </div>
 </template>

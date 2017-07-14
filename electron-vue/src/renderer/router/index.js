@@ -13,6 +13,7 @@ import Video from '../components/Video'
 import Writings from '../components/WritingList'
 import Photo from '../components/Photo'
 import VideoList from '../components/VideoList'
+import ArticleDetail from '../components/ArticleDetail'
 
 Vue.use(Router)
 
@@ -59,7 +60,7 @@ export default new Router({
       component: Poetry
     },
     {
-      path: '/VideoList/Video',
+      path: '/:List/Video',
       name: 'Video',
       component: Video
     },
@@ -77,6 +78,11 @@ export default new Router({
       path: '/Photo',
       name: 'Photo',
       component: Photo
+    },
+    {
+      path: '/:List/ArticleDetail',
+      name: 'ArticleDetail',
+      component: ArticleDetail
     }
   ]
 })
