@@ -9,6 +9,19 @@ export default new Vuex.Store({
   // modules,
   // strict: process.env.NODE_ENV !== 'production'
   state: {
-    message: '共享数据'
+    message: '共享数据',
+    paintingTitle: '画作',
+    paintingList: [
+      {field: '书法'}
+    ],
+    count: 0
+  },
+  mutations: {
+    setPaintingList (state, title) {
+      state.paintingTitle = title
+    },
+    increment (state) {
+      state.count++
+    }
   }
 })
