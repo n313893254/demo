@@ -7,6 +7,10 @@ import Painting from '../components/Painting'
 import History from '../components/History'
 import Research from '../components/Research'
 import Search from '../components/Search'
+import Poetry from '../components/Poetry'
+import Video from '../components/Video'
+import Writings from '../components/Writings'
+import Photo from '../components/Photo'
 
 Vue.use(Router)
 
@@ -46,6 +50,26 @@ export default new Router({
       path: '/Search',
       name: 'Search',
       component: Search
+    },
+    {
+      path: '/Poetry',
+      name: 'Poetry',
+      component: Poetry
+    },
+    {
+      path: '/Video',
+      name: 'Video',
+      component: Video
+    },
+    {
+      path: '/Writings',
+      name: 'Writings',
+      component: Writings
+    },
+    {
+      path: '/Photo',
+      name: 'Photo',
+      components: Photo
     }
   ]
 })
