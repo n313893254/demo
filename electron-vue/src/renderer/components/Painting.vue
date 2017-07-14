@@ -1,7 +1,15 @@
 <template lang="html">
   <div class="">
     <Menu/>
-    <p>画作desu {{ message }}</p>
+    <router-link class="button" to="/exhibit">书法</router-link>
+    <router-link class="button" to="/Chronological">连环画</router-link>
+    <router-link class="button" to="/Research">速写</router-link>
+    <router-link class="button" to="/history">人物</router-link>
+    <router-link class="button" to="/painting">临摹</router-link>
+    <router-link class="button" to="/Search">山水</router-link>
+    <router-link class="button" to="/Search">花鸟</router-link>
+    <router-link class="button" to="/">X</router-link>
+    <p>这是画作列表</p>
   </div>
 </template>
 
