@@ -2,9 +2,9 @@
   <div class="">
     <router-link class="button" to="/exhibit">自动展示</router-link>
     <router-link class="button" to="/Chronological">年表</router-link>
-    <router-link class="button" to="/Research">研究</router-link>
-    <router-link class="button" to="/history">史料</router-link>
     <router-link class="button" to="/painting">画作</router-link>
+    <router-link class="button" to="/history">史料</router-link>
+    <router-link class="button" to="/Research">研究</router-link>
     <router-link class="button" to="/Search">搜索</router-link>
     <router-link class="button" to="/?user=1">X</router-link>
   </div>

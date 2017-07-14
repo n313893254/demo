@@ -5,7 +5,7 @@
     <router-link class="button" to="/Painting">画作</router-link>
     <router-link class="button" to="/exhibit">生活</router-link>
     <button>工作</button>
-    <router-link class="button" to="/exhibit">文章</router-link>
+    <router-link class="button" to="/Chronological/ArticleDetail">文章</router-link>
     <button>展览</button>
   </div>
 </template>
