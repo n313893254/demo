@@ -1,7 +1,13 @@
 <template lang="html">
   <div class="">
     <MenuBar/>
-    <p>搜索desu {{ message }}</p>
+    <p>这是搜索页面</p>
+    <button @click="set('画作')">画作</button>
+    <button @click="set('史料')">史料</button>
+    <button @click="set('研究')">研究</button>
+    <div class="box">
+        <p>这是{{ title }}页面</p>
+    </div>
   </div>
 </template>
 
@@ -12,8 +18,13 @@ export default {
   name: 'Search',
   components: { MenuBar },
   computed: {
-    message () {
-      return this.$store.state.message
+    title () {
+      return this.$store.state.paintingTitle
+    }
+  },
+  methods: {
+    set (value) {
+      return this.$store.commit('setPaintingList', value)
     }
   }
 }
