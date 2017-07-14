@@ -18,4 +18,7 @@
     align-items: center;
     flex-wrap: wrap;
   }
+  .box {
+    border: 1px solid #000;
+  }
 </style>

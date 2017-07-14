@@ -1,9 +1,7 @@
 <template lang="html">
   <div class="">
-    <MenuBar/>
-    <p>播放视频</p>
     <div class="box">
-      <p>播放中</p>
+      <p>这是一篇文章</p>
       <router-link class="button" to="/VideoList">关闭</router-link>
     </div>
   </div>
@@ -11,10 +9,9 @@
 
 <script>
 export default {
-  name: 'Video'
+  name: 'ArticleDetail'
 }
 </script>
 
 <style lang="css">
-
 </style>

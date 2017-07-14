@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    <Menu/>
+    <MenuBar/>
     <p>视频列表</p>
     <div class="video">
       <router-link class="button" to="/Video">这是一个视频</router-link>
@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import Menu from './Menu'
+import MenuBar from './MenuBar'
 
 export default {
   name: 'VideoList',
-  components: { Menu }
+  components: { MenuBar }
 }
 </script>
 

@@ -1,16 +1,16 @@
 <template lang="html">
   <div class="">
-    <Menu/>
+    <MenuBar/>
     <p>照片列表</p>
   </div>
 </template>
 
 <script>
-import Menu from './Menu'
+import MenuBar from './MenuBar'
 
 export default {
   name: 'Photo',
-  components: { Menu }
+  components: { MenuBar }
 }
 </script>
 

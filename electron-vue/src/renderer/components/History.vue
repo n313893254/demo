@@ -1,20 +1,20 @@
 <template lang="html">
   <div class="">
-    <Menu/>
+    <MenuBar/>
     <p>史料desu {{ message }}</p>
-    <router-link class="button" to="/Writings">个人著作列表</router-link>
-    <router-link class="button" to="/Poetry">诗词列表</router-link>
+    <router-link class="button" to="/WritingList">个人著作列表</router-link>
+    <router-link class="button" to="/PoetryList">诗词列表</router-link>
     <router-link class="button" to="/VideoList">视频列表</router-link>
     <router-link class="button" to="/Photo">照片列表</router-link>
   </div>
 </template>
 
 <script>
-import Menu from './Menu'
+import MenuBar from './MenuBar'
 
 export default {
   name: 'History',
-  components: { Menu },
+  components: { MenuBar },
   computed: {
     message () {
       return this.$store.state.message

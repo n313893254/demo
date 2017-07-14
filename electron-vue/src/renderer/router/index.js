@@ -8,9 +8,9 @@ import Painting from '../components/Painting'
 import History from '../components/History'
 import Research from '../components/Research'
 import Search from '../components/Search'
-import Poetry from '../components/Poetry'
+import Poetry from '../components/PoetryList'
 import Video from '../components/Video'
-import Writings from '../components/Writings'
+import Writings from '../components/WritingList'
 import Photo from '../components/Photo'
 import VideoList from '../components/VideoList'
 
@@ -54,8 +54,8 @@ export default new Router({
       component: Search
     },
     {
-      path: '/Poetry',
-      name: 'Poetry',
+      path: '/PoetryList',
+      name: 'PoetryList',
       component: Poetry
     },
     {
@@ -64,19 +64,19 @@ export default new Router({
       component: Video
     },
     {
-      path: '/Writings',
-      name: 'Writings',
+      path: '/VideoList',
+      name: 'VideoList',
+      component: VideoList
+    },
+    {
+      path: '/WritingList',
+      name: 'WritingList',
       component: Writings
     },
     {
       path: '/Photo',
       name: 'Photo',
       component: Photo
-    },
-    {
-      path: '/VideoList',
-      name: 'VideoList',
-      component: VideoList
     }
   ]
 })

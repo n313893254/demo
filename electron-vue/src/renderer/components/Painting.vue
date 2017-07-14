@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    <Menu/>
+    <MenuBar/>
     <button @click="set('书法')">书法</button>
     <button @click="set('连环画')">连环画</button>
     <button @click="set('速写')">速写</button>
@@ -16,11 +16,11 @@
 </template>
 
 <script>
-import Menu from './Menu'
+import MenuBar from './MenuBar'
 
 export default {
   name: 'Painting',
-  components: { Menu },
+  components: { MenuBar },
   computed: {
     count () {
       return this.$store.state.count

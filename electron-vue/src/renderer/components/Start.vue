@@ -1,18 +1,18 @@
 <template>
   <div>
     <div class="page">
-      <Menu/>
+      <MenuBar/>
       <p>这是start {{ message }}</p>
     </div>
   </div>
 </template>
 
 <script>
-import Menu from './Menu'
+import MenuBar from './MenuBar'
 
 export default {
   name: 'Start',
-  components: { Menu },
+  components: { MenuBar },
   computed: {
     message () {
       return this.$store.state.message

@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    <Menu/>
+    <MenuBar/>
     <p>这是年表</p>
     <router-link class="button" to="/Painting">画作</router-link>
     <router-link class="button" to="/exhibit">生活</router-link>
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import Menu from './Menu'
+import MenuBar from './MenuBar'
 
 export default {
   name: 'Chronological',
-  components: { Menu },
+  components: { MenuBar },
   computed: {
     message () {
       return this.$store.state.message
