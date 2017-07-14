@@ -69,7 +69,7 @@ export default new Router({
     {
       path: '/Photo',
       name: 'Photo',
-      components: Photo
+      component: Photo
     }
   ]
 })

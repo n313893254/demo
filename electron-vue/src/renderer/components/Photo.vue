@@ -6,8 +6,11 @@
 </template>
 
 <script>
+import Menu from './Menu'
+
 export default {
-  name: 'photo'
+  name: 'Photo',
+  components: { Menu }
 }
 </script>
 
