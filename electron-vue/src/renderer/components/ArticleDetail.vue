@@ -2,7 +2,7 @@
   <div class="">
     <div class="box">
       <p>这是一篇文章 {{ this.$route.path }}</p>
-      <button type="button" name="button" @click="back()">X</button>
+      <button type="button" name="button" @click="pageBack()">X</button>
     </div>
   </div>
 </template>
@@ -11,7 +11,7 @@
 export default {
   name: 'ArticleDetail',
   methods: {
-    back () {
+    pageBack () {
       this.$router.back()
     }
   }
