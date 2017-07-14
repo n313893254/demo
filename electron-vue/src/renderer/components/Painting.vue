@@ -9,9 +9,10 @@
     <button @click="set('山水')">山水</button>
     <button @click="set('花鸟')">花鸟</button>
     <router-link class="button" to="/">X</router-link>
-    <p>这是{{ title }}列表</p>
-    <p>poi {{ count }}</p>
-    <button type="button" name="button" @click="add">test</button>
+    <div class="box">
+      <router-link class="button" to="/Painting/Display">🚢 poi</router-link>
+      <p>这是{{ title }}图片</p>
+    </div>
   </div>
 </template>
 
@@ -22,9 +23,6 @@ export default {
   name: 'Painting',
   components: { MenuBar },
   computed: {
-    count () {
-      return this.$store.state.count
-    },
     message () {
       return this.$store.state.message
     },
@@ -35,9 +33,6 @@ export default {
   methods: {
     set (value) {
       return this.$store.commit('setPaintingList', value)
-    },
-    add () {
-      this.$store.commit('increment')
     }
   }
 }
