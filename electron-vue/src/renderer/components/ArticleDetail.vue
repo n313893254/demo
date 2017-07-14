@@ -2,14 +2,19 @@
   <div class="">
     <div class="box">
       <p>这是一篇文章 {{ this.$route.path }}</p>
-      <router-link class="button" to="/WritingList">关闭</router-link>
+      <button type="button" name="button" @click="back()">X</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ArticleDetail'
+  name: 'ArticleDetail',
+  methods: {
+    back () {
+      this.$router.back()
+    }
+  }
 }
 </script>
 
