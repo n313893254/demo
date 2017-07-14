@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Start from '../components/Start'
 import Exhibit from '../components/Exhibit'
 import Chronological from '../components/Chronological'
@@ -11,6 +12,7 @@ import Poetry from '../components/Poetry'
 import Video from '../components/Video'
 import Writings from '../components/Writings'
 import Photo from '../components/Photo'
+import VideoList from '../components/VideoList'
 
 Vue.use(Router)
 
@@ -70,6 +72,11 @@ export default new Router({
       path: '/Photo',
       name: 'Photo',
       component: Photo
+    },
+    {
+      path: '/VideoList',
+      name: 'VideoList',
+      component: VideoList
     }
   ]
 })

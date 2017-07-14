@@ -1,17 +1,19 @@
 <template lang="html">
   <div class="">
     <Menu/>
-    <p>播放视频</p>
+    <p>视频列表</p>
     <div class="video">
-      <p>播放中</p>
-      <router-link class="button" to="/VideoList">关闭</router-link>
+      <router-link class="button" to="/Video">这是一个视频</router-link>
     </div>
   </div>
 </template>
 
 <script>
+import Menu from './Menu'
+
 export default {
-  name: 'Video'
+  name: 'VideoList',
+  components: { Menu }
 }
 </script>
 

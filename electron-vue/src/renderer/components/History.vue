@@ -4,7 +4,7 @@
     <p>史料desu {{ message }}</p>
     <router-link class="button" to="/Writings">个人著作列表</router-link>
     <router-link class="button" to="/Poetry">诗词列表</router-link>
-    <router-link class="button" to="/Video">视频列表</router-link>
+    <router-link class="button" to="/VideoList">视频列表</router-link>
     <router-link class="button" to="/Photo">照片列表</router-link>
   </div>
 </template>
