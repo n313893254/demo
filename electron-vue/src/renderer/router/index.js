@@ -116,9 +116,9 @@ router.afterEach(route => {
     y: 1
   }
   router.timer = setInterval(function () {
-    console.log(router._cursorPoint)
+    // console.log(router._cursorPoint)
     router.cursorPoint = Electron.screen.getCursorScreenPoint()
-    console.log(router.cursorPoint)
+    // console.log(router.cursorPoint)
     if (router.cursorPoint.x === router._cursorPoint.x &&
           router.cursorPoint.y === router._cursorPoint.y) {
       router.push({
