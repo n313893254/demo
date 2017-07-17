@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import Electron from 'electron'
+
 import Start from '../components/Start'
 import Exhibit from '../components/Exhibit'
 import Chronological from '../components/Chronological'
@@ -109,8 +111,22 @@ router.beforeEach((to, from, next) => {
 
 // 路由跳转后，开始监听鼠标
 router.afterEach(route => {
+  router._cursorPoint = {
+    x: 1,
+    y: 1
+  }
   router.timer = setInterval(function () {
-    console.log(2)
+    console.log(router._cursorPoint)
+    router.cursorPoint = Electron.screen.getCursorScreenPoint()
+    console.log(router.cursorPoint)
+    if (router.cursorPoint.x === router._cursorPoint.x &&
+          router.cursorPoint.y === router._cursorPoint.y) {
+      router.push({
+        name: 'Start'
+      })
+    }
+    router._cursorPoint.x = router.cursorPoint.x
+    router._cursorPoint.y = router.cursorPoint.y
   }, 10000)
   // console.log('start a ' + router.timer)
 })
