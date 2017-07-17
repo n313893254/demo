@@ -1,14 +1,12 @@
 <template lang="html">
   <div class="menu-wrapper">
     <div class="menu" v-if="seen">
-      <router-link class="button" to="/exhibit">自动展示</router-link>
       <router-link class="button" to="/Chronological">年表</router-link>
       <router-link class="button" to="/painting">画作</router-link>
       <router-link class="button" to="/history">史料</router-link>
       <router-link class="button" to="/Research">研究</router-link>
       <router-link class="button" to="/Search">搜索</router-link>
-      <router-link class="button" to="/?user=1">X</router-link>
-      <button type="button" name="button" @click="closeMenu">❌</button>
+      <button type="button" name="button" @click="closeMenu">返回</button>
     </div>
     <div class="" v-else>
       <button type="button" name="button" @click="openMenu">导航菜单</button>
