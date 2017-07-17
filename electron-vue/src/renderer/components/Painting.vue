@@ -1,14 +1,19 @@
 <template lang="html">
   <div class="">
     <MenuBar/>
-    <button @click="set('书法')">书法</button>
-    <button @click="set('连环画')">连环画</button>
-    <button @click="set('速写')">速写</button>
-    <button @click="set('人物')">人物</button>
-    <button @click="set('临摹')">临摹</button>
-    <button @click="set('山水')">山水</button>
-    <button @click="set('花鸟')">花鸟</button>
-    <router-link class="button" to="/">X</router-link>
+    <div class="menu-wrapper">
+      <div class="menu" v-if="true">
+        <div class="button" @click="set('书法')">书法</div>
+        <div class="button" @click="set('连环画')">连环画</div>
+        <div class="button" @click="set('速写')">速写</div>
+        <div class="button" @click="set('人物')">人物</div>
+        <div class="button" @click="set('临摹')">临摹</div>
+        <div class="button" @click="set('山水')">山水</div>
+        <div class="button" @click="set('花鸟')">花鸟</div>
+        <div class="button">返回</div>
+      </div>
+    </div>
+
     <div class="box">
       <router-link class="button" to="/Painting/Display">🚢 poi</router-link>
       <p>这是{{ title }}图片</p>
@@ -38,5 +43,11 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+.menu-wrapper {
+  position: fixed;
+  left: 5vh;
+  bottom: 5vw;
+  /*margin: 5vh 5vw;*/
+}
 </style>

@@ -6,10 +6,10 @@
       <router-link class="button" to="/history">史料</router-link>
       <router-link class="button" to="/Research">研究</router-link>
       <router-link class="button" to="/Search">搜索</router-link>
-      <button type="button" name="button" @click="closeMenu">返回</button>
+      <div class="button" @click="closeMenu">返回</div>
     </div>
-    <div class="" v-else>
-      <button type="button" name="button" @click="openMenu">导航菜单</button>
+    <div class="menu" v-else>
+      <div class="button" @click="openMenu">导航菜单</div>
     </div>
   </div>
 </template>
@@ -33,29 +33,11 @@ export default {
 }
 </script>
 
-<style lang="css">
-.button {
-  border: 2px solid #000;
-  height: 20px;
-  display: inline-block;
-  border-radius: 3px;
-  text-decoration: none;
-  color: blue;
-  padding: 10px 10px;
-  margin: 10px 10px;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
+<style lang="css" scoped>
 .menu-wrapper {
   position: fixed;
-  right: 0;
-  bottom: 0;
-  margin: 5vh 5vw;
+  right: 5vh;
+  bottom: 5vw;
+  /*margin: 5vh 5vw;*/
 }
 </style>
