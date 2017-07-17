@@ -19,7 +19,8 @@ import PaintingDetail from '../components/PaintingDetail'
 
 Vue.use(Router)
 
-export default new Router({
+// 设置路由
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -98,3 +99,20 @@ export default new Router({
     }
   ]
 })
+
+// 路由跳转前,清除定时器
+router.beforeEach((to, from, next) => {
+  clearInterval(router.timer)
+  // console.log(router.timer)
+  next()
+})
+
+// 路由跳转后，开始监听鼠标
+router.afterEach(route => {
+  router.timer = setInterval(function () {
+    console.log(2)
+  }, 10000)
+  // console.log('start a ' + router.timer)
+})
+
+export default router
