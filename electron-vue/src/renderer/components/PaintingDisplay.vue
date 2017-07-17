@@ -1,3 +1,4 @@
+<!-- 获取img的url进行展示 -->
 <template lang="html">
   <div class="">
     <div class="box">

@@ -13,14 +13,25 @@ export default new Vuex.Store({
     paintingTitle: '画作',
     paintingList: [
       {field: '书法'}
+    ],
+    menuSeen: false,
+    paintings: [
+      {
+        title: '创作《南国水乡》',
+        year: '1941年辛已29岁',
+        img: ''
+      }
     ]
   },
   mutations: {
     setPaintingList (state, title) {
       state.paintingTitle = title
     },
-    increment (state) {
-      state.count++
+    openMenu (state) {
+      state.menuSeen = true
+    },
+    closeMenu (state) {
+      state.menuSeen = false
     }
   }
 })
