@@ -1,7 +1,6 @@
 <template lang="html">
-  <div class="">
-
-    <div class="" v-if="seen">
+  <div class="menu-wrapper">
+    <div class="menu" v-if="seen">
       <router-link class="button" to="/exhibit">自动展示</router-link>
       <router-link class="button" to="/Chronological">年表</router-link>
       <router-link class="button" to="/painting">画作</router-link>
@@ -46,5 +45,19 @@ export default {
   color: blue;
   padding: 10px 10px;
   margin: 10px 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-wrapper {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 5vh 5vw;
 }
 </style>
