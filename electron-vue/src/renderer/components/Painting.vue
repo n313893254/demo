@@ -42,7 +42,7 @@ export default {
       return this.$store.state.leftMenuSeen
     },
     paintings () {
-      return this.$store.state.paintings
+      return this.$store.state.paintings.slice(0, 5)
     }
   },
   methods: {
@@ -69,8 +69,14 @@ export default {
 
 .img  img {
   height: 30vh;
-  width: 20vh;
-  margin: 1vh 1vw;
+  width: 30vh;
+  margin: 1vh 3vw;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.img p {
+  text-align: center;
 }
 
 .title {
