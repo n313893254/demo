@@ -18,9 +18,39 @@ export default new Vuex.Store({
     rightMenuSeen: false,
     paintings: [
       {
-        title: '创作《南国水乡》',
+        title: '山水图',
         year: '1941年辛已29岁',
-        img: ''
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+      },
+      {
+        title: '山水图',
+        year: '1941年辛已29岁',
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+      },
+      {
+        title: '山水图',
+        year: '1941年辛已29岁',
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+      },
+      {
+        title: '山水图',
+        year: '1941年辛已29岁',
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+      },
+      {
+        title: '山水图',
+        year: '1941年辛已29岁',
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+      },
+      {
+        title: '山水图',
+        year: '1941年辛已29岁',
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+      },
+      {
+        title: '山水图',
+        year: '1941年辛已29岁',
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
       }
     ]
   },

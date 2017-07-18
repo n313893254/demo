@@ -20,33 +20,9 @@
       <span> {{ title }} </span>
     </div>
     <div class="img-list">
-      <div class="img">
-        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
-        <p>这是{{ title }}图片</p>
-      </div>
-      <div class="img">
-        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
-        <p>这是{{ title }}图片</p>
-      </div>
-      <div class="img">
-        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
-        <p>这是{{ title }}图片</p>
-      </div>
-      <div class="img">
-        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
-        <p>这是{{ title }}图片</p>
-      </div>
-      <div class="img">
-        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
-        <p>这是{{ title }}图片</p>
-      </div>
-      <div class="img">
-        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
-        <p>这是{{ title }}图片</p>
-      </div>
-      <div class="img">
-        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
-        <p>这是{{ title }}图片</p>
+      <div class="img" v-for="painting in paintings">
+        <router-link to="/Painting/Display"><img :src="painting.imgSrc" alt=""></router-link>
+        <p>这是{{ painting.title }}图片</p>
       </div>
     </div>
   </div>
@@ -64,6 +40,9 @@ export default {
     },
     leftMenuSeen () {
       return this.$store.state.leftMenuSeen
+    },
+    paintings () {
+      return this.$store.state.paintings
     }
   },
   methods: {
