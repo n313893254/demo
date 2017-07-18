@@ -66,17 +66,21 @@ export default {
   bottom: 1vw;
 }
 
-.img  img {
+.img {
   height: 30vh;
   width: 17vw;
-  margin: 1vh 2vw;
+  margin: 4vh 2vw;
+}
+
+.img  img {
+  height: 100%;
+  width: 100%;
   border: 1px solid #000;
   border-radius: 50%;
 }
 
 .img p {
   text-align: center;
-  width: 18vw;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 
