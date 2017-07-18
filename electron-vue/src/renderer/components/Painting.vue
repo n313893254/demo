@@ -16,9 +16,38 @@
         <div class="button" @click="openLeftMenu()">分类菜单</div>
       </div>
     </div>
-    <div class="box">
-      <router-link class="button" to="/Painting/Display">🚢 poi</router-link>
-      <p>这是{{ title }}图片</p>
+    <div class="title">
+      <span> {{ title }} </span>
+    </div>
+    <div class="img-list">
+      <div class="img">
+        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
+        <p>这是{{ title }}图片</p>
+      </div>
+      <div class="img">
+        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
+        <p>这是{{ title }}图片</p>
+      </div>
+      <div class="img">
+        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
+        <p>这是{{ title }}图片</p>
+      </div>
+      <div class="img">
+        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
+        <p>这是{{ title }}图片</p>
+      </div>
+      <div class="img">
+        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
+        <p>这是{{ title }}图片</p>
+      </div>
+      <div class="img">
+        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
+        <p>这是{{ title }}图片</p>
+      </div>
+      <div class="img">
+        <router-link to="/Painting/Display"><img src="http://omph2coqc.bkt.clouddn.com/00357C.png" alt=""></router-link>
+        <p>这是{{ title }}图片</p>
+      </div>
     </div>
   </div>
 </template>
@@ -57,5 +86,23 @@ export default {
   left: 1vh;
   bottom: 1vw;
   /*margin: 5vh 5vw;*/
+}
+
+.img  img {
+  height: 30vh;
+  width: 20vh;
+  margin: 1vh 1vw;
+}
+
+.title {
+  height: 10vh;
+  text-align: center;
+}
+
+.img-list {
+  display: flex;
+  justify-content:flex-start;
+  width: 70vw;
+  flex-wrap: wrap;
 }
 </style>
