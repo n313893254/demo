@@ -14,7 +14,8 @@ export default new Vuex.Store({
     paintingList: [
       {field: '书法'}
     ],
-    menuSeen: false,
+    leftMenuSeen: false,
+    rightMenuSeen: false,
     paintings: [
       {
         title: '创作《南国水乡》',
@@ -27,11 +28,17 @@ export default new Vuex.Store({
     setPaintingList (state, title) {
       state.paintingTitle = title
     },
-    openMenu (state) {
-      state.menuSeen = true
+    openLeftMenu (state) {
+      state.leftMenuSeen = true
     },
-    closeMenu (state) {
-      state.menuSeen = false
+    closeLeftMenu (state) {
+      state.leftMenuSeen = false
+    },
+    openRightMenu (state) {
+      state.rightMenuSeen = true
+    },
+    closeRightMenu (state) {
+      state.rightMenuSeen = false
     }
   }
 })
