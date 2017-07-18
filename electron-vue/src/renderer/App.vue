@@ -14,6 +14,11 @@
 
 <style>
   /* CSS */
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
   #app {
     display: flex;
     justify-content: center;
@@ -25,12 +30,11 @@
   }
   .button {
     border: 2px solid #000;
-    height: 20px;
+    height: 5vh;
     display: inline-block;
     border-radius: 3px;
     text-decoration: none;
     color: blue;
-    padding: 10px 10px;
     margin: 10px 10px;
     cursor: pointer;
   }

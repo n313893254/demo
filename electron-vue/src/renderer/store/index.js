@@ -18,7 +18,7 @@ export default new Vuex.Store({
     rightMenuSeen: false,
     paintings: [
       {
-        title: '山水图',
+        title: '山水图胡卡是复活节萨复活阿瑟费好',
         year: '1941年辛已29岁',
         imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
       },

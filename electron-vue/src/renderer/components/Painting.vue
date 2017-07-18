@@ -42,7 +42,7 @@ export default {
       return this.$store.state.leftMenuSeen
     },
     paintings () {
-      return this.$store.state.paintings.slice(0, 5)
+      return this.$store.state.paintings.slice(0, 6)
     }
   },
   methods: {
@@ -64,29 +64,33 @@ export default {
   position: fixed;
   left: 1vh;
   bottom: 1vw;
-  /*margin: 5vh 5vw;*/
 }
 
 .img  img {
   height: 30vh;
-  width: 30vh;
-  margin: 1vh 3vw;
+  width: 17vw;
+  margin: 1vh 2vw;
   border: 1px solid #000;
   border-radius: 50%;
 }
 
 .img p {
   text-align: center;
+  width: 18vw;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 
 .title {
   height: 10vh;
   text-align: center;
+  margin: 5vh auto;
+  line-height: 10vh;
+  font-size: 5vh;
 }
 
 .img-list {
   display: flex;
-  justify-content:flex-start;
+  justify-content: space-between;
   width: 70vw;
   flex-wrap: wrap;
 }

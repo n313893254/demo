@@ -38,6 +38,5 @@ export default {
   position: fixed;
   right: 1vh;
   bottom: 1vw;
-  /*margin: 5vh 5vw;*/
 }
 </style>
