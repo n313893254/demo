@@ -21,7 +21,7 @@
     </div>
     <div class="img-list">
       <div class="img" v-for="painting in paintings">
-        <router-link to="/Painting/Display"><img :src="painting.imgSrc" alt=""></router-link>
+        <router-link :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}"><img :src="painting.imgSrc" alt=""></router-link>
         <p>{{ painting.title }}</p>
         <p>{{ painting.year }}</p>
       </div>
