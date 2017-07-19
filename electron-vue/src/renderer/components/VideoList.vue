@@ -23,43 +23,67 @@
     </div>
     <p>视频列表</p>
       <div class="mid">
-      	<router-link to="/VideoList/Video">      
+      	<router-link to="/VideoList/Video">
       		<div class="photo">
         	<img src="../assets/src/video.jpg">
         	<p>创作过程</p>
       		</div>
       	</router-link>
-      	<router-link to="/VideoList/Video">      
+      	<router-link to="/VideoList/Video">
       		<div class="photo">
         	<img src="../assets/src/video.jpg">
         	<p>创作过程</p>
       		</div>
       	</router-link>
-      	<router-link to="/VideoList/Video">      
+      	<router-link to="/VideoList/Video">
       		<div class="photo">
         	<img src="../assets/src/video.jpg">
         	<p>创作过程</p>
       		</div>
       	</router-link>
-      	<router-link to="/VideoList/Video">      
+      	<router-link to="/VideoList/Video">
       		<div class="photo">
         	<img src="../assets/src/video.jpg">
         	<p>创作过程</p>
       		</div>
       	</router-link>
-      	<router-link to="/VideoList/Video">      
+      	<router-link to="/VideoList/Video">
       		<div class="photo">
         	<img src="../assets/src/video.jpg">
         	<p>创作过程</p>
       		</div>
       	</router-link>
-      	<router-link to="/VideoList/Video">      
+      	<router-link to="/VideoList/Video">
       		<div class="photo">
         	<img src="../assets/src/video.jpg">
         	<p>创作过程</p>
       		</div>
       	</router-link>
-      	<router-link to="/VideoList/Video">      
+      	<router-link to="/VideoList/Video">
+      		<div class="photo">
+        	<img src="../assets/src/video.jpg">
+        	<p>创作过程</p>
+      		</div>
+      	</router-link>
+      	<router-link to="/VideoList/Video">
+      		<div class="photo">
+        	<img src="../assets/src/video.jpg">
+        	<p>创作过程</p>
+      		</div>
+      	</router-link>
+      	<router-link to="/VideoList/Video">
+      		<div class="photo">
+        	<img src="../assets/src/video.jpg">
+        	<p>创作过程</p>
+      		</div>
+      	</router-link>
+      	<router-link to="/VideoList/Video">
+      		<div class="photo">
+        	<img src="../assets/src/video.jpg">
+        	<p>创作过程</p>
+      		</div>
+      	</router-link>
+      	<router-link to="/VideoList/Video">
       		<div class="photo">
         	<img src="../assets/src/video.jpg">
         	<p>创作过程</p>

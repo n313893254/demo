@@ -71,6 +71,31 @@ export default new Vuex.Store({
         title: '山水图',
         year: '1941年',
         imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+      },
+      {
+        title: '山水图',
+        year: '1941年',
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+      },
+      {
+        title: '山水图',
+        year: '1941年',
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+      },
+      {
+        title: '山水图',
+        year: '1941年',
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+      },
+      {
+        title: '山水图',
+        year: '1941年',
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+      },
+      {
+        title: '山水图',
+        year: '1941年',
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
       }
     ]
   },

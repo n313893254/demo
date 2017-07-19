@@ -46,7 +46,7 @@ export default {
       return this.$store.state.leftMenuSeen
     },
     paintings () {
-      return this.$store.state.paintings.slice(0, 6)
+      return this.$store.state.paintings.slice(0, 12)
     }
   },
   methods: {

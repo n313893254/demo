@@ -55,6 +55,22 @@
         <img src="../assets/src/photo.jpg">
         <p>关山月与朋友合照</p>
       </div>
+      <div class="photo">
+        <img src="../assets/src/photo.jpg">
+        <p>关山月与朋友合照</p>
+      </div>
+      <div class="photo">
+        <img src="../assets/src/photo.jpg">
+        <p>关山月与朋友合照</p>
+      </div>
+      <div class="photo">
+        <img src="../assets/src/photo.jpg">
+        <p>关山月与朋友合照</p>
+      </div>
+      <div class="photo">
+        <img src="../assets/src/photo.jpg">
+        <p>关山月与朋友合照</p>
+      </div>
     </div>
   </div>
 </template>
