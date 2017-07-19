@@ -53,4 +53,9 @@
   .fade-enter, .fade-leave-to {
     opacity: 0;
   }
+  .menu-wrapper-right {
+    position: fixed;
+    right: 1vh;
+    bottom: 1vw;
+  }
 </style>

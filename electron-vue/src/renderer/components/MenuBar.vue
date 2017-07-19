@@ -34,9 +34,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.menu-wrapper-right {
-  position: fixed;
-  right: 1vh;
-  bottom: 1vw;
-}
+
 </style>
