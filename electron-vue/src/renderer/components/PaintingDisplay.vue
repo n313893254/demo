@@ -6,7 +6,10 @@
     </div>
     <div class="menu-wrapper-right">
       <div class="menu">
-        <router-link class="button" to="/Painting/Display/Detail">更多详情</router-link>
+        <router-link class="button"
+          :to="{ path: '/Painting/Display/Detail', query: { src: this.$route.query.src }}">
+          更多详情
+        </router-link>
         <div class="button" @click="pageBack()">返回</div>
       </div>
     </div>
