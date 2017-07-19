@@ -22,7 +22,8 @@
     <div class="img-list">
       <div class="img" v-for="painting in paintings">
         <router-link to="/Painting/Display"><img :src="painting.imgSrc" alt=""></router-link>
-        <p>这是{{ painting.title }}图片</p>
+        <p>{{ painting.title }}</p>
+        <p>{{ painting.year }}</p>
       </div>
     </div>
   </div>
@@ -69,7 +70,7 @@ export default {
 .img {
   height: 30vh;
   width: 17vw;
-  margin: 4vh 2vw;
+  margin: 5vh 2vw;
 }
 
 .img  img {
