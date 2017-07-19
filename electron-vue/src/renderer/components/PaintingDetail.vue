@@ -3,10 +3,15 @@
     <div class="img">
       <img :class="[isHeight ? 'height' : 'width']" :src="this.$route.query.src" alt="">
     </div>
-    <div class="box">
-      <p>这是画作详情页</p>
-      <router-link class="button" to="/Painting/ArticleDetail">这是一篇文章</router-link>
-      <button type="button" name="button" @click="pageBack()">X</button>
+    <div class="detail">
+      <div>画作标题简介</div>
+      <span>播放介绍音频</span>
+      <div class="article-list">
+        <p>画作相关文章: </p>
+        <router-link class="button" to="/Painting/ArticleDetail">文章1</router-link>
+        <router-link class="button" to="/Painting/ArticleDetail">文章2</router-link>
+        <router-link class="button" to="/Painting/ArticleDetail">文章3</router-link>
+      </div>
     </div>
     <div class="menu-wrapper-right">
       <div class="menu">
@@ -46,10 +51,23 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.page {
+  display: flex;
+}
 .page img.height {
   height: 100vh;
 }
 .page img.width {
   width: 80vw;
+}
+.detail {
+  border: 3px solid #000;
+  width: 20vw;
+  height: 100vh;
+}
+.article-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 </style>
