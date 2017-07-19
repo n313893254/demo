@@ -16,6 +16,10 @@ export default new Vuex.Store({
     ],
     leftMenuSeen: false,
     rightMenuSeen: false,
+
+    // 用于PaintingDisplay的宽高自适应
+    isHeight: true,
+
     paintings: [
       {
         title: '10个字的长度山水图胡卡是复活节萨复活阿瑟费好',
@@ -25,12 +29,12 @@ export default new Vuex.Store({
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/thumb-1920-736033.jpg'
       },
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'http://omph2coqc.bkt.clouddn.com/61990654_p0%20%281%29.jpg'
       },
       {
         title: '山水图',
@@ -69,6 +73,13 @@ export default new Vuex.Store({
     },
     closeRightMenu (state) {
       state.rightMenuSeen = false
+    },
+    // 用于PaintingDisplay的宽高自适应
+    setHeight (state) {
+      state.isHeight = true
+    },
+    setWidth (state) {
+      state.isHeight = false
     }
   }
 })

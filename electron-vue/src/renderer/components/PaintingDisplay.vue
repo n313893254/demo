@@ -1,10 +1,8 @@
 <!-- 获取img的url进行展示 -->
 <template lang="html">
   <div class="">
-    <div class="box">
-      <p>这是画作全屏展示页</p>
-      <img :src="this.$route.query.src" alt="">
-      <button type="button" name="button" @click="pageBack()">X</button>
+    <div class="page">
+      <img :class="[isHeight ? 'height' : 'width']" :src="this.$route.query.src" alt="">
     </div>
     <div class="menu-wrapper-right">
       <div class="menu">
@@ -18,6 +16,20 @@
 <script>
 export default {
   name: 'PaintingDisplay',
+  computed: {
+    isHeight () {
+      return this.$store.state.isHeight
+    }
+  },
+  created: function () {
+    let img = new Image()
+    img.src = this.$route.query.src
+    if (img.height > img.width) {
+      this.$store.commit('setHeight')
+    } else {
+      this.$store.commit('setWidth')
+    }
+  },
   methods: {
     pageBack () {
       this.$router.back()
@@ -26,5 +38,12 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+.page img.height {
+  height: 100vh;
+}
+.page img.width {
+  width: 100vw;
+}
+
 </style>
