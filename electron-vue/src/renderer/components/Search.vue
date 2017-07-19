@@ -33,8 +33,20 @@
       <div @click="set('研究')">研究</div>
     </div>
     <div class="panel">
-      <div class="content">
-        <p>这是{{ title }}页面</p>
+      <div class="content" v-if="title === '画作'">
+        <div class="img-list">
+          <div class="img" v-for="painting in paintings">
+            <router-link :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}"><img :src="painting.imgSrc" alt=""></router-link>
+            <p>{{ painting.title }}</p>
+            <p>{{ painting.year }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="content" v-else-if="title === '史料'">
+        <p>这是史料页面</p>
+      </div>
+      <div class="content" v-else>
+        <p>内容</p>
       </div>
     </div>
   </div>
@@ -49,6 +61,9 @@ export default {
   computed: {
     title () {
       return this.$store.state.searchTitle
+    },
+    paintings () {
+      return this.$store.state.paintings.slice(0, 6)
     }
   },
   methods: {
@@ -80,9 +95,36 @@ export default {
   height: 79vh;
   margin: 0 1.4vw;
 }
-.panel .content {
-  border: 1px solid red;
-  width: 95%;
+.img {
+  height: 15vh;
+  width: 9vw;
+  margin: 5vh 2vw;
+}
+
+.img  img {
   height: 100%;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.img p {
+  text-align: center;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+.title {
+  height: 10vh;
+  text-align: center;
+  margin: 5vh auto;
+  line-height: 10vh;
+  font-size: 5vh;
+}
+
+.img-list {
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+  flex-wrap: wrap;
 }
 </style>
