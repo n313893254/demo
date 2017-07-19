@@ -78,6 +78,9 @@ export default new Vuex.Store({
     setPaintingList (state, title) {
       state.paintingTitle = title
     },
+    setPhotoList (state, title) {
+      state.photoTitle = title
+    },
     openLeftMenu (state) {
       state.leftMenuSeen = true
     },

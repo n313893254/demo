@@ -1,19 +1,20 @@
+
 <template lang="html">
   <div class="">
     <MenuBar/>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
-        <div  @click="set('视频')">
-        	<router-link class="button" to="/VideoList">视频</router-link>
+        <div  @click="set('30-40s 30年-40年')">
+        	<router-link class="button" to="/ResearchList">30-40s 30年-40年</router-link>
         </div>
-        <div  @click="set('照片')">
-        	<router-link class="button" to="/Photo">照片</router-link>
+        <div  @click="set('50-70s 50年-70年')">
+        	<router-link class="button" to="/ResearchList">50-70s 50年-70年</router-link>
         </div>
-        <div  @click="set('诗词')">
-        	<router-link class="button" to="/PoetryList">诗词</router-link>
+        <div  @click="set('80-90s 80年-90年')">
+        	<router-link class="button" to="/ResearchList">80-90s 80年-90年</router-link>
         </div>
-        <div  @click="set('个人著作')">
-        	<router-link class="button" to="/WritingList">个人著作</router-link>
+        <div  @click="set('20th 2000年以后')">
+        	<router-link class="button" to="/ResearchList">20th 2000年以后</router-link>
         </div>
         <div class="button" @click="closeLeftMenu()">返回</div>
       </div>
@@ -25,25 +26,25 @@
       <div class="mid">
     	<div class="top">
     	  <div class="article">
-    	  	《关山月临摹敦煌壁画》自序<br>
-           作者：XXX<br>
-           时间：1988年12月<br>
-           <p>翰墨轩主人许礼平先生要编辑出版我早年所临的敦煌壁画，
-           意在为研究书史者提供资料。这批临画，经历了几许沧桑，
-           今能编印问世，值得高兴。</p>
+    	  	<p>0世纪的中国，走过了一个由战乱到和平、由殖民到独立、由衰落到强盛、
+    	  		 由屈辱到尊严的历程，在这个跌宕起伏的背景中，
+    	  		 中国古老的文化又是怎样地延 续和书写着民族不屈的历史!
+    	  		 恰如那古丝绸之路上的敦煌寂然地执著、无声地见 证那些来了又退去
+    	  		 、那些失了又复得的故事，见证《开国大典》的庄严和东西方 
+    	  		 文化论争中传统文化的博大与力量。</p>
     	  </div>
     	</div>
       <div class="article_title">
       <div class="container">
         <ul class="time-horizontal">
-            <li><b></b>诗篇1</li>
-            <li><b></b>诗篇2</li>
-            <li><b></b>诗篇3</li>
-            <li><b></b><router-link  to="/WritingList/ArticleDetail">诗篇4</router-link></li>
-            <li><b></b>诗篇5</li>
-            <li><b></b>诗篇6</li>
-            <li><b></b>诗篇7</li>
-            <li><b></b>诗篇8</li>
+            <li><b></b>无声的庄严</li>
+            <li><b></b>艺术的力量</li>
+            <li><b></b>返本求真</li>
+            <li><b></b><router-link  to="/WritingList/ArticleDetail">无声的庄严</router-link></li>
+            <li><b></b>艺术的力量</li>
+            <li><b></b>返本求真</li>
+            <li><b></b>艺术的力量</li>
+            <li><b></b>返本求真</li>
         </ul>
     </div>
       </div>

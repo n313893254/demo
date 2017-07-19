@@ -18,6 +18,7 @@ import VideoList from '../components/VideoList'
 import ArticleDetail from '../components/ArticleDetail'
 import PaintingDisplay from '../components/PaintingDisplay'
 import PaintingDetail from '../components/PaintingDetail'
+import ResearchList from '../components/ResearchList'
 
 Vue.use(Router)
 
@@ -58,6 +59,11 @@ const router = new Router({
       path: '/Search',
       name: 'Search',
       component: Search
+    },
+    {
+      path: '/ResearchList',
+      name: 'ResearchList',
+      component: ResearchList
     },
     {
       path: '/PoetryList',
