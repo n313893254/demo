@@ -3,10 +3,10 @@
     <MenuBar/>
     <p>展厅desu {{ this.$route.path }}</p>
     <div class="pic">
-      <div class=""  v-for="painting in paintings">
+      <div class=""  v-for="(painting, index) in paintings">
         <router-link
           :to="{ path: '/Painting/Display',query: { src: painting.imgSrc }}">
-          <img :src="painting.imgSrc" alt="">
+          <img :src="painting.imgSrc" alt="" :style="{ color: 'red' }">
         </router-link>
       </div>
     </div>
