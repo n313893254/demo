@@ -33,7 +33,9 @@
       <div @click="set('研究')">研究</div>
     </div>
     <div class="panel">
+      <div class="content">
         <p>这是{{ title }}页面</p>
+      </div>
     </div>
   </div>
 </template>
@@ -46,12 +48,12 @@ export default {
   components: { MenuBar },
   computed: {
     title () {
-      return this.$store.state.paintingTitle
+      return this.$store.state.searchTitle
     }
   },
   methods: {
     set (value) {
-      return this.$store.commit('setPaintingList', value)
+      return this.$store.commit('setSearchList', value)
     }
   }
 }
@@ -77,5 +79,10 @@ export default {
   border: 1px solid #000;
   height: 79vh;
   margin: 0 1.4vw;
+}
+.panel .content {
+  border: 1px solid red;
+  width: 95%;
+  height: 100%;
 }
 </style>

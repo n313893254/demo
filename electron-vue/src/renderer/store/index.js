@@ -11,6 +11,7 @@ export default new Vuex.Store({
   state: {
     message: '共享数据',
     paintingTitle: '画作',
+    searchTitle: '画作',
     paintingList: [
       {field: '书法'}
     ],
@@ -80,6 +81,9 @@ export default new Vuex.Store({
     },
     setWidth (state) {
       state.isHeight = false
+    },
+    setSearchList (state, title) {
+      state.searchTitle = title
     }
   }
 })
