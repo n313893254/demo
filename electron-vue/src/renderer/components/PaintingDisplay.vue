@@ -49,7 +49,6 @@ export default {
     }
 
     this.$store.commit('setMenuBarSeen', false)
-    this.$store.commit('detailShow', false)
   },
   methods: {
     pageBack () {
