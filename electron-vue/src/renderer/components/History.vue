@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="">
-    <MenuBar/>
     <p>史料 {{ this.$route.path }}</p>
     <div class="menu-wrapper-left">
     <div class="menu">
@@ -14,15 +13,15 @@
 </template>
 
 <script>
-import MenuBar from './MenuBar'
-
 export default {
   name: 'History',
-  components: { MenuBar },
   computed: {
     message () {
       return this.$store.state.message
     }
+  },
+  created: function () {
+    this.$store.commit('setMenuBarSeen', true)
   }
 }
 </script>

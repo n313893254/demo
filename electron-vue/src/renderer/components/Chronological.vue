@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="">
-    <MenuBar/>
     <p>这是年表</p>
     <router-link class="button" to="/Painting">画作</router-link>
     <router-link class="button" to="/exhibit">生活</router-link>
@@ -11,15 +10,15 @@
 </template>
 
 <script>
-import MenuBar from './MenuBar'
-
 export default {
   name: 'Chronological',
-  components: { MenuBar },
   computed: {
     message () {
       return this.$store.state.message
     }
+  },
+  created: function () {
+    this.$store.commit('setMenuBarSeen', true)
   }
 }
 </script>

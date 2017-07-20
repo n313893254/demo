@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="">
-    <MenuBar/>
     <p>展厅desu {{ this.$route.path }}</p>
     <div class="pic">
       <div class=""  v-for="(painting, index) in paintings">
@@ -14,11 +13,8 @@
 </template>
 
 <script>
-import MenuBar from './MenuBar'
-
 export default {
   name: 'Exhibit',
-  components: { MenuBar },
   computed: {
     message () {
       return this.$store.state.message
@@ -26,6 +22,9 @@ export default {
     paintings () {
       return this.$store.state.paintings.slice(0, 10)
     }
+  },
+  created: function () {
+    this.$store.commit('setMenuBarSeen', true)
   }
 }
 </script>

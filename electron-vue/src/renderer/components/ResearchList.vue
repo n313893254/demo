@@ -1,7 +1,6 @@
 
 <template lang="html">
   <div class="">
-    <MenuBar/>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('30-40s 30年-40年')">
@@ -30,7 +29,7 @@
     	  		 由屈辱到尊严的历程，在这个跌宕起伏的背景中，
     	  		 中国古老的文化又是怎样地延 续和书写着民族不屈的历史!
     	  		 恰如那古丝绸之路上的敦煌寂然地执著、无声地见 证那些来了又退去
-    	  		 、那些失了又复得的故事，见证《开国大典》的庄严和东西方 
+    	  		 、那些失了又复得的故事，见证《开国大典》的庄严和东西方
     	  		 文化论争中传统文化的博大与力量。</p>
     	  </div>
     	</div>
@@ -53,11 +52,8 @@
 </template>
 
 <script>
-import MenuBar from './MenuBar'
-
 export default {
   name: 'Photo',
-  components: { MenuBar },
   computed: {
     title () {
       return this.$store.state.photoTitle
@@ -79,6 +75,9 @@ export default {
     closeLeftMenu () {
       return this.$store.commit('closeLeftMenu')
     }
+  },
+  created: function () {
+    this.$store.commit('setMenuBarSeen', true)
   }
 }
 </script>
@@ -120,7 +119,7 @@ export default {
   padding: 0px;
   margin: 0px;
 }
-    
+
 .time-horizontal li {
   float: left;
   position: relative;
@@ -128,7 +127,7 @@ export default {
   width: 12.5%;
   padding-top: 10px;
 }
-    
+
 .time-horizontal li b:before {
   content: '';
   position: absolute;

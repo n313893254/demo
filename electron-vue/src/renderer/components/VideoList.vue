@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="">
-    <MenuBar/>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('视频')">
@@ -89,7 +88,7 @@
         	<p>创作过程</p>
       		</div>
       	</router-link>
-      	<router-link to="/VideoList/Video">      
+      	<router-link to="/VideoList/Video">
       		<div class="photo">
         	<img src="../assets/src/video.jpg">
         	<p>创作过程</p>
@@ -101,11 +100,8 @@
 </template>
 
 <script>
-import MenuBar from './MenuBar'
-
 export default {
   name: 'Photo',
-  components: { MenuBar },
   computed: {
     title () {
       return this.$store.state.photoTitle
@@ -127,6 +123,9 @@ export default {
     closeLeftMenu () {
       return this.$store.commit('closeLeftMenu')
     }
+  },
+  created: function () {
+    this.$store.commit('setMenuBarSeen', true)
   }
 }
 </script>

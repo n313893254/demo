@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="">
-    <MenuBar/>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div class="button" @click="set('书法')">书法</div>
@@ -33,11 +32,8 @@
 </template>
 
 <script>
-import MenuBar from './MenuBar'
-
 export default {
   name: 'Painting',
-  components: { MenuBar },
   computed: {
     title () {
       return this.$store.state.paintingTitle
@@ -59,6 +55,9 @@ export default {
     closeLeftMenu () {
       return this.$store.commit('closeLeftMenu')
     }
+  },
+  created: function () {
+    this.$store.commit('setMenuBarSeen', true)
   }
 }
 </script>

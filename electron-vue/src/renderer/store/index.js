@@ -15,8 +15,10 @@ export default new Vuex.Store({
     paintingList: [
       {field: '书法'}
     ],
+
     leftMenuSeen: false,
     rightMenuSeen: false,
+    menuBarSeen: false,
 
     // 用于PaintingDisplay的宽高自适应
     isHeight: true,
@@ -127,6 +129,10 @@ export default new Vuex.Store({
     },
     setSearchList (state, title) {
       state.searchTitle = title
+    },
+
+    setMenuBarSeen (state, value) {
+      state.menuBarSeen = value
     }
   }
 })
