@@ -33,7 +33,7 @@ export default {
       this.$store.commit('setWidth')
     }
 
-    this.$store.commit('setMenuBarSeen', true)
+    this.$store.commit('setMenuBarSeen', false)
   },
   methods: {
     pageBack () {
