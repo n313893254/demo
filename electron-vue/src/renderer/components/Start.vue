@@ -1,9 +1,7 @@
 <template>
   <div class="page">
-    <div class="logo">关&nbsp;&nbsp;山&nbsp;&nbsp;月</div>
-		<div class="konw"><p>农历九月十六日。生于广东阳江县埠场镇那蓬乡果园村，乳名应新。
-		兄弟姐妹八人，排行第二。父亲关籍农为小学教师，擅画梅兰菊竹。农历九月十六日。生于广东阳江县埠场镇那蓬乡果园村，乳名应新。兄弟姐妹八人，排行第二。
-		父亲关籍农为小学教师，擅画梅兰菊竹。</p></div>
+    <div class="logo"><img src="../assets/src/gsylogo.png"></div>
+		<div class="konw"><p>关山月知识库，传承国画荟萃</p></div>
   </div>
 </template>
 
@@ -28,18 +26,17 @@ export default {
 	height: 100vh;
 }
 .logo {
-	margin-left: 41.5%;
-	margin-top: 17%;
-	font-family: "宋体";
-	font-size: 1.8em;
-	color: yellow;
+	width: 100vw;
+	height: 50vh;
+	margin-left: 20vw;
+	margin-top: 5vh;
 }
 .konw {
-	margin-left: 32%;
-	margin-right: 27.5%;
-	margin-top: 1%;
+	margin-left: 16vw;
+	margin-right: 16vw;
+	margin-top: 8vh;
 	font-family: "宋体";
-	font-size: 1.4em;
+	font-size: 5vw;
 	color: #FFFFFF;
 }
 </style>
