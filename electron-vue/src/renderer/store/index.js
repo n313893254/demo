@@ -23,6 +23,8 @@ export default new Vuex.Store({
     // 用于PaintingDisplay的宽高自适应
     isHeight: true,
 
+    detailShow: false,
+
     paintings: [
       {
         title: '10个字的长度山水图胡卡是复活节萨复活阿瑟费好',
@@ -133,6 +135,10 @@ export default new Vuex.Store({
 
     setMenuBarSeen (state, value) {
       state.menuBarSeen = value
+    },
+
+    detailShow (state, value) {
+      state.detailShow = value
     }
   }
 })
