@@ -71,7 +71,7 @@ export default {
 }
 .page .img.height {
   display: flex;
-  width: 80vw;
+  width: 100vw;
   justify-content: center;
 }
 .page img.height {
