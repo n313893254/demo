@@ -1,7 +1,7 @@
 <!-- 获取img的url进行展示 -->
 <template lang="html">
   <div class="page">
-    <div class="img">
+    <div class="img" :class="[isHeight ? 'height' : 'width']">
       <img :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }"
         :src="this.$route.query.src" alt="">
     </div>
@@ -16,8 +16,12 @@
       </div>
     </div>
     <div class="menu-wrapper-right">
-      <div class="menu">
-        <div class="button" @click="detail()">更多详情</div>
+      <div class="menu" v-if="detailShow">
+        <div class="button" @click="detail(false)">关闭</div>
+        <div class="button" @click="pageBack()">返回</div>
+      </div>
+      <div class="menu" v-else>
+        <div class="button" @click="detail(true)">更多详情</div>
         <div class="button" @click="pageBack()">返回</div>
       </div>
     </div>
@@ -51,8 +55,8 @@ export default {
     pageBack () {
       this.$router.back()
     },
-    detail () {
-      this.$store.commit('detailShow', true)
+    detail (value) {
+      this.$store.commit('detailShow', value)
     }
   }
 }
@@ -62,9 +66,10 @@ export default {
 .page {
   display: flex;
   width: 100vw;
+  height: 100vh;
   justify-content: space-between;
 }
-.page .img {
+.page .img.height {
   display: flex;
   width: 80vw;
   justify-content: center;
