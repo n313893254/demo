@@ -22,54 +22,68 @@
     </div>
     <p>照片列表</p>
     <div class="mid">
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
-      <div class="photo">
-        <img src="../assets/src/photo.jpg">
-        <p>关山月与朋友合照</p>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
       </div>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
+      </div>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
+      </div>
+      <div class="photomodel">
+       <div class="photo"><img src="../assets/src/photo.jpg"></div>
+       <div class="biaoti"><p>40年代，关山月夫妇（左二，左三）、七...</p></div>
+      </div>
+    </div>
+    </div>
     </div>
   </div>
 </template>
@@ -107,7 +121,7 @@ export default {
 
 <style lang="css" scoped>
 .mid{
-	width: 83vw;
+	width: 90vw;
 	height: 90vh;
 }
 .menu-wrapper-left {
@@ -115,15 +129,39 @@ export default {
   left: 1vh;
   bottom: 1vw;
 }
-.photo{
-	width: 15vw;
-	height: 35vh;
+.photomodel{
+	width: 18vw;
+	height: 28vh;
+	margin-top: 6vh;
 	float: left;
-	margin: 3%;
-	margin-top: 2.5%;
+}
+.photo{
+	width: 16vw;
+	height: 16vh;
+	margin: 1vw;
+	border-radius: 15px;
+	background-color: #ffffff;
 }
 img{
 	width: 15vw;
-	height: 25vh;
+	height: 15vh;
+	margin-left: 0.5vw ;
+	margin-top: 0.5vh;
+}
+.biaoti{
+	width: 15vw;
+	height:8.5vh;
+	margin: 1.5vw;
+	background-color: #5B493F;
+	background-size: contain;
+	background-image: url(../assets/src/biaoti.jpg);
+	background-repeat: no-repeat;
+	background-position: 100% ,100%;
+}
+p{
+	color: #FBFC7D;
+	text-align: center;
+	font-size: 1vw;
+	padding-top: 1.5vh;
 }
 </style>

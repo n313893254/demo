@@ -2,6 +2,7 @@
   <div class="page">
     <MenuBar/>
     <div class="searchBar">
+      <input type="text"  class="search" placeholder="搜索你喜欢的作品">
       <label for="">年份</label>
       <select class="" name="">
         <option value="1993">1990</option>
@@ -78,11 +79,22 @@ export default {
 .page {
   width: 100%;
 }
-.searchBar select {
+.searchBar  {
   margin: 5vh 5vw 5vh 1vw;
+  border-radius: 2%;
 }
-.searchBar label {
-  margin-left: 5vw;
+.search{
+  font-size:17x;
+  font-weight:bold;
+  color:white;
+  top:102vh;
+  left:10vw;
+  width:45vw;
+  height: 5vh;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  -khtml-border-radius: 11px;
+  border-radius: 11px; 
 }
 .tab div {
   border: 1px solid #000;
@@ -105,7 +117,6 @@ export default {
   height: 100%;
   width: 100%;
   border: 1px solid #000;
-  border-radius: 50%;
 }
 
 .img p {

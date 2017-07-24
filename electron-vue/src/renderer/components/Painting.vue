@@ -24,8 +24,10 @@
           :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}">
           <img :src="painting.imgSrc" alt="">
         </router-link>
+        <div class="biaoti">
         <p>{{ painting.title }}</p>
         <p>{{ painting.year }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -71,22 +73,33 @@ export default {
 
 .img {
   height: 30vh;
-  width: 17vw;
-  margin: 5vh 2vw;
+  width: 16vw;
+  margin: 8vh 0;
 }
 
 .img  img {
   height: 100%;
   width: 100%;
   border: 1px solid #000;
-  border-radius: 50%;
 }
 
 .img p {
-  text-align: center;
-  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  color: #FBFC7D;
+	text-align: center;
+	font-size: 1vw;
+	padding-top: 1.5vh;
 }
 
+.biaoti{
+	width: 15vw;
+	height:8.5vh;
+	margin: 1.5vw;
+	background-color: #063E01;
+	background-size: contain;
+	background-image: url(../assets/src/painting_biaoti.jpg);
+	background-repeat: no-repeat;
+	background-position: 100% ,100%;
+}
 .title {
   height: 10vh;
   text-align: center;

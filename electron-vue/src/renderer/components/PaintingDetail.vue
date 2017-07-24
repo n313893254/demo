@@ -8,9 +8,23 @@
       <span>播放介绍音频</span>
       <div class="article-list">
         <p>画作相关文章: </p>
-        <router-link class="button" to="/Painting/ArticleDetail">文章1</router-link>
-        <router-link class="button" to="/Painting/ArticleDetail">文章2</router-link>
-        <router-link class="button" to="/Painting/ArticleDetail">文章3</router-link>
+        <div class="logo1">
+        	<img class="logo_img" src="../assets/src/logo.jpg">
+        </div>
+        <div class="neirong">
+        	<h2>堵海工地速写之一</h2>
+        	<br>
+        	<p>尺寸：31.5cm x 43cm</p><br>
+        	<p>质材：纸本设色</p><br>
+        	<p>收藏：岭南画派纪念馆藏</p><br>
+        	<p>款帐：</p><br>
+        	<p>印章：关山月（朱文）</p><br>
+        </div>
+        <div class="wenzhang">
+        	<router-link class="wen_neirong" to="/Painting/ArticleDetail">》工地艰苦生活有感</router-link><br>
+          <router-link class="wen_neirong"  to="/Painting/ArticleDetail">》研究速写之画作速写</router-link><br>
+          <router-link class="wen_neirong"  to="/Painting/ArticleDetail">》关山月相关研究文章</router-link>
+        </div>
       </div>
     </div>
     <div class="menu-wrapper-right">
@@ -65,11 +79,29 @@ export default {
 .detail {
   border: 3px solid #000;
   width: 20vw;
+  background-color: #000000;
   height: 100vh;
 }
 .article-list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+.logo_img{
+	margin-left: 5vw;
+}
+.neirong{
+	color: #FBFC7D;
+	font-size: 1.0vw;
+	margin-left: 3vw;
+}
+.wenzhang{
+	margin-top: 5vh;
+	margin-left: 5vw;
+}
+.wen_neirong{
+	color: #FBFC7D;
+	font-size: 1.0vw;
+	text-decoration: none;
 }
 </style>

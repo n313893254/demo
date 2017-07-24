@@ -21,22 +21,28 @@ export default {
 
 <style scoped>
 .page {
-	background-color: #000000;
+	background-color: #063E01;
 	width: 100vw;
 	height: 100vh;
 }
 .logo {
 	width: 100vw;
 	height: 50vh;
-	margin-left: 20vw;
+	float: left;
+	margin-left: 15vw;
 	margin-top: 5vh;
 }
+img{
+	width: 70vw;
+	height: 50vh;
+}
 .konw {
-	margin-left: 16vw;
-	margin-right: 16vw;
-	margin-top: 8vh;
+	margin-left: 8vw;
+	margin-right: 10vw;
+	margin-top: 5vh;
+	float: left;
 	font-family: "宋体";
 	font-size: 5vw;
-	color: #FFFFFF;
+	color: #FBFC7D;
 }
 </style>
