@@ -46,10 +46,17 @@ app.on('activate', () => {
   }
 })
 
+<<<<<<< HEAD
 // var sqlite3 = require('sqlite3').verbose()
 // var db = new sqlite3.Database(':memory')
 
 // db.close()
+=======
+// var sqlite3 = require('sqlite3').verbose()
+// var db = new sqlite3.Database(':memory')
+
+// db.close()
+>>>>>>> d7dc043997d637ac38f5721374e2c51a48c3be52
 
 /**
  * Auto Updater
