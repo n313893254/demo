@@ -1,18 +1,24 @@
 <template lang="html">
-  <div class="">
+  <div class="Box">
+  	<div class="nav">
+  		<div class="small_logo"><img src="../assets/src/logoe4_06.png"></div>
+  	  <div class="yemei_title">知识库》史料》个人著作</div>
+  	  <div class="gongsi">伊世易技术支持</div>
+
+  	</div>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
-        <div class="button" @click="set('书法')">书法</div>
-        <div class="button" @click="set('连环画')">连环画</div>
-        <div class="button" @click="set('速写')">速写</div>
-        <div class="button" @click="set('人物')">人物</div>
-        <div class="button" @click="set('临摹')">临摹</div>
-        <div class="button" @click="set('山水')">山水</div>
-        <div class="button" @click="set('花鸟')">花鸟</div>
-        <div class="button" @click="closeLeftMenu()">返回</div>
+        <div class="button" @click="set('书法')"><img src="../assets/src/pic_03.png"></div>
+        <div class="button" @click="set('连环画')"><img src="../assets/src/pic_06.png"></div>
+        <div class="button" @click="set('速写')"><img src="../assets/src/pic_08.png"></div>
+        <div class="button" @click="set('人物')"><img src="../assets/src/pic_10.png"></div>
+        <div class="button" @click="set('临摹')"><img src="../assets/src/pic_12.png"></div>
+        <div class="button" @click="set('山水')"><img src="../assets/src/pic_14.png"></div>
+        <div class="button" @click="set('花鸟')"><img src="../assets/src/pic_16.png"></div>
+        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/Details_14.png"></div>
       </div>
       <div class="menu" v-else>
-        <div class="button" @click="openLeftMenu()">分类菜单</div>
+        <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>
       </div>
     </div>
     <div class="title">
@@ -70,7 +76,6 @@ export default {
   left: 1vh;
   bottom: 1vw;
 }
-
 .img {
   height: 30vh;
   width: 16vw;
@@ -82,7 +87,10 @@ export default {
   width: 100%;
   border: 1px solid #000;
 }
-
+.menu img{
+	width: 100%;
+	height: 100%;
+}
 .img p {
   color: #FBFC7D;
 	text-align: center;
@@ -94,9 +102,8 @@ export default {
 	width: 15vw;
 	height:8.5vh;
 	margin: 1.5vw;
-	background-color: #063E01;
 	background-size: contain;
-	background-image: url(../assets/src/painting_biaoti.jpg);
+	background-image: url(../assets/src/lable_11.png);
 	background-repeat: no-repeat;
 	background-position: 100% ,100%;
 }
@@ -112,6 +119,7 @@ export default {
   display: flex;
   justify-content: space-between;
   width: 70vw;
+  margin-left: 12vw;
   flex-wrap: wrap;
 }
 </style>

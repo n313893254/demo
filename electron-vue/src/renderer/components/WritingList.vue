@@ -3,50 +3,57 @@
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('视频')">
-        	<router-link class="button" to="/VideoList">视频</router-link>
+        	<router-link class="button" to="/VideoList"><img src="../assets/src/history_08.png"></router-link>
         </div>
         <div  @click="set('照片')">
-        	<router-link class="button" to="/Photo">照片</router-link>
+        	<router-link class="button" to="/Photo"><img src="../assets/src/history_06.png"></router-link>
         </div>
         <div  @click="set('诗词')">
-        	<router-link class="button" to="/PoetryList">诗词</router-link>
+        	<router-link class="button" to="/PoetryList"><img src="../assets/src/history_10.png"></router-link>
         </div>
         <div  @click="set('个人著作')">
-        	<router-link class="button" to="/WritingList">个人著作</router-link>
+        	<router-link class="button" to="/WritingList"><img src="../assets/src/history_03.png"></router-link>
         </div>
-        <div class="button" @click="closeLeftMenu()">返回</div>
+        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/Details_14.png"></div>
       </div>
       <div class="menu" v-else>
-        <div class="button" @click="openLeftMenu()">分类菜单</div>
+        <div class="button" @click="openLeftMenu()">分类菜单<img src="../assets/src/book_35.png"></div>
       </div>
     </div>
     <p>个人著作列表</p>
     <div class="mid">
-    	<div class="top">
-    	  <div class="article">
-    	  	《关山月临摹敦煌壁画》自序<br>
-           作者：XXX<br>
-           时间：1988年12月<br>
-           <p>翰墨轩主人许礼平先生要编辑出版我早年所临的敦煌壁画，
-           意在为研究书史者提供资料。这批临画，经历了几许沧桑，
-           今能编印问世，值得高兴。</p>
-    	  </div>
-    	</div>
-      <div class="article_title">
-      <div class="container">
-        <ul class="time-horizontal">
-            <li><b></b>著作1</li>
-            <li><b></b>著作2</li>
-            <li><b></b>著作3</li>
-            <li><b></b><router-link  to="/WritingList/ArticleDetail">著作4</router-link></li>
-            <li><b></b>著作5</li>
-            <li><b></b>著作6</li>
-            <li><b></b>著作7</li>
-            <li><b></b>著作8</li>
-        </ul>
-    </div>
-      </div>
-    </div>
+  	<div class="img_tubiao">
+  			<img src="../assets/src/book_10.png">
+  		</div>
+  	<div class="left_title">
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
+  	</div>
+  	<div class="right_wenzhang">
+  		<img src="../assets/src/book_03.png">
+  	</div>
+  </div>
   </div>
 </template>
 

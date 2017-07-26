@@ -9,7 +9,7 @@
       <div class="article-list">
         <p>画作相关文章: </p>
         <div class="logo1">
-        	<img class="logo_img" src="../assets/src/logo.jpg">
+        	<img class="logo_img" src="../assets/src/Details_07.png">
         </div>
         <div class="neirong">
         	<h2>堵海工地速写之一</h2>

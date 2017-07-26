@@ -38,7 +38,7 @@ export default {
     box-sizing: border-box;
   }
   body{
-  	background-color: #063E01;
+  	background-image:url(assets/src/bg.jpg);
   }
   #app {
     display: flex;
@@ -46,11 +46,42 @@ export default {
     align-items: center;
     flex-wrap: wrap;
   }
+  .Box{
+  	width: 100vw;
+  }
   .box {
     border: 1px solid #000;
   }
-  .button {
-    border: 2px solid #000;
+  .nav{
+	 width:100vw;
+  height: 5vh;
+  position:fixed;/*固定作用*/
+  top:0px;
+  background-color:#707070;
+  opacity: 0.5;
+  _position:absolute;/* 把导航栏位置定义为绝对位置  关键*/
+  _top:expression(documentElement.scrollTop + "px"); /* 把导航栏位置放在浏览器垂直滚动条的顶端  关键 */
+  z-index:9999; /* 让导航栏浮在网页的高层位置，遇到flash和图片时候也能始终保持最外层 */
+}
+.small_logo img{
+	margin-left: 2vw;
+	margin-top: 1vh;
+	float: left;
+}
+.yemei_title{
+	margin-left: 43vw;
+	margin-top: 1vh;
+	float: left;
+	color: #FBFC7D;
+}
+.gongsi{
+	margin-top: 1vh;
+	float: right;
+	margin-right: 3vw;
+	color: #FBFC7D;
+}
+ .button {
+    width: 5vw;
     height: 5vh;
     display: inline-block;
     border-radius: 3px;
@@ -58,7 +89,7 @@ export default {
     color: blue;
     margin: 10px 10px;
     cursor: pointer;
-  }
+  } 
   .menu {
     display: flex;
     flex-direction: column;
@@ -79,4 +110,27 @@ export default {
     right: 1vh;
     bottom: 1vw;
   }
+  .left_title{
+	width: 27vw;
+	height: 90vh;
+	float: left;
+	color: #F1FA85;
+	font-size: 1vw;
+	margin-left: 1vw;
+}
+.img_tubiao{
+	float:left;
+}
+.img_tubiao img{
+	padding-top: 30vh;
+}
+.right_wenzhang{
+	width:45vw;
+	height: 90vh;
+	float: right;
+}
+.right_wenzhang img{
+	width: 45vw;
+	height: 90vh;
+}
 </style>

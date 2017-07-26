@@ -1,40 +1,54 @@
 <template lang="html">
-  <div class="">
+  <div class="Box">
+  	<div class="nav">
+  		<div class="small_logo"><img src="../assets/src/logoe4_06.png"></div>
+  	  <div class="yemei_title">知识库》史料》研究</div>
+  	  <div class="gongsi">伊世易技术支持</div>
+
+  	</div>
   	<p>研究 {{ this.$route.path }}</p>
   	<div class="menu-wrapper-left" >
     <div class="menu">
-    <router-link class="button" to="/ResearchList">30-40s 30年-40年</router-link>
-    <router-link class="button" to="/ResearchList">50-70s 50年-70年</router-link>
-    <router-link class="button" to="/ResearchList">80-90s 80年-90年</router-link>
-    <router-link class="button" to="/ResearchList">20th 2000年以后</router-link>
+    <router-link class="button" to="/ResearchList"><img src="../assets/src/book_31.png"></router-link>
+    <router-link class="button" to="/ResearchList"><img src="../assets/src/book_27.png"></router-link>
+    <router-link class="button" to="/ResearchList"><img src="../assets/src/book_22.png"></router-link>
+    <router-link class="button" to="/ResearchList"><img src="../assets/src/book_17.png"></router-link>
+    <router-link class="button" ><img src="../assets/src/book_35.png"></router-link>
     </div>
     </div>
     <div class="mid">
-    	<div class="top">
-    	  <div class="article">
-    	  	<p>0世纪的中国，走过了一个由战乱到和平、由殖民到独立、由衰落到强盛、
-    	  		 由屈辱到尊严的历程，在这个跌宕起伏的背景中，
-    	  		 中国古老的文化又是怎样地延 续和书写着民族不屈的历史!
-    	  		 恰如那古丝绸之路上的敦煌寂然地执著、无声地见 证那些来了又退去
-    	  		 、那些失了又复得的故事，见证《开国大典》的庄严和东西方 
-    	  		 文化论争中传统文化的博大与力量。</p>
-    	  </div>
-    	</div>
-      <div class="article_title">
-      <div class="container">
-        <ul class="time-horizontal">
-            <li><b></b>无声的庄严</li>
-            <li><b></b>艺术的力量</li>
-            <li><b></b>返本求真</li>
-            <li><b></b><router-link  to="/WritingList/ArticleDetail">无声的庄严</router-link></li>
-            <li><b></b>艺术的力量</li>
-            <li><b></b>返本求真</li>
-            <li><b></b>艺术的力量</li>
-            <li><b></b>返本求真</li>
-        </ul>
-    </div>
-      </div>
-    </div>
+  	<div class="img_tubiao">
+  			<img src="../assets/src/book_10.png">
+  		</div>
+  	<div class="left_title">
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
+  	</div>
+  	<div class="right_wenzhang">
+  		<img src="../assets/src/book_03.png">
+  	</div>
+  </div>
   </div>
 </template>
 
@@ -61,6 +75,10 @@ export default {
   position: fixed;
   left: 1vh;
   bottom: 1vw;
+}
+.menu img{
+	width: 100%;
+	height: 100%;
 }
 .top{
 	width: 85vw;
