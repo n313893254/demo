@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <div id="book" ref="book">
-      <canvas id="pageflip-canvas" width="300" height="300"></canvas>
+      <canvas id="pageflip-canvas"></canvas>
       <div class="pages">
         <section>
           <div class="">
@@ -75,6 +75,12 @@ export default {
     }
 
     var mouse = { x: 0, y: 0 }
+    canvas.width = BOOK_WIDTH + (CANVAS_PADDING * 2)
+    canvas.height = BOOK_HEIGHT + (CANVAS_PADDING * 2)
+    canvas.style.top = -CANVAS_PADDING + 'px'
+    canvas.style.left = -CANVAS_PADDING + 'px'
+
+    setInterval(render, 1000 / 60)
 
     document.addEventListener('mousemove', mouseMoveHandler, false)
     document.addEventListener('mousedown', mouseDownHandler, false)
@@ -184,15 +190,15 @@ export default {
       context.beginPath()
       context.moveTo(foldX, 0)
       context.lineTo(foldX, PAGE_HEIGHT)
-      context.quadraticCurveTo(foldX, PAGE_HEIGHT + (verticalOutdent * 2), foldX, 0)
+      context.quadraticCurveTo(foldX, PAGE_HEIGHT + (verticalOutdent * 2), foldX - foldWidth, PAGE_HEIGHT + verticalOutdent)
+      context.lineTo(foldX - foldWidth, -verticalOutdent)
+      context.quadraticCurveTo(foldX, -verticalOutdent * 2, foldX, 0)
 
       context.fill()
       context.stroke()
 
       context.restore()
     }
-
-    setInterval(render, 1000 / 60)
   }
 }
 </script>
