@@ -81,17 +81,11 @@ export default {
   width: 100vw;
   height: 100vh;
   justify-content: space-between;
-  align-items: center;
-}
-.page .img {
-  max-width: 1000px;
-  max-height: 563px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .page .img.height {
+  display: flex;
   width: 100vw;
+  justify-content: center;
 }
 .page img.height {
   height: 100vh;

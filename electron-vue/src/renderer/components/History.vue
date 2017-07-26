@@ -10,30 +10,52 @@
     </div>
   </div>
   <div class="mid">
-  	<div class="top">
-    	  <div class="article">
-    	  	《关山月临摹敦煌壁画》自序<br>
-           作者：XXX<br>
-           时间：1988年12月<br>
-           <p>翰墨轩主人许礼平先生要编辑出版我早年所临的敦煌壁画，
-           意在为研究书史者提供资料。这批临画，经历了几许沧桑，
-           今能编印问世，值得高兴。</p>
-    	  </div>
-    	</div>
-  	<div class="article_title">
-      <div class="container">
-        <ul class="time-horizontal">
-            <li><b></b>著作1</li>
-            <li><b></b>著作2</li>
-            <li><b></b>著作3</li>
-            <li><b></b><router-link  to="/WritingList/ArticleDetail">著作4</router-link></li>
-            <li><b></b>著作5</li>
-            <li><b></b>著作6</li>
-            <li><b></b>著作7</li>
-            <li><b></b>著作8</li>
-        </ul>
-    </div>
-      </div>
+  	<div class="img_tubiao">
+  			<img src="../assets/src/tubiao.jpg">
+  		</div>
+  	<div class="left_title">
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
+  	   	<p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
+  	     <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
+  	   	<p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>在深圳美术节上的发言</p><br>
+  	   <p>>>艺术的堕落--游欧杂记</p><br>
+  	   <p>>>香港回归敢赋一篇</p><br>
+  	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
+  	</div>
+  	<div class="right_wenzhang">
+  		<img src="../assets/src/wenzhang_photo.jpg">
+  	</div>
   </div>
   </div>
 </template>
@@ -63,52 +85,27 @@ export default {
 	height: 90vh;
 	margin: auto;
 }
-.top{
-	width: 85vw;
-	height: 60vh;
-	border: dashed 1px #FFFF00;
+.left_title{
+	width: 27vw;
+	height: 90vh;
 	float: left;
+	color: #F1FA85;
+	font-size: 1vw;
+	margin-left: 1vw;
 }
-.article{
-	width: 25vw;
-	height: 20vh;
-	margin-left: 35vw;
-	margin-top: 20vh;
-	color: forestgreen;
-	font-size: 1.2vw;
-	background-color:darksalmon;
+.img_tubiao{
+	float:left;
 }
-.article_title{
-	width: 85vw;
-	height: 40vh;
-	float: left;
+.img_tubiao img{
+	padding-top: 30vh;
 }
-.time-horizontal {
-  list-style-type: none;
-  border-top: 1px solid #707070;
-  max-width: 85vw;
-  padding: 0px;
-  margin: 0px;
+.right_wenzhang{
+	width:45vw;
+	height: 90vh;
+	float: right;
 }
-    
-.time-horizontal li {
-  float: left;
-  position: relative;
-  text-align: center;
-  width: 12.5%;
-  padding-top: 10px;
+.right_wenzhang img{
+	width: 45vw;
+	height: 90vh;
 }
-    
-.time-horizontal li b:before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 47%;
-  width: 12px;
-  height: 12px;
-  border: 2px solid #E9967A;
-  border-radius: 8px;
-  background:#E9967A;
-  }
- 
 </style>

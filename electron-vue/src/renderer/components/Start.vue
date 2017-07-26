@@ -37,7 +37,7 @@ img{
 	height: 50vh;
 }
 .konw {
-	margin-left: 8vw;
+	margin-left: 10vw;
 	margin-right: 10vw;
 	margin-top: 5vh;
 	float: left;

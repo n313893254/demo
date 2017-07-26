@@ -2,7 +2,11 @@
   <div class="page">
     <MenuBar/>
     <div class="searchBar">
-      <input type="text"  class="search" placeholder="搜索你喜欢的作品">
+      <label for="">
+      	<div class="search_list">A&nbsp;B&nbsp;C&nbsp;D&nbsp;E&nbsp;F&nbsp;G&nbsp;
+      		H&nbsp;I&nbsp;J&nbsp;K&nbsp;L&nbsp;M&nbsp;N&nbsp;O&nbsp;P&nbsp;
+      		Q&nbsp;R&nbsp;S&nbsp;T&nbsp;U&nbsp;V&nbsp;W&nbsp;X&nbsp;Y&nbsp;Z&nbsp;</div>
+      </label>
       <label for="">年份</label>
       <select class="" name="">
         <option value="1993">1990</option>
@@ -44,10 +48,138 @@
         </div>
       </div>
       <div class="content" v-else-if="title === '史料'">
-        <p>这是史料页面</p>
+           <div class="zuzuo">
+           	<div class="poetry_title">著作</div>
+           	<table>
+           		<ul>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		
+           		</ul> 
+           	</table>
+           </div>
+           <div class="poetry">
+           	<div class="poetry_title">诗歌</div>
+           	<table>
+           		<ul>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		
+           		</ul> 
+           	</table>
+           </div>
+           <div class="photo">
+           	<div class="poetry_title">照片</div>
+           	<table>
+           		<ul>
+           		<li>
+           			<img src="../assets/src/photo.jpg">
+           			<p>关山月与朋友的合照</p>
+           		</li>
+           		<li>
+           			<img src="../assets/src/photo.jpg">
+           			<p>关山月与朋友的合照</p>
+           		</li>
+           		<li>
+           		<img src="../assets/src/photo.jpg">
+           		<p>关山月与朋友的合照</p>
+           		</li>
+           		<li>
+           			<img src="../assets/src/photo.jpg">
+           			<p>关山月与朋友的合照</p>
+           		</li>
+           		
+           		</ul> 
+           	</table>
+           </div>
+           <div class="video">
+           <div class="poetry_title">视频</div>
+           <table>
+           		<ul>
+           		<li>
+           			<img src="../assets/src/video.jpg">
+           			<p>关山月的创作历程</p>
+           		</li>
+           		<li>
+           			<img src="../assets/src/video.jpg">
+           			<p>关山月的创作历程</p>
+           		</li>
+           		<li>
+           		<img src="../assets/src/video.jpg">
+           		<p>关山月的创作历程</p>
+           		</li>
+           		<li>
+           			<img src="../assets/src/video.jpg">
+           			<p>关山月的创作历程</p>
+           		</li>
+           		
+           		</ul> 
+           	</table>
+           </div>
       </div>
       <div class="content" v-else>
-        <p>内容</p>
+        <div class="zuzuo">
+           	<table>
+           		<ul>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		</ul> 
+           	</table>
+           	<table>
+           		<ul>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		</ul> 
+           	</table>
+           	<table>
+           		<ul>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		</ul> 
+           	</table>
+           	<table>
+           		<ul>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		</ul> 
+           	</table>
+           	<table>
+           		<ul>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		</ul> 
+           	</table>
+           	<table>
+           		<ul>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		</ul> 
+           	</table>
+           	<table>
+           		<ul>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		<li>劳动人民的画家——怀念赵望云</li>
+           		</ul> 
+           	</table>
+           </div>
       </div>
     </div>
   </div>
@@ -76,6 +208,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
 .page {
   width: 100%;
 }
@@ -83,18 +216,10 @@ export default {
   margin: 5vh 5vw 5vh 1vw;
   border-radius: 2%;
 }
-.search{
-  font-size:17x;
-  font-weight:bold;
-  color:white;
-  top:102vh;
-  left:10vw;
-  width:45vw;
-  height: 5vh;
-  -moz-border-radius: 11px;
-  -webkit-border-radius: 11px;
-  -khtml-border-radius: 11px;
-  border-radius: 11px; 
+.search_list{
+	background-color: #FFFFFF;
+	width: 32vw;
+	height: 2vh;            
 }
 .tab div {
   border: 1px solid #000;
@@ -127,7 +252,7 @@ export default {
 .title {
   height: 10vh;
   text-align: center;
-  margin: 5vh auto;
+  margin: 5vh auto;      
   line-height: 10vh;
   font-size: 5vh;
 }
@@ -137,5 +262,75 @@ export default {
   justify-content: space-between;
   width: 70vw;
   flex-wrap: wrap;
+}
+.zuzuo{
+	width: 100vw;
+	height: 8vh;
+	float: left;
+}
+.poetry_title{
+	width:3.5vw;
+	height: 3.5vh;
+	margin-top: 2vh;
+	border-radius: 12px;
+	background-color: #E9967A;
+	color: #FBFC7D;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: auto;
+}
+.zuzuo ul li{
+  margin-left:4vw ;
+  color: #FBFC7D;
+  font-size: 16px; 
+  line-height:5vh;
+	display: inline-block; 
+}
+.poetry{
+	width: 100vw;
+	height: 8vh;
+	float: left;
+}
+.poetry ul li{
+  margin-left:4vw ;
+  color: #FBFC7D;
+  font-size: 16px; 
+	display: inline-block; 
+}
+.photo{
+	width: 100vw;
+	height: 30vh;
+	float: left;
+}
+.photo ul li{
+  margin-left:4vw ;
+  color: #FBFC7D;
+  font-size: 16px; 
+	display: inline-block; 
+}
+.photo img{
+	width: 18vw;
+	height: 20vh;
+}
+.photo p{
+	padding-left: 3vw;
+}
+.video{
+	width: 100vw;
+	height: 30vh;
+	float: left;
+}
+.video ul li{
+  margin-left:4vw ;
+  color: #FBFC7D;
+  font-size: 16px; 
+	display: inline-block; 
+}
+.video p{
+	padding-left: 3vw;
+}
+.video img{
+	width: 18vw;
+	height: 20vh;
 }
 </style>
