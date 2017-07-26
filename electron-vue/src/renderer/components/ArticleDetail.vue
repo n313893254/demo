@@ -65,6 +65,7 @@ export default {
 }
 p{
 	text-indent: 2em;
+  font-size: 14px;
 }
 .button_out{
 	float: right;

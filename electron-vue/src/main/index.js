@@ -46,11 +46,20 @@ app.on('activate', () => {
   }
 })
 
-// var sqlite3 = require('sqlite3').verbose()
-// var db = new sqlite3.Database(':memory')
-
-// db.close()
-
+var sqlite3 = require('sqlite3').verbose()
+var path = require('path').resolve(__dirname, 'datos_exportados(14-05-2015o).sqlite')
+var sipac = new sqlite3.Database(path, 'OPEN_READONLY')
+// sipac.serialize(function () {
+//   sipac.each('SELECT * FROM dat_actividades', function (err, row) {
+//     if (err) {
+//       console.log(err)
+//     } else {
+//       console.log(row)
+//     }
+//   })
+// })
+console.log(sipac)
+sipac.close()
 /**
  * Auto Updater
  *
