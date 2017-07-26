@@ -128,7 +128,7 @@ router.afterEach(route => {
     if (router.cursorPoint.x === router._cursorPoint.x &&
           router.cursorPoint.y === router._cursorPoint.y) {
       router.push({
-        name: 'Exhibit'
+        name: 'Chronological'
       })
     }
     router._cursorPoint.x = router.cursorPoint.x
