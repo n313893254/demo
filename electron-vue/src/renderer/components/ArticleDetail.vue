@@ -17,13 +17,7 @@
             <h2>poi</h2>
             <p>Here is my debug.log with error:
 CI detected, so artifacts will be published if draft release exists
-Thu, 01 Sep 2016 15:53:24 GMT electron-builder Found existing nsis C:\Users\S2S Dev.cache\nsis\nsis-3.0.1
-Thu, 01 Sep 2016 15:53:24 GMT electron-builder Spawning npm.cmd rebuild --production --build-from-source --cache-min 999999999
-Rebuilding app dependencies for arch x64 to C:\Users\S2S Dev\projects\softphone\desktop\trunk\app-container\app
-
-child_process@1.0.2 C:\Users\S2S Dev\projects\softphone\desktop\trunk\app-container\app\node_modules\child_process
-electron-json-storage@2.0.0 C:\Users\S2S Dev\projects\softphone\desktop\trunk\app-container\app\node_modules\electron-json-storage
-async@1.5.2 C:\Users\S2S Dev\projects\softphone\desktop\trunk\app-container\app\node_modules\electron-json-storage\n</p>
+Thu, 01 Sep 2016 15:53:24 Gp\trunk\app-container\app\node_modules\electron-json-storage\n</p>
           </div>
         </section>
       </div>
@@ -129,7 +123,7 @@ export default {
           drawFlip(flip)
         }
       }
-      // console.log()
+      // console.log(flips)
     }
 
     function drawFlip (flip) {
@@ -144,7 +138,7 @@ export default {
 
       flip.page.style.width = Math.max(foldX, 0) + 'px'
       context.save()
-      context.translate(CANVAS_PADDING + (BOOK_WIDTH / 2), PAGE_Y + CANVAS_PADDING)
+      context.translate(CANVAS_PADDING + (BOOK_WIDTH / 2), PAGE_Y + 350)
 
       context.strokeStyle = 'rgba(0, 0, 0,' + (0.05 * strength) + ')'
       context.lineWidth = 30 * strength
