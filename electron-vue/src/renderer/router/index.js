@@ -133,7 +133,7 @@ router.afterEach(route => {
     }
     router._cursorPoint.x = router.cursorPoint.x
     router._cursorPoint.y = router.cursorPoint.y
-  }, 10000)
+  }, 1000000)
   // console.log('start a ' + router.timer)
 })
 
