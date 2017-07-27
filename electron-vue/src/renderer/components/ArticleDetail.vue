@@ -166,8 +166,13 @@ export default {
       let rightShadowWidth = (PAGE_WIDTH * 0.5) * Math.max(Math.min(strength, 0.5), 0)
       let leftShadowWidth = (PAGE_WIDTH * 0.5) * Math.max(Math.min(strength, 0.5), 0)
 
-      flip.page.style.width = Math.max(foldX, 0) + 'px'
+      // flip.page.style.width = Math.max(foldX, 0) + 'px'
       flipNext.page.style.width = Math.max(foldX, 0) + 'px'
+      if (Math.max(foldX, 0) < 1) {
+        flip.page.style.width = 0 + 'px'
+      } else {
+        flip.page.style.width = 400 + 'px'
+      }
       context.save()
       context.translate(CANVAS_PADDING + (BOOK_WIDTH / 2), PAGE_Y + 350)
 
