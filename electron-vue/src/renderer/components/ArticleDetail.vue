@@ -37,7 +37,7 @@ Thu, 01 Sep 2016 15:53:24 Gp\trunk\app-container\app\node_modules\electron-json-
               这样一来，你甚至可以使用其他框架驱动 Weex，打造三端一致的 native 应用。</p>
           </div>
         </section>
-        <section>
+        <!-- <section>
           <div class="">
             <h2>每周都有不同款的 JK 少女，画师和遥キナ「每日 JK 企划」动画化决定</h2>
             <p>比村奇石的《月曜日のたわわ》在 2016 年 10 月的时候出其不意的推出了泡面番动画，
@@ -45,7 +45,7 @@ Thu, 01 Sep 2016 15:53:24 Gp\trunk\app-container\app\node_modules\electron-json-
               而今天画师和遥キナ的周更原创系列画作「每日 JK 企划」宣布动画化决定，
               预定在 2018 年推出动画，这个系列是每周都更新一款不同制服的 JK 少女。</p>
           </div>
-        </section>
+        </section> -->
       </div>
     </div>
     <div class="box">
