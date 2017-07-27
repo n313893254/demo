@@ -58,6 +58,8 @@ Thu, 01 Sep 2016 15:53:24 Gp\trunk\app-container\app\node_modules\electron-json-
 </template>
 
 <script>
+import $ from 'jquery'
+
 export default {
   name: 'ArticleDetail',
   methods: {
@@ -69,6 +71,7 @@ export default {
     this.$store.commit('setMenuBarSeen', false)
   },
   mounted: function () {
+    console.log($('.box'))
     var BOOK_WIDTH = 830
     var BOOK_HEIGHT = 260
     var PAGE_WIDTH = 400
