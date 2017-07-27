@@ -14,7 +14,7 @@
         <div  @click="set('个人著作')">
         	<router-link class="button" to="/WritingList"><img src="../assets/src/history_03.png"></router-link>
         </div>
-        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/Details_14.png"></div>
+        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/book_35.png"></div>
       </div>
       <div class="menu" v-else>
         <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>

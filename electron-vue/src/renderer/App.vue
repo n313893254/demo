@@ -39,6 +39,7 @@ export default {
   }
   body{
   	background-image:url(assets/src/bg.jpg);
+  	background-repeat: no-repeat;
   }
   #app {
     display: flex;
@@ -52,6 +53,7 @@ export default {
   .box {
     border: 1px solid #000;
   }
+  /* 固定导航条*/
   .nav{
 	 width:100vw;
   height: 5vh;
@@ -77,12 +79,19 @@ export default {
 .gongsi{
 	margin-top: 1vh;
 	float: right;
+	width: 12vw;
 	margin-right: 3vw;
 	color: #FBFC7D;
 }
+.gongsi img{
+	margin-right: 1vw;
+	float: left;
+	
+}
+/*图标的大小*/
  .button {
-    width: 5vw;
-    height: 5vh;
+    width: 8vw;
+    height: 10vh;
     display: inline-block;
     border-radius: 3px;
     text-decoration: none;
@@ -125,12 +134,13 @@ export default {
 	padding-top: 30vh;
 }
 .right_wenzhang{
-	width:45vw;
-	height: 90vh;
+	width:43vw;
+	height: 70vh;
 	float: right;
+	margin-right: 3vw;
 }
 .right_wenzhang img{
-	width: 45vw;
-	height: 90vh;
+	width: 43vw;
+	height: 70vh;
 }
 </style>

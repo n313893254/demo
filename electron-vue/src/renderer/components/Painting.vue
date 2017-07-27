@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="Box">
   	<div class="nav">
-  		<div class="small_logo"><img src="../assets/src/logoe4_06.png"></div>
+  		<div class="small_logo"></div>
   	  <div class="yemei_title">知识库》史料》个人著作</div>
-  	  <div class="gongsi">伊世易技术支持</div>
-
+  	  <div class="gongsi"><img src="../assets/src/logoe4_06.png">
+  	  	<p>伊世易技术支持</p></div>
   	</div>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
@@ -15,7 +15,7 @@
         <div class="button" @click="set('临摹')"><img src="../assets/src/pic_12.png"></div>
         <div class="button" @click="set('山水')"><img src="../assets/src/pic_14.png"></div>
         <div class="button" @click="set('花鸟')"><img src="../assets/src/pic_16.png"></div>
-        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/Details_14.png"></div>
+        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/book_35.png"></div>
       </div>
       <div class="menu" v-else>
         <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>

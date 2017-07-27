@@ -22,24 +22,30 @@ export default {
 <style scoped>
 .page {
 	background-image: url(../assets/src/bg.jpg);
+	background-repeat: no-repeat;
 	width: 100vw;
 	height: 100vh;
 }
 .logo {
 	width: 100vw;
-	height: 50vh;
+	height: 45vh;
 	float: left;
 	margin-left: 15vw;
 	margin-top: 5vh;
 }
-
+.logo img{
+	margin: auto;
+}
 .konw {
-	margin-left: 15vw;
-	margin-right: 10vw;
+	width: 100vw;
+	height: 25vh;
 	margin-top: 5vh;
 	float: left;
 	font-family: "宋体";
 	font-size: 5vw;
 	color: #FBFC7D;
+}
+.konw p{
+	margin-left: 15vw;
 }
 </style>

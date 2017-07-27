@@ -1,20 +1,32 @@
 <template lang="html">
   <div class="Box">
   	<div class="nav">
-  		<div class="small_logo"><img src="../assets/src/logoe4_06.png"></div>
+  		<div class="small_logo"></div>
   	  <div class="yemei_title">知识库》史料》研究</div>
-  	  <div class="gongsi">伊世易技术支持</div>
-
+  	  <div class="gongsi"><img src="../assets/src/logoe4_06.png">
+  	  	<p>伊世易技术支持</p>
+  	  </div>
   	</div>
   	<p>研究 {{ this.$route.path }}</p>
-  	<div class="menu-wrapper-left" >
-    <div class="menu">
-    <router-link class="button" to="/ResearchList"><img src="../assets/src/book_31.png"></router-link>
-    <router-link class="button" to="/ResearchList"><img src="../assets/src/book_27.png"></router-link>
-    <router-link class="button" to="/ResearchList"><img src="../assets/src/book_22.png"></router-link>
-    <router-link class="button" to="/ResearchList"><img src="../assets/src/book_17.png"></router-link>
-    <router-link class="button" ><img src="../assets/src/book_35.png"></router-link>
-    </div>
+  	<div class="menu-wrapper-left">
+      <div class="menu" v-if="leftMenuSeen">
+        <div  @click="set('30-40s 30年-40年')">
+        	<router-link class="button" to="/ResearchList"><img src="../assets/src/book_31.png"></router-link>
+        </div>
+        <div  @click="set('50-70s 50年-70年')">
+        	<router-link class="button" to="/ResearchList"><img src="../assets/src/book_27.png"></router-link>
+        </div>
+        <div  @click="set('80-90s 80年-90年')">
+        	<router-link class="button" to="/ResearchList"><img src="../assets/src/book_22.png"></router-link>
+        </div>
+        <div  @click="set('20th 2000年以后')">
+        	<router-link class="button" to="/ResearchList"><img src="../assets/src/book_17.png"></router-link>
+        </div>
+        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/book_35.png"></div>
+      </div>
+      <div class="menu" v-else>
+        <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>
+      </div>
     </div>
     <div class="mid">
   	<div class="img_tubiao">
@@ -56,8 +68,25 @@
 export default {
   name: 'Research',
   computed: {
-    message () {
-      return this.$store.state.message
+    title () {
+      return this.$store.state.photoTitle
+    },
+    leftMenuSeen () {
+      return this.$store.state.leftMenuSeen
+    },
+    photos () {
+      return this.$store.state.photos.slice(0, 6)
+    }
+  },
+  methods: {
+    set (value) {
+      return this.$store.commit('setPhotoList', value)
+    },
+    openLeftMenu () {
+      return this.$store.commit('openLeftMenu')
+    },
+    closeLeftMenu () {
+      return this.$store.commit('closeLeftMenu')
     }
   },
   created: function () {

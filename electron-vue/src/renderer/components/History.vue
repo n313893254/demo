@@ -1,18 +1,32 @@
 <template lang="html">
   <div class="Box">
   	<div class="nav">
-  	  <div class="small_logo"><img src="../assets/src/logoe4_06.png"></div>
+  	  <div class="small_logo"></div>
   	  <div class="yemei_title">知识库》史料》个人著作</div>
-  	  <div class="gongsi">伊世易技术支持</div>
+  	  <div class="gongsi"><img src="../assets/src/logoe4_06.png">
+  	  	<p>伊世易技术支持</p></div>
   	</div>
     <p>史料 {{ this.$route.path }}</p>
     <div class="menu-wrapper-left">
-    <div class="menu">
-      <router-link class="button" to="/WritingList"><img src="../assets/src/history_03.png"></router-link>
-      <router-link class="button" to="/PoetryList"><img src="../assets/src/history_10.png"></router-link>
-      <router-link class="button" to="/VideoList"><img src="../assets/src/history_08.png"></router-link>
-      <router-link class="button" to="/Photo"><img src="../assets/src/history_06.png"></router-link>
-      <router-link class="button" to="/ResearchList"><img src="../assets/src/book_35.png"></router-link>
+    <div class="menu-wrapper-left">
+      <div class="menu" v-if="leftMenuSeen">
+        <div  @click="set('视频')">
+        	<router-link class="button" to="/VideoList"><img src="../assets/src/history_08.png"></router-link>
+        </div>
+        <div  @click="set('照片')">
+        	<router-link class="button" to="/Photo"><img src="../assets/src/history_06.png"></router-link>
+        </div>
+        <div  @click="set('诗篇')">
+        	<router-link class="button" to="/PoeryList"><img src="../assets/src/history_10.png"></router-link>
+        </div>
+        <div  @click="set('个人著作')">
+        	<router-link class="button" to="/WritingList"><img src="../assets/src/history_03.png"></router-link>
+        </div>
+        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/book_35.png"></div>
+      </div>
+      <div class="menu" v-else>
+        <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>
+      </div>
     </div>
   </div>
   <div class="mid">
@@ -55,8 +69,25 @@
 export default {
   name: 'History',
   computed: {
-    message () {
-      return this.$store.state.message
+    title () {
+      return this.$store.state.photoTitle
+    },
+    leftMenuSeen () {
+      return this.$store.state.leftMenuSeen
+    },
+    photos () {
+      return this.$store.state.photos.slice(0, 6)
+    }
+  },
+  methods: {
+    set (value) {
+      return this.$store.commit('setPhotoList', value)
+    },
+    openLeftMenu () {
+      return this.$store.commit('openLeftMenu')
+    },
+    closeLeftMenu () {
+      return this.$store.commit('closeLeftMenu')
     }
   },
   created: function () {

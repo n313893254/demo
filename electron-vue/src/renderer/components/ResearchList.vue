@@ -15,7 +15,7 @@
         <div  @click="set('20th 2000年以后')">
         	<router-link class="button" to="/ResearchList"><img src="../assets/src/book_17.png"></router-link>
         </div>
-        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/circle_12.png"></div>
+        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/book_35.png"></div>
       </div>
       <div class="menu" v-else>
         <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>
