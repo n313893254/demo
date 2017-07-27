@@ -21,8 +21,6 @@ export default {
 
 <style scoped>
 .page {
-	background-image: url(../assets/src/bg.jpg);
-	background-repeat: no-repeat;
 	width: 100vw;
 	height: 100vh;
 }

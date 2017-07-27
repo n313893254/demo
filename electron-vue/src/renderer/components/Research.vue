@@ -97,7 +97,7 @@ export default {
 
 <style lang="css">
 .mid{
-	width: 85vw;
+	width: 80vw;
 	height: 90vh;
 }
 .menu-wrapper-left {

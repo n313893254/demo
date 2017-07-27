@@ -121,8 +121,9 @@ export default {
 
 <style lang="css" scoped>
 .mid{
-	width: 90vw;
+	width: 88vw;
 	height: 90vh;
+	margin-left: 4.5vw;
 }
 .menu-wrapper-left {
   position: fixed;
@@ -130,26 +131,26 @@ export default {
   bottom: 1vw;
 }
 .photomodel{
-	width: 18vw;
+	width: 16vw;
 	height: 28vh;
 	margin-top: 6vh;
 	float: left;
 }
 .photo{
-	width: 16vw;
-	height: 16vh;
+	width: 14vw;
+	height: 14vh;
 	margin: 1vw;
 	border-radius: 15px;
 	background-color: #ffffff;
 }
 img{
-	width: 15vw;
-	height: 15vh;
+	width: 13vw;
+	height: 13vh;
 	margin-left: 0.5vw ;
 	margin-top: 0.5vh;
 }
 .biaoti{
-	width: 15vw;
+	width: 13.5vw;
 	height:8.5vh;
 	margin: 1.5vw;
 	background-size: contain;

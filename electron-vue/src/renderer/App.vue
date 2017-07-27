@@ -40,6 +40,8 @@ export default {
   body{
   	background-image:url(assets/src/bg.jpg);
   	background-repeat: no-repeat;
+  	background-position: right bottom ;
+  	 background-attachment:fixed;  
   }
   #app {
     display: flex;
@@ -90,12 +92,12 @@ export default {
 }
 /*图标的大小*/
  .button {
-    width: 8vw;
-    height: 10vh;
+    width: 6vw;
+    height: 6vh;
     display: inline-block;
-    border-radius: 3px;
     text-decoration: none;
     color: blue;
+    position: relative;
     margin: 10px 10px;
     cursor: pointer;
   } 
@@ -104,6 +106,17 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .menu img{
+  	max-width: 100%;
+  	max-height: 100%;
+  	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	margin: auto;
+  	
   }
   .fade-enter-active {
     transition: all .3s ease;
@@ -129,18 +142,23 @@ export default {
 }
 .img_tubiao{
 	float:left;
+	width: 3vw;
+	height: 3vh;
 }
 .img_tubiao img{
 	padding-top: 30vh;
+	width: 100%;
 }
 .right_wenzhang{
 	width:43vw;
 	height: 70vh;
-	float: right;
+	margin-left: 35vw;
+	position: fixed;
 	margin-right: 3vw;
 }
 .right_wenzhang img{
 	width: 43vw;
 	height: 70vh;
+		float: right;
 }
 </style>
