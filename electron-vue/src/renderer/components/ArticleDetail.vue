@@ -20,6 +20,23 @@ CI detected, so artifacts will be published if draft release exists
 Thu, 01 Sep 2016 15:53:24 Gp\trunk\app-container\app\node_modules\electron-json-storage\n</p>
           </div>
         </section>
+        <section>
+          <div class="">
+            <h2>五月七日学姐杀害事件乱入，剧场版《中二病也要谈恋爱》新特报公开</h2>
+            <p>出自作家虎虎同名小说的动画版《中二病也想谈恋爱！》自从2012年在石原立也监督、
+              池田和美（人设）、花田十辉（脚本）联手率领「京阿尼」团队改编之下而引爆巨大人气，
+              热潮也延续到2014年的总集篇剧场版《小鸟游六花・改》而暂告一段落……喔不、因为中二病将在明年盛大回归，
+              上映大银幕动画《映画 中二病でも恋がしたい！-Take On Me-》！</p>
+          </div>
+        </section>
+        <section>
+          <div class="">
+            <h2>快速上手</h2>
+            <p>Weex 是一套简单易用的跨平台开发方案，能以 web 的开发体验构建高性能、可扩展的 native 应用，
+              为了做到这些，Weex 与 Vue 合作，使用 Vue 作为上层框架，并遵循 W3C 标准实现了统一的 JSEngine 和 DOM API，
+              这样一来，你甚至可以使用其他框架驱动 Weex，打造三端一致的 native 应用。</p>
+          </div>
+        </section>
       </div>
     </div>
     <div class="box">
@@ -52,6 +69,7 @@ export default {
 
     var page = 0
     var flips = []
+    var mouse = { x: 0, y: 0 }
 
     var book = this.$refs.book
     var pages = book.querySelectorAll('.pages section')
@@ -68,14 +86,15 @@ export default {
       })
     }
 
-    var mouse = { x: 0, y: 0 }
     canvas.width = BOOK_WIDTH + (CANVAS_PADDING * 2)
     canvas.height = BOOK_HEIGHT + (CANVAS_PADDING * 2)
     canvas.style.top = -CANVAS_PADDING + 'px'
     canvas.style.left = -CANVAS_PADDING + 'px'
 
+    // 定时器
     setInterval(render, 1000 / 60)
 
+    // 事件监听
     document.addEventListener('mousemove', mouseMoveHandler, false)
     document.addEventListener('mousedown', mouseDownHandler, false)
     document.addEventListener('mouseup', mouseUpHandler, false)
@@ -111,22 +130,24 @@ export default {
       }
     }
 
+    // 绘制翻页效果
     function render () {
       context.clearRect(0, 0, canvas.width, canvas.height)
       for (let i = 0, len = flips.length; i < len; i++) {
         let flip = flips[i]
+        let flipNext = flips[i + 1]
         if (flip.dragging) {
           flip.target = Math.max(Math.min(mouse.x / PAGE_WIDTH, 1), -1)
         }
         flip.progress += (flip.target - flip.progress) * 0.2
         if (flip.dragging || Math.abs(flip.progress) < 0.997) {
-          drawFlip(flip)
+          drawFlip(flip, flipNext)
         }
       }
       // console.log(flips)
     }
 
-    function drawFlip (flip) {
+    function drawFlip (flip, flipNext) {
       let strength = 1 - Math.abs(flip.progress)
       let foldWidth = (PAGE_WIDTH * 0.5) * (1 - flip.progress)
       let foldX = PAGE_WIDTH * flip.progress + foldWidth
@@ -137,6 +158,7 @@ export default {
       let leftShadowWidth = (PAGE_WIDTH * 0.5) * Math.max(Math.min(strength, 0.5), 0)
 
       flip.page.style.width = Math.max(foldX, 0) + 'px'
+      flipNext.page.style.width = Math.max(foldX, 0) + 'px'
       context.save()
       context.translate(CANVAS_PADDING + (BOOK_WIDTH / 2), PAGE_Y + 350)
 
@@ -213,13 +235,23 @@ export default {
   margin-top: -125px;
 }
 
-.pages section {
+.pages section:nth-child(even) {
   background: url('http://omph2coqc.bkt.clouddn.com/GSYpaper.png') no-repeat;
   display: block;
   width: 400px;
   height: 250px;
   position: absolute;
   left: 415px;
+  top: 5px;
+  overflow: hidden;
+}
+.pages section:nth-child(odd) {
+  background: url('http://omph2coqc.bkt.clouddn.com/GSYpaper.png') no-repeat;
+  display: block;
+  width: 400px;
+  height: 250px;
+  position: absolute;
+  left: 0px;
   top: 5px;
   overflow: hidden;
 }
