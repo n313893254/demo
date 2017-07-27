@@ -126,6 +126,9 @@ let rendererConfig = {
     libraryTarget: 'commonjs2',
     path: path.join(__dirname, '../dist/electron')
   },
+  // externals: {
+  //   'trun': 'turn'
+  // },
   resolve: {
     alias: {
       '@': path.join(__dirname, '../src/renderer'),

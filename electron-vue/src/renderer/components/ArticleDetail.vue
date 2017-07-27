@@ -51,6 +51,7 @@ Thu, 01 Sep 2016 15:53:24 Gp\trunk\app-container\app\node_modules\electron-json-
     <div class="box">
       <div class="article_content">
          <!-- <img src="../assets/src/wenzhang.jpg"> -->
+         <p>dsads</p>
       </div>
     </div>
     <button class="button_out" type="button" name="button" @click="pageBack()">返回</button>
@@ -59,6 +60,7 @@ Thu, 01 Sep 2016 15:53:24 Gp\trunk\app-container\app\node_modules\electron-json-
 
 <script>
 import $ from 'jquery'
+// import turn from '../lib/turn'
 
 export default {
   name: 'ArticleDetail',
@@ -72,6 +74,13 @@ export default {
   },
   mounted: function () {
     console.log($('.box'))
+    // $('.box').turn({
+    //   width: 200,
+    //   height: 200,
+    //   elevation: 50,
+    //   gradients: true,
+    //   autoCenter: true
+    // })
     var BOOK_WIDTH = 830
     var BOOK_HEIGHT = 260
     var PAGE_WIDTH = 400
