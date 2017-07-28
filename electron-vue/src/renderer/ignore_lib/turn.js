@@ -6,17 +6,18 @@
  * Copyright (C) 2012 Emmanuel Garcia
  * All rights reserved
  **/
+import jquery from 'jquery'
 
 (function($) {
 
-'use strict';
+'use strict'
 
 var has3d,
-  
+
   hasRot,
 
   vendor = '',
-  
+
   version = '4.1.0',
 
   PI = Math.PI,
@@ -80,7 +81,7 @@ var has3d,
     // First page
 
     page: 1,
-    
+
     // Enables gradients
 
     gradients: true,
@@ -105,7 +106,7 @@ var has3d,
   // Number of pages in the DOM, minimum value: 6
 
   pagesInDOM = 6,
-  
+
 
 turnMethods = {
 
@@ -115,12 +116,12 @@ turnMethods = {
   init: function(options) {
 
     // Define constants
-    
-    has3d = 'WebKitCSSMatrix' in window || 'MozPerspective' in document.body.style;
-    hasRot = rotationAvailable();
-    vendor = getPrefix();
 
-    var i, that = this, pageNum = 0, data = this.data(), ch = this.children();
+    has3d = 'WebKitCSSMatrix' in window || 'MozPerspective' in document.body.style
+    hasRot = rotationAvailable()
+    vendor = getPrefix()
+
+    var i, that = this, pageNum = 0, data = this.data(), ch = this.children()
 
     // Set initial configuration
 
@@ -167,7 +168,7 @@ turnMethods = {
 
     if (options.direction!=='')
       this.turn('direction', options.direction);
-    
+
     // Prevent blue screen problems of switching to hardware acceleration mode
     // By forcing hardware acceleration for ever
 
@@ -225,14 +226,14 @@ turnMethods = {
       page = parseInt(currentPage[1], 10);
 
     if (page) {
-      
+
       if (page==lastPage)
         incPages = true;
       else if (page>lastPage)
         throw turnError('Page "'+page+'" cannot be inserted');
 
     } else {
-      
+
       page = lastPage;
       incPages = true;
 
@@ -279,7 +280,7 @@ turnMethods = {
   // Adds a page
 
   _addPage: function(page) {
-    
+
     var data = this.data(),
       element = data.pageObjs[page];
 
@@ -299,11 +300,11 @@ turnMethods = {
           this.append(data.pageWrap[page]);
 
           if (!data.pagePlace[page]) {
-            
+
             data.pagePlace[page] = page;
             // Move `pageObjs[page]` to wrapper
             data.pageObjs[page].appendTo(data.pageWrap[page]);
-          
+
          }
 
           // Set the size of the page
@@ -319,7 +320,7 @@ turnMethods = {
           turnMethods._makeFlip.call(this, page);
 
       }
-        
+
       } else {
 
         // Place
@@ -334,17 +335,17 @@ turnMethods = {
   },
 
   // Checks if a page is in memory
-  
+
   hasPage: function(page) {
 
     return has(page, this.data().pageObjs);
-  
+
   },
 
   // Centers the flipbook
 
   center: function(page) {
-    
+
     var data = this.data(),
       size = $(this).turn('size'),
       left = 0;
@@ -364,7 +365,7 @@ turnMethods = {
           else if (!view[1])
             left -= size.width/4;
         }
-      
+
       }
 
       $(this).css({marginLeft: left});
@@ -399,7 +400,7 @@ turnMethods = {
 
     $(document).unbind(mouseEvents.move, data.eventHandlers.touchMove).
       unbind(mouseEvents.up, data.eventHandlers.touchEnd);
-    
+
     while (data.totalPages!==0) {
       this.turn('removePage', data.totalPages);
     }
@@ -428,23 +429,23 @@ turnMethods = {
   // Sets and gets the zoom value
 
   zoom: function(newZoom) {
-    
+
     var data = this.data();
 
     if (typeof(newZoom)=='number') {
 
       if (newZoom<0.001 || newZoom>100)
         throw turnError(newZoom+ ' is not a value for zoom');
-      
+
       if (trigger('zooming', this, [newZoom, data.zoom])=='prevented')
         return this;
-      
+
       var size = this.turn('size'),
         currentView = this.turn('view'),
         iz = 1/data.zoom,
         newWidth = Math.round(size.width * iz * newZoom),
         newHeight = Math.round(size.height * iz * newZoom);
-    
+
       data.zoom = newZoom;
 
       $(this).turn('stop').
@@ -461,7 +462,7 @@ turnMethods = {
 
       for (var i = 0; i<currentView.length; i++) {
         if (currentView[i] && data.pageZoom[currentView[i]]!=data.zoom) {
-  
+
           this.trigger('zoomed',[
             currentView[i],
             currentView,
@@ -509,23 +510,23 @@ turnMethods = {
         prop.width = pageWidth;
         prop.height = pageHeight;
       }
-      
+
       if (position) {
         var odd = page%2;
         prop.top = (pageHeight-prop.height)/2;
 
         if (data.direction=='ltr') {
-          
+
           prop[(odd) ? 'right' : 'left'] = pageWidth-prop.width;
           prop[(odd) ? 'left' : 'right'] = 'auto';
 
         } else {
-          
+
           prop[(odd) ? 'left' : 'right'] = pageWidth-prop.width;
           prop[(odd) ? 'right' : 'left'] = 'auto';
 
         }
-      
+
       }
     }
 
@@ -540,7 +541,7 @@ turnMethods = {
     var data = this.data();
 
     if (!data.pages[page] && data.pagePlace[page]==page) {
-      
+
       var single = data.display=='single',
         odd = page%2;
 
@@ -557,7 +558,7 @@ turnMethods = {
         turnMethods._setPageLoc.call(this, page);
 
         data.pageZoom[page] = data.zoom;
-        
+
     }
 
     return data.pages[page];
@@ -600,9 +601,9 @@ turnMethods = {
       if (page<1 || page>data.totalPages)
         throw turnError('"'+page+'" is not a valid page');
 
-    
+
       view[1] = view[1] || view[0];
-      
+
       if (view[0]>=1 && view[1]<=data.totalPages) {
 
         remainingPages = Math.floor((pagesInDOM-2)/2);
@@ -628,7 +629,7 @@ turnMethods = {
   // Detects if a page is within the range of `pagesInDOM` from the current view
 
   _necessPage: function(page) {
-    
+
     if (page===0)
       return true;
 
@@ -636,7 +637,7 @@ turnMethods = {
 
     return this.data().pageObjs[page].hasClass('fixed') ||
       (page>=range[0] && page<=range[1]);
-    
+
   },
 
   // Releases memory by removing pages from the DOM
@@ -649,7 +650,7 @@ turnMethods = {
       if (has(page, data.pageWrap) &&
         !turnMethods._necessPage.call(this, page))
       turnMethods._removePageFromDOM.call(this, page);
-    
+
   },
 
   // Removes a page from DOM and its internal references
@@ -694,7 +695,7 @@ turnMethods = {
 
     // Delete all the pages
     if (page=='*') {
-      
+
       while (data.totalPages!==0) {
         this.turn('removePage', data.totalPages);
       }
@@ -703,7 +704,7 @@ turnMethods = {
 
       if (page<1 || page>data.totalPages)
         throw turnError('The page '+ page + ' doesn\'t exist');
-        
+
       if (data.pageObjs[page]) {
 
         // Stop animations
@@ -738,7 +739,7 @@ turnMethods = {
     }
 
     return this;
-  
+
   },
 
   // Moves pages
@@ -763,7 +764,7 @@ turnMethods = {
         if (data.pagePlace[page] && data.pageWrap[page]) {
 
           data.pagePlace[next] = next;
-        
+
           if (data.pageObjs[next].hasClass('fixed'))
             data.pageWrap[next] = data.pageWrap[page].
               attr('page', next);
@@ -771,7 +772,7 @@ turnMethods = {
             data.pageWrap[next] = data.pageWrap[page].
               css(turnMethods._pageSize.call(that, next, true)).
               attr('page', next);
-      
+
             if (data.pages[page])
               data.pages[next] = data.pages[page].
                 flip('options', {
@@ -808,14 +809,14 @@ turnMethods = {
       currentDisplay = data.display;
 
     if (display===undefined) {
-      
+
       return currentDisplay;
 
     } else {
 
       if ($.inArray(display, displays)==-1)
         throw turnError('"'+display + '" is not a value for display');
-      
+
       switch(display) {
         case 'single':
 
@@ -848,7 +849,7 @@ turnMethods = {
 
         break;
       }
-      
+
 
       data.display = display;
 
@@ -862,9 +863,9 @@ turnMethods = {
       return this;
 
     }
-  
+
   },
-  
+
   // Gets and sets the direction of the flipbook
 
   direction: function(dir) {
@@ -908,7 +909,7 @@ turnMethods = {
   // Gets the current activated corner
 
   corner: function() {
-    
+
     var corner,
       page,
       data = this.data();
@@ -926,7 +927,7 @@ turnMethods = {
   // Gets the data stored in the flipbook
 
   data: function() {
-    
+
     return this.data();
 
   },
@@ -968,7 +969,7 @@ turnMethods = {
   size: function(width, height) {
 
     if (width===undefined || height===undefined) {
-      
+
       return {width: this.width(), height: this.height()};
 
     } else {
@@ -983,7 +984,7 @@ turnMethods = {
 
       if (data.pageObjs[0])
         data.pageObjs[0].css({width: pageWidth, height: height});
-      
+
       for (page in data.pageWrap) {
         if (!has(page, data.pageWrap)) continue;
 
@@ -991,7 +992,7 @@ turnMethods = {
 
         data.pageObjs[page].css({width: prop.width, height: prop.height});
         data.pageWrap[page].css(prop);
-        
+
         if (data.pages[page])
           data.pages[page].css({width: prop.width, height: prop.height});
       }
@@ -1030,7 +1031,7 @@ turnMethods = {
   _removeMv: function(page) {
 
     var i, data = this.data();
-      
+
     for (i=0; i<data.pageMv.length; i++)
       if (data.pageMv[i]==page) {
         data.pageMv.splice(i, 1);
@@ -1042,7 +1043,7 @@ turnMethods = {
   },
 
   // Adds an animation to the cache
-  
+
   _addMv: function(page) {
 
     var data = this.data();
@@ -1055,9 +1056,9 @@ turnMethods = {
   // Gets indexes for a view
 
   _view: function(page) {
-  
+
     var data = this.data();
-    
+
     page = page || data.page;
 
     if (data.display=='double')
@@ -1087,7 +1088,7 @@ turnMethods = {
   stop: function(ignore, animate) {
 
     if (this.turn('animating')) {
-  
+
       var i, opts, page,
         data = this.data();
 
@@ -1116,7 +1117,7 @@ turnMethods = {
 
       }
     }
-    
+
     this.turn('update');
 
     return this;
@@ -1150,7 +1151,7 @@ turnMethods = {
   // Checks missing pages
 
   _missing : function(page) {
-    
+
     var data = this.data();
 
     if (data.totalPages<1)
@@ -1178,18 +1179,18 @@ turnMethods = {
       newView = this.turn('view', page);
 
     turnMethods._missing.call(this, page);
-    
+
     if (!data.pageObjs[page])
       return;
 
     data.page = page;
-  
+
     this.turn('stop');
 
     for (var i = 0; i<newView.length; i++) {
 
       if (newView[i] && data.pageZoom[newView[i]]!=data.zoom) {
-  
+
         this.trigger('zoomed',[
           newView[i],
           newView,
@@ -1211,7 +1212,7 @@ turnMethods = {
       this.turn('center');
 
   },
-  
+
   // Turns the page
 
   _turnPage: function(page) {
@@ -1232,7 +1233,7 @@ turnMethods = {
 
         if (currentPage==data.page && $.inArray(place, data.pageMv)!=-1)
           data.pages[place].flip('hideFoldedPage', true);
-        
+
         return;
 
       }
@@ -1261,7 +1262,7 @@ turnMethods = {
       actualPoint = flipData.point;
 
     turnMethods._missing.call(this, page);
-    
+
     if (!data.pageObjs[page])
       return;
 
@@ -1281,7 +1282,7 @@ turnMethods = {
     this.turn('update');
 
     flipData.point = actualPoint;
-    
+
     if (flipData.effect=='hard')
       if (data.direction=='ltr')
         data.pages[current].flip('turnPage',
@@ -1307,7 +1308,7 @@ turnMethods = {
     var data = this.data();
 
     if (page===undefined) {
-      
+
       return data.page;
 
     } else {
@@ -1324,11 +1325,11 @@ turnMethods = {
             else
               turnMethods._turnPage.call(this, page);
           }
-      
+
           return this;
 
         } else {
-        
+
           throw turnError('The page ' + page + ' does not exist');
 
         }
@@ -1345,7 +1346,7 @@ turnMethods = {
 
     return this.turn('page', Math.min(this.data().totalPages,
       turnMethods._view.call(this, this.data().page).pop() + 1));
-  
+
   },
 
   // Turns to the previous view
@@ -1360,18 +1361,18 @@ turnMethods = {
   // Shows a peeling corner
 
   peel: function(corner, animate) {
-    
+
     var data = this.data(),
       view = this.turn('view');
 
     animate = (animate===undefined) ? true : animate===true;
 
     if (corner===false) {
-      
+
       this.turn('stop', null, animate);
 
     } else {
-    
+
       if (data.display=='single') {
 
         data.pages[data.page].flip('peel', corner, animate);
@@ -1381,15 +1382,15 @@ turnMethods = {
         var page;
 
         if (data.direction=='ltr') {
-          
+
           page = (corner.indexOf('l')!=-1) ? view[0] : view[1];
 
         } else {
-          
+
           page = (corner.indexOf('l')!=-1) ? view[1] : view[0];
 
         }
-        
+
         if (data.pages[page])
           data.pages[page].flip('peel', corner, animate);
 
@@ -1426,7 +1427,7 @@ turnMethods = {
     }
 
     if (actualZoom && actualZoom!=data.zoom) {
-      
+
       opts.turn.trigger('zoomed',[
         opts.page,
         opts.turn.turn('view', opts.page),
@@ -1442,12 +1443,12 @@ turnMethods = {
       if ((corner.charAt(1)=='l' && data.direction=='ltr') ||
         (corner.charAt(1)=='r' && data.direction=='rtl'))
       {
-        
+
         opts.next = (opts.next<opts.page) ? opts.next : opts.page-1;
         opts.force = true;
 
       } else {
-        
+
         opts.next = (opts.next>opts.page) ? opts.next : opts.page+1;
 
       }
@@ -1461,7 +1462,7 @@ turnMethods = {
   // This event is called in context of flip
 
   _eventEnd: function(e, opts, turned) {
-  
+
     var that = $(e.target),
       data = that.data().f,
       turn = opts.turn,
@@ -1470,7 +1471,7 @@ turnMethods = {
     if (turned) {
 
       var tpage = dd.tpage || dd.page;
-    
+
       if (tpage==opts.next || tpage==opts.page) {
         delete dd.tpage;
 
@@ -1478,15 +1479,15 @@ turnMethods = {
       }
 
     } else {
-      
+
       turnMethods._removeMv.call(turn, opts.page);
       turnMethods._updateShadow.call(turn);
       turn.turn('update');
 
     }
-    
+
   },
-  
+
   // This event is called in context of flip
 
   _eventPressed: function(e) {
@@ -1496,7 +1497,7 @@ turnMethods = {
       turn = data.opts.turn,
       turnData = turn.data(),
       pages = turnData.pages;
-    
+
     turnData.mouseAction = true;
 
     turn.turn('update');
@@ -1514,7 +1515,7 @@ turnMethods = {
       data = page.data().f,
       turn = data.opts.turn,
       turnData = turn.data();
-    
+
     if (turnData.display=='single') {
       outArea = (point.corner=='br' || point.corner=='tr') ?
         point.x<page.width()/2:
@@ -1535,7 +1536,7 @@ turnMethods = {
   },
 
   // This event is called in context of flip
-  
+
   _flip: function(e) {
 
     e.stopPropagation();
@@ -1560,7 +1561,7 @@ turnMethods = {
       }
     }
   },
-  
+
   //
   _touchMove: function() {
     var data = this.data();
@@ -1598,7 +1599,7 @@ turnMethods = {
         if (view[0]) r.pageV[view[0]] = true;
         if (view[1]) r.pageV[view[1]] = true;
       };
-    
+
     for (i = 0; i<=total; i++) {
       page = mv[i];
       nextPage = data.pages[page].data().f.opts.next;
@@ -1629,7 +1630,7 @@ turnMethods = {
         corner = this.turn('corner'),
         actualView = this.turn('view'),
         newView = this.turn('view', data.tpage);
-  
+
       for (page in data.pageWrap) {
 
         if (!has(page, data.pageWrap))
@@ -1653,7 +1654,7 @@ turnMethods = {
 
           if (pos.pageV[page])
             p.flip('resize');
-          
+
           if (data.tpage) { // Is it turning the page to `tpage`?
 
             p.flip('hover', false).
@@ -1699,7 +1700,7 @@ turnMethods = {
   // Updates the position and size of the flipbook's shadow
 
   _updateShadow: function() {
-    
+
     var view, view2, shadow,
       data = this.data(),
       width = this.width(),
@@ -1719,7 +1720,7 @@ turnMethods = {
     for (var i = 0; i<data.pageMv.length; i++) {
       if (!view[0] || !view[1])
         break;
-    
+
       view = this.turn('view', data.pages[data.pageMv[i]].data().f.opts.next);
       view2 = this.turn('view', data.pageMv[i]);
 
@@ -1769,7 +1770,7 @@ turnMethods = {
       view = this.turn('view'),
       loc = 0;
 
-    
+
     if (page==view[0] || page==view[1])
       loc = 1;
     else if (
@@ -1802,16 +1803,16 @@ turnMethods = {
           );
         break;
       }
-    
+
     return loc;
   },
 
   // Gets and sets the options
 
   options: function(options) {
-    
+
     if (options===undefined) {
-      
+
       return this.data().opts;
 
     } else {
@@ -1821,7 +1822,7 @@ turnMethods = {
       // Set new values
 
       $.extend(data.opts, options);
-      
+
       // Set pages
 
       if (options.pages)
@@ -1836,7 +1837,7 @@ turnMethods = {
 
       if (options.display)
         this.turn('display', options.display);
-      
+
       // Set direction
 
       if (options.direction)
@@ -1846,7 +1847,7 @@ turnMethods = {
 
       if (options.width && options.height)
         this.turn('size', options.width, options.height);
-      
+
       // Add event listeners
 
       if (options.when)
@@ -1883,7 +1884,7 @@ flipMethods = {
       hover: false,
       effect: (this.hasClass('hard')) ? 'hard' : 'sheet'
     }});
-  
+
     this.flip('options', opts);
 
     flipMethods._addPageWrapper.call(this);
@@ -1892,7 +1893,7 @@ flipMethods = {
   },
 
   setData: function(d) {
-    
+
     var data = this.data();
 
     data.f = $.extend(data.f, d);
@@ -1901,7 +1902,7 @@ flipMethods = {
   },
 
   options: function(opts) {
-    
+
     var data = this.data().f;
 
     if (opts) {
@@ -1914,7 +1915,7 @@ flipMethods = {
   },
 
   z: function(z) {
-    
+
     var data = this.data().f;
 
     data.opts['z-index'] = z;
@@ -1928,14 +1929,14 @@ flipMethods = {
   },
 
   _cAllowed: function() {
-    
+
     var data = this.data().f,
       page = data.opts.page,
       turnData = data.opts.turn.data(),
       odd = page%2;
-    
+
     if (data.effect=='hard') {
-    
+
       return (turnData.direction=='ltr') ?
         [(odd) ? 'r' : 'l'] :
         [(odd) ? 'l' : 'r'];
@@ -1981,32 +1982,32 @@ flipMethods = {
 
     switch (data.effect) {
       case 'hard':
-        
+
         if (point.x>width-csz)
           point.corner = 'r';
         else if (point.x<csz)
           point.corner = 'l';
         else
           return false;
-            
+
         break;
 
       case 'sheet':
-        
+
         if (point.y<csz)
           point.corner+= 't';
         else if (point.y>=height-csz)
           point.corner+= 'b';
         else
           return false;
-    
+
         if (point.x<=csz)
           point.corner+= 'l';
         else if (point.x>=width-csz)
           point.corner+= 'r';
         else
           return false;
-     
+
         break;
       }
 
@@ -2105,13 +2106,13 @@ flipMethods = {
   },
 
   type: function () {
-    
+
     return this.data().f.effect;
 
   },
 
   resize: function(full) {
-    
+
     var data = this.data().f,
       turnData = data.opts.turn.data(),
       width = this.width(),
@@ -2119,7 +2120,7 @@ flipMethods = {
 
     switch (data.effect) {
       case 'hard':
-        
+
       if (full) {
         data.wrapper.css({width: width, height: height});
         data.fpage.css({width: width, height: height});
@@ -2182,7 +2183,7 @@ flipMethods = {
   if (!data.wrapper)
     switch (data.effect) {
       case 'hard':
-        
+
         var cssProperties = {};
         cssProperties[vendor + 'transform-style'] = 'preserve-3d';
         cssProperties[vendor + 'backface-visibility'] = 'hidden';
@@ -2195,7 +2196,7 @@ flipMethods = {
         data.fpage = $('<div/>', divAtt(0, 0, 1)).
           css(cssProperties).
           appendTo(parent);
-        
+
         if (turnData.opts.gradients) {
           data.ashadow = $('<div/>', divAtt(0, 0,  0)).
             hide().
@@ -2206,11 +2207,11 @@ flipMethods = {
 
       break;
       case 'sheet':
-        
+
         var width = this.width(),
           height = this.height(),
           size = Math.round(Math.sqrt(Math.pow(width, 2)+Math.pow(height, 2)));
-        
+
         data.fparent = data.opts.turn.data().fparent;
 
         if (!data.fparent) {
@@ -2218,7 +2219,7 @@ flipMethods = {
             fparent.data().flips = 0;
             fparent.css(divAtt(0, 0, 'auto', 'visible').css).
             appendTo(data.opts.turn);
-            
+
             data.opts.turn.data().fparent = fparent;
             data.fparent = fparent;
         }
@@ -2365,7 +2366,7 @@ flipMethods = {
           })*/
           gradient(data.bshadow, point2D(gradientX * 100, 0), point2D((-gradientX + 1)*100, 0),
             [[0, 'rgba(0,0,0,0.3)'],[1, 'rgba(0,0,0,0)']],2);
-          
+
         }
 
         break;
@@ -2407,11 +2408,11 @@ flipMethods = {
 
         middle.x = (left)? width - rel.x/2 : point.x + rel.x/2;
         middle.y = rel.y/2;
-        
+
         var alpha =  A90-Math.atan2(rel.y, rel.x),
           gamma = alpha - Math.atan2(middle.y, middle.x),
           distance =  Math.max(0, Math.sin(gamma) * Math.sqrt(Math.pow(middle.x, 2) + Math.pow(middle.y, 2)));
-          
+
           a = deg(alpha);
 
           tr = point2D(distance * Math.sin(alpha), distance * Math.cos(alpha));
@@ -2425,7 +2426,7 @@ flipMethods = {
               return compute();
             }
           }
-      
+
           if (alpha>A90) {
             var beta = PI-alpha, dd = h - height/Math.sin(beta);
             mv = point2D(Math.round(dd*Math.cos(beta)), Math.round(dd*Math.sin(beta)));
@@ -2434,14 +2435,14 @@ flipMethods = {
           }
 
           px = Math.round(tr.y/Math.tan(alpha) + tr.x);
-      
+
           var side = width - px,
             sideX = side*Math.cos(alpha*2),
             sideY = side*Math.sin(alpha*2);
             df = point2D(
               Math.round((left ? side -sideX : px+sideX)),
               Math.round((top) ? sideY : height - sideY));
-          
+
         // Gradients
           if (turnData.opts.gradients) {
 
@@ -2454,13 +2455,13 @@ flipMethods = {
 
             gradientOpacity = Math.min(far, 1);
 
-           
+
               gradientStartVal = gradientSize>100 ? (gradientSize-100)/gradientSize : 0;
 
               gradientEndPointA = point2D(
                 gradientSize*Math.sin(alpha)/width*100,
                 gradientSize*Math.cos(alpha)/height*100);
-           
+
 
               if (flipMethods._backGradient.call(that)) {
 
@@ -2482,7 +2483,7 @@ flipMethods = {
       },
 
       transform = function(tr, c, x, a) {
-      
+
         var f = ['0', 'auto'], mvW = (width-h)*x[0]/100, mvH = (height-h)*x[1]/100,
           cssA = {left: f[c[0]], top: f[c[1]], right: f[c[2]], bottom: f[c[3]]},
           cssB = {},
@@ -2501,7 +2502,7 @@ flipMethods = {
         data.wrapper.transform(translate(-tr.x + mvW-aliasingFk, -tr.y + mvH, ac) + rotate(-a), origin);
 
         data.fwrapper.transform(translate(-tr.x + mv.x + mvW, -tr.y + mv.y + mvH, ac) + rotate(-a), origin);
-      
+
         if (turnData.opts.gradients) {
 
           if (x[0])
@@ -2570,7 +2571,7 @@ flipMethods = {
   }
 
     data.point = point;
-  
+
   },
 
   _moveFoldingPage: function(move) {
@@ -2583,18 +2584,18 @@ flipMethods = {
     var turn = data.opts.turn,
       turnData = turn.data(),
       place = turnData.pagePlace;
-      
+
     if (move) {
 
       var nextPage = data.opts.next;
-  
+
       if (place[nextPage]!=data.opts.page) {
 
         if (data.folding)
           flipMethods._moveFoldingPage.call(this, false);
 
         var folding = flipMethods._foldingPage.call(this);
-        
+
         folding.appendTo(data.fpage);
         place[nextPage] = data.opts.page;
         data.folding = nextPage;
@@ -2607,16 +2608,16 @@ flipMethods = {
       if (data.folding) {
 
         if (turnData.pages[data.folding]) {
-         
+
           // If we have flip available
 
           var flipData = turnData.pages[data.folding].data().f;
-          
+
           turnData.pageObjs[data.folding].
             appendTo(flipData.wrapper);
 
         } else if (turnData.pageWrap[data.folding]) {
-          
+
           // If we have the pageWrapper
 
           turnData.pageObjs[data.folding].
@@ -2659,11 +2660,11 @@ flipMethods = {
       }
 
       if (animate) {
-        
+
         var that = this,
           point = (data.point && data.point.corner==c.corner) ?
           data.point : flipMethods._c.call(this, c.corner, 1);
-      
+
         this.animatef({
           from: [point.x, point.y],
           to: [c.x, c.y],
@@ -2725,7 +2726,7 @@ flipMethods = {
 
     switch (data.effect) {
       case 'hard':
-        
+
         if (turnData.opts.gradients) {
           data.bshadowLoc = 0;
           data.bshadow.remove();
@@ -2783,7 +2784,7 @@ flipMethods = {
         delta = (top) ? Math.min(0, p1.y-p4.y)/2 : Math.max(0, p1.y-p4.y)/2,
         p2 = point2D(p1.x, p1.y+delta),
         p3 = point2D(p4.x, p4.y-delta);
-    
+
       this.animatef({
         from: 0,
         to: 1,
@@ -2835,7 +2836,7 @@ flipMethods = {
 
           },
           complete: function() {
-            
+
             that.trigger('end', [data.opts, true]);
 
           },
@@ -2849,19 +2850,19 @@ flipMethods = {
   moving: function() {
 
     return 'effect' in this.data();
-  
+
   },
 
   isTurning: function() {
 
     return this.flip('moving') && this.data().effect.turning;
-  
+
   },
 
   corner: function() {
-    
+
     return this.data().f.corner;
-      
+
   },
 
   _eventStart: function(e) {
@@ -2917,9 +2918,9 @@ flipMethods = {
             point.y = origin.y;
             flipMethods._showFoldedPage.call(this, point, true);
           }
-        
+
         } else {
-          
+
           if (data.status=='hover') {
             data.status = '';
             flipMethods.hideFoldedPage.call(this, true);
@@ -2956,7 +2957,7 @@ flipMethods = {
   },
 
   hover: function(hover) {
-    
+
     flipMethods.setData.call(this, {'hover': hover});
     return this;
 
@@ -2974,7 +2975,7 @@ flipMethods = {
       if ($.inArray(corner, flipMethods._cAllowed.call(this))!=-1) {
 
         var point = flipMethods._c.call(this, corner, data.opts.cornerSize/2);
-        
+
         data.status = 'peel';
 
         flipMethods._showFoldedPage.call(this,
@@ -2992,7 +2993,7 @@ flipMethods = {
       data.status = '';
 
       flipMethods.hideFoldedPage.call(this, animate);
-      
+
     }
 
     return this;
@@ -3019,7 +3020,7 @@ function dec(that, methods, args) {
 // Attributes for a layer
 
 function divAtt(top, left, zIndex, overf) {
-    
+
   return {'css': {
     position: 'absolute',
     top: top,
@@ -3028,7 +3029,7 @@ function divAtt(top, left, zIndex, overf) {
     zIndex: zIndex || 'auto'
   }
 };
-      
+
 }
 
 // Gets a 2D point from a bezier curve of four points
@@ -3038,16 +3039,16 @@ function bezier(p1, p2, p3, p4, t) {
   var a = 1 - t,
     b = a * a * a,
     c = t * t * t;
-    
+
   return point2D(Math.round(b*p1.x + 3*t*a*a*p2.x + 3*t*t*a*p3.x + c*p4.x),
     Math.round(b*p1.y + 3*t*a*a*p2.y + 3*t*t*a*p3.y + c*p4.y));
 
 }
-  
+
 // Converts an angle from degrees to radians
 
 function rad(degrees) {
-  
+
   return degrees/180*PI;
 
 }
@@ -3055,7 +3056,7 @@ function rad(degrees) {
 // Converts an angle from radians to degrees
 
 function deg(radians) {
-  
+
   return radians/PI*180;
 
 }
@@ -3063,7 +3064,7 @@ function deg(radians) {
 // Gets a 2D point
 
 function point2D(x, y) {
-  
+
   return {x: x, y: y};
 
 }
@@ -3084,7 +3085,7 @@ function rotationAvailable() {
 // Returns the traslate value
 
 function translate(x, y, use3d) {
-  
+
   return (has3d && use3d) ? ' translate3d(' + x + 'px,' + y + 'px, 0px) '
   : ' translate(' + x + 'px, ' + y + 'px) ';
 
@@ -3093,7 +3094,7 @@ function translate(x, y, use3d) {
 // Returns the rotation value
 
 function rotate(degrees) {
-  
+
   return ' rotate(' + degrees + 'deg) ';
 
 }
@@ -3101,7 +3102,7 @@ function rotate(degrees) {
 // Checks if a property belongs to an object
 
 function has(property, object) {
-  
+
   return Object.prototype.hasOwnProperty.call(object, property);
 
 }
@@ -3153,7 +3154,7 @@ function gradient(obj, p0, p1, colors, numColors) {
 
     for (j = 0; j<numColors; j++)
       cols.push('color-stop('+colors[j][0]+', '+colors[j][1]+')');
-    
+
     obj.css({'background-image':
         '-webkit-gradient(linear, '+
         p0.x+'% '+
@@ -3162,7 +3163,7 @@ function gradient(obj, p0, p1, colors, numColors) {
         p1.y+'%, '+
         cols.join(',') + ' )'});
   } else {
-    
+
     p0 = {x:p0.x/100 * obj.width(), y:p0.y/100 * obj.height()};
     p1 = {x:p1.x/100 * obj.width(), y:p1.y/100 * obj.height()};
 
@@ -3267,12 +3268,12 @@ $.extend($.fn, {
   transform: function(transform, origin) {
 
     var properties = {};
-    
+
     if (origin)
       properties[vendor+'transform-origin'] = origin;
-    
+
     properties[vendor+'transform'] = transform;
-  
+
     return this.css(properties);
 
   },
@@ -3334,7 +3335,7 @@ $.extend($.fn, {
       frame();
 
     } else {
-      
+
       delete data['effect'];
 
     }
@@ -3349,4 +3350,4 @@ $.cssPrefix = getPrefix;
 $.cssTransitionEnd = getTransitionEnd;
 $.findPos = findPos;
 
-})(jQuery);
+})(jquery);

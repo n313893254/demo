@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    <div id="book" ref="book">
+    <!-- <div id="book" ref="book">
       <canvas id="pageflip-canvas"></canvas>
       <div class="pages">
         <section>
@@ -37,7 +37,7 @@ Thu, 01 Sep 2016 15:53:24 Gp\trunk\app-container\app\node_modules\electron-json-
               这样一来，你甚至可以使用其他框架驱动 Weex，打造三端一致的 native 应用。</p>
           </div>
         </section>
-        <!-- <section>
+        <section>
           <div class="">
             <h2>每周都有不同款的 JK 少女，画师和遥キナ「每日 JK 企划」动画化决定</h2>
             <p>比村奇石的《月曜日のたわわ》在 2016 年 10 月的时候出其不意的推出了泡面番动画，
@@ -45,9 +45,9 @@ Thu, 01 Sep 2016 15:53:24 Gp\trunk\app-container\app\node_modules\electron-json-
               而今天画师和遥キナ的周更原创系列画作「每日 JK 企划」宣布动画化决定，
               预定在 2018 年推出动画，这个系列是每周都更新一款不同制服的 JK 少女。</p>
           </div>
-        </section> -->
+        </section>
       </div>
-    </div>
+    </div> -->
     <div class="box">
       <div class="article_content">
          <!-- <img src="../assets/src/wenzhang.jpg"> -->
@@ -55,12 +55,24 @@ Thu, 01 Sep 2016 15:53:24 Gp\trunk\app-container\app\node_modules\electron-json-
       </div>
     </div>
     <button class="button_out" type="button" name="button" @click="pageBack()">返回</button>
+    <div class="" id="flipbook">
+      <div class="hard">
+        Turn.js
+      </div>
+      <div class="hard"></div>
+      <div class="">Page 1</div>
+      <div class="">Page 2</div>
+      <div class="">Page 3</div>
+      <div class="">Page 4</div>
+      <div class="hard"></div>
+      <div class="hard"></div>
+    </div>
   </div>
 </template>
 
 <script>
 import $ from 'jquery'
-// import turn from '../lib/turn'
+import turn from '../ignore_lib/turn'
 
 export default {
   name: 'ArticleDetail',
@@ -73,14 +85,20 @@ export default {
     this.$store.commit('setMenuBarSeen', false)
   },
   mounted: function () {
-    console.log($('.box'))
-    // $('.box').turn({
-    //   width: 200,
-    //   height: 200,
-    //   elevation: 50,
-    //   gradients: true,
-    //   autoCenter: true
-    // })
+    $('#flipbook').turn({
+      width: 400,
+      height: 300,
+      autoCenter: true
+    })
+
+    console.log(turn)
+    $('.box').turn({
+      width: 200,
+      height: 200,
+      elevation: 50,
+      gradients: true,
+      autoCenter: true
+    })
     var BOOK_WIDTH = 830
     var BOOK_HEIGHT = 260
     var PAGE_WIDTH = 400
@@ -260,7 +278,9 @@ export default {
   margin-left: -400px;
   margin-top: -125px;
 }
-
+#flipbook {
+  background: red;
+}
 .pages section:nth-child(even) {
   background: url('http://omph2coqc.bkt.clouddn.com/GSYpaper.png') no-repeat;
   display: block;
