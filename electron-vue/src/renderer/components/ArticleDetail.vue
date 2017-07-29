@@ -12,17 +12,17 @@
             近日官方公开了这张专辑CD的封面，分别是蓝光盘限定版、DVD限定版和通常版。</div>
           <div class="">TrySail是日本的声优组合，由Music Ray’n事务所所属的三名女声优麻仓桃、雨宫天、夏川椎菜组成。
             TrySail将出席在今年的「Animelo Summer Live 2017 -THE CARD-」演唱会，登场时间为8月27日。</div>
-          <div class="hard">七月新番『咕噜咕噜魔法阵』ED单曲封面公开</div>
-          <div class="hard">月番『咕噜咕噜魔法阵』是由卫藤ヒロユキ原著的漫画改编，
+          <div class="">七月新番『咕噜咕噜魔法阵』ED单曲封面公开</div>
+          <div class="">月番『咕噜咕噜魔法阵』是由卫藤ヒロユキ原著的漫画改编，
             动画由Production I.G负责制作。本作的ED是由TECHNOBOYS PULCRAFT GREEN-FUNDfeat.Bonjour铃木组合演唱，歌名叫做
             单曲CD的发售日期为今年8月9日，
             近日官方公布了单曲CD的封面以及艺术照。单曲封面是动画『咕噜咕噜魔法阵』插图，
             而艺术照则是演唱组合的照片。</div>
-          <div class="hard">『咕噜咕噜魔法阵』简介：被勇者迷父母养育成长的少年·尼克，某天，
+          <div class="">『咕噜咕噜魔法阵』简介：被勇者迷父母养育成长的少年·尼克，某天，
             父母得知了哥达国国王为了讨伐魔王而募集勇者一事，于是尼克被勇者迷父母说着“到出发旅行的日子了！
             ”而强行展开了旅程。尼克按照村子的惯例，在旅行前前往村子边缘的怪人魔法婆婆家里，
           </div>
-          <div class="hard">  并在那里遇见了使用名为“咕噜咕噜”的不可思议魔法的少女·柯柯丽……。略显轻率的尼克和不谙世事天真烂漫的柯柯丽，
+          <div class="">  并在那里遇见了使用名为“咕噜咕噜”的不可思议魔法的少女·柯柯丽……。略显轻率的尼克和不谙世事天真烂漫的柯柯丽，
             以及在这样的两人的旅途中加以点缀的独特而具魅力的同伴们。
             尽情欢笑，偶尔哭泣。令人心动不已，满溢勇气与感动的王道冒险幻想剧，现在开幕。</div>
         </div>
@@ -33,7 +33,7 @@
 
 <script>
 import $ from 'jquery'
-import turn from '../ignore_lib/turn'
+import turn from '../ignore_lib/turn.min'
 
 export default {
   name: 'ArticleDetail',
