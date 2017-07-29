@@ -32,12 +32,12 @@ export default {
 	margin-top: 5vh;
 }
 .logo img{
-	margin: auto;
+	margin-left: 8vw;
 }
 .konw {
 	width: 100vw;
 	height: 25vh;
-	margin-top: 5vh;
+	margin-top: 3vh;
 	float: left;
 	font-family: "宋体";
 	font-size: 5vw;

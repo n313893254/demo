@@ -41,7 +41,8 @@ export default {
   	background-image:url(assets/src/bg.jpg);
   	background-repeat: no-repeat;
   	background-position: right bottom ;
-  	 background-attachment:fixed;  
+  	background-attachment:fixed;
+  	background-size: cover;  
   }
   #app {
     display: flex;
@@ -92,8 +93,8 @@ export default {
 }
 /*图标的大小*/
  .button {
-    width: 6vw;
-    height: 6vh;
+    width: 10vw;
+    height: 5.625vh;
     display: inline-block;
     text-decoration: none;
     color: blue;
