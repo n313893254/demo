@@ -28,4 +28,8 @@ export default {
   height: 100vh;
   width: 100vw;
 }
+.know p {
+  font-size: 5vw;
+  color: #FBFC7D;
+}
 </style>
