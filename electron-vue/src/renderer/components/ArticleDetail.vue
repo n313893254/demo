@@ -104,66 +104,6 @@ export default {
 .flipbook-viewport .shadow {
   box-shadow: 0 0 20px #ccc;
 }
-#book {
-  color: #333;
-  background: #444;
-  font-family: Helvetica, sans-serif;
-
-  /*background: url('http://omph2coqc.bkt.clouddn.com/GSYbook.png') no-repeat;*/
-  position: absolute;
-  width: 830px;
-  height: 260px;
-  left: 50%;
-  top: 50%;
-  margin-left: -400px;
-  margin-top: -125px;
-}
-.pages section:nth-child(even) {
-  background: url('http://omph2coqc.bkt.clouddn.com/GSYpaper.png') no-repeat;
-  display: block;
-  width: 400px;
-  height: 250px;
-  position: absolute;
-  left: 415px;
-  top: 5px;
-  overflow: hidden;
-}
-.pages section:nth-child(odd) {
-  background: url('http://omph2coqc.bkt.clouddn.com/GSYpaper.png') no-repeat;
-  display: block;
-  width: 400px;
-  height: 250px;
-  position: absolute;
-  left: 0px;
-  top: 5px;
-  overflow: hidden;
-}
-  .pages section > div {
-    display: block;
-    width: 400px;
-    height: 250px;
-    font-size: 12px;
-  }
-  .pages section p,
-  .pages section h2 {
-    padding: 3px 35px;
-    line-height: 1.4em;
-    text-align: justify;
-    margin: 15px 0 10px;
-  }
-#pageflip-canvas {
-  position: absolute;
-  z-index: 100;
-}
-.article_content{
-	width: 90vw;
-	height: 90vh;
-	margin-top: 3vh;
-}
-.article_content img{
-	width: 90vw;
-	height: 90vh;
-}
 .button_out{
 	float: right;
 	font-size: 2vw;
