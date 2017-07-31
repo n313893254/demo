@@ -21,30 +21,11 @@ export default {
 
 <style scoped>
 .page {
-	width: 70vw;
-	height: 100vh;
-}
-.logo {
-	width: 100vw;
-	height: 45vh;
-	float: left;
-	margin-left: 15vw;
-	margin-top: 5vh;
-}
-.logo img{
-		margin-left: 15vw;
-}
-.konw {
-	width: 100vw;
-	height: 25vh;
-	margin-top: 3vh;
-	margin-left: 15vw;
-	float: left;
-	font-family: "宋体";
-	font-size: 5vw;
-	color: #FBFC7D;
-}
-.konw p{
-		margin-left: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
 }
 </style>
