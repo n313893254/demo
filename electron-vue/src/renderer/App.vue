@@ -42,7 +42,7 @@ export default {
   	background-repeat: no-repeat;
   	background-position: right bottom ;
   	background-attachment:fixed;
-  	background-size: cover;  
+  	background-size: cover;
   }
   #app {
     display: flex;
@@ -89,7 +89,7 @@ export default {
 .gongsi img{
 	margin-right: 1vw;
 	float: left;
-	
+
 }
 /*图标的大小*/
  .button {
@@ -101,7 +101,7 @@ export default {
     position: relative;
     margin: 10px 10px;
     cursor: pointer;
-  } 
+  }
   .menu {
     display: flex;
     flex-direction: column;
@@ -117,7 +117,7 @@ export default {
   	left: 0;
   	right: 0;
   	margin: auto;
-  	
+
   }
   .fade-enter-active {
     transition: all .3s ease;

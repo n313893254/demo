@@ -28,6 +28,14 @@
         </div>
       </div>
     </div>
+    <div class="cd-transition-layer">
+      <div class="bg-layer"></div>
+    </div>
+    <div class="menu-wrapper-right">
+      <div class="menu">
+        <div class="button" @click="pageBack()">返回</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -48,7 +56,11 @@ export default {
   mounted: function () {
     console.log($('.poi'))
     console.log(turn)
-
+    // 泼墨效果
+    var transitionLayer = $('.cd-transition-layer')
+    transitionLayer.addClass('closing')
+    transitionLayer.addClass('visible opening')
+    // 翻书效果
     $('.flipbook').turn({
       width: 922,
       height: 600,
@@ -59,6 +71,26 @@ export default {
       page: 2,
       turnCorners: 'all'
     })
+    // var delay = ($('.no-cssanimations').length > 0) ? 0 : 600
+
+    // function setLayerDimensions () {
+    //   let windowWidth = $(window).width()
+    //   let windowHeight = $(window).height()
+    //   let layerHeight
+    //   let layerWidth
+    //
+    //   if (windowWidth / windowHeight > frameProportion) {
+    //     layerWidth = windowWidth
+    //     layerHeight = layerWidth / frameProportion
+    //   } else {
+    //     layerHeight = windowHeight * 1.2
+    //     layerWidth = layerHeight * frameProportion
+    //   }
+    //   transitionBackground.css({
+    //     'width': layerWidth * frames + 'px',
+    //     'height': layerHeight + 'px'
+    //   })
+    // }
   }
 }
 </script>
@@ -68,7 +100,7 @@ export default {
   background-color: #fcfcfc;
   overflow: hidden;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 .flipbook-viewport {
   overflow: hidden;
@@ -109,5 +141,59 @@ export default {
 	font-size: 2vw;
 	width: 5vw;
 	height: 5vh;
+}
+
+/* Transition layer */
+.cd-transition-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+.cd-transition-layer .bg-layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-2%);
+  height: 100%;
+  width: 2500%;
+  background: url('http://omph2coqc.bkt.clouddn.com/17-7-31/72171056.jpg') no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.cd-transition-layer.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 2s steps(24);
+  animation-fill-mode: forwards;
+}
+.cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence-reverse 2s steps(24);
+  animation-fill-mode: forwards;
+}
+.no-cssanimations .cd-transition-layer {
+  display: none;
+}
+@-webkit-keyframes cd-sequence {
+  0% {
+    transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-98%);
+  }
+}
+@-webkit-keyframes cd-sequence-reverse {
+  0% {
+    transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-2%);
+  }
 }
 </style>
