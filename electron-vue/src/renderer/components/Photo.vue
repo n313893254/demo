@@ -8,8 +8,8 @@
         <div  @click="set('照片')">
         	<router-link class="button" to="/Photo"><img src="../assets/src/history_06.png"></router-link>
         </div>
-        <div  @click="set('诗词')">
-        	<router-link class="button" to="/PoetryList"><img src="../assets/src/history_10.png"></router-link>
+        <div  @click="set('诗篇')">
+        	<router-link class="button" to="/PoeryList"><img src="../assets/src/history_10.png"></router-link>
         </div>
         <div  @click="set('个人著作')">
         	<router-link class="button" to="/WritingList"><img src="../assets/src/history_03.png"></router-link>
@@ -121,7 +121,7 @@ export default {
 
 <style lang="css" scoped>
 .mid{
-	width: 88vw;
+	width: 84vw;
 	height: 90vh;
 	margin-left: 4.5vw;
 }
@@ -143,7 +143,7 @@ export default {
 	border-radius: 15px;
 	background-color: #ffffff;
 }
-img{
+.photo img{
 	width: 13vw;
 	height: 13vh;
 	margin-left: 0.5vw ;

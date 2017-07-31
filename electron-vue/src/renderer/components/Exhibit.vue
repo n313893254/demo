@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 .pic {
   width: 120px;
   height: 180px;

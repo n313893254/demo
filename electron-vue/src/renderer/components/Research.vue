@@ -95,19 +95,16 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 .mid{
-	width: 80vw;
+	width: 85vw;
 	height: 90vh;
+	margin-left: 10vw;
 }
 .menu-wrapper-left {
   position: fixed;
   left: 1vh;
   bottom: 1vw;
-}
-.menu img{
-	width: 100%;
-	height: 100%;
 }
 .top{
 	width: 85vw;
@@ -136,7 +133,7 @@ export default {
   padding: 0px;
   margin: 0px;
 }
-    
+
 .time-horizontal li {
   float: left;
   position: relative;
@@ -144,7 +141,7 @@ export default {
   width: 12.5%;
   padding-top: 10px;
 }
-    
+
 .time-horizontal li b:before {
   content: '';
   position: absolute;

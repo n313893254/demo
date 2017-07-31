@@ -2,7 +2,7 @@
   <div class="Box">
   	<div class="nav">
   		<div class="small_logo"></div>
-  	  <div class="yemei_title">知识库》史料》个人著作</div>
+  	  <div class="yemei_title">知识库》史料》画作</div>
   	  <div class="gongsi"><img src="../assets/src/logoe4_06.png">
   	  	<p>伊世易技术支持</p></div>
   	</div>
@@ -86,10 +86,6 @@ export default {
   height: 100%;
   width: 100%;
   border: 1px solid #000;
-}
-.menu img{
-	width: 100%;
-	height: 100%;
 }
 .img p {
   color: #FBFC7D;

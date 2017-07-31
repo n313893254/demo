@@ -88,7 +88,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 .mid{
 	width: 85vw;
 	height: 90vh;

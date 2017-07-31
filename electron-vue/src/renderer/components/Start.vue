@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .page {
-	width: 100vw;
+	width: 70vw;
 	height: 100vh;
 }
 .logo {
@@ -32,18 +32,19 @@ export default {
 	margin-top: 5vh;
 }
 .logo img{
-	margin-left: 8vw;
+		margin-left: 15vw;
 }
 .konw {
 	width: 100vw;
 	height: 25vh;
 	margin-top: 3vh;
+	margin-left: 15vw;
 	float: left;
 	font-family: "宋体";
 	font-size: 5vw;
 	color: #FBFC7D;
 }
 .konw p{
-	margin-left: 15vw;
+		margin-left: 15vw;
 }
 </style>

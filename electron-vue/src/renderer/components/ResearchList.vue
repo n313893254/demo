@@ -89,7 +89,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 .mid{
 	width: 85vw;
 	height: 90vh;
@@ -98,10 +98,6 @@ export default {
   position: fixed;
   left: 1vh;
   bottom: 1vw;
-}
-.menu img{
-	width: 100%;
-	height: 100%;
 }
 .top{
 	width: 85vw;

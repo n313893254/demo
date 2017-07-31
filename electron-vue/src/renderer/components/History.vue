@@ -8,7 +8,6 @@
   	</div>
     <p>史料 {{ this.$route.path }}</p>
     <div class="menu-wrapper-left">
-    <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('视频')">
         	<router-link class="button" to="/VideoList"><img src="../assets/src/history_08.png"></router-link>
@@ -28,7 +27,7 @@
         <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>
       </div>
     </div>
-  </div>
+  
   <div class="mid">
   	<div class="img_tubiao">
   			<img src="../assets/src/book_10.png">
@@ -59,7 +58,7 @@
   	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
   	</div>
   	<div class="right_wenzhang">
-  		<img src="../assets/src/book_03.png">
+  		
   	</div>
   </div>
   </div>
@@ -96,7 +95,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 .menu-wrapper-left {
   position: fixed;
   left: 1vh;
@@ -107,9 +106,5 @@ export default {
 	height: 90vh;
 	margin: auto;
 	margin-top: 4vh;
-}
-.menu img{
-	width: 100%;
-	height: 100%;
 }
 </style>

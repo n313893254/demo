@@ -21,15 +21,15 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 video{
-            position: fixed;
-            right: 0px;
-            bottom: 0px;
-            min-width: 100%;
-            min-height: 100%;
-            height: auto;
-            width: auto;
+       position: fixed;
+       right: 0px;
+       bottom: 0px;
+       min-width: 100%;
+       min-height: 100%;
+       height: auto;
+       width: auto;
             /*加滤镜*/
             /*-webkit-filter: grayscale(100%);*/
             /*filter:grayscale(100%);*/

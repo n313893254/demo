@@ -42,7 +42,7 @@ export default {
   	background-repeat: no-repeat;
   	background-position: right bottom ;
   	background-attachment:fixed;
-  	background-size: cover;
+  	background-size: cover;  
   }
   #app {
     display: flex;
@@ -77,31 +77,32 @@ export default {
 	margin-left: 43vw;
 	margin-top: 1vh;
 	float: left;
+	font-size: 1.1vw;
 	color: #FBFC7D;
 }
 .gongsi{
 	margin-top: 1vh;
 	float: right;
 	width: 12vw;
+	font-size: 1.1vw;
 	margin-right: 3vw;
 	color: #FBFC7D;
 }
 .gongsi img{
 	margin-right: 1vw;
 	float: left;
-
+	
 }
 /*图标的大小*/
  .button {
-    width: 10vw;
-    height: 5.625vh;
+    width: 8vw;
+    height: 8vh;
     display: inline-block;
     text-decoration: none;
-    color: blue;
     position: relative;
     margin: 10px 10px;
     cursor: pointer;
-  }
+  } 
   .menu {
     display: flex;
     flex-direction: column;
@@ -117,7 +118,7 @@ export default {
   	left: 0;
   	right: 0;
   	margin: auto;
-
+  	
   }
   .fade-enter-active {
     transition: all .3s ease;
@@ -138,7 +139,7 @@ export default {
 	height: 90vh;
 	float: left;
 	color: #F1FA85;
-	font-size: 1vw;
+	font-size: 1.1vw;
 	margin-left: 1vw;
 }
 .img_tubiao{
@@ -156,6 +157,9 @@ export default {
 	margin-left: 35vw;
 	position: fixed;
 	margin-right: 3vw;
+	background-image: url(assets/src/book_03.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 .right_wenzhang img{
 	width: 43vw;
