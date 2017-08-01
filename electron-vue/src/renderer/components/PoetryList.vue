@@ -51,7 +51,6 @@
   	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
   	</div>
   	<div class="right_wenzhang">
-  		<img src="../assets/src/book_03.png">
   	</div>
   </div>
   </div>

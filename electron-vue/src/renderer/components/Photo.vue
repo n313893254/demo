@@ -9,7 +9,7 @@
         	<router-link class="button" to="/Photo"><img src="../assets/src/history_06.png"></router-link>
         </div>
         <div  @click="set('诗篇')">
-        	<router-link class="button" to="/PoeryList"><img src="../assets/src/history_10.png"></router-link>
+        	<router-link class="button" to="/PoetryList"><img src="../assets/src/history_10.png"></router-link>
         </div>
         <div  @click="set('个人著作')">
         	<router-link class="button" to="/WritingList"><img src="../assets/src/history_03.png"></router-link>

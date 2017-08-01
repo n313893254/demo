@@ -27,9 +27,9 @@ export default new Vuex.Store({
 
     paintings: [
       {
-        title: '10个字的长度山水图胡卡是复活节萨复活阿瑟费好',
+        title: '山水画',
         year: '1941年',
-        imgSrc: 'imgs/painting_img2.jpg'
+        imgSrc: 'imgs/video1.png'
       },
       {
         title: '山水图',

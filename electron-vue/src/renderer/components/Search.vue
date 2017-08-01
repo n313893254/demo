@@ -1,36 +1,14 @@
 <template lang="html">
   <div class="page">
     <MenuBar/>
+    <div class="nav">
+  		<div class="small_logo"><img src="../assets/src/logogsy_03.png"></div>
+  	  <div class="yemei_title">知识库》史料》画作</div>
+  	  <div class="gongsi"><img src="../assets/src/logoe4_06.png">
+  	  	<p>伊世易技术支持</p></div>
+  	</div>
     <div class="searchBar">
-      <label for="">
-      	<div class="search_list">A&nbsp;B&nbsp;C&nbsp;D&nbsp;E&nbsp;F&nbsp;G&nbsp;
-      		H&nbsp;I&nbsp;J&nbsp;K&nbsp;L&nbsp;M&nbsp;N&nbsp;O&nbsp;P&nbsp;
-      		Q&nbsp;R&nbsp;S&nbsp;T&nbsp;U&nbsp;V&nbsp;W&nbsp;X&nbsp;Y&nbsp;Z&nbsp;</div>
-      </label>
-      <label for="">年份</label>
-      <select class="" name="">
-        <option value="1993">1990</option>
-        <option value="1993">1980</option>
-        <option value="1993">1970</option>
-        <option value="1993">1960</option>
-        <option value="1993">1950</option>
-        <option value="1993">1940</option>
-      </select>
-      <label for="">月份</label>
-      <select class="" name="">
-        <option value="1">1月</option>
-        <option value="1">2月</option>
-        <option value="1">3月</option>
-        <option value="1">4月</option>
-        <option value="1">5月</option>
-        <option value="1">6月</option>
-        <option value="1">7月</option>
-        <option value="1">8月</option>
-        <option value="1">9月</option>
-        <option value="1">10月</option>
-        <option value="1">11月</option>
-        <option value="1">12月</option>
-      </select>
+      
     </div>
     <div class="tab">
       <div @click="set('画作')">画作</div>
@@ -213,8 +191,11 @@ export default {
   width: 100%;
 }
 .searchBar  {
-  margin: 5vh 5vw 5vh 1vw;
-  border-radius: 2%;
+	width: 100vw;
+	height: 5vh;
+	margin-top: 5.1vh;
+	background-color: rgba(163,163,111,0.4);
+  background-color:#a3a36f;
 }
 .search_list{
 	background-color: #FFFFFF;

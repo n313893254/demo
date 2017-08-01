@@ -22,80 +22,27 @@
     </div>·
     <p>视频列表</p>
       <div class="mid">
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-      	<router-link to="/VideoList/Video">
-      		<div class="photo">
-        	<img src="../assets/src/video.jpg">
-        	<p>创作过程</p>
-      		</div>
-      	</router-link>
-    </div>
-    </div>
+      	<div class="photomodel">
+       <div class="photo" to="/Video"><img src="../assets/src/video1.png"></div>
+       <div class="biaoti" to="/Video"><p>创作过程</p></div>
+      </div>
+      <div class="photomodel">
+       <div class="photo" to="/Video"><img src="../assets/src/video2.png"></div>
+       <div class="biaoti" to="/Video"><p>创作《巨榕》<br>1994年</p></div>
+      </div>
+      <div class="photomodel">
+       <div class="photo" to="/Video"><img src="../assets/src/video3.png"></div>
+       <div class="biaoti" to="/Video"><p>创作《黄陵古柏》<br>1994年</p></div>
+      </div>
+      <div class="photomodel">
+       <div class="photo" to="/Video"><img src="../assets/src/video4.png"></div>
+       <div class="biaoti" to="/Video"><p>创作《漂流伴水声》<br>1993年</p></div>
+      </div>
+      <div class="photomodel">
+       <div class="photo" to="/Video"><img src="../assets/src/video5.png"></div>
+       <div class="biaoti" to="/Video"><p>关山月专题片</p></div>
+      </div>
+  </div>
   </div>
 </template>
 
@@ -133,23 +80,46 @@ export default {
 
 <style lang="css" scoped>
 .mid{
-	width: 83vw;
-	height: 90vh;
+	width: 80vw;
+	height: 80vh;
+	margin-left: 2vw;
+	margin-top: 8vh;
 }
 .menu-wrapper-left {
   position: fixed;
   left: 1vh;
   bottom: 1vw;
 }
-.photo{
-	width: 15vw;
-	height: 35vh;
+.photomodel{
+	width: 16vw;
+	height: 28vh;
+	margin-top: 6vh;
+	margin-left: 4vw;
 	float: left;
-	margin: 3%;
-	margin-top: 2.5%;
+}
+.photo{
+	width: 14vw;
+	height: 16vh;
+	border-radius: 15px;
 }
 .photo img{
-	width: 15vw;
-	height: 25vh;
+	width: 14vw;
+	height: 16vh;
+
+}
+.biaoti{
+	width: 14vw;
+	height:8.5vh;
+	margin-top: 1.5vh;
+	background-size: contain;
+	background-image: url(../assets/src/video_bg.png);
+	background-repeat: no-repeat;
+	background-position: 100% ,100%;
+}
+p{
+	color: #FBFC7D;
+	text-align: center;
+	font-size: 1vw;
+	padding-top: 2.0vh;
 }
 </style>

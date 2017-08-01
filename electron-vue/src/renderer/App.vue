@@ -62,8 +62,8 @@ export default {
   height: 5vh;
   position:fixed;/*固定作用*/
   top:0px;
-  background-color:#707070;
-  opacity: 0.5;
+  background-color:#a3a36f;
+  background-color: rgba(163,163,111,0.5);
   _position:absolute;/* 把导航栏位置定义为绝对位置  关键*/
   _top:expression(documentElement.scrollTop + "px"); /* 把导航栏位置放在浏览器垂直滚动条的顶端  关键 */
   z-index:9999; /* 让导航栏浮在网页的高层位置，遇到flash和图片时候也能始终保持最外层 */
@@ -74,14 +74,14 @@ export default {
 	float: left;
 }
 .yemei_title{
-	margin-left: 43vw;
-	margin-top: 1vh;
+	margin-left: 33vw;
+	margin-top: 1.4vh;
 	float: left;
 	font-size: 1.1vw;
-	color: #FBFC7D;
+	color: #FFFFFF;
 }
 .gongsi{
-	margin-top: 1vh;
+	margin-top: 1.4vh;
 	float: right;
 	width: 12vw;
 	font-size: 1.1vw;
@@ -140,12 +140,13 @@ export default {
 	float: left;
 	color: #F1FA85;
 	font-size: 1.1vw;
-	margin-left: 1vw;
+	margin-left: 5vw;
 }
 .img_tubiao{
 	float:left;
 	width: 3vw;
 	height: 3vh;
+	position: fixed;
 }
 .img_tubiao img{
 	padding-top: 30vh;
@@ -153,7 +154,8 @@ export default {
 }
 .right_wenzhang{
 	width:43vw;
-	height: 70vh;
+	height: 50vh;
+	margin-top: 8vh;
 	margin-left: 35vw;
 	position: fixed;
 	margin-right: 3vw;
@@ -164,6 +166,6 @@ export default {
 .right_wenzhang img{
 	width: 43vw;
 	height: 70vh;
-		float: right;
+	float: right;
 }
 </style>

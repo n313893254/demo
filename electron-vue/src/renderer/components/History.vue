@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="Box">
   	<div class="nav">
-  	  <div class="small_logo"></div>
+  	  <div class="small_logo"><img src="../assets/src/logogsy_03.png"></div>
   	  <div class="yemei_title">知识库》史料》个人著作</div>
   	  <div class="gongsi"><img src="../assets/src/logoe4_06.png">
   	  	<p>伊世易技术支持</p></div>
@@ -16,7 +16,7 @@
         	<router-link class="button" to="/Photo"><img src="../assets/src/history_06.png"></router-link>
         </div>
         <div  @click="set('诗篇')">
-        	<router-link class="button" to="/PoeryList"><img src="../assets/src/history_10.png"></router-link>
+        	<router-link class="button" to="/PoetryList"><img src="../assets/src/history_10.png"></router-link>
         </div>
         <div  @click="set('个人著作')">
         	<router-link class="button" to="/WritingList"><img src="../assets/src/history_03.png"></router-link>
@@ -58,7 +58,6 @@
   	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
   	</div>
   	<div class="right_wenzhang">
-  		
   	</div>
   </div>
   </div>

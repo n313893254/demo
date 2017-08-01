@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="Box">
   	<div class="nav">
-  		<div class="small_logo"></div>
+  		<div class="small_logo"><img src="../assets/src/logogsy_03.png"></div>
   	  <div class="yemei_title">知识库》史料》画作</div>
   	  <div class="gongsi"><img src="../assets/src/logoe4_06.png">
   	  	<p>伊世易技术支持</p></div>
@@ -26,7 +26,7 @@
     </div>
     <div class="img-list">
       <div class="img" v-for="painting in paintings">
-        <router-link
+        <router-link class="huazuo"
           :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}">
           <img :src="painting.imgSrc" alt="">
         </router-link>
@@ -76,6 +76,19 @@ export default {
   left: 1vh;
   bottom: 1vw;
 }
+.title{
+	background-image:url(../assets/src/flower_11.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 50vw;
+	margin: auto ;
+	color:#F1FA85;
+}
+.title span{
+	font-size: 2.5vw;
+	margin: auto;
+	text-align: center;
+}
 .img {
   height: 30vh;
   width: 16vw;
@@ -93,11 +106,10 @@ export default {
 	font-size: 1vw;
 	padding-top: 1.5vh;
 }
-
 .biaoti{
 	width: 15vw;
 	height:8.5vh;
-	margin: 1.5vw;
+	margin: 1.4vw;
 	background-size: contain;
 	background-image: url(../assets/src/lable_11.png);
 	background-repeat: no-repeat;
