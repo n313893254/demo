@@ -55,7 +55,7 @@
     </div>
     <div class="menu-wrapper-right">
       <div class="menu">
-        <div class="button" @click="pageBack()">返回</div>
+        <div class="button" @click="pageBack()"><img src="../assets/src/Details_14.png"></div>
       </div>
     </div>
   </div>
@@ -156,7 +156,7 @@ export default {
 .flipbook-viewport .page p {
   text-indent: 2em;
   line-height: 240%;
-  margin: 1vh;
+  margin: 1vh 2vw;
 }
 .flipbook-viewport .page .center {
   display: flex;
