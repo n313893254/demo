@@ -3,13 +3,35 @@
     <div class="flipbook-viewport">
       <div class="container">
         <div class="flipbook">
-          <div class="">『魔神Z』新剧场版与日本政府合作对抗麻疹 『终物语』第2季特番公布预告片-日刊和邪晚间版</div>
-          <div class="">离开了40度的上海来到了30度的广州，一切都感觉相当良好。离开了喧闹的CHINA JOY，感受广州的夏季，
-            其实上次来广州也是夏天。这次还要感谢我们广州的记者Beryl特别来机场接机，给我带来极大的便利，出差了，
-            最近几天的更新就要集中在网上了，明天fripSide的八木沼悟志在广州的发布会大家可以期待我们在微博的直播。</div>
-          <div class="">TrySail组合的第2张专辑CD「TAILWIND」将在今年8月23日正式发售，
-            这张专辑CD将收录包括『埃罗芒阿老师』的ED「adrenaline!!!」在内的12首歌曲，其中还将有以主打歌「TAILWIND」为首的4首新歌。
-            近日官方公开了这张专辑CD的封面，分别是蓝光盘限定版、DVD限定版和通常版。</div>
+          <div class="page">
+            <p>我生长在穷乡僻壤的小村子，从小就喜欢涂鸦。家门口的晒谷场，就是我的大画板;随手拾来的木炭瓦片，
+              就是我的画具。见鸡画鸡，见狗画狗，我曾在晒谷场上画过牛耕田，画过牵长线放纸鹞。</p>
+            <p>我和哥哥和一位堂叔会画炭相，但我觉得黑漆的炭相不好看。一次弄来一小块他们画炭相用的“飞马纸”，
+              便是用这块洁白的洋纸画一只大雄鸡。春节刚过，家家户户都贴有红对联，于是我冒着风险撕下邻舍的一块红纸，
+              企图泡出点红颜色用来画雄鸡的鸡冠。此外，我还发现水瓜叶可以挤出绿色汁液;妈妈上山砍柴时又求她为我摘回一些当黄色用的梔子;
+              有时为了要画多种颜色的花纸鹞，又用土块和石头磨出各种各样色彩的粉末当颜料。</p>
+          </div>
+          <div class="page">
+            <h1>绘事话童年</h1>
+            <p>我生长在穷乡僻壤的小村子，从小就喜欢涂鸦。家门口的晒谷场，就是我的大画板;随手拾来的木炭瓦片，
+              就是我的画具。见鸡画鸡，见狗画狗，我曾在晒谷场上画过牛耕田，画过牵长线放纸鹞。</p>
+            <p>我和哥哥和一位堂叔会画炭相，但我觉得黑漆的炭相不好看。一次弄来一小块他们画炭相用的“飞马纸”，
+              便是用这块洁白的洋纸画一只大雄鸡。春节刚过，家家户户都贴有红对联，于是我冒着风险撕下邻舍的一块红纸，
+              企图泡出点红颜色用来画雄鸡的鸡冠。此外，我还发现水瓜叶可以挤出绿色汁液;妈妈上山砍柴时又求她为我摘回一些当黄色用的梔子;
+              有时为了要画多种颜色的花纸鹞，又用土块和石头磨出各种各样色彩的粉末当颜料。</p>
+              <p>我家是所谓书香世代的破落户，家里有个破败的小花园。家乡叫果园村，我小时候村里到处都是花果树，
+                其中有两人合抱不过来的菠萝蜜、人面果。在我家花园里还有百年荔枝树和两棵古白梅，父亲还亲手植了不少幽兰与修竹，
+                园门口的夜兰花棚悬挂着一副竹刻的对联:“为室因树，补屋牵萝。
+                ”父亲读书会客的小书舍，就盖在荔枝树的旁边。总之，破旧的环境还十分雅致，书香、诗味和画意都很浓。</p>
+          </div>
+          <div class="page">
+            <p>父亲虽然没有赶上考科举，但却是一位有文学修养的小学教师。他曾写过不少诗，也会画几笔梅、兰、菊、竹四君子为题材的文人画。
+              在我八九岁的时候，才跟随着父亲念书，他在哪里应聘，我就在哪里就读，最远的两处地方我记得是小渔港溪头镇和奋兴小学所在的织贡圩。
+              在奋兴小学念书的时候我已十一二岁了。当时随父亲住在小房间里，见他画画时我也偷偷地临仿，可是他一见我画画</p>
+              <div class="center">
+                <img src="http://121.40.46.137/guanshanyue/assets/img/beditor_upload/20160805/1470375818127692.png" alt="">
+              </div>
+          </div>
           <div class="">TrySail是日本的声优组合，由Music Ray’n事务所所属的三名女声优麻仓桃、雨宫天、夏川椎菜组成。
             TrySail将出席在今年的「Animelo Summer Live 2017 -THE CARD-」演唱会，登场时间为8月27日。</div>
           <div class="">七月新番『咕噜咕噜魔法阵』ED单曲封面公开</div>
@@ -66,8 +88,8 @@ export default {
 
     // 翻书效果
     $('.flipbook').turn({
-      width: 60 + 'vw',
-      height: 60 + 'vh',
+      width: 88 + 'vw',
+      height: 72 + 'vh',
       elevation: 10,
       gradients: true,
       autoCenter: false,
@@ -119,6 +141,26 @@ export default {
   background-position: center;
   width: 100%;
   height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flipbook-viewport .page {
+  background: white;
+}
+.flipbook-viewport .page h1 {
+  padding: 2vh 2vw;
+  text-align: center;
+}
+.flipbook-viewport .page p {
+  text-indent: 2em;
+  line-height: 240%;
+  margin: 1vh;
+}
+.flipbook-viewport .page .center {
+  display: flex;
+  justify-content: center;
 }
 /* Transition layer */
 .cd-transition-layer {
