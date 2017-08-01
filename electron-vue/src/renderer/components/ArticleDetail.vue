@@ -66,9 +66,9 @@ export default {
 
     // 翻书效果
     $('.flipbook').turn({
-      width: 922,
-      height: 600,
-      elevation: 50,
+      width: 60 + 'vw',
+      height: 60 + 'vh',
+      elevation: 10,
       gradients: true,
       autoCenter: false,
       acceleration: true,
@@ -101,52 +101,25 @@ export default {
 
 <style lang="css" scoped>
 .body {
-  background-color: #fcfcfc;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
 }
 .flipbook-viewport {
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
 .flipbook-viewport .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: auto;
-}
-.flipbook-viewport .flipbook {
-  width: 1000px;
-  height: 600px;
-  left: -461px;
-  top: 300px;
-}
-.flipbook-viewport .page {
-  width: 461px;
-  height: 600px;
-  background-color: white;
+  background-image: url('../assets/bg/article-bg.png');
+  background-size: contain;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
-.flipbook .page {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-.flipbook-viewport .page img {
-  user-select: none;
-  margin: 0;
-}
-.flipbook-viewport .shadow {
-  box-shadow: 0 0 20px #ccc;
-}
-.button_out{
-	float: right;
-	font-size: 2vw;
-	width: 5vw;
-	height: 5vh;
-}
-
 /* Transition layer */
 .cd-transition-layer {
   position: fixed;
