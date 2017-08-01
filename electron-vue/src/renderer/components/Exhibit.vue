@@ -7,6 +7,7 @@
           :to="{ path: '/Painting/Display',query: { src: painting.imgSrc }}">
           <img :src="painting.imgSrc" alt="" :style="{ color: 'red' }">
         </router-link>
+        <img src="../assets/src/painting_img2.jpg" alt="">
       </div>
     </div>
   </div>

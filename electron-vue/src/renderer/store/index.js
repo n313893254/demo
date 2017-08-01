@@ -29,7 +29,7 @@ export default new Vuex.Store({
       {
         title: '10个字的长度山水图胡卡是复活节萨复活阿瑟费好',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'imgs/painting_img2.jpg'
       },
       {
         title: '山水图',
