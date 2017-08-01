@@ -60,6 +60,10 @@ export default {
     var transitionLayer = $('.cd-transition-layer')
     transitionLayer.addClass('closing')
     transitionLayer.addClass('visible opening')
+    setTimeout(function () {
+      transitionLayer.addClass('no-cssanimations')
+    }, 3000)
+
     // 翻书效果
     $('.flipbook').turn({
       width: 922,
@@ -148,7 +152,7 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -2;
+  z-index: 2;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -177,7 +181,7 @@ export default {
   -webkit-animation: cd-sequence-reverse 2s steps(24);
   animation-fill-mode: forwards;
 }
-.no-cssanimations .cd-transition-layer {
+.no-cssanimations.cd-transition-layer {
   display: none;
 }
 @-webkit-keyframes cd-sequence {
