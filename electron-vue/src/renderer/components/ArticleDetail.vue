@@ -97,26 +97,6 @@ export default {
       page: 2,
       turnCorners: 'all'
     })
-    // var delay = ($('.no-cssanimations').length > 0) ? 0 : 600
-
-    // function setLayerDimensions () {
-    //   let windowWidth = $(window).width()
-    //   let windowHeight = $(window).height()
-    //   let layerHeight
-    //   let layerWidth
-    //
-    //   if (windowWidth / windowHeight > frameProportion) {
-    //     layerWidth = windowWidth
-    //     layerHeight = layerWidth / frameProportion
-    //   } else {
-    //     layerHeight = windowHeight * 1.2
-    //     layerWidth = layerHeight * frameProportion
-    //   }
-    //   transitionBackground.css({
-    //     'width': layerWidth * frames + 'px',
-    //     'height': layerHeight + 'px'
-    //   })
-    // }
   }
 }
 </script>
