@@ -139,15 +139,10 @@ export default {
 .photo{
 	width: 14vw;
 	height: 14vh;
-	margin: 1vw;
-	border-radius: 15px;
-	background-color: #ffffff;
 }
 .photo img{
-	width: 13vw;
-	height: 13vh;
-	margin-left: 0.5vw ;
-	margin-top: 0.5vh;
+	width: 14vw;
+	height: 14vh;
 }
 .biaoti{
 	width: 13.5vw;
@@ -159,7 +154,7 @@ export default {
 	background-position: 100% ,100%;
 }
 p{
-	color: #FBFC7D;
+	color: #00000;
 	text-align: center;
 	font-size: 1vw;
 	padding-top: 1.5vh;

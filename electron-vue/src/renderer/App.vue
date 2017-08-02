@@ -138,7 +138,7 @@ export default {
 	width: 27vw;
 	height: 90vh;
 	float: left;
-	color: #F1FA85;
+	color: #000000;
 	font-size: 1.1vw;
 	margin-left: 5vw;
 }
