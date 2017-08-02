@@ -27,7 +27,7 @@
         <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>
       </div>
     </div>
-  
+
   <div class="mid">
   	<div class="img_tubiao">
   			<img src="../assets/src/book_10.png">
@@ -58,6 +58,7 @@
   	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
   	</div>
   	<div class="right_wenzhang">
+      <p>sfdaf</p>
   	</div>
   </div>
   </div>

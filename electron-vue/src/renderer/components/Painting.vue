@@ -29,7 +29,7 @@
         <div class="painting-wrapper">
           <router-link class="poi"
             :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}">
-            <img :src="painting.imgSrc" alt="" :style="painting.display">
+            <img :src="painting.imgSrc" alt="">
           </router-link>
         </div>
         <div class="img-description">
@@ -124,15 +124,15 @@ export default {
 }
 .poi {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .img  img {
-  /*height: 100%;
-  width: 100%;*/
-  border: 1px solid #000;
+  clip-path: circle(80px at 50% 50%);
+  /*@media*/
 }
 .img p {
   color: #FBFC7D;
