@@ -31,8 +31,8 @@
           <img :src="painting.imgSrc" alt="">
         </router-link>
         <div class="biaoti">
-        <p>{{ painting.title }}</p>
-        <p>{{ painting.year }}</p>
+          <p>{{ painting.title }}</p>
+          <p>{{ painting.year }}</p>
         </div>
       </div>
     </div>
@@ -105,18 +105,20 @@ export default {
 }
 .img p {
   color: #FBFC7D;
-	text-align: center;
-	font-size: 1vw;
-	padding-top: 1.5vh;
+  font-size: 2vh;
 }
 .biaoti{
 	width: 15vw;
 	height:8.5vh;
-	margin: 1.4vw;
+	margin-top: 1vh;
 	background-size: contain;
 	background-image: url(../assets/src/lable_11.png);
 	background-repeat: no-repeat;
-	background-position: 100% ,100%;
+	background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .title {
   height: 10vh;
