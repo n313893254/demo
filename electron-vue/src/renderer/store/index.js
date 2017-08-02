@@ -139,6 +139,16 @@ export default new Vuex.Store({
 
     detailShow (state, value) {
       state.detailShow = value
+    },
+
+    setDisplay (state, payload) {
+      let i = payload.number
+      let display = payload.display
+      if (display === 'height') {
+        state.paintings[i].display = 'height: 100%'
+      } else {
+        state.paintings[i].display = 'width: 100%'
+      }
     }
   }
 })

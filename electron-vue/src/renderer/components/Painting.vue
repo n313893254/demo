@@ -29,7 +29,7 @@
         <div class="painting-wrapper">
           <router-link class="poi"
             :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}">
-            <img :src="painting.imgSrc" alt="">
+            <img :src="painting.imgSrc" alt="" :style="painting.display">
           </router-link>
         </div>
         <div class="img-description">
@@ -53,6 +53,9 @@ export default {
     },
     paintings () {
       return this.$store.state.paintings.slice(0, 12)
+    },
+    display () {
+
     }
   },
   methods: {
@@ -68,6 +71,22 @@ export default {
   },
   created: function () {
     this.$store.commit('setMenuBarSeen', true)
+    let paintings = this.$store.state.paintings.slice(0, 12)
+    for (let i in paintings) {
+      let img = new Image()
+      img.src = paintings[i].imgSrc
+      if (img.height > img.width) {
+        this.$store.commit('setDisplay', {
+          number: i,
+          display: 'height'
+        })
+      } else {
+        this.$store.commit('setDisplay', {
+          number: i,
+          display: 'width'
+        })
+      }
+    }
   }
 }
 </script>
@@ -111,8 +130,8 @@ export default {
   align-items: center;
 }
 .img  img {
-  height: 100%;
-  width: 100%;
+  /*height: 100%;
+  width: 100%;*/
   border: 1px solid #000;
 }
 .img p {
