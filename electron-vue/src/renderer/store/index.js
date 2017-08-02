@@ -29,7 +29,7 @@ export default new Vuex.Store({
       {
         title: '山水画',
         year: '1941年',
-        imgSrc: 'imgs/video1.png'
+        imgSrc: 'imgs/painting_img2.jpg'
       },
       {
         title: '山水图',

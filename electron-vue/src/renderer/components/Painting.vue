@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="Box">
+  <div class="body">
   	<div class="nav">
   		<div class="small_logo"><img src="../assets/src/logogsy_03.png"></div>
   	  <div class="yemei_title">知识库》史料》画作</div>
@@ -71,6 +71,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.body {
+  overflow: hidden;
+}
 .menu-wrapper-left {
   position: fixed;
   left: 1vh;
@@ -80,19 +83,19 @@ export default {
 	background-image:url(../assets/src/flower_11.png);
 	background-repeat: no-repeat;
 	background-size: contain;
-	width: 50vw;
-	margin: auto ;
+  background-position: center;
+	width: 100vw;
 	color:#F1FA85;
+  margin-bottom: 0;
 }
 .title span{
 	font-size: 2.5vw;
-	margin: auto;
 	text-align: center;
 }
 .img {
   height: 30vh;
   width: 16vw;
-  margin: 8vh 0;
+  margin-bottom: 16vh;
 }
 
 .img  img {
@@ -128,6 +131,7 @@ export default {
   justify-content: space-between;
   width: 70vw;
   margin-left: 12vw;
+  margin-right: 0;
   flex-wrap: wrap;
 }
 </style>

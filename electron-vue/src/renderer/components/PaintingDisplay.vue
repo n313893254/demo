@@ -81,6 +81,7 @@ export default {
   width: 100vw;
   height: 100vh;
   justify-content: space-between;
+  align-items: center;
 }
 .page .img.height {
   display: flex;
