@@ -39,52 +39,52 @@ export default new Vuex.Store({
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/61990654_p0%20%281%29.jpg'
+        imgSrc: 'imgs/painting_img4.jpg'
       },
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'imgs/painting_img2.jpg'
       },
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'imgs/painting_img3.jpg'
       },
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'imgs/painting_img4.jpg'
       },
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'imgs/painting_img2.jpg'
       },
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'imgs/painting_img3.jpg'
       },
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'imgs/painting_img4.jpg'
       },
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'imgs/painting_img2.jpg'
       },
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'imgs/painting_img3.jpg'
       },
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/00357D.png'
+        imgSrc: 'imgs/painting_img4.jpg'
       },
       {
         title: '山水图',

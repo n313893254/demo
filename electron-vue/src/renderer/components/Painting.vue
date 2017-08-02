@@ -27,7 +27,7 @@
     <div class="img-list">
       <div class="img" v-for="painting in paintings">
         <div class="painting-wrapper">
-          <router-link tag="div"
+          <router-link class="poi"
             :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}">
             <img :src="painting.imgSrc" alt="">
           </router-link>
@@ -97,17 +97,19 @@ export default {
 .painting-wrapper {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .img {
   height: 30vh;
   width: 16vw;
   margin-bottom: 16vh;
 }
-
+.poi {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .img  img {
   height: 100%;
   width: 100%;
