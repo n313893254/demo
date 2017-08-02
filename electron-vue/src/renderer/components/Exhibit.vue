@@ -8,6 +8,7 @@
           <img :src="painting.imgSrc" alt="" :style="{ color: 'red' }">
         </router-link>
         <img src="../assets/src/painting_img2.jpg" alt="">
+        <img src="../assets/src/painting_img3.jpg" alt="">
       </div>
     </div>
   </div>

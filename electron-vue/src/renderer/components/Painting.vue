@@ -26,11 +26,13 @@
     </div>
     <div class="img-list">
       <div class="img" v-for="painting in paintings">
-        <router-link class="huazuo"
-          :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}">
-          <img :src="painting.imgSrc" alt="">
-        </router-link>
-        <div class="biaoti">
+        <div class="painting-wrapper">
+          <router-link tag="div"
+            :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}">
+            <img :src="painting.imgSrc" alt="">
+          </router-link>
+        </div>
+        <div class="img-description">
           <p>{{ painting.title }}</p>
           <p>{{ painting.year }}</p>
         </div>
@@ -92,6 +94,14 @@ export default {
 	font-size: 2.5vw;
 	text-align: center;
 }
+.painting-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .img {
   height: 30vh;
   width: 16vw;
@@ -107,11 +117,9 @@ export default {
   color: #FBFC7D;
   font-size: 2vh;
 }
-.biaoti{
-	width: 15vw;
-	height:8.5vh;
+.img-description {
 	margin-top: 1vh;
-	background-size: contain;
+	background-size: 100% 100%;
 	background-image: url(../assets/src/lable_11.png);
 	background-repeat: no-repeat;
 	background-position: center;

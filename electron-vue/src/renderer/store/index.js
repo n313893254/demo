@@ -34,7 +34,7 @@ export default new Vuex.Store({
       {
         title: '山水图',
         year: '1941年',
-        imgSrc: 'http://omph2coqc.bkt.clouddn.com/thumb-1920-736033.jpg'
+        imgSrc: 'imgs/painting_img3.jpg'
       },
       {
         title: '山水图',
