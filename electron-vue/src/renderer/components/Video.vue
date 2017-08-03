@@ -18,7 +18,7 @@ import videojs from 'video.js'
 export default {
   name: 'elVideo',
   created: function () {
-    this.$store.commit('setMenuBarSeen', false)
+    // this.$store.commit('setMenuBarSeen', false)
     console.log(videojs)
   },
   methods: {
@@ -38,6 +38,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .video-js {
   background-color: #000;
