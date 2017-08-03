@@ -100,7 +100,6 @@ export default {
 .photo{
 	width: 14vw;
 	height: 16vh;
-	border-radius: 15px;
 }
 .photo img{
 	width: 14vw;
@@ -110,16 +109,18 @@ export default {
 .biaoti{
 	width: 14vw;
 	height:8.5vh;
+	text-align: center;
 	margin-top: 1.5vh;
+	padding-top: 2.2vh;
 	background-size: contain;
 	background-image: url(../assets/src/video_bg.png);
 	background-repeat: no-repeat;
 	background-position: 100% ,100%;
 }
 p{
-	color: #FBFC7D;
+	color: #000000;
 	text-align: center;
 	font-size: 1vw;
-	padding-top: 2.0vh;
+	line-height: 2vh;
 }
 </style>
