@@ -23,7 +23,7 @@
     <p>视频列表</p>
       <div class="mid">
       	<div class="photomodel">
-       <div class="photo" to="/Video"><img src="../assets/src/video1.png"></div>
+       <router-link class="photo" to="videoList/Video"><img src="../assets/src/video1.png"></router-link>
        <div class="biaoti" to="/Video"><p>创作过程</p></div>
       </div>
       <div class="photomodel">

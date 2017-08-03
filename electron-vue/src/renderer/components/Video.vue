@@ -1,15 +1,19 @@
 <template lang="html">
-  <div class="">
+  <div class="page">
     <p>播放视频 {{ this.$route.path }}</p>
-     <video autoplay="autoplay" loop="loop">
-     <source  src="../movie/Movie.mp4" type="video/mp4" ></source>
+     <video autoplay="autoplay" loop="loop" width="100%" height="100%">
+       <source  src="/static/video/video-1.mp4" type="video/mp4"></source>
      </video>
+     <div class="button" @click="pageBack()">返回</div>
+     <MenuBar/>
   </div>
 </template>
 
 <script>
+import MenuBar from './MenuBar'
 export default {
   name: 'Video',
+  components: { MenuBar },
   methods: {
     pageBack () {
       this.$router.back()
