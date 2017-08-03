@@ -20,9 +20,8 @@
         <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>
       </div>
     </div>·
-    <p>视频列表</p>
-      <div class="mid">
-      	<div class="photomodel">
+    <div class="mid">
+    	<div class="photomodel">
         <router-link class="photo" to="videoList/Video"><img src="../assets/src/video1.png"></router-link>
         <div class="biaoti" to="/Video"><p>创作过程</p></div>
       </div>
