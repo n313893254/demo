@@ -37,6 +37,7 @@ export default {
   	background-position: right bottom ;
   	background-attachment:fixed;
   	background-size: cover;
+  	font-family: "宋体";
   }
   #app {
     display: flex;
@@ -128,6 +129,7 @@ export default {
     right: 1vh;
     bottom: 1vw;
   }
+  /* 史料和研究的内容*/
   .left_title{
 	width: 27vw;
 	height: 90vh;
@@ -157,9 +159,39 @@ export default {
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-.right_wenzhang img{
-	width: 43vw;
-	height: 70vh;
+.article_words{
+	width: 32vw;
+	height: 41vh;
+	min-height: 41vh;
+	border: 1px dashed #E9967A;
+  margin-left: 5.5vw;
+  margin-top: 4vh;
+  overflow: hidden;
+  line-height: 2em;
+  font-size: 0.9vw;
+  line-height: 25px;
+  clear: both;
+  word-break: break-word;
+  
+}
+.article_words p{
+	text-indent: 2em;
+}
+.article_words h2{
+	text-align: center;
+}
+.author{
+	width: 32vw;
+}
+.writer{
+	width: 16vw;
+	float: left;
+}
+.data{
+	width: 16vw;
+	float: right;
+}
+.data p{
 	float: right;
 }
 </style>

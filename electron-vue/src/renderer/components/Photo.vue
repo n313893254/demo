@@ -1,5 +1,11 @@
 <template lang="html">
-  <div class="">
+  <div class="Box">
+    <div class="nav">
+      <div class="small_logo"><img src="../assets/src/logogsy_03.png"></div>
+      <div class="yemei_title">知识库》史料》照片</div>
+      <div class="gongsi"><img src="../assets/src/logoe4_06.png">
+      <p>伊世易技术支持</p></div>
+    </div>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('视频')">
@@ -121,9 +127,9 @@ export default {
 
 <style lang="css" scoped>
 .mid{
-	width: 84vw;
-	height: 90vh;
-	margin-left: 4.5vw;
+  width: 84vw;
+  height: 90vh;
+  margin-left: 9vw;
 }
 .menu-wrapper-left {
   position: fixed;
@@ -131,32 +137,34 @@ export default {
   bottom: 1vw;
 }
 .photomodel{
-	width: 16vw;
-	height: 28vh;
-	margin-top: 6vh;
-	float: left;
+  width: 16vw;
+  height: 28vh;
+  margin-top: 6vh;
+  float: left;
 }
 .photo{
-	width: 14vw;
-	height: 14vh;
+  width: 14vw;
+  height: 14vh;
+  box-shadow: 3px 3px 3px #FBFC7D;
 }
 .photo img{
-	width: 14vw;
-	height: 14vh;
+  width: 14vw;
+  height: 14vh;
 }
 .biaoti{
-	width: 13.5vw;
-	height:8.5vh;
-	margin: 1.5vw;
-	background-size: contain;
-	background-image: url(../assets/src/lable_11.png);
-	background-repeat: no-repeat;
-	background-position: 100% ,100%;
+  width: 13.5vw;
+  height:8.5vh;
+  margin-left: 0.3vw;
+  margin-top: 1.5vw;
+  background-size: contain;
+  background-image: url(../assets/src/lable_11.png);
+  background-repeat: no-repeat;
+  background-position: 100% ,100%;
 }
-p{
-	color: #00000;
-	text-align: center;
-	font-size: 1vw;
-	padding-top: 1.5vh;
+.biaoti p{
+  color: #00000;
+  text-align: center;
+  font-size: 1vw;
+  padding-top: 1.5vh;
 }
 </style>

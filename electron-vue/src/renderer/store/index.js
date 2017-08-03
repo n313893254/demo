@@ -31,6 +31,13 @@ export default new Vuex.Store({
       {
         title: '山水画',
         year: '1941年',
+        name: '塞上冰河',
+        time: '纸本设色',
+        size: '20世纪40年代',
+        qualitaive: '98.5cm x45.6cm',
+        collection: '广州艺术博物院藏',
+        inscription: '塞上冰河。四十年代旧作，一九九八年春补题于珠江南岸，漠阳关山月。',
+        seal: '关山月（朱文） 漠阳（白文）',
         imgSrc: 'imgs/painting_img2.jpg'
       },
       {

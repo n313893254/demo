@@ -1,5 +1,11 @@
 <template lang="html">
   <div class="">
+  	<div class="nav">
+  		<div class="small_logo"><img src="../assets/src/logogsy_03.png"></div>
+  	  <div class="yemei_title">知识库》史料》视频</div>
+  	  <div class="gongsi"><img src="../assets/src/logoe4_06.png">
+  	  	<p>伊世易技术支持</p></div>
+  	</div>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('视频')">

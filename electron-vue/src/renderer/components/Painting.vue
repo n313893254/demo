@@ -36,6 +36,15 @@
           <p>{{ painting.title }}</p>
           <p>{{ painting.year }}</p>
         </div>
+        <div class="img_detail" >
+          <p>{{painting.name}}</p>
+          <p>{{painting.time}}</p>
+          <p>{{painting.size}}</p>
+          <p>{{painting.qualitaive}}</p>
+          <p>{{painting.collection}}</p>
+          <p>{{painting.inscription}}</p>
+          <p>{{painting.seal}}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -139,11 +148,12 @@ export default {
   font-size: 2vh;
 }
 .img-description {
-	margin-top: 1vh;
-	background-size: 100% 100%;
-	background-image: url(../assets/src/lable_11.png);
-	background-repeat: no-repeat;
-	background-position: center;
+  margin-top: 1vh;
+  height: 8vh;
+  background-size: 100% 100%;
+  background-image: url(../assets/src/lable_11.png);
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,5 +174,9 @@ export default {
   margin-left: 12vw;
   margin-right: 0;
   flex-wrap: wrap;
+}
+.img_detail{
+  background-color: #000000;
+  display: none;
 }
 </style>
