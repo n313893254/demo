@@ -25,12 +25,6 @@ export default {
 </script>
 
 <style>
-  .test {
-    position: fixed;
-    top: 5vh;
-    right: 5vw;
-    border: 1px solid #000;
-  }
   /* CSS */
   * {
     padding: 0;

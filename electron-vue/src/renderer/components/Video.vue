@@ -1,7 +1,11 @@
 <template lang="html">
   <div class="page">
-    <p>播放视频 {{ this.$route.path }}</p>
-     <video autoplay="autoplay" loop="loop" width="100%" height="100%">
+     <video
+        id="my-player"
+        class="video-js vjs-matrix"
+        controls
+        preload="auto"
+        autoplay="auto">
        <source  src="/static/video/video-1.mp4" type="video/mp4"></source>
      </video>
      <div class="button" @click="pageBack()">返回</div>
@@ -11,6 +15,9 @@
 
 <script>
 import MenuBar from './MenuBar'
+import videojs from 'video.js'
+// import $ from 'jquery'
+
 export default {
   name: 'Video',
   components: { MenuBar },
@@ -21,27 +28,24 @@ export default {
   },
   created: function () {
     this.$store.commit('setMenuBarSeen', false)
+    console.log(videojs)
   }
 }
 </script>
 
 <style lang="css" scoped>
-video{
-       position: fixed;
-       right: 0px;
-       bottom: 0px;
-       min-width: 100%;
-       min-height: 100%;
-       height: auto;
-       width: auto;
-            /*加滤镜*/
-            /*-webkit-filter: grayscale(100%);*/
-            /*filter:grayscale(100%);*/
-        }
-source{
-         min-width: 100%;
-         min-height: 100%;
-         height: auto;
-         width: auto;
-        }
+.page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.page .video-js {
+  background-color: #000;
+  height: 80vh;
+  width: 80vw;
+}
+
 </style>
