@@ -16,6 +16,8 @@ export default new Vuex.Store({
       {field: '书法'}
     ],
 
+    isDisplay: false,
+
     leftMenuSeen: false,
     rightMenuSeen: false,
     menuBarSeen: false,
@@ -149,6 +151,10 @@ export default new Vuex.Store({
       } else {
         state.paintings[i].display = 'width: 100%'
       }
+    },
+
+    setPlayer (state, value) {
+      state.isDisplay = value
     }
   }
 })

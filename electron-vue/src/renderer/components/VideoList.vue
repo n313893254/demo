@@ -26,7 +26,7 @@
         <div class="biaoti" to="/Video"><p>创作过程</p></div>
       </div>
       <div class="photomodel">
-        <div class="photo" @click="showVideo()"><img src="../assets/src/video2.png"></div>
+        <div class="photo" @click="showVideo(true)"><img src="../assets/src/video2.png"></div>
         <div class="biaoti" to="/Video"><p>创作《巨榕》<br>1994年</p></div>
       </div>
       <div class="photomodel">
@@ -42,12 +42,17 @@
         <div class="biaoti" to="/Video"><p>关山月专题片</p></div>
       </div>
     </div>
+    <div class="videoPlayer" v-if="videoPlay">
+      <elVideo/>
+    </div>
   </div>
 </template>
 
 <script>
+import elVideo from './Video'
 export default {
   name: 'Photo',
+  components: { elVideo },
   computed: {
     title () {
       return this.$store.state.photoTitle
@@ -57,6 +62,9 @@ export default {
     },
     photos () {
       return this.$store.state.photos.slice(0, 6)
+    },
+    videoPlay () {
+      return this.$store.state.isDisplay
     }
   },
   methods: {
@@ -68,6 +76,10 @@ export default {
     },
     closeLeftMenu () {
       return this.$store.commit('closeLeftMenu')
+    },
+    // { true: 弹出播放器, false: 关闭播放器 }
+    showVideo (value) {
+      return this.$store.commit('setPlayer', value)
     }
   },
   created: function () {
@@ -117,10 +129,17 @@ export default {
 	background-repeat: no-repeat;
 	background-position: 100% ,100%;
 }
-p{
+p {
 	color: #000000;
 	text-align: center;
 	font-size: 1vw;
 	line-height: 2vh;
+}
+.videoPlayer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 </style>
