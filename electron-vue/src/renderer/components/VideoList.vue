@@ -22,7 +22,7 @@
     </div>·
     <div class="mid">
     	<div class="photomodel">
-        <router-link class="photo" to="videoList/Video"><img src="../assets/src/video1.png"></router-link>
+        <div class="photo"><img src="../assets/src/video1.png"></div>
         <div class="biaoti" to="/Video"><p>创作过程</p></div>
       </div>
       <div class="photomodel">
@@ -30,16 +30,16 @@
         <div class="biaoti" to="/Video"><p>创作《巨榕》<br>1994年</p></div>
       </div>
       <div class="photomodel">
-        <div class="photo" to="/Video"><img src="../assets/src/video3.png"></div>
-        <div class="biaoti" to="/Video"><p>创作《黄陵古柏》<br>1994年</p></div>
+        <div class="photo" ><img src="../assets/src/video3.png"></div>
+        <div class="biaoti"><p>创作《黄陵古柏》<br>1994年</p></div>
       </div>
       <div class="photomodel">
-        <div class="photo" to="/Video"><img src="../assets/src/video4.png"></div>
-        <div class="biaoti" to="/Video"><p>创作《漂流伴水声》<br>1993年</p></div>
+        <div class="photo"><img src="../assets/src/video4.png"></div>
+        <div class="biaoti"><p>创作《漂流伴水声》<br>1993年</p></div>
       </div>
       <div class="photomodel">
-        <div class="photo" to="/Video"><img src="../assets/src/video5.png"></div>
-        <div class="biaoti" to="/Video"><p>关山月专题片</p></div>
+        <div class="photo"><img src="../assets/src/video5.png"></div>
+        <div class="biaoti"><p>关山月专题片</p></div>
       </div>
     </div>
     <div class="videoPlayer" v-if="videoPlay">
