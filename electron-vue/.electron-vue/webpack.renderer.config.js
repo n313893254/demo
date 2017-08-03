@@ -94,16 +94,6 @@ let rendererConfig = {
           }
         }
       }
-      // {
-      //   test: /\.(png|jpe?g|gif|svg)$/,
-      //   use: {
-      //     loader: 'file-loader',
-      //     query: {
-      //       limit: 10000,
-      //       name: 'imgs/[name].[ext]'
-      //     }
-      //   }
-      // }
     ]
   },
   node: {
