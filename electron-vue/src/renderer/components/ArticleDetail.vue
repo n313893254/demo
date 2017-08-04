@@ -146,8 +146,9 @@ export default {
 }
 .flipbook-viewport .page p {
   text-indent: 2em;
-  line-height: 240%;
-  margin: 1vh 4vw;
+  line-height: 200%;
+  font-size: 2vh;
+  margin: 4vh 4vw;
   color: #B97325;
 }
 .flipbook-viewport .page .author {
