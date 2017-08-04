@@ -31,13 +31,16 @@ export default {
     margin: 0;
     box-sizing: border-box;
   }
-  body{
+  body {
   	background-image:url(assets/src/bg.jpg);
   	background-repeat: no-repeat;
   	background-position: right bottom ;
   	background-attachment:fixed;
   	background-size: cover;
   	font-family: "宋体";
+  }
+  body::-webkit-scrollbar {
+    display: none;
   }
   #app {
     display: flex;
@@ -172,7 +175,7 @@ export default {
   line-height: 25px;
   clear: both;
   word-break: break-word;
-  
+
 }
 .article_words p{
 	text-indent: 2em;
