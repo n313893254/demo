@@ -25,46 +25,45 @@ export default {
 </script>
 
 <style>
-  /* CSS */
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  body {
-  	background-image:url(assets/src/bg.jpg);
-  	background-repeat: no-repeat;
-  	background-position: right bottom ;
-  	background-attachment:fixed;
-  	background-size: cover;
-  	font-family: "宋体";
-  }
-  body::-webkit-scrollbar {
-    display: none;
-  }
-  #app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .Box{
-  	width: 100vw;
-  }
-  .box {
-    border: 1px solid #000;
-  }
-  /* 固定导航条*/
-  .nav{
-	 width:100vw;
+/* CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+	background-image:url(assets/src/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom ;
+	background-attachment:fixed;
+	background-size: cover;
+	font-family: "宋体";
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Box{
+	width: 100vw;
+}
+.box {
+  border: 1px solid #000;
+}
+/* 固定导航条*/
+.nav{
+  width: 100vw;
   height: 5vh;
-  position:fixed;/*固定作用*/
-  top:0px;
-  background-color:#a3a36f;
-  background-color: rgba(163,163,111,0.5);
-  _position:absolute;/* 把导航栏位置定义为绝对位置  关键*/
-  _top:expression(documentElement.scrollTop + "px"); /* 把导航栏位置放在浏览器垂直滚动条的顶端  关键 */
-  z-index:9999; /* 让导航栏浮在网页的高层位置，遇到flash和图片时候也能始终保持最外层 */
+  position: fixed;/*固定作用*/
+  top: 0px;
+  background-color: #a3a36f;
+  background-color: rgba(163, 163, 111, 0.5);
+  _top: expression(documentElement.scrollTop + "px"); /* 把导航栏位置放在浏览器垂直滚动条的顶端  关键 */
+  z-index: 9999; /* 让导航栏浮在网页的高层位置，遇到flash和图片时候也能始终保持最外层 */
 }
 .small_logo img{
 	margin-left: 2vw;

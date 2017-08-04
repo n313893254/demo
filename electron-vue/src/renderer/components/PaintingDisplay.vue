@@ -26,8 +26,8 @@
         </div>
         <div class="wenzhang">
           <router-link class="wen_neirong" to="/Painting/ArticleDetail">》工地艰苦生活有感</router-link><br>
-          <router-link class="wen_neirong"  to="/Painting/ArticleDetail">》研究速写之画作速写</router-link><br>
-          <router-link class="wen_neirong"  to="/Painting/ArticleDetail">》关山月相关研究文章</router-link>
+          <router-link class="wen_neirong" to="/Painting/ArticleDetail">》研究速写之画作速写</router-link><br>
+          <router-link class="wen_neirong" to="/Painting/ArticleDetail">》关山月相关研究文章</router-link>
         </div>
       </div>
     </div>

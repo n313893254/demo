@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div class="video-page">
   	<div class="nav">
   		<div class="small_logo"><img src="../assets/src/logogsy_03.png"></div>
   	  <div class="yemei_title">知识库》史料》视频</div>
@@ -96,11 +96,16 @@ export default {
 
 
 <style lang="css" scoped>
+.video-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
 .mid{
 	width: 80vw;
 	height: 80vh;
-	margin-left: 2vw;
-	margin-top: 8vh;
+  margin-top: 10vh;
 }
 .menu-wrapper-left {
   position: fixed;
