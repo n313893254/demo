@@ -1,9 +1,11 @@
 <!-- 获取img的url进行展示 -->
 <template lang="html">
   <div class="page">
-    <div class="img" :class="[isHeight ? 'height' : 'width']">
-      <img :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }"
-        :src="this.$route.query.src" alt="">
+    <div class="img-wrapper" :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }">
+      <div class="">
+        <img :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }"
+          :src="this.$route.query.src" alt="">
+      </div>
     </div>
     <div class="detail" v-if="detailShow">
       <div>画作标题简介</div>
@@ -83,19 +85,31 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-.page .img.height {
+.page .img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.page .img-wrapper.height {
   display: flex;
   width: 100vw;
   justify-content: center;
 }
-.page img.height {
+.page .img-wrapper.height {
   height: 100vh;
 }
+.page img.height {
+  height: 100%;
+}
 .page img.width {
-  width: 100vw;
+  width: 100%;
+}
+.page .img-wrapper.small.width {
+  width: 80vw;
 }
 .page img.small.width {
-  width: 80vw;
+  width: 100%;
 }
 .detail {
   border: 3px solid #000;
