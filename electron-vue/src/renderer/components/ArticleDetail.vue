@@ -11,7 +11,8 @@
               企图泡出点红颜色用来画雄鸡的鸡冠。此外，我还发现水瓜叶可以挤出绿色汁液;妈妈上山砍柴时又求她为我摘回一些当黄色用的梔子;
               有时为了要画多种颜色的花纸鹞，又用土块和石头磨出各种各样色彩的粉末当颜料。</p>
           </div>
-          <div class="page">
+          <div class="page odd">
+            <div class="author">作者：关山月</div>
             <h1>绘事话童年</h1>
             <p>我生长在穷乡僻壤的小村子，从小就喜欢涂鸦。家门口的晒谷场，就是我的大画板;随手拾来的木炭瓦片，
               就是我的画具。见鸡画鸡，见狗画狗，我曾在晒谷场上画过牛耕田，画过牵长线放纸鹞。</p>
@@ -24,7 +25,8 @@
                 园门口的夜兰花棚悬挂着一副竹刻的对联:“为室因树，补屋牵萝。
                 ”父亲读书会客的小书舍，就盖在荔枝树的旁边。总之，破旧的环境还十分雅致，书香、诗味和画意都很浓。</p>
           </div>
-          <div class="page">
+          <div class="page even">
+            <div class="time">1988年12月</div>
             <p>父亲虽然没有赶上考科举，但却是一位有文学修养的小学教师。他曾写过不少诗，也会画几笔梅、兰、菊、竹四君子为题材的文人画。
               在我八九岁的时候，才跟随着父亲念书，他在哪里应聘，我就在哪里就读，最远的两处地方我记得是小渔港溪头镇和奋兴小学所在的织贡圩。
               在奋兴小学念书的时候我已十一二岁了。当时随父亲住在小房间里，见他画画时我也偷偷地临仿，可是他一见我画画</p>
@@ -134,16 +136,29 @@ export default {
   align-items: center;
 }
 .flipbook-viewport .page {
-  background: white;
+  background: #FFF;
+  font-family: 'STFangsong', 'FangSong';
 }
 .flipbook-viewport .page h1 {
   padding: 2vh 2vw;
   text-align: center;
+  color: #F2AA00;
 }
 .flipbook-viewport .page p {
   text-indent: 2em;
   line-height: 240%;
-  margin: 1vh 2vw;
+  margin: 1vh 4vw;
+  color: #B97325;
+}
+.flipbook-viewport .page .author {
+  color: #FFD6A1;
+  margin: 3vh 4vw;
+}
+.flipbook-viewport .page .time {
+  color: #FFD6A1;
+  margin: 3vh 4vw;
+  display: flex;
+  justify-content: flex-end;
 }
 .flipbook-viewport .page .center {
   display: flex;
