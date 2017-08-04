@@ -4,10 +4,13 @@ import axios from 'axios'
 import App from './App'
 import router from './router'
 import store from './store'
+import {webFrame} from 'electron'
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
+
+webFrame.setVisualZoomLevelLimits(1, 1)
 
 /* eslint-disable no-new */
 new Vue({

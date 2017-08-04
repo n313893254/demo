@@ -140,7 +140,7 @@ export default {
   align-items: center;
 }
 .img  img {
-  clip-path: circle(80px at 50% 50%);
+  clip-path: circle(81px at 50% 50%);
   /*@media*/
 }
 .img p {

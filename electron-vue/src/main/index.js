@@ -19,6 +19,7 @@ function createWindow () {
    * Initial window options
    */
   const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+
   mainWindow = new BrowserWindow({
     // height: 675,
     // width: 1200,
@@ -27,7 +28,7 @@ function createWindow () {
     // useContentSize: true,
     frame: false
   })
-
+  // WebFrame.setVisualZoomLevelLimits(1, 1)
   mainWindow.loadURL(winURL)
 
   mainWindow.on('closed', () => {
