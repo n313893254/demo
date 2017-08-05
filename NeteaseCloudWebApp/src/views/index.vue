@@ -4,7 +4,7 @@
       <div class="logo" slot="left"></div>
       <mu-icon-button icon='search' slot="right"/>
     </mu-appbar>
-    <mu-tabs :value="activeTab" class="view-tabs">
+    <mu-tabs :value="activeTab" @change="handleTabChange" class="view-tabs">
       <mu-tab value="rage" title="时下流行"/>
       <mu-tab value="songList" title="歌单"/>
       <mu-tab value="leaderBoard" title="排行榜"/>

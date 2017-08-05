@@ -9,7 +9,12 @@ export default new Router({
     {
       path: '/index',
       component: require('../views/index'),
-      children: []
+      children: [
+        {
+          path: 'rage',
+          component: require('../views/rage')
+        }
+      ]
     },
     {
       path: '*',
