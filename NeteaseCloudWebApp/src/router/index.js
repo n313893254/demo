@@ -13,6 +13,18 @@ export default new Router({
         {
           path: 'rage',
           component: require('../views/rage')
+        },
+        {
+          path: 'songList',
+          component: require('../views/songList')
+        },
+        {
+          path: 'leaderBoard',
+          component: require('../views/leaderBoard')
+        },
+        {
+          path: 'hotSinger',
+          component: require('../views/hotSinger')
         }
       ]
     },
