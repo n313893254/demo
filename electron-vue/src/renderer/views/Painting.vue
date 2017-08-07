@@ -56,12 +56,27 @@
         </div>
       </div>
     </div>
+    <mu-raised-button label="undocked drawer" @click="toggle(true)"/>
+    <mu-drawer :open="open" :docked="docked" @close="toggle()">
+      <mu-list @itemClick="docked ? '' : toggle()">
+        <mu-list-item title="Menu Item 1"/>
+        <mu-list-item title="Menu Item 2"/>
+        <mu-list-item title="Menu Item 3"/>
+        <mu-list-item v-if="docked" @click.native="open = false" title="Close"/>
+      </mu-list>
+    </mu-drawer>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Painting',
+  data () {
+    return {
+      open: false,
+      docked: true
+    }
+  },
   computed: {
     title () {
       return this.$store.state.paintingTitle
@@ -85,6 +100,10 @@ export default {
     },
     closeLeftMenu () {
       return this.$store.commit('closeLeftMenu')
+    },
+    toggle (flag) {
+      this.open = !this.open
+      this.docked = !flag
     }
   },
   created: function () {

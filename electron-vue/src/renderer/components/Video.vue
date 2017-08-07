@@ -4,10 +4,9 @@
         id="my-player"
         class="video-js vjs-matrix"
         controls
-        preload="auto"
         autoplay="auto">
        <source  src="/static/video/video-1.mp4" type="video/mp4"></source>
-     </video>
+    </video>
     <div class="button" @click="showVideo(false)">X</div>
   </div>
 </template>
@@ -17,10 +16,7 @@ import videojs from 'video.js'
 
 export default {
   name: 'elVideo',
-  created: function () {
-    // this.$store.commit('setMenuBarSeen', false)
-    console.log(videojs)
-  },
+  components: { videojs },
   methods: {
     // { true: 弹出播放器, false: 关闭播放器 }
     showVideo (value) {
@@ -30,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="less" scoped>
 .video-wrapper {
   width: 100vw;
   height: 100vh;

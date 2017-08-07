@@ -29,7 +29,7 @@
     <div class="menu-wrapper-right">
       <div class="menu">
         <div class="button" @click="pageBack()"><img src="../assets/src/Details_11.png"></div>
-        <div class="button" @click="pageBack2()"><img src="../assets/src/back_19.png"></div>
+        <div class="button" @click="pageBack2()"><img src="../assets/menu/back_19.png"></div>
       </div>
     </div>
   </div>

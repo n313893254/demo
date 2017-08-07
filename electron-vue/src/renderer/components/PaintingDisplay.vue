@@ -36,11 +36,11 @@
     <div class="menu-wrapper-right">
       <div class="menu" v-if="detailShow">
         <div class="button" @click="detail(false)"><img src="../assets/src/x_36.png"></div>
-        <div class="button" @click="pageBack()"><img src="../assets/src/back_19.png"></div>
+        <div class="button" @click="pageBack()"><img src="../assets/menu/back_19.png"></div>
       </div>
       <div class="menu" v-else>
         <div class="button" @click="detail(true)">更多详情</div>
-        <div class="button" @click="pageBack()"><img src="../assets/src/back_19.png"></div>
+        <div class="button" @click="pageBack()"><img src="../assets/menu/back_19.png"></div>
       </div>
     </div>
   </div>

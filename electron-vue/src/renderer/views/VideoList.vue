@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="Box">
+  <div class="video-page">
   	<div class="nav">
   		<div class="small_logo">
   			<img src="../assets/src/piclist_06.png">
@@ -35,12 +35,12 @@
     </div>·
     <div class="mid">
     	<div class="photomodel">
-        <div class="photo"><img src="../assets/src/video1.png"></div>
-        <div class="biaoti" to="/Video"><p>创作过程</p></div>
+        <div class="photo" @click="showVideo(true)"><img src="../assets/src/video1.png"></div>
+        <div class="biaoti"><p>创作过程</p></div>
       </div>
       <div class="photomodel">
         <div class="photo" @click="showVideo(true)"><img src="../assets/src/video2.png"></div>
-        <div class="biaoti" to="/Video"><p>创作《巨榕》<br>1994年</p></div>
+        <div class="biaoti"><p>创作《巨榕》<br>1994年</p></div>
       </div>
       <div class="photomodel">
         <div class="photo" ><img src="../assets/src/video3.png"></div>
@@ -55,16 +55,24 @@
         <div class="biaoti"><p>关山月专题片</p></div>
       </div>
     </div>
-    <div class="videoPlayer" v-if="videoPlay">
-      <elVideo/>
-    </div>
+    <transition name="zoom" :duration="1000">
+      <div class="videoPlayer" v-if="videoPlay">
+        <elVideo/>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
-import elVideo from './Video'
+import elVideo from '../components/Video'
+
 export default {
   name: 'Photo',
+  data () {
+    return {
+      show: false
+    }
+  },
   components: { elVideo },
   computed: {
     title () {
@@ -102,17 +110,21 @@ export default {
 </script>
 
 
-<style lang="css" scoped>
+<style lang="less" scoped>
+@import "../../../node_modules/vodal/zoom.css";
+.test {
+  z-index: 100;
+}
 .video-page {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
-}
-.mid{
-	width: 80vw;
-	height: 80vh;
-  margin-top: 10vh;
+  .mid{
+  	width: 80vw;
+  	height: 80vh;
+    margin-top: 10vh;
+  }
 }
 .menu-wrapper-left {
   position: fixed;
@@ -160,4 +172,42 @@ export default {
   top: 0;
   left: 0;
 }
+/* -- zoom -- */
+// @-webkit-keyframes zoom-enter {
+//     from {
+//         -webkit-transform: scale3d(.3, .3, .3);
+//         transform: scale3d(.3, .3, .3);
+//     }
+// }
+//
+// @keyframes zoom-enter {
+//     from {
+//         -webkit-transform: scale3d(.3, .3, .3);
+//         transform: scale3d(.3, .3, .3);
+//     }
+// }
+//
+// .vodal-zoom-enter-active {
+//     -webkit-animation: zoom-enter both cubic-bezier(0.4, 0, 0, 1.5);
+//     animation: vodal-zoom-enter both cubic-bezier(0.4, 0, 0, 1.5);
+// }
+//
+// @-webkit-keyframes zoom-leave {
+//     to {
+//         -webkit-transform: scale3d(.3, .3, .3);
+//         transform: scale3d(.3, .3, .3);
+//     }
+// }
+//
+// @keyframes zoom-leave {
+//     to {
+//         -webkit-transform: scale3d(.3, .3, .3);
+//         transform: scale3d(.3, .3, .3);
+//     }
+// }
+//
+// .zoom-leave-active {
+//     -webkit-animation: vodal-zoom-leave both;
+//     animation: vodal-zoom-leave both;
+// }
 </style>

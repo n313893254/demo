@@ -60,7 +60,7 @@
     </div>
     <div class="menu-wrapper-right">
       <div class="menu">
-        <div class="button" @click="pageBack()"><img src="../assets/src/Details_14.png"></div>
+        <div class="button" @click="pageBack()"><img src="../assets/menu/back_19.png"></div>
       </div>
     </div>
   </div>
@@ -106,7 +106,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="less" scoped>
 .body {
   height: 100vh;
   width: 100vw;
@@ -212,6 +212,12 @@ export default {
   }
   100% {
     transform: translateY(-50%) translateX(-2%);
+  }
+}
+.menu-wrapper-right {
+  .menu {
+    .button {
+    }
   }
 }
 </style>
