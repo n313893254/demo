@@ -55,11 +55,9 @@
         <div class="biaoti"><p>关山月专题片</p></div>
       </div>
     </div>
-    <transition name="zoom" :duration="1000">
-      <div class="videoPlayer" v-if="videoPlay">
-        <elVideo/>
-      </div>
-    </transition>
+    <div class="videoPlayer" v-if="videoPlay">
+      <elVideo/>
+    </div>
   </div>
 </template>
 
@@ -111,7 +109,6 @@ export default {
 
 
 <style lang="less" scoped>
-@import "../../../node_modules/vodal/zoom.css";
 .test {
   z-index: 100;
 }
@@ -172,42 +169,5 @@ export default {
   top: 0;
   left: 0;
 }
-/* -- zoom -- */
-// @-webkit-keyframes zoom-enter {
-//     from {
-//         -webkit-transform: scale3d(.3, .3, .3);
-//         transform: scale3d(.3, .3, .3);
-//     }
-// }
-//
-// @keyframes zoom-enter {
-//     from {
-//         -webkit-transform: scale3d(.3, .3, .3);
-//         transform: scale3d(.3, .3, .3);
-//     }
-// }
-//
-// .vodal-zoom-enter-active {
-//     -webkit-animation: zoom-enter both cubic-bezier(0.4, 0, 0, 1.5);
-//     animation: vodal-zoom-enter both cubic-bezier(0.4, 0, 0, 1.5);
-// }
-//
-// @-webkit-keyframes zoom-leave {
-//     to {
-//         -webkit-transform: scale3d(.3, .3, .3);
-//         transform: scale3d(.3, .3, .3);
-//     }
-// }
-//
-// @keyframes zoom-leave {
-//     to {
-//         -webkit-transform: scale3d(.3, .3, .3);
-//         transform: scale3d(.3, .3, .3);
-//     }
-// }
-//
-// .zoom-leave-active {
-//     -webkit-animation: vodal-zoom-leave both;
-//     animation: vodal-zoom-leave both;
-// }
+
 </style>
