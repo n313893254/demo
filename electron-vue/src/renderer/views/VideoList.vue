@@ -55,9 +55,11 @@
         <div class="biaoti"><p>关山月专题片</p></div>
       </div>
     </div>
-    <div class="videoPlayer" v-if="videoPlay">
-      <elVideo/>
-    </div>
+    <transition name="bounce">
+      <div class="videoPlayer" v-if="videoPlay">
+        <elVideo/>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -169,5 +171,18 @@ export default {
   top: 0;
   left: 0;
 }
-
+.bounce-enter-active {
+  animation: bounce-in 1s;
+}
+.bounce-leave-active {
+  animation: bounce-in 1s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>

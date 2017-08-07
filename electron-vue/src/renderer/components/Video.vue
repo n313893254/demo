@@ -1,5 +1,5 @@
 <template lang="html">
-  <transition name="bounce">
+
     <div class="video-wrapper">
       <div class="mask"></div>
        <video
@@ -11,7 +11,6 @@
       </video>
       <div class="button" @click="showVideo(false)">X</div>
     </div>
-  </transition>
 </template>
 
 <script>
@@ -43,19 +42,5 @@ export default {
   background-color: #000;
   height: 50vh;
   width: 50vw;
-}
-.bounce-enter-active {
-  animation: bounce-in .5s;
-}
-.bounce-leave-active {
-  animation: bounce-in .5s reverse;
-}
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 </style>
