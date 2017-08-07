@@ -5,6 +5,10 @@ import App from './App'
 import router from './router'
 import store from './store'
 import {webFrame} from 'electron'
+import MuseUI from 'muse-ui'
+import 'muse-ui/dist/muse-ui.css'
+import './assets/theme.less'
+Vue.use(MuseUI)
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios

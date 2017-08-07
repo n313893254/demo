@@ -85,6 +85,12 @@ let rendererConfig = {
         }
       },
       {
+        test: /\.less$/,
+        use: [
+          'style-loader', 'css-loader', 'less-loader'
+        ]
+      },
+      {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         use: {
           loader: 'url-loader',

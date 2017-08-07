@@ -183,8 +183,8 @@ export default {
   }
   .img-list {
     display: flex;
-    justify-content: space-between;
-    width: 70vw;
+    justify-content: flex-start;
+    width: 80vw;
     margin-right: 0;
     flex-wrap: wrap;
   }
