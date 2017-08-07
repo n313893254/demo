@@ -29,6 +29,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import "../assets/animate.less";
+
 .video-wrapper {
   width: 100vw;
   height: 100vh;
