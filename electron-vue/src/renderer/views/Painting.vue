@@ -28,29 +28,31 @@
         <div class="button" @click="openLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
     </div>
-    <div class="title">
-      <span> {{ title }} </span>
-    </div>
-    <div class="img-list">
-      <div class="img" v-for="painting in paintings">
-        <div class="painting-wrapper">
-          <router-link class="poi"
-            :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}">
-            <img :src="painting.imgSrc" alt="">
-          </router-link>
-        </div>
-        <div class="img-description">
-          <p>{{ painting.title }}</p>
-          <p>{{ painting.year }}</p>
-        </div>
-        <div class="img_detail" >
-          <p>{{painting.name}}</p>
-          <p>{{painting.time}}</p>
-          <p>{{painting.size}}</p>
-          <p>{{painting.qualitaive}}</p>
-          <p>{{painting.collection}}</p>
-          <p>{{painting.inscription}}</p>
-          <p>{{painting.seal}}</p>
+    <div class="content-wrapper">
+      <div class="title">
+        <span> {{ title }} </span>
+      </div>
+      <div class="img-list">
+        <div class="img" v-for="painting in paintings">
+          <div class="painting-wrapper">
+            <router-link class="poi"
+              :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}">
+              <img :src="painting.imgSrc" alt="">
+            </router-link>
+          </div>
+          <div class="img-description">
+            <p>{{ painting.title }}</p>
+            <p>{{ painting.year }}</p>
+          </div>
+          <div class="img_detail" >
+            <p>{{painting.name}}</p>
+            <p>{{painting.time}}</p>
+            <p>{{painting.size}}</p>
+            <p>{{painting.qualitaive}}</p>
+            <p>{{painting.collection}}</p>
+            <p>{{painting.inscription}}</p>
+            <p>{{painting.seal}}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -107,7 +109,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="less" scoped>
 .body {
   overflow: hidden;
 }
@@ -166,21 +168,26 @@ export default {
   align-items: center;
   flex-direction: column;
 }
-.title {
-  height: 10vh;
-  text-align: center;
-  margin: 5vh auto;
-  line-height: 10vh;
-  font-size: 5vh;
-}
-
-.img-list {
+.content-wrapper {
   display: flex;
-  justify-content: space-between;
-  width: 70vw;
-  margin-left: 12vw;
-  margin-right: 0;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .title {
+    height: 10vh;
+    text-align: center;
+    margin: 5vh auto;
+    margin-top: 10vh;
+    line-height: 10vh;
+    font-size: 5vh;
+  }
+  .img-list {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    margin-right: 0;
+    flex-wrap: wrap;
+  }
 }
 .img_detail{
   background-color: #000000;
