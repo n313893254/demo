@@ -1,11 +1,18 @@
 <template lang="html">
   <div class="Box">
-    <div class="nav">
-      <div class="small_logo"><img src="../assets/src/logogsy_03.png"></div>
-        <div class="yemei_title">知识库》史料》诗篇</div>
-  	<div class="gongsi"><img src="../assets/src/logoe4_06.png">
-  	  <p>伊世易技术支持</p></div>
-    </div>
+  	<div class="nav">
+  		<div class="small_logo">
+  			<img src="../assets/src/piclist_06.png">
+  		</div>
+  	  <div class="yemei_title">
+  	  	<p>知识库》画作》山水</p>
+  	  </div>
+  	  <div class="yemei_year">
+  	  	<img src="../assets/src/piclist_03.png">
+  	  </div>
+  	  <div class="gongsi"><img src="../assets/src/logoe4.png">
+  	  	<p>伊世易技术支持</p></div>
+  	</div>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('视频')">
@@ -20,10 +27,10 @@
         <div  @click="set('个人著作')">
         	<router-link class="button" to="/WritingList"><img src="../assets/src/history_03.png"></router-link>
         </div>
-        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/book_35.png"></div>
+        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
       <div class="menu" v-else>
-        <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>
+        <div class="button" @click="openLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
     </div>
     <p>诗词列表</p>
@@ -118,6 +125,8 @@ export default {
 .mid{
 	width: 85vw;
 	height: 90vh;
+	margin-top: 3vh;
+	margin-left: 7vw;
 }
 .menu-wrapper-left {
   position: fixed;

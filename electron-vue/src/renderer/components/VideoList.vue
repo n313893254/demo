@@ -1,9 +1,16 @@
 <template lang="html">
-  <div class="video-page">
+  <div class="Box">
   	<div class="nav">
-  		<div class="small_logo"><img src="../assets/src/logogsy_03.png"></div>
-  	  <div class="yemei_title">知识库》史料》视频</div>
-  	  <div class="gongsi"><img src="../assets/src/logoe4_06.png">
+  		<div class="small_logo">
+  			<img src="../assets/src/piclist_06.png">
+  		</div>
+  	  <div class="yemei_title">
+  	  	<p>知识库》画作》山水</p>
+  	  </div>
+  	  <div class="yemei_year">
+  	  	<img src="../assets/src/piclist_03.png">
+  	  </div>
+  	  <div class="gongsi"><img src="../assets/src/logoe4.png">
   	  	<p>伊世易技术支持</p></div>
   	</div>
     <div class="menu-wrapper-left">
@@ -140,7 +147,7 @@ export default {
 	background-repeat: no-repeat;
 	background-position: 100% ,100%;
 }
-p {
+.biaoti p{
 	color: #000000;
 	text-align: center;
 	font-size: 1vw;

@@ -71,19 +71,26 @@ body::-webkit-scrollbar {
 	float: left;
 }
 .yemei_title{
-	margin-left: 33vw;
-	margin-top: 1.4vh;
+	margin-left: 0.5vw;
+	margin-top: 1.2vh;
 	float: left;
-	font-size: 1.1vw;
-	color: #FFFFFF;
+	font-size: 1vw;
+	color: #714A3B;
+}
+.yemei_year{
+	margin-left: 22vw;
+	float: left;
+	width: 8vw;
+	height: 5vh;
+	margin-top: 0.2vh;
 }
 .gongsi{
 	margin-top: 1.4vh;
 	float: right;
 	width: 12vw;
-	font-size: 1.1vw;
+	margin-top: 2vh;
+	font-size: 1vw;
 	margin-right: 3vw;
-	color: #FBFC7D;
 }
 .gongsi img{
 	margin-right: 1vw;
@@ -92,12 +99,12 @@ body::-webkit-scrollbar {
 }
 /*图标的大小*/
  .button {
-    width: 8vw;
-    height: 8vh;
+    width: 10vw;
+    height: 10vh;
     display: inline-block;
     text-decoration: none;
     position: relative;
-    margin-top: 2vh;
+    margin-top: 1vh;
     cursor: pointer;
   }
   .menu {
@@ -133,12 +140,70 @@ body::-webkit-scrollbar {
   }
   /* 史料和研究的内容*/
   .left_title{
-	width: 27vw;
+	width: 30vw;
 	height: 90vh;
 	float: left;
 	color: #000000;
 	font-size: 1.1vw;
 	margin-left: 5vw;
+	margin-top: 5vh;
+}
+.left_title ul{
+	margin: 0; 
+	line-height: 30px;
+}
+.left_title a{
+	color: #000000;
+	text-decoration: none;
+}
+.left_title a:hover{
+	text-decoration: underline;
+}
+.str_wrap {
+	overflow:hidden;
+	//zoom:1;
+	width:100%;
+	position:relative;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;  
+}
+.str_move { 
+	white-space:nowrap;
+	position:absolute; 
+	top:0; 
+	left:0;
+	cursor:move;
+}
+.str_move_clone {
+	display:inline-block;
+	//display:inline;
+	//zoom:1;
+	vertical-align:top;
+	position:absolute; 
+	left:100%;
+	top:0;
+}
+.str_vertical .str_move_clone {
+	left:0;
+	top:100%;
+}
+.str_down .str_move_clone {
+	left:0;
+	bottom:100%;
+}
+.str_vertical .str_move,
+.str_down .str_move {
+	white-space:normal;
+	width:100%;
+}
+.str_static .str_move,
+.no_drag .str_move,
+.noStop .str_move{
+	cursor:inherit;
+}
+.str_wrap img {
+	max-width:none !important;	
 }
 .img_tubiao{
 	float:left;
@@ -153,8 +218,8 @@ body::-webkit-scrollbar {
 .right_wenzhang{
 	width:43vw;
 	height: 50vh;
-	margin-top: 8vh;
-	margin-left: 35vw;
+	margin-top: 15vh;
+	margin-left: 38vw;
 	position: fixed;
 	margin-right: 3vw;
 	background-image: url(assets/src/book_03.png);

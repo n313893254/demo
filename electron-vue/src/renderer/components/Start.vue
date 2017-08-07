@@ -27,6 +27,7 @@ export default {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  background-color: #000000;
 }
 .know p {
   font-size: 5vw;

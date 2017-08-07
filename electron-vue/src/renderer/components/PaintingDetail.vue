@@ -5,7 +5,6 @@
     </div>
     <div class="detail">
       <div>画作标题简介</div>
-      <span>播放介绍音频</span>
       <div class="article-list">
         <p>画作相关文章: </p>
         <div class="logo1">
@@ -30,7 +29,7 @@
     <div class="menu-wrapper-right">
       <div class="menu">
         <div class="button" @click="pageBack()"><img src="../assets/src/Details_11.png"></div>
-        <div class="button" @click="pageBack2()"><img src="../assets/src/Details_14.png"></div>
+        <div class="button" @click="pageBack2()"><img src="../assets/src/back_19.png"></div>
       </div>
     </div>
   </div>
@@ -91,7 +90,7 @@ export default {
 	margin-left: 5vw;
 }
 .neirong{
-	color: #FBFC7D;
+	color: #714A3B;
 	font-size: 1.0vw;
 	margin-left: 3vw;
 }
@@ -100,7 +99,7 @@ export default {
 	margin-left: 5vw;
 }
 .wen_neirong{
-	color: #FBFC7D;
+	color: #714A3B;
 	font-size: 1.0vw;
 	text-decoration: none;
 }

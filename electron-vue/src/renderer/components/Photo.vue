@@ -1,11 +1,18 @@
 <template lang="html">
   <div class="Box">
-    <div class="nav">
-      <div class="small_logo"><img src="../assets/src/logogsy_03.png"></div>
-      <div class="yemei_title">知识库》史料》照片</div>
-      <div class="gongsi"><img src="../assets/src/logoe4_06.png">
-      <p>伊世易技术支持</p></div>
-    </div>
+  	<div class="nav">
+  		<div class="small_logo">
+  			<img src="../assets/src/piclist_06.png">
+  		</div>
+  	  <div class="yemei_title">
+  	  	<p>知识库》画作》山水</p>
+  	  </div>
+  	  <div class="yemei_year">
+  	  	<img src="../assets/src/piclist_03.png">
+  	  </div>
+  	  <div class="gongsi"><img src="../assets/src/logoe4.png">
+  	  	<p>伊世易技术支持</p></div>
+  	</div>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('视频')">
@@ -20,10 +27,10 @@
         <div  @click="set('个人著作')">
         	<router-link class="button" to="/WritingList"><img src="../assets/src/history_03.png"></router-link>
         </div>
-        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/book_35.png"></div>
+        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
       <div class="menu" v-else>
-        <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>
+        <div class="button" @click="openLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
     </div>
     <p>照片列表</p>
@@ -143,28 +150,30 @@ export default {
   float: left;
 }
 .photo{
-  width: 14vw;
-  height: 14vh;
-  box-shadow: 3px 3px 3px #FBFC7D;
+	width: 15vw;
+	height: 15vh;
+	background-color: #fffff;
 }
 .photo img{
-  width: 14vw;
-  height: 14vh;
+	width: 14vw;
+	height: 14vh;
+	margin: auto;
+
 }
 .biaoti{
-  width: 13.5vw;
-  height:8.5vh;
-  margin-left: 0.3vw;
-  margin-top: 1.5vw;
-  background-size: contain;
-  background-image: url(../assets/src/lable_11.png);
-  background-repeat: no-repeat;
-  background-position: 100% ,100%;
+	width: 13.5vw;
+	height:8.5vh;
+	margin-top: 1.5vw;
+	background-size: contain;
+	background-image: url(../assets/src/photo_12.png);
+	background-repeat: no-repeat;
+	background-position: 100% ,100%;
 }
 .biaoti p{
-  color: #00000;
-  text-align: center;
-  font-size: 1vw;
-  padding-top: 1.5vh;
+	color: #00000;
+	text-align: center;
+	font-size: 1vw;
+	text-indent: 1em;
+	padding-top: 1.5vh;
 }
 </style>

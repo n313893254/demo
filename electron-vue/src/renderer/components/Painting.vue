@@ -1,24 +1,31 @@
 <template lang="html">
   <div class="body">
   	<div class="nav">
-  		<div class="small_logo"><img src="../assets/src/logogsy_03.png"></div>
-  	  <div class="yemei_title">知识库》史料》画作</div>
-  	  <div class="gongsi"><img src="../assets/src/logoe4_06.png">
+  		<div class="small_logo">
+  			<img src="../assets/src/piclist_06.png">
+  		</div>
+  	  <div class="yemei_title">
+  	  	<p>知识库》画作》山水</p>
+  	  </div>
+  	  <div class="yemei_year">
+  	  	<img src="../assets/src/piclist_03.png">
+  	  </div>
+  	  <div class="gongsi"><img src="../assets/src/logoe4.png">
   	  	<p>伊世易技术支持</p></div>
   	</div>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
-        <div class="button" @click="set('书法')"><img src="../assets/src/pic_03.png"></div>
-        <div class="button" @click="set('连环画')"><img src="../assets/src/pic_06.png"></div>
-        <div class="button" @click="set('速写')"><img src="../assets/src/pic_08.png"></div>
-        <div class="button" @click="set('人物')"><img src="../assets/src/pic_10.png"></div>
-        <div class="button" @click="set('临摹')"><img src="../assets/src/pic_12.png"></div>
-        <div class="button" @click="set('山水')"><img src="../assets/src/pic_14.png"></div>
-        <div class="button" @click="set('花鸟')"><img src="../assets/src/pic_16.png"></div>
-        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/book_35.png"></div>
+        <div class="button" @click="set('书法')"><img src="../assets/src/piclist_21.png"></div>
+        <div class="button" @click="set('连环画')"><img src="../assets/src/piclist_27.png"></div>
+        <div class="button" @click="set('速写')"><img src="../assets/src/piclist_30.png"></div>
+        <div class="button" @click="set('人物')"><img src="../assets/src/piclist_34.png"></div>
+        <div class="button" @click="set('临摹')"><img src="../assets/src/piclist_37.png"></div>
+        <div class="button" @click="set('山水')"><img src="../assets/src/piclist_40.png"></div>
+        <div class="button" @click="set('花鸟')"><img src="../assets/src/piclist_43.png"></div>
+        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
       <div class="menu" v-else>
-        <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>
+        <div class="button" @click="openLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
     </div>
     <div class="title">
@@ -115,8 +122,8 @@ export default {
 	background-size: contain;
   background-position: center;
 	width: 100vw;
-	color:#F1FA85;
-  margin-bottom: 0;
+	color:#6F473B ;
+  margin-top: 10vh;
 }
 .title span{
 	font-size: 2.5vw;
@@ -140,20 +147,20 @@ export default {
   align-items: center;
 }
 .img  img {
-  clip-path: circle(81px at 50% 50%);
+  clip-path: circle(80px at 50% 50%);
   /*@media*/
 }
 .img p {
-  color: #FBFC7D;
+  color: #6F473B;
   font-size: 2vh;
 }
 .img-description {
-  margin-top: 1vh;
-  height: 8vh;
-  background-size: 100% 100%;
-  background-image: url(../assets/src/lable_11.png);
-  background-repeat: no-repeat;
-  background-position: center;
+	margin-top: 1vh;
+	height: 8vh;
+	background-size: 100% 100%;
+	background-image: url(../assets/src/piclist_24.png);
+	background-repeat: no-repeat;
+	background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
