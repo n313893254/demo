@@ -9,12 +9,12 @@
 export default {
   name: 'Start',
   created: function () {
-    this.$store.commit('setMenuBarSeen', true)
-    setTimeout(function () {
-      // router.push({
-      //   name: 'Chronological'
-      // })
-    }, 5000)
+    this.$store.commit('setMenuBarSeen', false)
+    setTimeout(() => {
+      this.$router.push({
+        name: 'Chronological'
+      })
+    }, 10000)
   }
 }
 </script>
