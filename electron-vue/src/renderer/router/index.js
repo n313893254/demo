@@ -3,7 +3,6 @@ import Router from 'vue-router'
 
 import Electron from 'electron'
 
-import Start from '../components/Start'
 import Exhibit from '../components/Exhibit'
 import Chronological from '../components/Chronological'
 import Painting from '../views/Painting'
@@ -29,7 +28,7 @@ const router = new Router({
     {
       path: '/',
       name: 'Start',
-      component: Start
+      component: require('../views/Start')
     },
     {
       path: '/Exhibit',

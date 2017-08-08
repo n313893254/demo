@@ -8,13 +8,13 @@
 <script>
 export default {
   name: 'Start',
-  computed: {
-    message () {
-      return this.$store.state.message
-    }
-  },
   created: function () {
     this.$store.commit('setMenuBarSeen', true)
+    setTimeout(function () {
+      // router.push({
+      //   name: 'Chronological'
+      // })
+    }, 5000)
   }
 }
 </script>
