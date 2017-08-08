@@ -20,7 +20,7 @@ let mainConfig = {
       {
         test: /\.(js)$/,
         enforce: 'pre',
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /ignore_lib/],
         use: {
           loader: 'eslint-loader',
           options: {

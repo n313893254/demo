@@ -69,8 +69,10 @@
 </template>
 
 <script>
+import db from '../ignore_lib/GsyDB'
 export default {
   name: 'Painting',
+  components: { db },
   data () {
     return {
       open: false,
@@ -124,6 +126,10 @@ export default {
         })
       }
     }
+
+    db.getWorkList(1, function (row) {
+      console.log(row)
+    })
   }
 }
 </script>
