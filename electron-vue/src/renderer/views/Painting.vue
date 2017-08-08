@@ -143,15 +143,6 @@ export default {
   left: 1vh;
   bottom: 1vw;
 }
-.title{
-	background-image:url(../assets/src/flower_11.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-  background-position: center;
-	width: 100vw;
-	color:#6F473B ;
-  margin-top: 10vh;
-}
 .title span{
 	font-size: 2.5vw;
 	text-align: center;
@@ -164,6 +155,8 @@ export default {
   height: 30vh;
   width: 16vw;
   margin-bottom: 16vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 .poi {
   height: 100%;
@@ -202,9 +195,15 @@ export default {
     height: 10vh;
     text-align: center;
     margin: 5vh auto;
-    margin-top: 10vh;
+    margin-top: 15vh;
     line-height: 10vh;
     font-size: 5vh;
+    background-image:url(../assets/src/flower_11.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100vw;
+    color:#6F473B ;
   }
   .img-list {
     display: flex;
