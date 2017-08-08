@@ -8,17 +8,16 @@
       </div>
     </div>
     <div class="detail" v-if="detailShow">
-      <div>
-      	<img class="left"  src="../assets/src/xiangq_03.png">
-      	<img class="right" src="../assets/src/xiangq_03.png">
-      </div>
+      <div>画作标题简介</div>
+      <span>播放介绍音频</span>
       <div class="article-list">
+        <p>画作相关文章: </p>
         <div class="logo1">
-          <img class="logo_img" src="../assets/src/logoxiangq_07.png">
+          <img class="logo_img" src="../assets/src/logo.jpg">
         </div>
         <div class="neirong">
-          <p>堵海工地速写之一</p>
-          <br><br>
+          <h2>堵海工地速写之一</h2>
+          <br>
           <p>尺寸：31.5cm x 43cm</p><br>
           <p>质材：纸本设色</p><br>
           <p>收藏：岭南画派纪念馆藏</p><br>
@@ -31,16 +30,15 @@
           <router-link class="wen_neirong" to="/Painting/ArticleDetail">》关山月相关研究文章</router-link>
         </div>
       </div>
-      <div class="detail_zhou"><img src="../assets/src/zhou_31.png"></div>
     </div>
     <div class="menu-wrapper-right">
       <div class="menu" v-if="detailShow">
-        <div class="button" @click="detail(false)"><img src="../assets/src/x_36.png"></div>
-        <div class="button" @click="pageBack()"><img src="../assets/menu/back_19.png"></div>
+        <div class="button" @click="detail(false)"><img src="../assets/src/Details_11.png"></div>
+        <div class="button" @click="pageBack()"><img src="../assets/src/Details_14.png"></div>
       </div>
       <div class="menu" v-else>
         <div class="button" @click="detail(true)">更多详情</div>
-        <div class="button" @click="pageBack()"><img src="../assets/menu/back_19.png"></div>
+        <div class="button" @click="pageBack()"><img src="../assets/src/Details_11.png"></div>
       </div>
     </div>
   </div>
@@ -114,8 +112,9 @@ export default {
   width: 100%;
 }
 .detail {
+  border: 3px solid #000;
   width: 20vw;
-  background-color: #FFFFFF;
+  background-color: #000000;
   height: 100vh;
 }
 .article-list {
@@ -123,39 +122,20 @@ export default {
   flex-direction: column;
   align-items: flex-start;
 }
-.left{
-	float: left;
-	margin: 0.5vw;
-}
-.right{
-	float: right;
-	margin: 0.5vw;
-}
 .logo_img{
-	float: left;
-	margin-top: 10vh;
-  margin-left:1.8vw;
+  margin-left: 5vw;
 }
 .neirong{
-  color: #714A3B;
+  color: #FBFC7D;
   font-size: 1.0vw;
-  margin-top: 2vh;
+  margin-left: 3vw;
 }
 .wenzhang{
-  margin-top: 2vh;
-}
-.detail_zhou{
-	width: 13vw;
-	height: 8vh;
-	margin-left: 3vw;
-	margin-top: 3vh;
-}
-.detail_zhou img{
-	width: 13vw;
-	height: 8vh;
+  margin-top: 5vh;
+  margin-left: 5vw;
 }
 .wen_neirong{
-  color: #714A3B;
+  color: #FBFC7D;
   font-size: 1.0vw;
   text-decoration: none;
 }

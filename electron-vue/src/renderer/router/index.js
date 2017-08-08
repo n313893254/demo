@@ -19,6 +19,7 @@ import ArticleDetail from '../components/ArticleDetail'
 import PaintingDisplay from '../components/PaintingDisplay'
 import PaintingDetail from '../components/PaintingDetail'
 import ResearchList from '../components/ResearchList'
+import Searchlist from '../components/Searchlist'
 
 Vue.use(Router)
 
@@ -59,6 +60,11 @@ const router = new Router({
       path: '/Search',
       name: 'Search',
       component: Search
+    },
+    {
+      path: '/Searchlist',
+      name: 'Searchlist',
+      component: Searchlist
     },
     {
       path: '/ResearchList',

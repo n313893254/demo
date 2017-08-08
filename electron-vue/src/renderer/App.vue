@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
 /* 固定导航条*/
 .nav{
   width: 100vw;
-  height: 5vh;
+  height: 5.8vh;
   position: fixed;/*固定作用*/
   top: 0px;
   background-color: #a3a36f;
@@ -72,7 +72,7 @@ body::-webkit-scrollbar {
 }
 .yemei_title{
 	margin-left: 0.5vw;
-	margin-top: 1.2vh;
+	margin-top: 1.6vh;
 	float: left;
 	font-size: 1vw;
 	color: #714A3B;
@@ -85,7 +85,7 @@ body::-webkit-scrollbar {
 	margin-top: 0.2vh;
 }
 .gongsi{
-	margin-top: 1.4vh;
+	margin-top: 1.5vh;
 	float: right;
 	width: 12vw;
 	margin-top: 2vh;
@@ -216,23 +216,22 @@ body::-webkit-scrollbar {
 	width: 100%;
 }
 .right_wenzhang{
-	width:43vw;
-	height: 50vh;
+	width:48vw;
+	height: 55vh;
 	margin-top: 15vh;
-	margin-left: 38vw;
+	margin-left: 36vw;
 	position: fixed;
 	margin-right: 3vw;
-	background-image: url(assets/src/book_03.png);
+	background-image: url(assets/src/history_banner.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 .article_words{
-	width: 32vw;
-	height: 41vh;
-	min-height: 41vh;
+	width: 33vw;
+	height: 41vh; 
 	border: 1px dashed #E9967A;
-  margin-left: 5.5vw;
-  margin-top: 4vh;
+  margin-left: 7.5vw;
+  margin-top: 5.2vh;
   overflow: hidden;
   line-height: 2em;
   font-size: 0.9vw;
@@ -243,12 +242,17 @@ body::-webkit-scrollbar {
 }
 .article_words p{
 	text-indent: 2em;
+	color: #B65D03;
+	line-height: 25px;
 }
 .article_words h2{
 	text-align: center;
+	color: #F6C374;
+	padding-bottom: 1vh;
 }
 .author{
 	width: 32vw;
+	color: #F6C374;
 }
 .writer{
 	width: 16vw;
@@ -260,5 +264,6 @@ body::-webkit-scrollbar {
 }
 .data p{
 	float: right;
+	color:#F6C374;
 }
 </style>

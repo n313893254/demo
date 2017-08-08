@@ -14,32 +14,49 @@
   	  <div class="gongsi"><img src="../assets/src/logoe4.png">
   	  	<p>伊世易技术支持</p></div>
   	</div>
+  	<div class="search_banner"><img src="../assets/src/sslogo_17.png"></div>
+  	<div class="tab_label">
+  		<a href="#">画作</a>
+  		<a href="#">史料</a>
+  		<a href="#">研究</a>
+  	</div>
     <div class="searchBar">
-     <input type="search" placeholder="请输入拼音字母搜索" />
+     <input type="search" class="kuang" placeholder="请输入拼音字母搜索" /></input>
+     <div class="sousu"><router-link to="/Searchlist"><img src="../assets/src/ss1_34.png"></router-link></div>
         </div>
-    <div class="tab">
-      <div @click="set('画作')"><img src="../assets/src/suoh_07.png"></div>
-      <div @click="set('史料')"><img src="../assets/src/sousuo_09.png"></div>
-      <div @click="set('研究')"><img src="../assets/src/sous_09.png"></div>
-    </div>
-    <div class="panel">
-      <div class="content" v-if="title === '画作'">
-        <div class="img-list">
-          <div class="img" v-for="painting in paintings">
-            <router-link :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}"><img :src="painting.imgSrc" alt=""></router-link>
-            <div class="biaoti">
-            <p>{{ painting.title }}</p>
-            <p>{{ painting.year }}</p>
-            </div>
-          </div>
+        <div class="method">
+           <p class="first">
+           	<a href="#">Q</a>&nbsp;
+           	<a href="#">W</a>&nbsp;
+           	<a href="#">E</a>&nbsp;
+           	<a href="#">R</a>&nbsp;
+           	<a href="#">T</a>&nbsp;
+           	<a href="#">Y</a>&nbsp;
+           	<a href="#">U</a>&nbsp;
+           	<a href="#">I</a>&nbsp;
+           	<a href="#">O</a>&nbsp;
+           	<a href="#">P</a></p><br>
+           <p><a href="#">A</a>&nbsp;
+           	<a href="#">S</a>&nbsp;
+           	<a href="#">D</a>&nbsp;
+           	<a href="#">F</a>&nbsp;
+           	<a href="#">G</a>&nbsp;
+           	<a href="#">H</a>&nbsp;
+           	<a href="#">J</a>&nbsp;
+           	<a href="#">K</a>&nbsp;
+           	<a href="#">L</a></p><br>
+           <p><a href="#">Z</a>&nbsp;
+           	<a href="#">X</a>&nbsp;
+           	<a href="#">C</a>&nbsp;
+           	<a href="#">V</a>&nbsp;
+           	<a href="#">B</a>&nbsp;
+           	<a href="#">N</a>&nbsp;
+           	<a href="#">M</a></p>
+           <div class="method_img">
+           <img src="../assets/src/dele2dowm_40.png">
+           <img src="../assets/src/deledown_42.png">
+           </div>
         </div>
-      </div>
-      <div class="content" v-else-if="title === '史料'">
-      
-      </div>
-      <div class="content" v-else>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -73,152 +90,81 @@ export default {
 .searchBar  {
 	width: 100vw;
 	height: 6vh;
-	margin-top: 6vh;
-  background-color:#F7EEE5;
+	float: left;
 }
-.searchBar input{
-	width:50vw;
+.kuang{
+	width:45vw;
 	height: 5vh;
 	outline-style: none;
 	border-radius: 20px;
-	margin-left: 20vw;
+	margin-left: 23vw;
+	float: left;
 	margin-top: 0.5vh;
 }
-.search_list{
-	background-color: #FFFFFF;
-	width: 32vw;
-	height: 2vh;            
-}
-.tab div {
-	float: left;
-  margin-left: 4vw;
-  margin-bottom: 2vh;
-}
-.panel {
-  width: 79vh;
-  background-color: #F3EEE8;
-  margin-left: 4vw;
-  margin-top: 18vh;
-  width: 85vw;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
-  border-top-right-radius:25px ;
-  height: 100vh;
-}
-.img {
-  height: 30vh;
-  width: 16vw;
-  margin: 8vh 2vw;
-}
-
-.img  img {
-  height: 100%;
-  width: 100%;
-  border: 1px solid #000;
-}
-.img p {
-  color: #000000;
-	text-align: center;
-	font-size: 1vw;
-	line-height: 2.5vh;
-}
-.biaoti{
-	width: 15vw;
-	height:9vh;
-	margin: 1.4vw;
-	padding-top: 0.8vh;
+.kuang{
+	background-image: url(../assets/src/sousuo_03.png);
+	background-repeat: no-repeat; 
 	background-size: contain;
-	background-image: url(../assets/src/piclist_24.png);
-	background-repeat: no-repeat;
-	background-position: 100% ,100%;
+  background-position: 0px 0px;
+  padding-left: 3vw; 
 }
-.biaoti p{
+.sousu{
+	width: 5vw;
+	height: 5vh;
+	float: left;
+	margin-top: 0.5vh;
+	margin-left: 5vh;
+	outline-style: none;
+	border-radius:20px;
+	margin-left: 2vw;
+	background-color: #FFFFFF;
+}
+.sousu img{
+	width: 5vw;
+	height: 5vh;
+}
+.search_banner{
+	float: left;
+	margin-top:10vh;
+	margin-left: 20vw;
+}
+.method{
+	background-color: #FFFFFF;
+	width: 38vw;
+	height: 27.5vh;
+	float: left;
+	margin-left: 25vw;
+}
+.method p{
 	text-align: center;
-	padding-top: 0.5vh;
+	font-size: 2vw;
 }
-.title {
-  height: 10vh;
-  text-align: center;
-  margin: 5vh auto;      
-  line-height: 10vh;
-  font-size: 5vh;
-  padding-top: 0.5vh;
+.first{
+	padding-top: 4vh;
 }
-
-.img-list {
-  display: flex;
-  justify-content: space-between;
-  width: 85vw;
-  flex-wrap: wrap;
+.method_img{
+	width: 35vw;
+	height: 6vh;
 }
-.zuzuo{
-	width: 100vw;
-	height: 8vh;
-	float: left;
+.method_img img{
+	width: 4vw;
+	height: 5.5vh;
+	float: right;
+	margin-right: 1vw;
 }
-.poetry_title{
-	width:3.5vw;
-	height: 3.5vh;
-	margin-top: 2vh;
-	border-radius: 12px;
-	background-color: #E9967A;
-	color: #FBFC7D;
-	font-size: 16px;
-	text-align: center;
-	vertical-align: auto;
+.tab_label{
+	margin-top: 45vh;
+	width: 20vw;
+	height: 5vh;
+	margin-left: 25vw;
+	font-size: 0.8vw;
 }
-.zuzuo ul li{
-  margin-left:4vw ;
-  color: #FBFC7D;
-  font-size: 16px; 
-  line-height:5vh;
-	display: inline-block; 
+a{
+	color: #000000;
+	text-decoration: none;
 }
-.poetry{
-	width: 100vw;
-	height: 8vh;
-	float: left;
-}
-.poetry ul li{
-  margin-left:4vw ;
-  color: #FBFC7D;
-  font-size: 16px; 
-	display: inline-block; 
-}
-.photo{
-	width: 100vw;
-	height: 30vh;
-	float: left;
-}
-.photo ul li{
-  margin-left:4vw ;
-  color: #FBFC7D;
-  font-size: 16px; 
-	display: inline-block; 
-}
-.photo img{
-	width: 18vw;
-	height: 20vh;
-}
-.photo p{
-	padding-left: 3vw;
-}
-.video{
-	width: 100vw;
-	height: 30vh;
-	float: left;
-}
-.video ul li{
-  margin-left:4vw ;
-  color: #FBFC7D;
-  font-size: 16px; 
-	display: inline-block; 
-}
-.video p{
-	padding-left: 3vw;
-}
-.video img{
-	width: 18vw;
-	height: 20vh;
+a:hover{
+	color: #fdd69c;
+	text-decoration: none;
 }
 </style>

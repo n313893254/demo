@@ -31,6 +31,6 @@ export default {
 }
 .know p {
   font-size: 5vw;
-  color: #FED59F;
+  color: #FDD69C;
 }
 </style>

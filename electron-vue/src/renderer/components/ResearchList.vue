@@ -17,16 +17,16 @@
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('30-40s 30年-40年')">
-        	<router-link class="button" to="/ResearchList"><img src="../assets/src/book_31.png"></router-link>
+        	<router-link class="button" to="/ResearchList"><img src="../assets/src/research_30.png"></router-link>
         </div>
         <div  @click="set('50-70s 50年-70年')">
-        	<router-link class="button" to="/ResearchList"><img src="../assets/src/book_27.png"></router-link>
+        	<router-link class="button" to="/ResearchList"><img src="../assets/src/research_50.png"></router-link>
         </div>
         <div  @click="set('80-90s 80年-90年')">
-        	<router-link class="button" to="/ResearchList"><img src="../assets/src/book_22.png"></router-link>
+        	<router-link class="button" to="/ResearchList"><img src="../assets/src/research_80.png"></router-link>
         </div>
         <div  @click="set('20th 2000年以后')">
-        	<router-link class="button" to="/ResearchList"><img src="../assets/src/book_17.png"></router-link>
+        	<router-link class="button" to="/ResearchList"><img src="../assets/src/research_20.png"></router-link>
         </div>
         <div class="button" @click="closeLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
@@ -34,10 +34,9 @@
         <div class="button" @click="openLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
     </div>
-    <p>研究</p>
       <div class="mid">
   	<div class="img_tubiao">
-  			<img src="../assets/src/book_10.png">
+  			<img src="../assets/src/history_tubiao.png">
   		</div>
   	<div class="left_title">
   	   <p>>>香港回归敢赋一篇</p><br>
@@ -127,6 +126,7 @@ export default {
 	width: 85vw;
 	height: 90vh;
 	margin-top: 3vh;
+	margin-left: 7vw;
 }
 .menu-wrapper-left {
   position: fixed;

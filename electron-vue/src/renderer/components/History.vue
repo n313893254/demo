@@ -17,16 +17,16 @@
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('视频')">
-        	<router-link class="button" to="/VideoList"><img src="../assets/src/history_08.png"></router-link>
+        	<router-link class="button" to="/VideoList"><img src="../assets/src/history_04.png"></router-link>
         </div>
         <div  @click="set('照片')">
-        	<router-link class="button" to="/Photo"><img src="../assets/src/history_06.png"></router-link>
+        	<router-link class="button" to="/Photo"><img src="../assets/src/history_05.png"></router-link>
         </div>
         <div  @click="set('诗篇')">
-        	<router-link class="button" to="/PoetryList"><img src="../assets/src/history_10.png"></router-link>
+        	<router-link class="button" to="/PoetryList"><img src="../assets/src/history_07.png"></router-link>
         </div>
         <div  @click="set('个人著作')">
-        	<router-link class="button" to="/WritingList"><img src="../assets/src/history_03.png"></router-link>
+        	<router-link class="button" to="/History"><img src="../assets/src/history_14.png"></router-link>
         </div>
         <div class="button" @click="closeLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
@@ -37,7 +37,7 @@
   
   <div class="mid">
   	<div class="img_tubiao">
-  			<img src="../assets/src/book_10.png">
+  			<img src="../assets/src/history_tubiao.png">
   		</div>
   	<div class="left_title">
   	   <p>>>香港回归敢赋一篇</p><br>
