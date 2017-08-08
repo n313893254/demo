@@ -37,7 +37,7 @@ body {
 	background-position: right bottom ;
 	background-attachment:fixed;
 	background-size: cover;
-	font-family: "宋体";
+	font-family: "仿宋";
 }
 body::-webkit-scrollbar {
   display: none;
@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
 /* 固定导航条*/
 .nav{
   width: 100vw;
-  height: 5.8vh;
+  height: 5.5vh;
   position: fixed;/*固定作用*/
   top: 0px;
   background-color: #a3a36f;
@@ -69,32 +69,39 @@ body::-webkit-scrollbar {
 	margin-left: 2vw;
 	margin-top: 1vh;
 	float: left;
+	width: 7vw;
+	height: 3vh;
 }
 .yemei_title{
 	margin-left: 0.5vw;
-	margin-top: 1.6vh;
+	margin-top: 1.3vh;
 	float: left;
 	font-size: 1vw;
 	color: #714A3B;
 }
 .yemei_year{
-	margin-left: 22vw;
+	margin-left: 25vw;
 	float: left;
 	width: 8vw;
 	height: 5vh;
 	margin-top: 0.2vh;
 }
+.yemei_year img{
+	width:12vw;
+	height: 5vh;
+}
 .gongsi{
-	margin-top: 1.5vh;
 	float: right;
 	width: 12vw;
-	margin-top: 2vh;
+	margin-top: 1.3vh;
 	font-size: 1vw;
-	margin-right: 3vw;
+	margin-right: 0.5vw;
 }
 .gongsi img{
 	margin-right: 1vw;
 	float: left;
+	width: 1.5vw;
+	height: 2.25vh;
 
 }
 /*图标的大小*/
@@ -228,13 +235,12 @@ body::-webkit-scrollbar {
 }
 .article_words{
 	width: 33vw;
-	height: 41vh; 
-	border: 1px dashed #E9967A;
+	height: 40vh; 
   margin-left: 7.5vw;
-  margin-top: 5.2vh;
+  margin-top: 5.5vh;
   overflow: hidden;
   line-height: 2em;
-  font-size: 0.9vw;
+  font-size: 1vw;
   line-height: 25px;
   clear: both;
   word-break: break-word;

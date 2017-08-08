@@ -6,6 +6,7 @@
     <button>工作</button>
     <router-link class="button" to="/Chronological/ArticleDetail">文章</router-link>
     <button>展览</button>
+    <p>时间轴</p>
   </div>
 </template>
 
@@ -24,4 +25,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+p{
+	margin: auto;
+	font-size: 9vw;
+}
 </style>

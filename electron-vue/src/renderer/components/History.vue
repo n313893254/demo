@@ -13,7 +13,6 @@
   	  <div class="gongsi"><img src="../assets/src/logoe4.png">
   	  	<p>伊世易技术支持</p></div>
   	</div>
-    <p>史料 {{ this.$route.path }}</p>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('视频')">

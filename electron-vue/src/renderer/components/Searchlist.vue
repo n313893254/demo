@@ -36,9 +36,180 @@
         </div>
       </div>
       <div class="content" v-else-if="title === '史料'">
-      
+        <div class="search_writing">
+         <div class="search_writing_img"></div>
+         <div class="search_article">
+         <table>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	 <tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         </table>
+         </div>
+        </div>
+        <div class="search_poetry">
+        	<div class="search_poetry_img"></div>
+        	<div class="search_article">
+        		<table>
+         	<tr>
+         		<td class="search_name"><p>》三访南丫岛即兴（九首）</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1984年1月</p>
+         		</td>
+         	</tr>
+         	</table>
+        	</div>
+        </div>
+        <div class="search_photo">
+        	<div class="search_photo_img"></div>
+        	  	<div class="search_article">
+        		<table>
+         	<tr>
+         		<td class="search_name"><p>》关山月坐船去南洋写生</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1983年10月</p>
+         		</td>
+         	</tr>  	
+         	</table>
+        	</div>
+        </div>
+        <div class="search_video">
+        	<div class="search_video_img"></div>
+        	  	<div class="search_article">
+        		<table>
+         	<tr>
+         		<td class="search_name"><p>》创作《榕树》</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1993年11月</p>
+         		</td>
+         	</tr>
+         	</table>
+        	</div>
+        </div>
       </div>
       <div class="content" v-else>
+      <div class="search_research">
+      <div class="search_article">
+         <table>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	 <tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》我所走过的艺术道路--在一场讲座上的谈话</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1991年</p>
+         		</td>
+         	</tr>
+         </table>
+         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -55,7 +226,7 @@ export default {
       return this.$store.state.searchTitle
     },
     paintings () {
-      return this.$store.state.paintings.slice(0, 6)
+      return this.$store.state.paintings.slice(0, 8)
     }
   },
   methods: {
@@ -113,15 +284,24 @@ export default {
 	width: 32vw;
 	height: 2vh;            
 }
+.tab{
+	margin-left: 4vw;
+}
 .tab div {
 	float: left;
-  margin-left: 4vw;
+  width: 8vw;
+  height: 8vh;
+  margin-top: 4vh;
+}
+.tab div img{
+	width: 8vw;
+	height: 8vh;
 }
 .panel {
   width: 79vh;
   background-color: #F3EEE8;
   margin-left: 4vw;
-  margin-top: 17vh;
+  margin-top: 11vh;
   width: 85vw;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -174,74 +354,93 @@ export default {
   width: 85vw;
   flex-wrap: wrap;
 }
-.zuzuo{
-	width: 100vw;
-	height: 8vh;
+.search_writing{
+	width:79vw ;
+	height: 35vh;
 	float: left;
+	overflow: hidden;
 }
-.poetry_title{
-	width:3.5vw;
+.search_writing_img{
+	width: 79vw;
+	height: 2.5vw;
+	margin-left: 2vw;
+	margin-top: 1vh;
+	background-image: url(../assets/src/sousuo_23.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.search_poetry{
+	width:79vw ;
+	height: 25vh;
+	float: left;
+	overflow: hidden;
+}
+.search_poetry_img{
+	width: 79vw;
+	height: 2.5vw;
+	margin-left: 2vw;
+	margin-top: 1vh;
+	background-image: url(../assets/src/sousuo_26.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.search_photo{
+	width:79vw ;
+	height: 20vh;	
+	float: left;
+	overflow: hidden;
+}
+.search_photo_img{
+	width: 79vw;
+	height: 2.5vw;
+	margin-left: 2vw;
+	margin-top: 1vh;
+	background-image: url(../assets/src/sousuo_29.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.search_video{
+	width:79vw ;
+	height: 15vh;
+	float: left;
+	overflow: hidden;
+}
+.search_video_img{
+	width: 79vw;
+	height: 2.5vw;
+	margin-left: 2vw;
+	margin-top: 1vh;
+	background-image: url(../assets/src/sousuo_31.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.search_article{
+	margin-left: 6vw;
+	overflow: hidden;
+}
+.search_article tr{
 	height: 3.5vh;
-	margin-top: 2vh;
-	border-radius: 12px;
-	background-color: #E9967A;
-	color: #FBFC7D;
-	font-size: 16px;
-	text-align: center;
-	vertical-align: auto;
+	font-size: 1.2vw;
 }
-.zuzuo ul li{
-  margin-left:4vw ;
-  color: #FBFC7D;
-  font-size: 16px; 
-  line-height:5vh;
-	display: inline-block; 
-}
-.poetry{
-	width: 100vw;
-	height: 8vh;
+ .search_name{
+ 	width: 45vw;
+ }
+ .search_author{
+	width: 30vw;
+	float: right;
+ }
+ .search_author p{
+ 	text-align: center;
+ }
+ .search_year{
+ 	width: 30vw;
+ }
+ .search_research{
+ 	width:79vw ;
+	height: 90vh;
 	float: left;
-}
-.poetry ul li{
-  margin-left:4vw ;
-  color: #FBFC7D;
-  font-size: 16px; 
-	display: inline-block; 
-}
-.photo{
-	width: 100vw;
-	height: 30vh;
-	float: left;
-}
-.photo ul li{
-  margin-left:4vw ;
-  color: #FBFC7D;
-  font-size: 16px; 
-	display: inline-block; 
-}
-.photo img{
-	width: 18vw;
-	height: 20vh;
-}
-.photo p{
-	padding-left: 3vw;
-}
-.video{
-	width: 100vw;
-	height: 30vh;
-	float: left;
-}
-.video ul li{
-  margin-left:4vw ;
-  color: #FBFC7D;
-  font-size: 16px; 
-	display: inline-block; 
-}
-.video p{
-	padding-left: 3vw;
-}
-.video img{
-	width: 18vw;
-	height: 20vh;
-}
+	margin-left: 2.5vw;
+	margin-top: 3vh;
+	overflow: hidden;
+ }
 </style>

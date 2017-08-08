@@ -126,14 +126,14 @@ export default {
 .search_banner{
 	float: left;
 	margin-top:10vh;
-	margin-left: 20vw;
+	margin-left: 25vw;
 }
 .method{
 	background-color: #FFFFFF;
 	width: 38vw;
-	height: 27.5vh;
+	height: 30vh;
 	float: left;
-	margin-left: 25vw;
+	margin-left: 27vw;
 }
 .method p{
 	text-align: center;
