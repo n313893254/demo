@@ -111,6 +111,7 @@ export default {
 
 
 <style lang="less" scoped>
+@import "../assets/animate.less";
 .test {
   z-index: 100;
 }

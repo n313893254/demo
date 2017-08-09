@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="menu-wrapper-right">
-    <div class="menu" v-if="rightMenuSeen">
+    <div class="menu">
       <transition name="bounce">
         <router-link v-if="count > 5" class="button" to="/Chronological"><img src="../assets/src/piclist_42.png"></router-link>
       </transition>
@@ -16,10 +16,10 @@
       <transition name="bounce">
         <router-link v-if="count > 1" class="button" to="/Search"><img src="../assets/src/piclist_28.png"></router-link>
       </transition>
-      <div class="button" @click="closeRightMenu()"><img src="../assets/src/piclist_46.png"></div>
+      <div class="button" v-if="rightMenuSeen" @click="closeRightMenu()"><img src="../assets/src/piclist_46.png"></div>
     </div>
-    <div class="menu" v-else>
-      <div class="button" @click="openRightMenu()"><img src="../assets/src/piclist_46.png"></div>
+    <div class="menu" >
+      <div class="button" v-if="rightMenuSeen === false" @click="openRightMenu()"><img src="../assets/src/piclist_46.png"></div>
     </div>
   </div>
 </template>
@@ -41,17 +41,29 @@ export default {
   methods: {
     openRightMenu () {
       clearInterval(this.timer)
+      this.count = 0
       this.timer = setInterval(() => {
         this.count++
-        console.log(this.count)
+        // console.log(this.count)
         if (this.count > 10) {
           this.count = 10
+          clearInterval(this.timer)
         }
-      }, 100)
+      }, 200)
       return this.$store.commit('openRightMenu')
     },
     closeRightMenu () {
       clearInterval(this.timer)
+      this.count = 10
+      console.log(this)
+      this.timer = setInterval(() => {
+        this.count--
+        console.log(this.count)
+        if (this.count < 0) {
+          this.count = 0
+          clearInterval(this.timer)
+        }
+      }, 50)
       return this.$store.commit('closeRightMenu')
     }
   }
