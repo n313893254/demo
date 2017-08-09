@@ -60,7 +60,7 @@
         </div>
       </div>
     </div>
-    <mu-raised-button label="undocked drawer" @click="toggle(true)"/>
+    <!-- <mu-raised-button label="undocked drawer" @click="toggle(true)"/> -->
     <mu-drawer :open="open" :docked="docked" @close="toggle()">
       <mu-list @itemClick="docked ? '' : toggle()">
         <mu-list-item title="Menu Item 1"/>
@@ -123,6 +123,7 @@ export default {
   },
   created: function () {
     this.$store.commit('setMenuBarSeen', true)
+    this.$store.commit('closeRightMenu')
     let paintings = this.$store.state.paintings.slice(0, 12)
     for (let i in paintings) {
       let img = new Image()

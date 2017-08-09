@@ -120,6 +120,7 @@ export default {
   },
   created: function () {
     this.$store.commit('setMenuBarSeen', true)
+    this.$store.commit('closeRightMenu')
   }
 }
 </script>

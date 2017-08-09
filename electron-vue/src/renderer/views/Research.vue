@@ -12,7 +12,8 @@
   	  	<img src="../assets/src/piclist_03.png">
   	  </div>
   	  <div class="gongsi"><img src="../assets/src/logoe4.png">
-  	  	<p>伊世易技术支持</p></div>
+  	  	<p>伊世易技术支持</p>
+      </div>
   	</div>
   	<div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
@@ -119,6 +120,7 @@ export default {
   },
   created: function () {
     this.$store.commit('setMenuBarSeen', true)
+    this.$store.commit('closeRightMenu')
   }
 }
 </script>

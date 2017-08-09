@@ -82,6 +82,9 @@ export default {
       return this.$store.commit('setSearchList', value)
     }
   },
+  created: function () {
+    this.$store.commit('closeRightMenu')
+  },
   mounted: function () {
     $('.method').hide()
     $('.kuang').hover(function () {

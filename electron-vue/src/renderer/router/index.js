@@ -3,10 +3,6 @@ import Router from 'vue-router'
 
 import Electron from 'electron'
 
-// import Painting from '../views/Painting'
-// import History from '../components/History'
-// import Research from '../components/Research'
-// import Search from '../components/Search'
 import Poetry from '../components/PoetryList'
 import Video from '../components/Video'
 import Writings from '../components/WritingList'
