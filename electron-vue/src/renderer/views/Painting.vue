@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="body">
+    <TransisionLayer/>
   	<div class="nav">
   		<div class="small_logo">
   			<img src="../assets/src/piclist_06.png">
@@ -64,8 +65,7 @@
         <mu-list-item title="Menu Item 3"/>
         <mu-list-item v-if="docked" @click.native="open = false" title="Close"/>
       </mu-list>
-    </mu-drawer>
-    <TransisionLayer/>
+    </mu-drawer>  
   </div>
 </template>
 

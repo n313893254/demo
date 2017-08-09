@@ -6,7 +6,6 @@
       <router-link class="button" to="/history"><img src="../assets/src/piclist_32.png"></router-link>
       <router-link class="button" to="/Research"><img src="../assets/src/piclist_36.png"></router-link>
       <router-link class="button" to="/Search"><img src="../assets/src/piclist_28.png"></router-link>
-      <router-link class="button" to="/">start</router-link>
       <div class="button" @click="closeRightMenu()"><img src="../assets/src/piclist_46.png"></div>
     </div>
     <div class="menu" v-else>
