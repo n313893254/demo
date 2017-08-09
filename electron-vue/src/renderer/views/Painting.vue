@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="body">
-    <TransisionLayer/>
+    <!-- <TransisionLayer/> -->
     <!-- <div class="">
       <PaintingDisplay/>
     </div> -->
@@ -253,8 +253,8 @@ export default {
   opacity: 0;
   transition: 0.3s;
   position: absolute;
-  -webkit-transition: .5s;  
-  -moz-transition: .5s;  
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
 }
 .img-description:hover .img_detail{
 	opacity: 1;

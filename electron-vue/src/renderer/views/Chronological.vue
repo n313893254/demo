@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="">
+    <TransisionLayer/>
     <p>这是年表</p>
     <router-link class="button" to="/Painting">画作</router-link>
     <router-link class="button" to="/exhibit">生活</router-link>
@@ -7,7 +8,6 @@
     <router-link class="button" to="/Chronological/ArticleDetail">文章</router-link>
     <button>展览</button>
     <p>时间轴</p>
-    <TransisionLayer/>
   </div>
 </template>
 

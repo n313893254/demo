@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="page">
     <MenuBar/>
-    <TransisionLayer/>
+    <!-- <TransisionLayer/> -->
     <div class="nav">
   		<div class="small_logo">
   			<img src="../assets/src/piclist_06.png">
