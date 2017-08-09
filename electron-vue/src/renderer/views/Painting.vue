@@ -33,18 +33,18 @@
         <span> {{ title }} </span>
       </div>
       <div class="img-list">
-        <div class="img" v-for="painting in paintings">
+        <div class="img" v-for="painting in rows">
           <div class="painting-wrapper">
             <router-link class="poi"
               :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}">
-              <img :src="painting.imgSrc" alt="">
+              <img src="imgs/painting_img2.jpg" alt="">
             </router-link>
           </div>
           <div class="img-description">
-            <p>{{ painting.title }}</p>
-            <p>{{ painting.year }}</p>
+            <p>{{ painting.name }}</p>
+            <p>{{ painting.create_time }}</p>
           </div>
-          <div class="img_detail" >
+          <!-- <div class="img_detail" >
             <p>{{painting.name}}</p>
             <p>{{painting.time}}</p>
             <p>{{painting.size}}</p>
@@ -52,7 +52,7 @@
             <p>{{painting.collection}}</p>
             <p>{{painting.inscription}}</p>
             <p>{{painting.seal}}</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -76,7 +76,8 @@ export default {
   data () {
     return {
       open: false,
-      docked: true
+      docked: true,
+      rows: []
     }
   },
   computed: {
@@ -126,9 +127,8 @@ export default {
         })
       }
     }
-
-    db.getWorkList(1, function (row) {
-      console.log(row)
+    db.getWorkList(1, (row) => {
+      this.rows = row
     })
   }
 }
