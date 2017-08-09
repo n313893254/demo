@@ -156,7 +156,7 @@ body::-webkit-scrollbar {
 	margin-top: 5vh;
 }
 .left_title ul{
-	margin: 0; 
+	margin: 0;
 	line-height: 30px;
 }
 .left_title a{
@@ -173,12 +173,12 @@ body::-webkit-scrollbar {
 	position:relative;
 	-moz-user-select: none;
 	-khtml-user-select: none;
-	user-select: none;  
+	user-select: none;
 }
-.str_move { 
+.str_move {
 	white-space:nowrap;
-	position:absolute; 
-	top:0; 
+	position:absolute;
+	top:0;
 	left:0;
 	cursor:move;
 }
@@ -187,7 +187,7 @@ body::-webkit-scrollbar {
 	//display:inline;
 	//zoom:1;
 	vertical-align:top;
-	position:absolute; 
+	position:absolute;
 	left:100%;
 	top:0;
 }
@@ -210,7 +210,7 @@ body::-webkit-scrollbar {
 	cursor:inherit;
 }
 .str_wrap img {
-	max-width:none !important;	
+	max-width:none !important;
 }
 .img_tubiao{
 	float:left;
@@ -235,7 +235,7 @@ body::-webkit-scrollbar {
 }
 .article_words{
 	width: 33vw;
-	height: 40vh; 
+	height: 40vh;
   margin-left: 7.5vw;
   margin-top: 5.5vh;
   overflow: hidden;

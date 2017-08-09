@@ -7,12 +7,15 @@
     <router-link class="button" to="/Chronological/ArticleDetail">文章</router-link>
     <button>展览</button>
     <p>时间轴</p>
+    <TransisionLayer/>
   </div>
 </template>
 
 <script>
+import TransisionLayer from '../components/TransisionLayer'
 export default {
   name: 'Chronological',
+  components: { TransisionLayer },
   computed: {
     message () {
       return this.$store.state.message

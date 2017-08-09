@@ -10,9 +10,8 @@ import turn from '../ignore_lib/turn.min'
 
 export default {
   name: 'TransisionLayer',
+  components: { $, turn },
   mounted: function () {
-    console.log($('.poi'))
-    console.log(turn)
     // 泼墨效果
     var transitionLayer = $('.cd-transition-layer')
     transitionLayer.addClass('closing')

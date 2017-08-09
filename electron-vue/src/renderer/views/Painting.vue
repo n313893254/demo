@@ -65,14 +65,16 @@
         <mu-list-item v-if="docked" @click.native="open = false" title="Close"/>
       </mu-list>
     </mu-drawer>
+    <TransisionLayer/>
   </div>
 </template>
 
 <script>
 import db from '../ignore_lib/GsyDB'
+import TransisionLayer from '../components/TransisionLayer'
 export default {
   name: 'Painting',
-  components: { db },
+  components: { db, TransisionLayer },
   data () {
     return {
       open: false,
