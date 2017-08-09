@@ -4,7 +4,7 @@
     <div class="img-wrapper" :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }">
       <div class="">
         <img :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }"
-          :src="this.$route.query.src" alt="">
+          src="../assets/src/painting_img2.jpg" alt="">
       </div>
     </div>
     <div class="detail" v-if="detailShow">
@@ -58,13 +58,13 @@ export default {
     }
   },
   created: function () {
-    let img = new Image()
-    img.src = this.$route.query.src
-    if (img.height > img.width) {
-      this.$store.commit('setHeight')
-    } else {
-      this.$store.commit('setWidth')
-    }
+    // let img = new Image()
+    // img.src = this.$route.query.src
+    // if (img.height > img.width) {
+    //   this.$store.commit('setHeight')
+    // } else {
+    //   this.$store.commit('setWidth')
+    // }
     this.$store.commit('setMenuBarSeen', false)
   },
   methods: {

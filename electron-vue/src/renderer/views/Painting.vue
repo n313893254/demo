@@ -1,6 +1,9 @@
 <template lang="html">
   <div class="body">
     <TransisionLayer/>
+    <!-- <div class="">
+      <PaintingDisplay/>
+    </div> -->
   	<div class="nav">
   		<div class="small_logo">
   			<img src="../assets/src/piclist_06.png">
@@ -30,7 +33,7 @@
       </div>
     </div>
     <div class="content-wrapper">
-      <div class="title">
+      <div class="title" @click="handlePainting()">
         <span> {{ listTitle }} </span>
       </div>
       <div class="img-list">
@@ -38,7 +41,7 @@
           <div class="painting-wrapper">
             <router-link class="poi"
               :to="{ path: '/Painting/Display', query: { src: 'imgs/painting_img2.jpg' }}">
-              <img src="imgs/painting_img2.jpg" alt="">
+              <img src="../assets/src/painting_img2.jpg" alt="">
             </router-link>
           </div>
           <div class="img-description">
@@ -65,16 +68,17 @@
         <mu-list-item title="Menu Item 3"/>
         <mu-list-item v-if="docked" @click.native="open = false" title="Close"/>
       </mu-list>
-    </mu-drawer>  
+    </mu-drawer>
   </div>
 </template>
 
 <script>
 import db from '../ignore_lib/GsyDB'
 import TransisionLayer from '../components/TransisionLayer'
+import PaintingDisplay from '../components/PaintingDisplay'
 export default {
   name: 'Painting',
-  components: { db, TransisionLayer },
+  components: { db, TransisionLayer, PaintingDisplay },
   data () {
     return {
       open: false,
@@ -112,6 +116,9 @@ export default {
         this.rows = row
       })
       document.body.scrollTop = 0
+    },
+    handlePainting () {
+      console.log('poi')
     }
   },
   created: function () {

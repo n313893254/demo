@@ -16,21 +16,21 @@
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
         <div  @click="set('视频')">
-        	<router-link class="button" to="/VideoList"><img src="../assets/src/history_08.png"></router-link>
+        	<router-link class="button" to="/VideoList"><img src="../assets/src/history_04.png"></router-link>
         </div>
         <div  @click="set('照片')">
-        	<router-link class="button" to="/Photo"><img src="../assets/src/history_06.png"></router-link>
+        	<router-link class="button" to="/Photo"><img src="../assets/src/history_05.png"></router-link>
         </div>
         <div  @click="set('诗篇')">
-        	<router-link class="button" to="/PoeryList"><img src="../assets/src/history_10.png"></router-link>
+        	<router-link class="button" to="/PoeryList"><img src="../assets/src/history_07.png"></router-link>
         </div>
         <div  @click="set('个人著作')">
-        	<router-link class="button" to="/WritingList"><img src="../assets/src/history_03.png"></router-link>
+        	<router-link class="button" to="/WritingList"><img src="../assets/src/history_14.png"></router-link>
         </div>
-        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/book_35.png"></div>
+        <div class="button" @click="closeLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
       <div class="menu" v-else>
-        <div class="button" @click="openLeftMenu()"><img src="../assets/src/book_35.png"></div>
+        <div class="button" @click="openLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
     </div>·
     <div class="mid">
@@ -171,18 +171,5 @@ export default {
   top: 0;
   left: 0;
 }
-.bounce-enter-active {
-  animation: bounce-in 1s;
-}
-.bounce-leave-active {
-  animation: bounce-in 1s reverse;
-}
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
 </style>
