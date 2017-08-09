@@ -42,7 +42,7 @@ export default {
   transform: translateY(-50%) translateX(-2%);
   height: 100%;
   width: 2500%;
-  background: url('http://omph2coqc.bkt.clouddn.com/17-7-31/72171056.jpg') no-repeat 0 0;
+  background: url('../assets/bg/transitionLayer.png') no-repeat 0 0;
   background-size: 100% 100%;
 }
 .cd-transition-layer.visible {
@@ -50,11 +50,11 @@ export default {
   visibility: visible;
 }
 .cd-transition-layer.opening .bg-layer {
-  -webkit-animation: cd-sequence 2s steps(24);
+  -webkit-animation: cd-sequence 1.5s steps(24);
   animation-fill-mode: forwards;
 }
 .cd-transition-layer.closing .bg-layer {
-  -webkit-animation: cd-sequence-reverse 2s steps(24);
+  -webkit-animation: cd-sequence-reverse 1.5s steps(24);
   animation-fill-mode: forwards;
 }
 .no-cssanimations.cd-transition-layer {

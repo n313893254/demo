@@ -7,7 +7,7 @@
           class="video-js vjs-matrix"
           controls
           autoplay="auto">
-         <source  src="/static/video/video-1.mp4" type="video/mp4"></source>
+         <source  src="./static/video/video-1.mp4" type="video/mp4"></source>
       </video>
       <div class="button" @click="showVideo(false)">X</div>
     </div>
