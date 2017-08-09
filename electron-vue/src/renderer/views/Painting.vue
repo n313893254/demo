@@ -144,6 +144,19 @@ export default {
       console.log(this.rows[0])
     })
   }
+  /* mounted: function () {
+    $(function () {
+      $('.img_detail').hide()
+      $('.img-description').hover(function () {
+        $('.img_detail').show()
+      }, function () {
+        $('.img_detail').hide()
+      })
+      $('.img_detail').hover(function () {
+        $('.img_detail').show()
+      }, function () {
+        $('.img_detail').hide()
+      }) */
 }
 </script>
 
@@ -235,7 +248,15 @@ export default {
   }
 }
 .img_detail{
-  background-color: #000000;
-  display: none;
+  background-color:#FFFFFF;
+  display:block ;
+  opacity: 0;
+  transition: 0.3s;
+  position: absolute;
+  -webkit-transition: .5s;  
+  -moz-transition: .5s;  
+}
+.img-description:hover .img_detail{
+	opacity: 1;
 }
 </style>

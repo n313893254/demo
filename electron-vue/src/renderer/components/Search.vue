@@ -21,10 +21,10 @@
   		<a href="#">研究</a>
   	</div>
     <div class="searchBar">
-     <input type="search" class="kuang" placeholder="请输入拼音字母搜索" /></input>
+     <input type="search" id="kuang" class="kuang" placeholder="请输入拼音字母搜索" /></input>
      <div class="sousu"><router-link to="/Searchlist"><img src="../assets/src/ss1_34.png"></router-link></div>
         </div>
-        <div class="method">
+        <div class="method" id="mehtod">
            <p class="first">
            	<a href="#">Q</a>&nbsp;
            	<a href="#">W</a>&nbsp;
@@ -61,6 +61,7 @@
 </template>
 
 <script>
+import $ from 'jquery'
 import MenuBar from './MenuBar'
 
 export default {
@@ -78,6 +79,19 @@ export default {
     set (value) {
       return this.$store.commit('setSearchList', value)
     }
+  },
+  mounted: function () {
+    $('.method').hide()
+    $('.kuang').hover(function () {
+      $('.method').show()
+    }, function () {
+      $('.method').hide()
+    })
+    $('.method').hover(function () {
+      $('.method').show()
+    }, function () {
+      $('.method').hide()
+    })
   }
 }
 </script>
@@ -103,10 +117,10 @@ export default {
 }
 .kuang{
 	background-image: url(../assets/src/sousuo_03.png);
-	background-repeat: no-repeat; 
+	background-repeat: no-repeat;
 	background-size: contain;
   background-position: 0px 0px;
-  padding-left: 3vw; 
+  padding-left: 3vw;
 }
 .sousu{
 	width: 5vw;

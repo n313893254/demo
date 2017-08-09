@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="logo"><img src="../assets/src/qidong_03.png"></div>
-		<div class="know"><p>关山月知识库，传承国画荟萃</p></div>
+		<div class="know">关山月知识库，传承国画荟萃</div>
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 .page {
   display: flex;
   justify-content: center;
@@ -29,8 +29,5 @@ export default {
   width: 100vw;
   background-color: #000000;
 }
-.know p {
-  font-size: 5vw;
-  color: #FDD69C;
-}
+
 </style>
