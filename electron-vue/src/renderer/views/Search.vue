@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="page">
     <MenuBar/>
+    <TransisionLayer/>
     <div class="nav">
   		<div class="small_logo">
   			<img src="../assets/src/piclist_06.png">
@@ -62,11 +63,12 @@
 
 <script>
 import $ from 'jquery'
-import MenuBar from './MenuBar'
+import MenuBar from '../components/MenuBar'
+import TransisionLayer from '../components/TransisionLayer'
 
 export default {
   name: 'Search',
-  components: { MenuBar },
+  components: { MenuBar, $, TransisionLayer },
   computed: {
     title () {
       return this.$store.state.searchTitle
@@ -96,7 +98,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="less" scoped>
 
 .page {
   width: 100%;

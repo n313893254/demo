@@ -3,10 +3,10 @@ import Router from 'vue-router'
 
 import Electron from 'electron'
 
-import Painting from '../views/Painting'
-import History from '../components/History'
-import Research from '../components/Research'
-import Search from '../components/Search'
+// import Painting from '../views/Painting'
+// import History from '../components/History'
+// import Research from '../components/Research'
+// import Search from '../components/Search'
 import Poetry from '../components/PoetryList'
 import Video from '../components/Video'
 import Writings from '../components/WritingList'
@@ -36,22 +36,22 @@ const router = new Router({
     {
       path: '/Painting',
       name: 'Painting',
-      component: Painting
+      component: require('../views/Painting')
     },
     {
       path: '/History',
       name: 'History',
-      component: History
+      component: require('../views/History')
     },
     {
       path: '/Research',
       name: 'Research',
-      component: Research
+      component: require('../views/Research')
     },
     {
       path: '/Search',
       name: 'Search',
-      component: Search
+      component: require('../views/Search')
     },
     {
       path: '/Searchlist',

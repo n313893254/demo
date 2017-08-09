@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="Box">
+    <TransisionLayer/>
   	<div class="nav">
   		<div class="small_logo">
   			<img src="../assets/src/piclist_06.png">
@@ -33,7 +34,7 @@
         <div class="button" @click="openLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
     </div>
-  
+
   <div class="mid">
   	<div class="img_tubiao">
   			<img src="../assets/src/history_tubiao.png">
@@ -91,8 +92,10 @@
 </template>
 
 <script>
+import TransisionLayer from '../components/TransisionLayer'
 export default {
   name: 'History',
+  components: { TransisionLayer },
   computed: {
     title () {
       return this.$store.state.photoTitle

@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="Box">
+  <TransisionLayer/>
    <div class="nav">
   		<div class="small_logo">
   			<img src="../assets/src/piclist_06.png">
@@ -90,8 +91,10 @@
 </template>
 
 <script>
+import TransisionLayer from '../components/TransisionLayer'
 export default {
   name: 'Research',
+  components: { TransisionLayer },
   computed: {
     title () {
       return this.$store.state.photoTitle
@@ -120,7 +123,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="less" scoped>
 .mid{
 	width: 85vw;
 	height: 90vh;
