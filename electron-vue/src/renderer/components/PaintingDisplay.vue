@@ -39,7 +39,7 @@
         <div class="button" @click="pageBack()"><img src="../assets/menu/back_19.png"></div>
       </div>
       <div class="menu" v-else>
-        <div class="button" @click="detail(true)">更多详情</div>
+        <div class="button" @click="detail(true)"><img src="../assets/menu/detail.png"></div>
         <div class="button" @click="pageBack()"><img src="../assets/menu/back_19.png"></div>
       </div>
     </div>
