@@ -36,7 +36,7 @@
         <div class="img" v-for="painting in rows">
           <div class="painting-wrapper">
             <router-link class="poi"
-              :to="{ path: '/Painting/Display', query: { src: painting.imgSrc }}">
+              :to="{ path: '/Painting/Display', query: { src: 'imgs/painting_img2.jpg' }}">
               <img src="imgs/painting_img2.jpg" alt="">
             </router-link>
           </div>
@@ -109,6 +109,7 @@ export default {
       db.getWorkList(categoryId[value], (row) => {
         this.rows = row
       })
+      document.body.scrollTop = 0
     }
   },
   created: function () {
