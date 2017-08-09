@@ -16,6 +16,17 @@ export default new Vuex.Store({
       {field: '书法'}
     ],
 
+    category_id: {
+      '全部': 0,
+      '山水': 1,
+      '花鸟': 2,
+      '人物': 3,
+      '临摹': 4,
+      '速写': 5,
+      '连环画': 6,
+      '书法': 9
+    },
+
     isDisplay: false,
 
     leftMenuSeen: false,

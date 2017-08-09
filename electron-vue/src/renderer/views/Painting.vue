@@ -15,13 +15,13 @@
   	</div>
     <div class="menu-wrapper-left">
       <div class="menu" v-if="leftMenuSeen">
-        <div class="button" @click="set('书法')"><img src="../assets/src/piclist_21.png"></div>
-        <div class="button" @click="set('连环画')"><img src="../assets/src/piclist_27.png"></div>
-        <div class="button" @click="set('速写')"><img src="../assets/src/piclist_30.png"></div>
-        <div class="button" @click="set('人物')"><img src="../assets/src/piclist_34.png"></div>
-        <div class="button" @click="set('临摹')"><img src="../assets/src/piclist_37.png"></div>
-        <div class="button" @click="set('山水')"><img src="../assets/src/piclist_40.png"></div>
-        <div class="button" @click="set('花鸟')"><img src="../assets/src/piclist_43.png"></div>
+        <div class="button" @click="handleCategory('书法')"><img src="../assets/src/piclist_21.png"></div>
+        <div class="button" @click="handleCategory('连环画')"><img src="../assets/src/piclist_27.png"></div>
+        <div class="button" @click="handleCategory('速写')"><img src="../assets/src/piclist_30.png"></div>
+        <div class="button" @click="handleCategory('人物')"><img src="../assets/src/piclist_34.png"></div>
+        <div class="button" @click="handleCategory('临摹')"><img src="../assets/src/piclist_37.png"></div>
+        <div class="button" @click="handleCategory('山水')"><img src="../assets/src/piclist_40.png"></div>
+        <div class="button" @click="handleCategory('花鸟')"><img src="../assets/src/piclist_43.png"></div>
         <div class="button" @click="closeLeftMenu()"><img src="../assets/src/fenlei_29.png"></div>
       </div>
       <div class="menu" v-else>
@@ -30,7 +30,7 @@
     </div>
     <div class="content-wrapper">
       <div class="title">
-        <span> {{ title }} </span>
+        <span> {{ listTitle }} </span>
       </div>
       <div class="img-list">
         <div class="img" v-for="painting in rows">
@@ -77,7 +77,8 @@ export default {
     return {
       open: false,
       docked: true,
-      rows: []
+      rows: [],
+      listTitle: '画作'
     }
   },
   computed: {
@@ -89,15 +90,9 @@ export default {
     },
     paintings () {
       return this.$store.state.paintings.slice(0, 12)
-    },
-    display () {
-
     }
   },
   methods: {
-    set (value) {
-      return this.$store.commit('setPaintingList', value)
-    },
     openLeftMenu () {
       return this.$store.commit('openLeftMenu')
     },
@@ -107,6 +102,13 @@ export default {
     toggle (flag) {
       this.open = !this.open
       this.docked = !flag
+    },
+    handleCategory (value) {
+      let categoryId = this.$store.state.category_id
+      this.listTitle = value
+      db.getWorkList(categoryId[value], (row) => {
+        this.rows = row
+      })
     }
   },
   created: function () {
@@ -127,8 +129,9 @@ export default {
         })
       }
     }
-    db.getWorkList(1, (row) => {
+    db.getWorkList(0, (row) => {
       this.rows = row
+      console.log(this.rows[0])
     })
   }
 }
@@ -170,22 +173,7 @@ export default {
   clip-path: circle(80px at 50% 50%);
   /*@media*/
 }
-.img p {
-  color: #6F473B;
-  font-size: 2vh;
-}
-.img-description {
-	margin-top: 1vh;
-	height: 8vh;
-	background-size: 100% 100%;
-	background-image: url(../assets/src/piclist_24.png);
-	background-repeat: no-repeat;
-	background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -211,6 +199,29 @@ export default {
     width: 80vw;
     margin-right: 0;
     flex-wrap: wrap;
+    .img {
+      .img-description {
+        margin-top: 1vh;
+        height: 8vh;
+        background-size: 100% 100%;
+        background-image: url(../assets/src/piclist_24.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p {
+          width: 100%;
+          color: #6F473B;
+          font-size: 2vh;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          text-align: center;
+        }
+      }
+    }
   }
 }
 .img_detail{
