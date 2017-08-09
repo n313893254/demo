@@ -40,6 +40,7 @@ export default {
   },
   methods: {
     openRightMenu () {
+      clearInterval(this.timer)
       this.timer = setInterval(() => {
         this.count++
         console.log(this.count)
@@ -50,7 +51,6 @@ export default {
       return this.$store.commit('openRightMenu')
     },
     closeRightMenu () {
-      this.count = 0
       clearInterval(this.timer)
       return this.$store.commit('closeRightMenu')
     }
