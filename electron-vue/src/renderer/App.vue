@@ -20,6 +20,12 @@ export default {
   },
   created: function () {
     this.$store.commit('setMenuBarSeen', true)
+    document.onselectstart = function () {
+      return false
+    }
+    document.oncontextmenu = function () {
+      return false
+    }
   }
 }
 </script>

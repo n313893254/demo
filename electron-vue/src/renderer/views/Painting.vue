@@ -41,9 +41,9 @@
       <div class="img-list">
         <div class="img" v-for="painting in rows">
           <div class="painting-wrapper">
-            <div class="poi"  @click="handlePainting()"
+            <div class="img-preview"  @click="handlePainting()"
               style="background-image: url(imgs/painting_img2.jpg);
-                      background-size: cover">
+                      ">
               <!-- <img src="../assets/src/painting_img2.jpg" alt=""> -->
             </div>
           </div>
@@ -199,6 +199,16 @@ export default {
       margin-right: 0;
       flex-wrap: wrap;
       .img {
+        .img-preview {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background-size: cover
+        }
         .img-description {
           margin-top: 1vh;
           height: 8vh;
@@ -244,15 +254,7 @@ export default {
   margin-left: 2vw;
   margin-right: 2vw;
 }
-.poi {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
+
 .img  img {
   // clip-path: circle(80px at 50% 50%);
   /*@media*/
