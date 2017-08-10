@@ -6,6 +6,7 @@
           :src="'./static/pics/works/' + this.$store.state.bigImgUrl" alt="">
       </div>
     </div>
+    <transition name="slide-fade">
     <div class="detail" v-if="detailShow">
       <div>
       	<img class="left"  src="../assets/src/xiangq_03.png">
@@ -32,6 +33,7 @@
       </div>
       <div class="detail_zhou"><img src="../assets/src/zhou_31.png"></div>
     </div>
+    </transition>
     <div class="menu-wrapper-right">
       <div class="menu" v-if="detailShow">
         <div class="button" @click="detail(false)"><img src="../assets/src/x_36.png"></div>
@@ -85,6 +87,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import "../assets/animate.less";
 .page .img-wrapper.height {
   display: flex;
   width: 100vw;
