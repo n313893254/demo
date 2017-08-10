@@ -1,4 +1,3 @@
-<!-- 获取img的url进行展示 -->
 <template lang="html">
   <div class="display-page">
     <div class="img-wrapper" :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }">
@@ -159,8 +158,11 @@ export default {
   text-decoration: none;
 }
 .display-page {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   height: 100vh;
   width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 </style>

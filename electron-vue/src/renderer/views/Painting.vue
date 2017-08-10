@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="body">
     <!-- <TransisionLayer/> -->
-    <!-- <div class="">
+    <div class="">
       <PaintingDisplay/>
-    </div> -->
+    </div>
   	<div class="nav">
   		<div class="small_logo">
   			<img src="../assets/src/piclist_06.png">
@@ -40,8 +40,10 @@
         <div class="img" v-for="painting in rows">
           <div class="painting-wrapper">
             <router-link class="poi"
-              :to="{ path: '/Painting/Display', query: { src: 'imgs/painting_img2.jpg' }}">
-              <img src="../assets/src/painting_img2.jpg" alt="">
+              :to="{ path: '/Painting/Display', query: { src: 'imgs/painting_img2.jpg' }}"
+              style="background-image: url(imgs/painting_img2.jpg);
+                      background-size: cover">
+              <!-- <img src="../assets/src/painting_img2.jpg" alt=""> -->
             </router-link>
           </div>
           <div class="img-description">
@@ -192,9 +194,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 }
 .img  img {
-  clip-path: circle(80px at 50% 50%);
+  // clip-path: circle(80px at 50% 50%);
   /*@media*/
 }
 
