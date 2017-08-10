@@ -135,7 +135,6 @@ body::-webkit-scrollbar {
   	left: 0;
   	right: 0;
   	margin: auto;
-
   }
   .fade-enter-active {
     transition: all .3s ease;
@@ -146,11 +145,7 @@ body::-webkit-scrollbar {
   .fade-enter, .fade-leave-to {
     opacity: 0;
   }
-  .menu-wrapper-right {
-    position: fixed;
-    right: 1vh;
-    bottom: 1vw;
-  }
+
   /* 史料和研究的内容*/
   .left_title{
 	width: 30vw;

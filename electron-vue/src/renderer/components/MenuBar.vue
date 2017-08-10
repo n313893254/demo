@@ -16,10 +16,10 @@
       <transition name="bounce">
         <router-link v-if="count > 1" class="button" to="/Search"><img src="../assets/src/piclist_28.png"></router-link>
       </transition>
-      <div class="button" v-if="rightMenuSeen" @click="closeRightMenu()"><img src="../assets/src/piclist_46.png"></div>
+      <div class="button main" v-if="rightMenuSeen" @click="closeRightMenu()"><img src="../assets/src/piclist_46.png"></div>
     </div>
     <div class="menu" >
-      <div class="button" v-if="rightMenuSeen === false" @click="openRightMenu()"><img src="../assets/src/piclist_46.png"></div>
+      <div class="button main" v-if="rightMenuSeen === false" @click="openRightMenu()"><img src="../assets/src/piclist_46.png"></div>
     </div>
   </div>
 </template>
@@ -72,4 +72,32 @@ export default {
 
 <style lang="less" scoped>
 @import "../assets/animate.less";
+
+.menu-wrapper-right {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .button {
+       width: 10vw;
+       height: 10vh;
+       display: inline-block;
+       text-decoration: none;
+       position: relative;
+       margin-top: 1vh;
+       cursor: pointer;
+       img {
+
+       }
+     }
+     .main.button {
+       width: 13vw;
+       height: 13vh;
+     }
+  }
+}
 </style>
