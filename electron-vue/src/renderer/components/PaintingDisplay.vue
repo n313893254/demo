@@ -1,6 +1,6 @@
 <!-- 获取img的url进行展示 -->
 <template lang="html">
-  <div class="page">
+  <div class="display-page">
     <div class="img-wrapper" :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }">
       <div class="">
         <img :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }"
@@ -78,7 +78,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="less" scoped>
 .page {
   display: flex;
   width: 100vw;
@@ -157,5 +157,10 @@ export default {
   color: #714A3B;
   font-size: 1.0vw;
   text-decoration: none;
+}
+.display-page {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
 }
 </style>
