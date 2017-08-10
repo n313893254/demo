@@ -3,7 +3,7 @@
     <!-- <TransisionLayer/> -->
     <transition name="bounce">
       <div class="painting-display" v-if="this.$store.state.isPaintingShow">
-        <PaintingDisplay/>
+        <PaintingDisplay :row="bigPainting"/>
       </div>
     </transition>
   	<div class="nav">
@@ -41,7 +41,7 @@
       <div class="img-list">
         <div class="img" v-for="painting in rows">
           <div class="painting-wrapper">
-            <div class="img-preview"  @click="handlePainting(painting.img_link)"
+            <div class="img-preview"  @click="handlePainting(painting.img_link, painting)"
               :style="{backgroundImage: 'url(./static/pics/works/' + painting.img_link + ')'}">
               <!-- <img src="../assets/src/painting_img2.jpg" alt=""> -->
             </div>
@@ -86,7 +86,8 @@ export default {
       open: false,
       docked: true,
       rows: [],
-      listTitle: '画作'
+      listTitle: '画作',
+      bigPainting: ''
     }
   },
   computed: {
@@ -124,9 +125,10 @@ export default {
       })
       document.body.scrollTop = 0
     },
-    handlePainting (url) {
+    handlePainting (url, painting) {
       this.$store.commit('handleBigImgUrl', url)
       this.$store.commit('handlePaintingShow', true)
+      this.bigPainting = painting
     }
   },
   created: function () {

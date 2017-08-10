@@ -16,13 +16,13 @@
           <img class="logo_img" src="../assets/src/logoxiangq_07.png">
         </div>
         <div class="neirong">
-          <p>堵海工地速写之一</p>
+          <p>{{ this.row.name }}</p>
           <br><br>
-          <p>尺寸：31.5cm x 43cm</p><br>
-          <p>质材：纸本设色</p><br>
-          <p>收藏：岭南画派纪念馆藏</p><br>
-          <p>款帐：</p><br>
-          <p>印章：关山月（朱文）</p><br>
+          <p>尺寸：{{ this.row.size }}</p><br>
+          <p>质材：{{ this.row.material }}</p><br>
+          <p>收藏：{{ this.row.storage }}</p><br>
+          <p>款帐：{{ this.row.style }}</p><br>
+          <p>印章：{{ this.row.seal }}</p><br>
         </div>
         <div class="wenzhang">
           <router-link class="wen_neirong" to="/Painting/ArticleDetail">》工地艰苦生活有感</router-link><br>
@@ -48,6 +48,7 @@
 <script>
 export default {
   name: 'PaintingDisplay',
+  props: ['row'],
   computed: {
     isHeight () {
       return this.$store.state.isHeight
@@ -65,7 +66,7 @@ export default {
     //   this.$store.commit('setWidth')
     // }
     this.$store.commit('setMenuBarSeen', false)
-    console.log(this.$store.state.bigImgUrl)
+    console.log(this.row)
   },
   methods: {
     pageBack () {
