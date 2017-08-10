@@ -77,13 +77,13 @@ export default {
     closeDisplay () {
       this.$store.commit('handlePaintingShow', false)
       this.$store.commit('setMenuBarSeen', true)
+      this.$store.commit('detailShow', false)
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
-
 .page .img-wrapper.height {
   display: flex;
   width: 100vw;
