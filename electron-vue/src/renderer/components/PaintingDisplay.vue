@@ -3,7 +3,7 @@
     <div class="img-wrapper" :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }">
       <div class="">
         <img :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }"
-          src="../assets/src/painting_img2.jpg" alt="">
+          :src="'./static/pics/works/' + this.$store.state.bigImgUrl" alt="">
       </div>
     </div>
     <div class="detail" v-if="detailShow">
@@ -65,6 +65,7 @@ export default {
     //   this.$store.commit('setWidth')
     // }
     this.$store.commit('setMenuBarSeen', false)
+    console.log(this.$store.state.bigImgUrl)
   },
   methods: {
     pageBack () {

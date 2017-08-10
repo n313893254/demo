@@ -41,7 +41,7 @@
       <div class="img-list">
         <div class="img" v-for="painting in rows">
           <div class="painting-wrapper">
-            <div class="img-preview"  @click="handlePainting()"
+            <div class="img-preview"  @click="handlePainting(painting.img_link)"
               :style="{backgroundImage: 'url(./static/pics/works/' + painting.img_link + ')'}">
               <!-- <img src="../assets/src/painting_img2.jpg" alt=""> -->
             </div>
@@ -124,7 +124,8 @@ export default {
       })
       document.body.scrollTop = 0
     },
-    handlePainting () {
+    handlePainting (url) {
+      this.$store.commit('handleBigImgUrl', url)
       this.$store.commit('handlePaintingShow', true)
     }
   },

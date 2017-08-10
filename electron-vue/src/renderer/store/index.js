@@ -27,8 +27,10 @@ export default new Vuex.Store({
       '书法': 9
     },
 
+    // Painting.vue
     isDisplay: false,
     isPaintingShow: false,
+    bigImgUrl: '',
 
     leftMenuSeen: false,
     rightMenuSeen: false,
@@ -107,6 +109,9 @@ export default new Vuex.Store({
     },
     handlePaintingShow (state, value) {
       state.isPaintingShow = value
+    },
+    handleBigImgUrl (state, url) {
+      state.bigImgUrl = url
     }
   }
 })
