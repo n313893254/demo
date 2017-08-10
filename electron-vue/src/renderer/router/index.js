@@ -10,7 +10,6 @@ import Photo from '../components/Photo'
 import VideoList from '../views/VideoList'
 import ArticleDetail from '../components/ArticleDetail'
 import PaintingDisplay from '../components/PaintingDisplay'
-import PaintingDetail from '../components/PaintingDetail'
 import ResearchList from '../components/ResearchList'
 import Searchlist from '../components/Searchlist'
 
@@ -93,11 +92,6 @@ const router = new Router({
       path: '/Painting/Display',
       name: 'PaintingDisplay',
       component: PaintingDisplay
-    },
-    {
-      path: '/Painting/Display/Detail',
-      name: 'PaintingDetail',
-      component: PaintingDetail
     }
   ]
 })
