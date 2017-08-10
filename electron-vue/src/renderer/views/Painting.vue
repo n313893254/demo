@@ -1,9 +1,11 @@
 <template lang="html">
-  <div class="body">
+  <div class="painting-page">
     <!-- <TransisionLayer/> -->
-    <div class="" v-if="this.$store.state.isPaintingShow">
-      <PaintingDisplay/>
-    </div>
+    <transition name="bounce">
+      <div class="painting-display" v-if="this.$store.state.isPaintingShow">
+        <PaintingDisplay/>
+      </div>
+    </transition>
   	<div class="nav">
   		<div class="small_logo">
   			<img src="../assets/src/piclist_06.png">
@@ -163,8 +165,64 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.body {
+@import "../assets/animate.less";
+.painting-page {
   overflow: hidden;
+  .painting-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title {
+      height: 10vh;
+      text-align: center;
+      margin: 5vh auto;
+      margin-top: 15vh;
+      line-height: 10vh;
+      font-size: 5vh;
+      background-image:url(../assets/src/flower_11.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 100vw;
+      color:#6F473B ;
+    }
+    .img-list {
+      display: flex;
+      justify-content: flex-start;
+      width: 80vw;
+      margin-right: 0;
+      flex-wrap: wrap;
+      .img {
+        .img-description {
+          margin-top: 1vh;
+          height: 8vh;
+          background-size: 100% 100%;
+          background-image: url(../assets/src/piclist_24.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          p {
+            width: 100%;
+            color: #6F473B;
+            font-size: 2vh;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }
 .menu-wrapper-left {
   position: fixed;
@@ -200,56 +258,7 @@ export default {
   /*@media*/
 }
 
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  .title {
-    height: 10vh;
-    text-align: center;
-    margin: 5vh auto;
-    margin-top: 15vh;
-    line-height: 10vh;
-    font-size: 5vh;
-    background-image:url(../assets/src/flower_11.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 100vw;
-    color:#6F473B ;
-  }
-  .img-list {
-    display: flex;
-    justify-content: flex-start;
-    width: 80vw;
-    margin-right: 0;
-    flex-wrap: wrap;
-    .img {
-      .img-description {
-        margin-top: 1vh;
-        height: 8vh;
-        background-size: 100% 100%;
-        background-image: url(../assets/src/piclist_24.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        p {
-          width: 100%;
-          color: #6F473B;
-          font-size: 2vh;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          text-align: center;
-        }
-      }
-    }
-  }
-}
+
 .img_detail{
   background-color:#FFFFFF;
   display:block ;

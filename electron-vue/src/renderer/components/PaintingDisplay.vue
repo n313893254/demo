@@ -75,6 +75,7 @@ export default {
     },
     closeDisplay () {
       this.$store.commit('handlePaintingShow', false)
+      this.$store.commit('setMenuBarSeen', true)
     }
   }
 }
@@ -152,9 +153,6 @@ export default {
   background-color: rgba(0, 0, 0, 0.8);
   height: 100vh;
   width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
