@@ -60,15 +60,14 @@ export default {
     }
   },
   created: function () {
-    // let img = new Image()
-    // img.src = this.$route.query.src
-    // if (img.height > img.width) {
-    //   this.$store.commit('setHeight')
-    // } else {
-    //   this.$store.commit('setWidth')
-    // }
+    let img = new Image()
+    img.src = this.$store.state.bigImgUrl
+    if (img.height > img.width) {
+      this.$store.commit('setHeight')
+    } else {
+      this.$store.commit('setWidth')
+    }
     this.$store.commit('setMenuBarSeen', false)
-    console.log(this.row)
   },
   methods: {
     pageBack () {
@@ -88,31 +87,30 @@ export default {
 
 <style lang="less" scoped>
 @import "../assets/animate.less";
-.page .img-wrapper.height {
+.display-page .img-wrapper.height {
   display: flex;
   width: 100vw;
   justify-content: center;
 }
-.page .img-wrapper.height {
+.display-page .img-wrapper.height {
   height: 100vh;
 }
-.page img.height {
+.display-page .img-wrapper.width {
+  height: 100vh;
+}
+.display-page img.height {
   height: 100%;
 }
-.page img.width {
+.display-page img.width {
   width: 100%;
 }
-.page .img-wrapper.small.width {
+.display-page .img-wrapper.small.width {
   width: 80vw;
 }
-.page img.small.width {
+.display-page img.small.width {
   width: 100%;
 }
-.detail {
-  width: 20vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100vh;
-}
+
 .article-list {
   display: flex;
   flex-direction: column;
@@ -156,8 +154,8 @@ export default {
 }
 .display-page {
   background-color: rgba(0, 0, 0, 0.8);
-  height: 100vh;
-  width: 100vw;
+  // height: 100vh;
+  // width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -166,6 +164,11 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100vw;
+  }
+  .detail {
+    width: 20vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
   }
 }
 </style>

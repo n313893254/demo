@@ -111,7 +111,8 @@ export default new Vuex.Store({
       state.isPaintingShow = value
     },
     handleBigImgUrl (state, url) {
-      state.bigImgUrl = url
+      state.bigImgUrl = url.split(/_600\.jpg/)[0] + '_big.jpg'
+      console.log(state.bigImgUrl)
     }
   }
 })
