@@ -55,10 +55,10 @@ export default {
     closeRightMenu () {
       clearInterval(this.timer)
       this.count = 10
-      console.log(this)
+      // console.log(this)
       this.timer = setInterval(() => {
         this.count--
-        console.log(this.count)
+        // console.log(this.count)
         if (this.count < 0) {
           this.count = 0
           clearInterval(this.timer)

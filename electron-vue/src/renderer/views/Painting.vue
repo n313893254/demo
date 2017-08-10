@@ -42,8 +42,7 @@
         <div class="img" v-for="painting in rows">
           <div class="painting-wrapper">
             <div class="img-preview"  @click="handlePainting()"
-              style="background-image: url(imgs/painting_img2.jpg);
-                      ">
+              :style="{backgroundImage: 'url(./static/works/' + rows[0].img_link + ')'}">
               <!-- <img src="../assets/src/painting_img2.jpg" alt=""> -->
             </div>
           </div>
@@ -145,7 +144,12 @@ export default {
     }
     db.getWorkList(0, (row) => {
       this.rows = row
-      console.log(this.rows[0])
+      // let reg = /[^/]+\.jpg/i
+      this.rows[0].img_link = this.rows[0].img_link
+                              .match(/[^/]+\.jpg/i)[0]
+                              .split(/\.jpg/i)[0] + '_600.jpg'
+      // this.rows[0].img_link = this.
+      console.log(this.rows[0].img_link)
     })
   }
   /* mounted: function () {
