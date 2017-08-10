@@ -81,19 +81,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.page {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: space-between;
-  align-items: center;
-}
-.page .img-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-}
+
 .page .img-wrapper.height {
   display: flex;
   width: 100vw;
@@ -167,5 +155,14 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 }
 </style>

@@ -33,18 +33,17 @@
       </div>
     </div>
     <div class="content-wrapper">
-      <div class="title" @click="handlePainting()">
+      <div class="title">
         <span> {{ listTitle }} </span>
       </div>
       <div class="img-list">
         <div class="img" v-for="painting in rows">
           <div class="painting-wrapper">
-            <router-link class="poi"
-              :to="{ path: '/Painting/Display', query: { src: 'imgs/painting_img2.jpg' }}"
+            <div class="poi"  @click="handlePainting()"
               style="background-image: url(imgs/painting_img2.jpg);
                       background-size: cover">
               <!-- <img src="../assets/src/painting_img2.jpg" alt=""> -->
-            </router-link>
+            </div>
           </div>
           <div class="img-description">
             <p>{{ painting.name }}</p>
