@@ -35,11 +35,11 @@
     <div class="menu-wrapper-right">
       <div class="menu" v-if="detailShow">
         <div class="button" @click="detail(false)"><img src="../assets/src/x_36.png"></div>
-        <div class="button" @click="pageBack()"><img src="../assets/menu/back_19.png"></div>
+        <div class="button" @click="closeDisplay()"><img src="../assets/menu/back_19.png"></div>
       </div>
       <div class="menu" v-else>
         <div class="button" @click="detail(true)"><img src="../assets/menu/detail.png"></div>
-        <div class="button" @click="pageBack()"><img src="../assets/menu/back_19.png"></div>
+        <div class="button" @click="closeDisplay()"><img src="../assets/menu/back_19.png"></div>
       </div>
     </div>
   </div>
@@ -72,6 +72,9 @@ export default {
     },
     detail (value) {
       this.$store.commit('detailShow', value)
+    },
+    closeDisplay () {
+      this.$store.commit('handlePaintingShow', false)
     }
   }
 }

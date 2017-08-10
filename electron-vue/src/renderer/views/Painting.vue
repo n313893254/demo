@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="body">
     <!-- <TransisionLayer/> -->
-    <div class="">
+    <div class="" v-if="this.$store.state.isPaintingShow">
       <PaintingDisplay/>
     </div>
   	<div class="nav">
@@ -120,7 +120,7 @@ export default {
       document.body.scrollTop = 0
     },
     handlePainting () {
-      console.log('poi')
+      this.$store.commit('handlePaintingShow', true)
     }
   },
   created: function () {

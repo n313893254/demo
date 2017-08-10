@@ -28,6 +28,7 @@ export default new Vuex.Store({
     },
 
     isDisplay: false,
+    isPaintingShow: false,
 
     leftMenuSeen: false,
     rightMenuSeen: false,
@@ -103,6 +104,9 @@ export default new Vuex.Store({
 
     setPlayer (state, value) {
       state.isDisplay = value
+    },
+    handlePaintingShow (state, value) {
+      state.isPaintingShow = value
     }
   }
 })
