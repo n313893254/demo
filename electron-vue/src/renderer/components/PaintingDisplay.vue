@@ -105,7 +105,7 @@ export default {
 }
 .detail {
   width: 20vw;
-  background-color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
 }
 .article-list {
