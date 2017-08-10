@@ -116,6 +116,11 @@ export default {
       this.listTitle = value
       db.getWorkList(categoryId[value], (row) => {
         this.rows = row
+        for (let i in this.rows) {
+          this.rows[i].img_link = this.rows[i].img_link
+                                  .match(/[^/]+\.jpg/i)[0]
+                                  .split(/\.jpg/i)[0] + '_600.jpg'
+        }
       })
       document.body.scrollTop = 0
     },
@@ -144,14 +149,11 @@ export default {
     }
     db.getWorkList(0, (row) => {
       this.rows = row
-      // let reg = /[^/]+\.jpg/i
       for (let i in this.rows) {
         this.rows[i].img_link = this.rows[i].img_link
                                 .match(/[^/]+\.jpg/i)[0]
                                 .split(/\.jpg/i)[0] + '_600.jpg'
       }
-      // this.rows[0].img_link = this.
-      console.log(this.rows[0].img_link)
     })
   }
   /* mounted: function () {
