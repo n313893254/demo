@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="display-page">
     <div class="img-wrapper" :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }">
-      <div class="">
+      <div class="poi">
         <img :class="{[isHeight ? 'height' : 'width']: true, 'small': detailShow }"
           :src="'./static/pics/works/' + this.$store.state.bigImgUrl" alt="">
       </div>
@@ -61,7 +61,9 @@ export default {
   },
   created: function () {
     let img = new Image()
-    img.src = this.$store.state.bigImgUrl
+    img.src = './static/pics/works/' + this.$store.state.bigImgUrl
+    console.log(img.height)
+    console.log(img.width)
     if (img.height > img.width) {
       this.$store.commit('setHeight')
     } else {
@@ -87,6 +89,12 @@ export default {
 
 <style lang="less" scoped>
 @import "../assets/animate.less";
+.poi {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .display-page .img-wrapper.height {
   display: flex;
   width: 100vw;
@@ -107,8 +115,14 @@ export default {
 .display-page .img-wrapper.small.width {
   width: 80vw;
 }
+.display-page .img-wrapper.small.height {
+  width: 80vw;
+}
 .display-page img.small.width {
   width: 100%;
+}
+.display-page img.small.height {
+  height: 100%;
 }
 
 .article-list {
