@@ -273,4 +273,9 @@ body::-webkit-scrollbar {
 	float: right;
 	color:#F6C374;
 }
+.menu-wrapper-right {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
 </style>

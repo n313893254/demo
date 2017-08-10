@@ -51,9 +51,9 @@
         </div>
       </div>
     </div>
-    <div class="cd-transition-layer">
+    <!-- <div class="cd-transition-layer">
       <div class="bg-layer"></div>
-    </div>
+    </div> -->
     <div class="menu-wrapper-right">
       <div class="menu">
         <div class="button" @click="pageBack()"><img src="../assets/menu/back_19.png"></div>
