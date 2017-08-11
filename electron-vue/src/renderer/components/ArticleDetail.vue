@@ -2,20 +2,32 @@
   <div class="body">
     <div class="flipbook-viewport">
       <div class="container">
-        <div class="flipbook">
+        <div class="flipbook" ref="flipbook">
           <div class="page">
-            <p>我生长在穷乡僻壤的小村子，从小就喜欢涂鸦。家门口的晒谷场，就是我的大画板;随手拾来的木炭瓦片，
-              就是我的画具。见鸡画鸡，见狗画狗，我曾在晒谷场上画过牛耕田，画过牵长线放纸鹞。</p>
-            <p>我和哥哥和一位堂叔会画炭相，但我觉得黑漆的炭相不好看。一次弄来一小块他们画炭相用的“飞马纸”，
-              便是用这块洁白的洋纸画一只大雄鸡。春节刚过，家家户户都贴有红对联，于是我冒着风险撕下邻舍的一块红纸，
-              企图泡出点红颜色用来画雄鸡的鸡冠。此外，我还发现水瓜叶可以挤出绿色汁液;妈妈上山砍柴时又求她为我摘回一些当黄色用的梔子;
-              有时为了要画多种颜色的花纸鹞，又用土块和石头磨出各种各样色彩的粉末当颜料。</p>
+            <h1>这是封面</h1>
           </div>
           <div class="page odd">
             <div class="author">作者：关山月</div>
             <h1>绘事话童年</h1>
-            <!-- <p>{{ content }}</p> -->
-            <p v-html="page"></p>
+            <p v-html="page[0]"></p>
+            <p v-html="page[1]"></p>
+          </div>
+          <div class="page even">
+            <div class="time">1988年12月</div>
+            <p v-html="page[2]"></p>
+            <p v-html="page[3]"></p>
+          </div>
+          <div class="page odd">
+            <div class="author">作者：关山月</div>
+            <p v-html="page[4]"></p>
+            <p v-html="page[5]"></p>
+          </div>
+          <div class="page even">
+            <div class="time">1988年12月</div>
+            <p v-html="page[6]"></p>
+            <p v-html="page[7]"></p>
+            <p v-html="page[8]"></p>
+            <p v-html="page[9]"></p>
           </div>
           <!-- <div class="page even">
             <div class="time">1988年12月</div>
@@ -73,7 +85,9 @@ export default {
   data () {
     return {
       content: '1',
-      page: ''
+      page: '',
+      message: '',
+      newPage: '<div class="page"><p>就是我的画具。见鸡画鸡，见狗画狗，我曾在晒谷场上画过牛耕田，画过牵长线放纸鹞。</p></div>'
     }
   },
   methods: {
@@ -83,16 +97,15 @@ export default {
   },
   created: function () {
     this.$store.commit('setMenuBarSeen', false)
+    db.getHistoricalDetail(283, (row) => {
+      this.content = row.content2
+      this.page = this.content.substring(0, 400)
+      let str = this.content.match(/<p(.*?)<\/p>/ig)
+      this.page = str
+      // console.log(str)
+    })
   },
   mounted: function () {
-    // 泼墨效果
-    var transitionLayer = $('.cd-transition-layer')
-    transitionLayer.addClass('closing')
-    transitionLayer.addClass('visible opening')
-    setTimeout(function () {
-      transitionLayer.addClass('no-cssanimations')
-    }, 3000)
-
     // 翻书效果
     $('.flipbook').turn({
       width: 88 + 'vw',
@@ -104,16 +117,13 @@ export default {
       page: 2,
       turnCorners: 'all'
     })
+    // let element = $('<div />').html('Loading...')
+    // $('.flipbook').turn('addPage', element, 3)
+    // this.message = 1
 
     // db.getHistoricalList(7, (row) => {
     //   console.log(row)
     // })
-
-    db.getHistoricalDetail(283, (row) => {
-      this.content = row.content
-      this.page = this.content.substring(0, 400)
-      console.log(row.content)
-    })
   }
 }
 </script>
