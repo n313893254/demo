@@ -36,41 +36,62 @@
     </div>
 
   <div class="mid">
-  	<div class="img_tubiao">
-  			<img src="../assets/src/history_tubiao.png">
-  		</div>
+    <div class="left_box">
   	<div class="left_title">
-  	   <p>>>香港回归敢赋一篇</p><br>
-  	   <p>>>在深圳美术节上的发言</p><br>
-  	   <p>>>艺术的堕落--游欧杂记</p><br>
-  	   <p>>>香港回归敢赋一篇</p><br>
-  	   <p>>>在深圳美术节上的发言</p><br>
-  	   <p>>>艺术的堕落--游欧杂记</p><br>
-  	   <p>>>香港回归敢赋一篇</p><br>
-  	   <p>>>在深圳美术节上的发言</p><br>
-  	   <p>>>艺术的堕落--游欧杂记</p><br>
-  	   <p>>>香港回归敢赋一篇</p><br>
-  	   <p>>>香港回归敢赋一篇</p><br>
-  	   <p>>>在深圳美术节上的发言</p><br>
-  	   <p>>>艺术的堕落--游欧杂记</p><br>
-  	   <p>>>香港回归敢赋一篇</p><br>
-  	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
-  	   <p>>>在深圳美术节上的发言</p><br>
-  	   <p>>>艺术的堕落--游欧杂记</p><br>
-  	   <p>>>香港回归敢赋一篇</p><br>
-  	   <p>>>香港回归敢赋一篇</p><br>
-  	   <p>>>在深圳美术节上的发言</p><br>
-  	   <p>>>艺术的堕落--游欧杂记</p><br>
-  	   <p>>>香港回归敢赋一篇</p><br>
-  	   <p>>>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</p><br>
+  	   <ul>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>艺术的堕落--游欧杂记</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>在深圳美术节上的发言</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>艺术的堕落--游欧杂记</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>在深圳美术节上的发言</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>艺术的堕落--游欧杂记</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>艺术的堕落--游欧杂记</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>艺术的堕落--游欧杂记</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>艺术的堕落--游欧杂记</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>艺术的堕落--游欧杂记</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</li>
+  	   <li>艺术的堕落--游欧杂记</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>追流溯源的艺术--为《平山郁夫丝绸之路素描集》出版而作</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>艺术的堕落--游欧杂记</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>在深圳美术节上的发言</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>艺术的堕落--游欧杂记</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>在深圳美术节上的发言</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>艺术的堕落--游欧杂记</li>
+  	   <li>香港回归敢赋一篇</li>
+  	   <li>香港回归敢赋一篇</li>
+    </ul>
+  	</div>
   	</div>
   	<div class="right_wenzhang">
   	<div class="article_words">
   	  <div class="author">
   	    <div class="writer">作者：关山月</div>
-  	    <div class="data"> <p>1988年</p></div>
+  	    <div class="data"> 1988年</div>
   	  </div>
-  	  <h2>《关于画梅》</h2>
+  	  <h2 class="article">《关于画梅》</h2>
+  	  <div class="article_conent">
   	  <p>树有根、水有源。我喜爱画梅。说起来，也是有其根源的，根源早就萌植于童年生活之中，
   	       包括传统观念的支配、客观环境的影响，还有就是纯朴的童稚之心在模仿行动的潜移默化中产生的兴趣在起作用。</p>
           <p>我出生在一个没落的书香之家，父亲是一个赶不上科举考试的农村知识分子——小学教师。
@@ -89,9 +110,11 @@
   	</div>
   </div>
   </div>
+  </div>
 </template>
 
 <script>
+import $ from 'jquery'
 import TransisionLayer from '../components/TransisionLayer'
 export default {
   name: 'History',
@@ -120,7 +143,11 @@ export default {
   },
   created: function () {
     this.$store.commit('setMenuBarSeen', true)
-    this.$store.commit('closeRightMenu')
+  },
+  mounted: function () {
+    $('li').click(function () {
+      $('.article').html($(this).html())
+    })
   }
 }
 </script>

@@ -22,37 +22,40 @@
   		<a href="#">研究</a>
   	</div>
     <div class="searchBar">
-     <input type="search" id="kuang" class="kuang" placeholder="请输入拼音字母搜索" /></input>
+    <div class="search_kuang">
+     <div class="search_img"></div>
+     <div class="search"><input type="search" class="search" placeholder="请输入拼音首字母"></div>
+     </div>
      <div class="sousu"><router-link to="/Searchlist"><img src="../assets/src/ss1_34.png"></router-link></div>
         </div>
         <div class="method" id="mehtod">
            <p class="first">
-           	<a href="#">Q</a>&nbsp;
-           	<a href="#">W</a>&nbsp;
-           	<a href="#">E</a>&nbsp;
-           	<a href="#">R</a>&nbsp;
-           	<a href="#">T</a>&nbsp;
-           	<a href="#">Y</a>&nbsp;
-           	<a href="#">U</a>&nbsp;
-           	<a href="#">I</a>&nbsp;
-           	<a href="#">O</a>&nbsp;
-           	<a href="#">P</a></p><br>
-           <p><a href="#">A</a>&nbsp;
-           	<a href="#">S</a>&nbsp;
-           	<a href="#">D</a>&nbsp;
-           	<a href="#">F</a>&nbsp;
-           	<a href="#">G</a>&nbsp;
-           	<a href="#">H</a>&nbsp;
-           	<a href="#">J</a>&nbsp;
-           	<a href="#">K</a>&nbsp;
-           	<a href="#">L</a></p><br>
-           <p><a href="#">Z</a>&nbsp;
-           	<a href="#">X</a>&nbsp;
-           	<a href="#">C</a>&nbsp;
-           	<a href="#">V</a>&nbsp;
-           	<a href="#">B</a>&nbsp;
-           	<a href="#">N</a>&nbsp;
-           	<a href="#">M</a></p>
+           	<a >Q</a>&nbsp;
+           	<a >W</a>&nbsp;
+           	<a >E</a>&nbsp;
+           	<a >R</a>&nbsp;
+           	<a >T</a>&nbsp;
+           	<a >Y</a>&nbsp;
+           	<a >U</a>&nbsp;
+           	<a >I</a>&nbsp;
+           	<a >O</a>&nbsp;
+           	<a >P</a></p><br>
+           <p><a >A</a>&nbsp;
+           	<a >S</a>&nbsp;
+           	<a >D</a>&nbsp;
+           	<a >F</a>&nbsp;
+           	<a >G</a>&nbsp;
+           	<a >H</a>&nbsp;
+           	<a >J</a>&nbsp;
+           	<a >K</a>&nbsp;
+           	<a >L</a></p><br>
+           <p><a >Z</a>&nbsp;
+           	<a >X</a>&nbsp;
+           	<a >C</a>&nbsp;
+           	<a >V</a>&nbsp;
+           	<a >B</a>&nbsp;
+           	<a >N</a>&nbsp;
+           	<a >M</a></p>
            <div class="method_img">
            <img src="../assets/src/dele2dowm_40.png">
            <img src="../assets/src/deledown_42.png">
@@ -82,12 +85,9 @@ export default {
       return this.$store.commit('setSearchList', value)
     }
   },
-  created: function () {
-    this.$store.commit('closeRightMenu')
-  },
   mounted: function () {
     $('.method').hide()
-    $('.kuang').hover(function () {
+    $('.search_kuang').hover(function () {
       $('.method').show()
     }, function () {
       $('.method').hide()
@@ -108,24 +108,38 @@ export default {
 }
 .searchBar  {
 	width: 100vw;
-	height: 6vh;
+	height: 5.5vh;
 	float: left;
 }
-.kuang{
-	width:45vw;
-	height: 5vh;
-	outline-style: none;
-	border-radius: 20px;
-	margin-left: 23vw;
-	float: left;
-	margin-top: 0.5vh;
+.search_kuang{
+    width:45vw;
+    height: 5vh;
+    border-radius: 20px;
+    float: left;
+    margin-left: 23vw;
+    background-color: #ffffff;
+    -webkit-box-shadow: #000000;
+    -moz-box-shadow: #000000;
+    box-shadow: #000000 ;
 }
-.kuang{
-	background-image: url(../assets/src/sousuo_03.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-  background-position: 0px 0px;
-  padding-left: 3vw;
+.search_img{
+    width:2vw;
+    height: 3vh;
+    float: left;
+    margin-top: 1vh;
+    margin-left: 0.5vw;
+    background-image: url(../assets/src/sousuo_03.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.search{
+    width:41vw;
+    height:5vh;
+    float: left;
+    opacity: 0.8;
+    border: dashed 1px #ffffff;
+    background-color: transparent;
+    outline-style: none;
 }
 .sousu{
 	width: 5vw;
@@ -133,7 +147,6 @@ export default {
 	float: left;
 	margin-top: 0.5vh;
 	margin-left: 5vh;
-	outline-style: none;
 	border-radius:20px;
 	margin-left: 2vw;
 	background-color: #FFFFFF;
@@ -148,28 +161,33 @@ export default {
 	margin-left: 25vw;
 }
 .method{
-	background-color: #FFFFFF;
-	width: 38vw;
-	height: 30vh;
+	width: 30vw;
+	height: 25vh;
 	float: left;
-	margin-left: 27vw;
+    background-image: url(../assets/src/search_02.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+	margin-left: 25vw;
 }
 .method p{
 	text-align: center;
-	font-size: 2vw;
+	font-size: 1.5vw;
 }
 .first{
-	padding-top: 4vh;
+	padding-top: 2.1vh;
 }
 .method_img{
-	width: 35vw;
-	height: 6vh;
+	width: 30vw;
+	height: 3vh;
+    float: left;
+    margin-left: 21.5vw;
+
 }
 .method_img img{
-	width: 4vw;
-	height: 5.5vh;
-	float: right;
-	margin-right: 1vw;
+	width: 2.5vw;
+	height: 3vh;
+    float: left;
+    margin-right: 1vw;
 }
 .tab_label{
 	margin-top: 45vh;

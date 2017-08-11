@@ -14,14 +14,17 @@
   	  <div class="gongsi"><img src="../assets/src/logoe4.png">
   	  	<p>伊世易技术支持</p></div>
   	</div>
-    <div class="searchBar">
-     <input type="search" class="kuang" placeholder="请输入拼音字母搜索" /></input>
+   <div class="searchBar">
+    <div class="search_kuang">
+     <div class="search_img"></div>
+     <div class="search"><input type="search" class="search" placeholder="请输入拼音首字母"></div>
+     </div>
      <div class="sousu"><router-link to="/Searchlist"><img src="../assets/src/ss1_34.png"></router-link></div>
         </div>
     <div class="tab">
-      <div @click="set('画作')"><img src="../assets/src/suoh_07.png"></div>
-      <div @click="set('史料')"><img src="../assets/src/sousuo_09.png"></div>
-      <div @click="set('研究')"><img src="../assets/src/sous_09.png"></div>
+      <div @click="set('画作')"><img src="../assets/src/sshuanormal_07.png"></div>
+      <div @click="set('史料')"><img src="../assets/src/ssshiliao_09.png"></div>
+      <div @click="set('研究')"><img src="../assets/src/ssyanjiu_11.png"></div>
     </div>
     <div class="panel">
       <div class="content" v-if="title === '画作'">
@@ -244,40 +247,58 @@ export default {
 }
 .searchBar  {
 	width: 100vw;
-	height: 6vh;
-	margin-top: 6vh;
+	height: 5.5vh;
+	margin-top: 3.6vh;
   background-color:#F7EEE5;
 }
-.kuang{
-	width:45vw;
-	height: 5vh;
-	outline-style: none;
-	border-radius: 20px;
-	margin-left: 23vw;
-	float: left;
-	margin-top: 0.5vh;
+.search_kuang{
+    width:45vw;
+    height: 5vh;
+    border-radius: 20px;
+    float: left;
+    margin-left: 23vw;
+    background-color: #ffffff;
+    -webkit-box-shadow: #000000;
+    -moz-box-shadow: #000000;
+    box-shadow: #000000 ;
 }
-.kuang{
-	background-image: url(../assets/src/sousuo_03.png);
-	background-repeat: no-repeat; 
-	background-size: contain;
-  background-position: 0px 0px;
-  padding-left: 3vw; 
+.search_img{
+    width:2vw;
+    height: 3vh;
+    float: left;
+    margin-top: 1vh;
+    margin-left: 0.5vw;
+    background-image: url(../assets/src/sousuo_03.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.search{
+    width:41vw;
+    height:5vh;
+    float: left;
+    opacity: 0.8;
+    border: dashed 1px #ffffff;
+    background-color: transparent;
+    outline-style: none;
 }
 .sousu{
-	width: 5vw;
-	height: 5vh;
-	float: left;
-	margin-top: 0.5vh;
-	margin-left: 5vh;
-	outline-style: none;
-	border-radius:20px;
-	margin-left: 2vw;
-	background-color: #FFFFFF;
+    width: 5vw;
+    height: 5vh;
+    float: left;
+    margin-top: 0.5vh;
+    margin-left: 5vh;
+    border-radius:20px;
+    margin-left: 2vw;
+    background-color: #FFFFFF;
 }
 .sousu img{
-	width: 5vw;
-	height: 5vh;
+    width: 5vw;
+    height: 5vh;
+}
+.search_banner{
+    float: left;
+    margin-top:10vh;
+    margin-left: 25vw;
 }
 .search_list{
 	background-color: #FFFFFF;
@@ -301,7 +322,7 @@ export default {
   width: 79vh;
   background-color: #F3EEE8;
   margin-left: 4vw;
-  margin-top: 11vh;
+  margin-top: 11.5vh;
   width: 85vw;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -311,13 +332,15 @@ export default {
 .img {
   height: 30vh;
   width: 16vw;
+  border-radius: 50%;
   margin: 8vh 2vw;
 }
 
 .img  img {
   height: 100%;
   width: 100%;
-  border: 1px solid #000;
+  border-radius: 50%;
+
 }
 .img p {
   color: #000000;
