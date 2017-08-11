@@ -15,7 +15,7 @@
             <div class="author">作者：关山月</div>
             <h1>绘事话童年</h1>
             <!-- <p>{{ content }}</p> -->
-            <p v-html="content"></p>
+            <p v-html="page"></p>
           </div>
           <!-- <div class="page even">
             <div class="time">1988年12月</div>
@@ -72,7 +72,8 @@ export default {
   components: { $, turn, db },
   data () {
     return {
-      content: '1'
+      content: '1',
+      page: ''
     }
   },
   methods: {
@@ -109,8 +110,9 @@ export default {
     // })
 
     db.getHistoricalDetail(283, (row) => {
-      this.content = row.content2
-      console.log(row.content2)
+      this.content = row.content
+      this.page = this.content.substring(0, 400)
+      console.log(row.content)
     })
   }
 }

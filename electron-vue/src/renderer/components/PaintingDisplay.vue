@@ -62,8 +62,6 @@ export default {
   created: function () {
     let img = new Image()
     img.src = './static/pics/works/' + this.$store.state.bigImgUrl
-    console.log(img.height)
-    console.log(img.width)
     if (img.height > img.width) {
       this.$store.commit('setHeight')
     } else {
