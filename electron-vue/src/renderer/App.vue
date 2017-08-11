@@ -178,6 +178,10 @@ body::-webkit-scrollbar {
 .left_title li{
   list-style-type: none;
 }
+.left_title li:hover{
+  color:#714A3B;
+;
+}
 .left_title a{
   color: #000000;
   text-decoration: none;

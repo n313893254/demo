@@ -39,7 +39,7 @@
     <div class="left_box">
   	<div class="left_title">
   	   <ul>
-  	   <li>香港回归敢赋一篇</li>
+  	   <li><a>香港回归敢赋一篇</a></li>
   	   <li>艺术的堕落--游欧杂记</li>
   	   <li>香港回归敢赋一篇</li>
   	   <li>在深圳美术节上的发言</li>

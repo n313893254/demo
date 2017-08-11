@@ -43,15 +43,15 @@
         <div class="biaoti"><p>创作《巨榕》<br>1994年</p></div>
       </div>
       <div class="photomodel">
-        <div class="photo" ><img src="../assets/src/video3.png"></div>
+        <div class="photo" @click="showVideo(true)" ><img src="../assets/src/video3.png"></div>
         <div class="biaoti"><p>创作《黄陵古柏》<br>1994年</p></div>
       </div>
       <div class="photomodel">
-        <div class="photo"><img src="../assets/src/video4.png"></div>
+        <div class="photo" @click="showVideo(true)"><img src="../assets/src/video4.png"></div>
         <div class="biaoti"><p>创作《漂流伴水声》<br>1993年</p></div>
       </div>
       <div class="photomodel">
-        <div class="photo"><img src="../assets/src/video5.png"></div>
+        <div class="photo" @click="showVideo(true)"><img src="../assets/src/video5.png"></div>
         <div class="biaoti"><p>关山月专题片</p></div>
       </div>
     </div>
@@ -155,7 +155,7 @@ export default {
 	margin-top: 1.5vh;
 	padding-top: 2.2vh;
 	background-size: contain;
-	background-image: url(../assets/src/video_bg.png);
+	background-image: url(../assets/src/photo_12.png);
 	background-repeat: no-repeat;
 	background-position: 100% ,100%;
 }

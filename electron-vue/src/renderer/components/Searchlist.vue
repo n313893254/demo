@@ -20,12 +20,50 @@
      <div class="search"><input type="search" class="search" placeholder="请输入拼音首字母"></div>
      </div>
      <div class="sousu"><router-link to="/Searchlist"><img src="../assets/src/ss1_34.png"></router-link></div>
+         <div class="method" id="mehtod">
+           <p class="first">
+           	<a >Q</a>&nbsp;
+           	<a >W</a>&nbsp;
+           	<a >E</a>&nbsp;
+           	<a >R</a>&nbsp;
+           	<a >T</a>&nbsp;
+           	<a >Y</a>&nbsp;
+           	<a >U</a>&nbsp;
+           	<a >I</a>&nbsp;
+           	<a >O</a>&nbsp;
+           	<a >P</a></p><br>
+           <p><a >A</a>&nbsp;
+           	<a >S</a>&nbsp;
+           	<a >D</a>&nbsp;
+           	<a >F</a>&nbsp;
+           	<a >G</a>&nbsp;
+           	<a >H</a>&nbsp;
+           	<a >J</a>&nbsp;
+           	<a >K</a>&nbsp;
+           	<a >L</a></p><br>
+           <p><a >Z</a>&nbsp;
+           	<a >X</a>&nbsp;
+           	<a >C</a>&nbsp;
+           	<a >V</a>&nbsp;
+           	<a >B</a>&nbsp;
+           	<a >N</a>&nbsp;
+           	<a >M</a></p>
+           <div class="method_img">
+           <img src="../assets/src/dele2dowm_40.png">
+           <img src="../assets/src/deledown_42.png">
+           </div>
         </div>
+        </div>
+        <div class="search-flower">
     <div class="tab">
       <div @click="set('画作')"><img src="../assets/src/sshuanormal_07.png"></div>
       <div @click="set('史料')"><img src="../assets/src/ssshiliao_09.png"></div>
       <div @click="set('研究')"><img src="../assets/src/ssyanjiu_11.png"></div>
     </div>
+    <div class="search-hang"></div>
+    </div>
+    <div class="ssearch">
+    <div class="search-zong">
     <div class="panel">
       <div class="content" v-if="title === '画作'">
         <div class="img-list">
@@ -98,6 +136,18 @@
         	<div class="search_poetry_img"></div>
         	<div class="search_article">
         		<table>
+         	<tr>
+         		<td class="search_name"><p>》三访南丫岛即兴（九首）</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1984年1月</p>
+         		</td>
+         	</tr>
+         	<tr>
+         		<td class="search_name"><p>》三访南丫岛即兴（九首）</p></td>
+         		<td class="search_author"><p>关山月</p></td>
+         		<td class="search_year"><p>1984年1月</p>
+         		</td>
+         	</tr>
          	<tr>
          		<td class="search_name"><p>》三访南丫岛即兴（九首）</p></td>
          		<td class="search_author"><p>关山月</p></td>
@@ -214,11 +264,14 @@
          </div>
       </div>
       </div>
+     </div>
     </div>
-  </div>
+   </div>
+   </div>
 </template>
 
 <script>
+import $ from 'jquery'
 import MenuBar from './MenuBar'
 
 export default {
@@ -236,6 +289,19 @@ export default {
     set (value) {
       return this.$store.commit('setSearchList', value)
     }
+  },
+  mounted: function () {
+    $('.method').hide()
+    $('.search_kuang').hover(function () {
+      $('.method').show()
+    }, function () {
+      $('.method').hide()
+    })
+    $('.method').hover(function () {
+      $('.method').show()
+    }, function () {
+      $('.method').hide()
+    })
   }
 }
 </script>
@@ -247,15 +313,16 @@ export default {
 }
 .searchBar  {
 	width: 100vw;
-	height: 5.5vh;
+	height: 6.5vh;
 	margin-top: 3.6vh;
   background-color:#F7EEE5;
 }
 .search_kuang{
     width:45vw;
-    height: 5vh;
+    height: 3.8vh;
     border-radius: 20px;
     float: left;
+    margin-top: 1.3vh;
     margin-left: 23vw;
     background-color: #ffffff;
     -webkit-box-shadow: #000000;
@@ -264,9 +331,9 @@ export default {
 }
 .search_img{
     width:2vw;
-    height: 3vh;
+    height: 2.2vh;
     float: left;
-    margin-top: 1vh;
+    margin-top: 1.0vh;
     margin-left: 0.5vw;
     background-image: url(../assets/src/sousuo_03.png);
     background-size: contain;
@@ -274,7 +341,7 @@ export default {
 }
 .search{
     width:41vw;
-    height:5vh;
+    height:3.8vh;
     float: left;
     opacity: 0.8;
     border: dashed 1px #ffffff;
@@ -283,17 +350,16 @@ export default {
 }
 .sousu{
     width: 5vw;
-    height: 5vh;
+    height: 3.8vh;
     float: left;
-    margin-top: 0.5vh;
-    margin-left: 5vh;
+    margin-top: 1.3vh;
     border-radius:20px;
     margin-left: 2vw;
     background-color: #FFFFFF;
 }
 .sousu img{
     width: 5vw;
-    height: 5vh;
+    height: 3.8vh;
 }
 .search_banner{
     float: left;
@@ -305,29 +371,99 @@ export default {
 	width: 32vw;
 	height: 2vh;            
 }
-.tab{
-	margin-left: 4vw;
+.method{
+    width: 30vw;
+    height: 25vh;
+    float: left;
+    position: absolute;
+    z-index: 99999;
+    margin-top: 4vh;
+    background-image: url(../assets/src/search_02.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 25vw;
+}
+.method p{
+    text-align: center;
+    font-size: 1.5vw;
+    color: #000;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+a:hover{
+    color: #fdd69c;
+    text-decoration: none;
+}
+.first{
+    padding-top: 2.1vh;
+}
+.method_img{
+    width: 30vw;
+    height: 3vh;
+    float: left;
+    margin-left: 21.5vw;
+
+}
+.method_img img{
+    width: 2.5vw;
+    height: 3vh;
+    float: left;
+    margin-right: 1vw;
+}
+.search-flower{
+    width: 90vw;
+    height:8vh;
+    margin-top: 2vh;
+}
+.tab {
+    margin-left: 4vw;
+    float: left;
+}
+.search-hang{
+    width:60vw;
+    height: 6vh;
+    float: left;
+    margin-top: 2vh;
+    margin-left: 1vw;
+    background-image: url("../assets/src/search_hang.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .tab div {
 	float: left;
   width: 8vw;
   height: 8vh;
-  margin-top: 4vh;
 }
 .tab div img{
 	width: 8vw;
 	height: 8vh;
 }
+.ssearch{
+  width: 90vw;
+    height:100vh;
+    float: left;
+}
+
+.search-zong{
+    width: 4vw;
+    height:100vh;
+    float: left;
+    background-image: url("../assets/src/search_zong.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 .panel {
-  width: 79vh;
-  background-color: #F3EEE8;
-  margin-left: 4vw;
-  margin-top: 11.5vh;
   width: 85vw;
+  float: left;
+  margin-left: 4vw;
+  background-color: #F3EEE8;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
   border-top-right-radius:25px ;
   height: 100vh;
+  overflow-y: scroll;
 }
 .img {
   height: 30vh;
@@ -381,6 +517,7 @@ export default {
 	width:79vw ;
 	height: 35vh;
 	float: left;
+    margin-top: 2vh;
 	overflow: hidden;
 }
 .search_writing_img{

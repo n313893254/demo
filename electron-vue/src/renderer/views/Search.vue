@@ -160,8 +160,12 @@ export default {
 }
 .search_banner{
 	float: left;
-	margin-top:10vh;
-	margin-left: 25vw;
+	margin-top:20vh;
+	margin-left: 30vw;
+}
+.search_banner img{
+    width:30vw;
+    height:25vh;
 }
 .method{
 	width: 30vw;
