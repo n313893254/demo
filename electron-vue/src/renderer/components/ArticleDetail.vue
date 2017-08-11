@@ -56,13 +56,13 @@
           </div>
           <div class="page odd">
             <div class="author">作者：关山月</div>
-            <p v-html="content[13]"></p>
-            <p v-html="content[14]"></p>
+            <p v-html="page[9]"></p>
+            <!-- <p v-html="content[14]"></p> -->
           </div>
           <div class="page even">
             <div class="time">1988年12月</div>
           </div>
-          <div class="page" v-if="page[10] != undefined">
+          <div class="page">
 
           </div>
           <!-- <div class="page even">
@@ -140,21 +140,8 @@ export default {
       this.content = this.row.content2.match(/<p(.*?)<\/p>/ig)
       console.log(str)
       this.page = this.row.content2.match(/<p(.*?)<\/p>/ig)
-      // let _this = this
-      // for (let i in str) {
-      //   if (this.page[i].length < 100) {
-      //     this.page[i] = str[i] + str[parseInt(i) + 1]
-      //     delete str[parseInt(i) + 1]
-      //   }
-      // }
-      // for (let i = 0; i < str.length; i++) {
-      //   if (this.page[i].length < 100) {
-      //     this.page[i] = str[i] + str[i + 1]
-      //     i += 1
-      //   }
-      //   console.log(i)
-      //   // console.log(_this)
-      // }
+
+      // 分页处理
       let i = 0
       let j = 0
       while (i < str.length) {
@@ -189,18 +176,6 @@ export default {
       page: 2,
       turnCorners: 'all'
     })
-    // console.log(this.page[10])
-    // let element = $('<div />').html('Loading...')
-    // $('.flipbook').turn('addPage', element, 3)
-    // this.message = 1
-
-    // db.getHistoricalList(7, (row) => {
-    //   console.log(row)
-    // })
-    // db.getHistoricalDetail(237, (row) => {
-    //   this.row = row
-    //   console.log(this.row)
-    // })
   }
 }
 </script>
