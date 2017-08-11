@@ -1,33 +1,63 @@
 <template lang="html">
-  <div class="body">
+  <div class="artcle-detail-page">
     <div class="flipbook-viewport">
       <div class="container">
         <div class="flipbook" ref="flipbook">
-          <div class="page">
-            <h1>这是封面</h1>
+          <div class="page my-cover">
+            <h1>{{ row.name }}</h1>
+            <h1>{{ row.author }}</h1>
+            <h1>{{ row.create_time }}</h1>
+          </div>
+          <div class="page odd">
+            <div class="author">作者：{{ row.author }}</div>
+            <h1>{{ row.name }}</h1>
+            <!-- <p v-html="page[0]"></p> -->
+            <p v-html="content[0]"></p>
+            <p v-html="content[1]"></p>
+          </div>
+          <div class="page even">
+            <div class="time">{{ row.create_time }}</div>
+            <!-- <p v-html="page[1]"></p> -->
+            <p v-html="content[2]"></p>
           </div>
           <div class="page odd">
             <div class="author">作者：关山月</div>
-            <h1>绘事话童年</h1>
-            <p v-html="page[0]"></p>
-            <p v-html="page[1]"></p>
+            <p v-html="content[3]"></p>
           </div>
           <div class="page even">
             <div class="time">1988年12月</div>
-            <p v-html="page[2]"></p>
-            <p v-html="page[3]"></p>
+            <p v-html="content[4]"></p>
           </div>
           <div class="page odd">
             <div class="author">作者：关山月</div>
-            <p v-html="page[4]"></p>
-            <p v-html="page[5]"></p>
+            <p v-html="content[5]"></p>
           </div>
           <div class="page even">
             <div class="time">1988年12月</div>
-            <p v-html="page[6]"></p>
-            <p v-html="page[7]"></p>
-            <p v-html="page[8]"></p>
-            <p v-html="page[9]"></p>
+            <p v-html="content[6]"></p>
+            <p v-html="content[7]"></p>
+            <p v-html="content[8]"></p>
+            <p v-html="content[9]"></p>
+            <p v-html="content[10]"></p>
+          </div>
+          <div class="page odd">
+            <div class="author">作者：关山月</div>
+            <p v-html="content[11]"></p>
+          </div>
+          <div class="page even">
+            <div class="time">1988年12月</div>
+            <p v-html="content[12]"></p>
+          </div>
+          <div class="page odd">
+            <div class="author">作者：关山月</div>
+            <p v-html="content[13]"></p>
+            <p v-html="content[14]"></p>
+          </div>
+          <div class="page even">
+            <div class="time">1988年12月</div>
+          </div>
+          <div class="page" v-if="page[10] != undefined">
+
           </div>
           <!-- <div class="page even">
             <div class="time">1988年12月</div>
@@ -84,10 +114,11 @@ export default {
   components: { $, turn, db },
   data () {
     return {
-      content: '1',
-      page: '',
+      content: [],
+      page: [],
       message: '',
-      newPage: '<div class="page"><p>就是我的画具。见鸡画鸡，见狗画狗，我曾在晒谷场上画过牛耕田，画过牵长线放纸鹞。</p></div>'
+      newPage: '<div class="page"><p>就是我的画具。见鸡画鸡，见狗画狗，我曾在晒谷场上画过牛耕田，画过牵长线放纸鹞。</p></div>',
+      row: ''
     }
   },
   methods: {
@@ -98,11 +129,17 @@ export default {
   created: function () {
     this.$store.commit('setMenuBarSeen', false)
     db.getHistoricalDetail(283, (row) => {
-      this.content = row.content2
-      this.page = this.content.substring(0, 400)
-      let str = this.content.match(/<p(.*?)<\/p>/ig)
-      this.page = str
-      // console.log(str)
+      this.row = row
+      let str = this.row.content2.match(/<p(.*?)<\/p>/ig)
+      this.content = str
+      console.log(str)
+      // this.page = str
+      // for (let i in str) {
+      //   if (this.page[i].length < 100) {
+      //     this.page[i] = str[i] + str[parseInt(i) + 1]
+      //     console.log(i)
+      //   }
+      // }
     })
   },
   mounted: function () {
@@ -117,6 +154,7 @@ export default {
       page: 2,
       turnCorners: 'all'
     })
+    // console.log(this.page[10])
     // let element = $('<div />').html('Loading...')
     // $('.flipbook').turn('addPage', element, 3)
     // this.message = 1
@@ -124,15 +162,25 @@ export default {
     // db.getHistoricalList(7, (row) => {
     //   console.log(row)
     // })
+    // db.getHistoricalDetail(237, (row) => {
+    //   this.row = row
+    //   console.log(this.row)
+    // })
   }
 }
 </script>
 
 <style lang="less" scoped>
-.body {
+.artcle-detail-page {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  .page.my-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 .flipbook-viewport {
   display: flex;
