@@ -25,10 +25,8 @@
           <p>款帐：{{ this.row.style }}</p><br>
           <p>印章：{{ this.row.seal }}</p><br>
         </div>
-        <div class="wenzhang">
-          <router-link class="wen_neirong" to="/Painting/ArticleDetail">》工地艰苦生活有感</router-link><br>
-          <router-link class="wen_neirong" to="/Painting/ArticleDetail">》研究速写之画作速写</router-link><br>
-          <router-link class="wen_neirong" to="/Painting/ArticleDetail">》关山月相关研究文章</router-link>
+        <div class="wenzhang" v-for="article in articles">
+          <router-link class="wen_neirong" to="/Painting/ArticleDetail">》{{ article.name }}</router-link><br>
         </div>
       </div>
       <div class="detail_zhou"><img src="../assets/src/zhou_31.png"></div>
@@ -48,9 +46,16 @@
 </template>
 
 <script>
+import db from '../ignore_lib/GsyDb.js'
 export default {
   name: 'PaintingDisplay',
+  components: { db },
   props: ['row'],
+  data () {
+    return {
+      articles: []
+    }
+  },
   computed: {
     isHeight () {
       return this.$store.state.isHeight
@@ -68,6 +73,9 @@ export default {
       this.$store.commit('setWidth')
     }
     this.$store.commit('setMenuBarSeen', false)
+    db.getWorkArtical(this.row.id, (article) => {
+      this.articles = article
+    })
   },
   methods: {
     pageBack () {
