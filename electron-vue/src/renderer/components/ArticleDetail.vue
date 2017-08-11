@@ -11,42 +11,48 @@
           <div class="page odd">
             <div class="author">作者：{{ row.author }}</div>
             <h1>{{ row.name }}</h1>
-            <!-- <p v-html="page[0]"></p> -->
-            <p v-html="content[0]"></p>
-            <p v-html="content[1]"></p>
+            <p v-html="page[0]"></p>
+            <!-- <p v-html="content[0]"></p>
+            <p v-html="content[1]"></p> -->
           </div>
           <div class="page even">
             <div class="time">{{ row.create_time }}</div>
-            <!-- <p v-html="page[1]"></p> -->
-            <p v-html="content[2]"></p>
+            <p v-html="page[1]"></p>
+            <!-- <p v-html="content[2]"></p> -->
           </div>
           <div class="page odd">
             <div class="author">作者：关山月</div>
-            <p v-html="content[3]"></p>
+            <p v-html="page[3]"></p>
+            <!-- <p v-html="content[3]"></p> -->
           </div>
           <div class="page even">
             <div class="time">1988年12月</div>
-            <p v-html="content[4]"></p>
+            <!-- <p v-html="content[4]"></p> -->
+            <p v-html="page[4]"></p>
           </div>
           <div class="page odd">
             <div class="author">作者：关山月</div>
-            <p v-html="content[5]"></p>
+            <p v-html="page[5]"></p>
+            <!-- <p v-html="content[5]"></p> -->
           </div>
           <div class="page even">
             <div class="time">1988年12月</div>
-            <p v-html="content[6]"></p>
+            <p v-html="page[6]"></p>
+            <!-- <p v-html="content[6]"></p>
             <p v-html="content[7]"></p>
             <p v-html="content[8]"></p>
             <p v-html="content[9]"></p>
-            <p v-html="content[10]"></p>
+            <p v-html="content[10]"></p> -->
           </div>
           <div class="page odd">
             <div class="author">作者：关山月</div>
-            <p v-html="content[11]"></p>
+            <!-- <p v-html="content[11]"></p> -->
+            <p v-html="page[7]"></p>
           </div>
           <div class="page even">
             <div class="time">1988年12月</div>
-            <p v-html="content[12]"></p>
+            <p v-html="page[8]"></p>
+            <!-- <p v-html="content[12]"></p> -->
           </div>
           <div class="page odd">
             <div class="author">作者：关山月</div>
@@ -131,15 +137,44 @@ export default {
     db.getHistoricalDetail(283, (row) => {
       this.row = row
       let str = this.row.content2.match(/<p(.*?)<\/p>/ig)
-      this.content = str
+      this.content = this.row.content2.match(/<p(.*?)<\/p>/ig)
       console.log(str)
-      // this.page = str
+      this.page = this.row.content2.match(/<p(.*?)<\/p>/ig)
+      // let _this = this
       // for (let i in str) {
       //   if (this.page[i].length < 100) {
       //     this.page[i] = str[i] + str[parseInt(i) + 1]
-      //     console.log(i)
+      //     delete str[parseInt(i) + 1]
       //   }
       // }
+      // for (let i = 0; i < str.length; i++) {
+      //   if (this.page[i].length < 100) {
+      //     this.page[i] = str[i] + str[i + 1]
+      //     i += 1
+      //   }
+      //   console.log(i)
+      //   // console.log(_this)
+      // }
+      let i = 0
+      let j = 0
+      while (i < str.length) {
+        console.log('i:' + i)
+        console.log('j:' + j)
+        if (str[i].length < 80) {
+          this.page[j] = str[i] + str[i + 1] + str[i + 2] + str[i + 3]
+          i += 3
+          this.page.length -= 3
+        } else if (str[i].length < 100) {
+          this.page[j] = str[i] + str[i + 1]
+          i += 1
+          this.page.length--
+        } else {
+          this.page[j] = str[i]
+        }
+        i++
+        j++
+      }
+      console.log(this.page)
     })
   },
   mounted: function () {
