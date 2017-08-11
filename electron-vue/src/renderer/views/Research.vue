@@ -142,6 +142,7 @@ export default {
   },
   created: function () {
     this.$store.commit('setMenuBarSeen', true)
+    this.$store.commit('closeRightMenu')
   },
   mounted: function () {
     $('li').click(function () {

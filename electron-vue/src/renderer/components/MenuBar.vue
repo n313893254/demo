@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="menu-wrapper-right">
-    <div class="menu">
+    <div class="menu" @click="clearCount()">
       <transition name="bounce">
         <router-link v-if="count > 5" class="button" to="/Chronological"><img src="../assets/src/piclist_42.png"></router-link>
       </transition>
@@ -65,6 +65,11 @@ export default {
         }
       }, 50)
       return this.$store.commit('closeRightMenu')
+    },
+    clearCount () {
+      clearInterval(this.timer)
+      this.count = 0
+      console.log(this.count)
     }
   }
 }
