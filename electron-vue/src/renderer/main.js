@@ -8,7 +8,10 @@ import {webFrame} from 'electron'
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
 import './assets/theme.less'
+import VueTouch from 'vue-touch'
+
 Vue.use(MuseUI)
+Vue.use(VueTouch, {name: 'v-touch'})
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
