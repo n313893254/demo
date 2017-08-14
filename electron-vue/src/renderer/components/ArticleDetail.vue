@@ -11,7 +11,7 @@
           <div class="page odd">
             <div class="author">作者：{{ row.author }}</div>
             <h1>{{ row.name }}</h1>
-            <p v-html="page[0]"></p>
+            <p v-html="text[0]"></p>
             <!-- <p v-html="content[0]"></p>
             <p v-html="content[1]"></p> -->
           </div>
@@ -124,7 +124,8 @@ export default {
       page: [],
       message: '',
       newPage: '<div class="page"><p>就是我的画具。见鸡画鸡，见狗画狗，我曾在晒谷场上画过牛耕田，画过牵长线放纸鹞。</p></div>',
-      row: ''
+      row: '',
+      text: []
     }
   },
   methods: {
@@ -138,15 +139,19 @@ export default {
       this.row = row
       let str = this.row.content2.match(/<p(.*?)<\/p>/ig)
       this.content = this.row.content2.match(/<p(.*?)<\/p>/ig)
-      console.log(str)
+
       this.page = this.row.content2.match(/<p(.*?)<\/p>/ig)
+
+      //获取每个段落的文本
+      for (let i = 0; i < str.length; i++) {
+        this.text[i] = str[i].replace(/<(?!hr)(?:.|\s)*?>/ig, '')
+      }
+      console.log(this.text)
 
       // 分页处理
       let i = 0
       let j = 0
       while (i < str.length) {
-        console.log('i:' + i)
-        console.log('j:' + j)
         if (str[i].length < 80) {
           this.page[j] = str[i] + str[i + 1] + str[i + 2] + str[i + 3]
           i += 3
@@ -161,7 +166,7 @@ export default {
         i++
         j++
       }
-      console.log(this.page)
+      // console.log(this.page)
     })
   },
   mounted: function () {
