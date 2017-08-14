@@ -11,7 +11,7 @@
           <div class="page odd">
             <div class="author">作者：{{ row.author }}</div>
             <h1>{{ row.name }}</h1>
-            <p v-html="text[0]"></p>
+            <p v-html="page[0]"></p>
             <!-- <p v-html="content[0]"></p>
             <p v-html="content[1]"></p> -->
           </div>
@@ -125,7 +125,8 @@ export default {
       message: '',
       newPage: '<div class="page"><p>就是我的画具。见鸡画鸡，见狗画狗，我曾在晒谷场上画过牛耕田，画过牵长线放纸鹞。</p></div>',
       row: '',
-      text: []
+      text: [],
+      lineCount: []
     }
   },
   methods: {
@@ -140,33 +141,45 @@ export default {
       let str = this.row.content2.match(/<p(.*?)<\/p>/ig)
       this.content = this.row.content2.match(/<p(.*?)<\/p>/ig)
 
-      this.page = this.row.content2.match(/<p(.*?)<\/p>/ig)
-
-      //获取每个段落的文本
+      // 获取每个段落的文本
       for (let i = 0; i < str.length; i++) {
         this.text[i] = str[i].replace(/<(?!hr)(?:.|\s)*?>/ig, '')
       }
-      console.log(this.text)
-
-      // 分页处理
-      let i = 0
-      let j = 0
-      while (i < str.length) {
-        if (str[i].length < 80) {
-          this.page[j] = str[i] + str[i + 1] + str[i + 2] + str[i + 3]
-          i += 3
-          this.page.length -= 3
-        } else if (str[i].length < 100) {
-          this.page[j] = str[i] + str[i + 1]
-          i += 1
-          this.page.length--
-        } else {
-          this.page[j] = str[i]
-        }
-        i++
-        j++
+      // 每个段落的行数
+      for (let i = 0; i < this.text.length; i++) {
+        this.lineCount[i] = Math.ceil(this.text[i].length / 30)
       }
-      // console.log(this.page)
+      // 分页处理
+      // let i = 0
+      // let j = 0
+      // while (i < str.length) {
+      //   if (str[i].length < 80) {
+      //     this.page[j] = str[i] + str[i + 1] + str[i + 2] + str[i + 3]
+      //     i += 3
+      //     this.page.length -= 3
+      //   } else if (str[i].length < 100) {
+      //     this.page[j] = str[i] + str[i + 1]
+      //     i += 1
+      //     this.page.length--
+      //   } else {
+      //     this.page[j] = str[i]
+      //   }
+      //   i++
+      //   j++
+      // }
+      let pageNum = 0
+      let i = 0
+      for (i = 0; i < this.lineCount.length; i++) {
+        if (this.lineCount[i] + this.lineCount[i + 1] < 15) {
+          this.page[pageNum] = this.content[i] + this.content[i + 1]
+          i++
+          console.log(this.page[pageNum])
+        } else {
+          this.page[pageNum] = this.content[i]
+        }
+        pageNum++
+      }
+      // console.log(this.lineCount)
     })
   },
   mounted: function () {
