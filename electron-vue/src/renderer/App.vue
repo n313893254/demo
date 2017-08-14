@@ -20,6 +20,8 @@ export default {
   },
   created: function () {
     this.$store.commit('setMenuBarSeen', true)
+
+    // 禁用选中
     document.onselectstart = function () {
       return false
     }

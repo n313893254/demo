@@ -29,6 +29,7 @@ export default {
     }
   },
   methods: {
+    // hammer.js 测试触屏手势
     onSwipeLeft () {
       console.log('poi')
     },

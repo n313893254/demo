@@ -103,6 +103,7 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
+// 鼠标不操作时跳转到年表
 // 路由跳转后，开始监听鼠标
 router.afterEach(route => {
   router._cursorPoint = {

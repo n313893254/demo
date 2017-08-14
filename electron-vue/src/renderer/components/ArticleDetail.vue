@@ -136,6 +136,8 @@ export default {
   },
   created: function () {
     this.$store.commit('setMenuBarSeen', false)
+
+    // 获取数据库数据
     db.getHistoricalDetail(283, (row) => {
       this.row = row
       let str = this.row.content2.match(/<p(.*?)<\/p>/ig)
@@ -183,7 +185,7 @@ export default {
     })
   },
   mounted: function () {
-    // 翻书效果
+    // 翻书效果 使用turn.js 5th
     $('.flipbook').turn({
       width: 88 + 'vw',
       height: 80 + 'vh',

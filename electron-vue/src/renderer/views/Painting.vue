@@ -135,6 +135,10 @@ export default {
     this.$store.commit('setMenuBarSeen', true)
     this.$store.commit('closeRightMenu')
     let paintings = this.$store.state.paintings.slice(0, 12)
+
+    // 计算图片宽高
+    // 宽 > 高： 宽100%
+    // 宽 < 高： 高100%
     for (let i in paintings) {
       let img = new Image()
       img.src = paintings[i].imgSrc

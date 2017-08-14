@@ -10,6 +10,8 @@ export default {
   name: 'Start',
   created: function () {
     this.$store.commit('setMenuBarSeen', false)
+
+    // 启动页定时跳转
     setTimeout(() => {
       this.$router.push({
         name: 'Chronological'

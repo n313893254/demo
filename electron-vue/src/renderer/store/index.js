@@ -16,6 +16,7 @@ export default new Vuex.Store({
       {field: '书法'}
     ],
 
+    // 数据库分类
     category_id: {
       '全部': 0,
       '山水': 1,
