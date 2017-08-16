@@ -37,6 +37,8 @@ export default new Vuex.Store({
     rightMenuSeen: false,
     menuBarSeen: false,
 
+    maskReady: false,
+
     // 用于PaintingDisplay的宽高自适应
     isHeight: true,
 
@@ -113,7 +115,10 @@ export default new Vuex.Store({
     },
     handleBigImgUrl (state, url) {
       state.bigImgUrl = url.split(/_600\.jpg/)[0] + '_big.jpg'
-      console.log(state.bigImgUrl)
+    },
+    handleMask (state, value) {
+      state.maskReady = value
+      console.log(value)
     }
   }
 })

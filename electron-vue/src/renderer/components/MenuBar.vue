@@ -82,6 +82,7 @@ export default {
   position: fixed;
   right: 0;
   bottom: 0;
+  z-index: 200;
   .menu {
     display: flex;
     flex-direction: column;
