@@ -126,7 +126,8 @@ export default {
       newPage: '<div class="page"><p>就是我的画具。见鸡画鸡，见狗画狗，我曾在晒谷场上画过牛耕田，画过牵长线放纸鹞。</p></div>',
       row: '',
       text: [],
-      lineCount: []
+      lineCount: [],
+      newContent: []
     }
   },
   methods: {
@@ -151,37 +152,37 @@ export default {
       for (let i = 0; i < this.text.length; i++) {
         this.lineCount[i] = Math.ceil(this.text[i].length / 30)
       }
-      // 分页处理
-      // let i = 0
-      // let j = 0
-      // while (i < str.length) {
-      //   if (str[i].length < 80) {
-      //     this.page[j] = str[i] + str[i + 1] + str[i + 2] + str[i + 3]
-      //     i += 3
-      //     this.page.length -= 3
-      //   } else if (str[i].length < 100) {
-      //     this.page[j] = str[i] + str[i + 1]
-      //     i += 1
-      //     this.page.length--
-      //   } else {
-      //     this.page[j] = str[i]
-      //   }
-      //   i++
-      //   j++
-      // }
-      let pageNum = 0
-      let i = 0
-      for (i = 0; i < this.lineCount.length; i++) {
-        if (this.lineCount[i] + this.lineCount[i + 1] < 15) {
-          this.page[pageNum] = this.content[i] + this.content[i + 1]
-          i++
-          console.log(this.page[pageNum])
-        } else {
-          this.page[pageNum] = this.content[i]
+      // 将段落分解成每一行，第一行加段落标记，其余为<p></p>
+      let paragraphNum = 0
+      let lineNum = 0
+      let newContentIndex = 0
+      for (paragraphNum = 0; paragraphNum < this.lineCount.length; paragraphNum++) {
+        for (lineNum = 0; lineNum < this.lineCount[paragraphNum]; lineNum++) {
+          if (lineNum === 0) {
+            this.newContent[newContentIndex] = '<p style="text-indent: 2em;">'
+            this.newContent[newContentIndex] += this.text[paragraphNum].substring(lineNum * 30, (lineNum + 1) * 30)
+            this.newContent[newContentIndex] += '</p>'
+          } else {
+            this.newContent[newContentIndex] = '<p>'
+            this.newContent[newContentIndex] += this.text[paragraphNum].substring(lineNum * 30, (lineNum + 1) * 30)
+            this.newContent[newContentIndex] += '</p>'
+          }
+          newContentIndex++
         }
-        pageNum++
       }
-      // console.log(this.lineCount)
+      // 分页处理
+      let pageIndex = 0
+      for (let i = 0; i < this.newContent.length; i++) {
+        if (i === 0) {
+          this.page[pageIndex] = this.newContent[i]
+        } else if (i % 14 === 0 && i !== 0) {
+          pageIndex++
+          this.page[pageIndex] = this.newContent[i]
+        } else {
+          this.page[pageIndex] += this.newContent[i]
+        }
+      }
+      console.log(this.page)
     })
   },
   mounted: function () {
