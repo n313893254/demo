@@ -159,7 +159,7 @@ export default {
       for (paragraphNum = 0; paragraphNum < this.lineCount.length; paragraphNum++) {
         for (lineNum = 0; lineNum < this.lineCount[paragraphNum]; lineNum++) {
           if (lineNum === 0) {
-            this.newContent[newContentIndex] = '<p style="text-indent: 2em;">'
+            this.newContent[newContentIndex] = '<p style="text-indent: 2em;">' + '  '
             this.newContent[newContentIndex] += this.text[paragraphNum].substring(lineNum * 30, (lineNum + 1) * 30)
             this.newContent[newContentIndex] += '</p>'
           } else {
