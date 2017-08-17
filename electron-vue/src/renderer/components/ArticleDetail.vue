@@ -158,13 +158,14 @@ export default {
       let newContentIndex = 0
       for (paragraphNum = 0; paragraphNum < this.lineCount.length; paragraphNum++) {
         for (lineNum = 0; lineNum < this.lineCount[paragraphNum]; lineNum++) {
+          // 第一行缩进
           if (lineNum === 0) {
             this.newContent[newContentIndex] = '<p style="text-indent: 2vw;">' + '&nbsp &nbsp &nbsp &nbsp'
             this.newContent[newContentIndex] += this.text[paragraphNum].substring(lineNum * 28, (lineNum + 1) * 28)
             this.newContent[newContentIndex] += '</p>'
           } else {
             this.newContent[newContentIndex] = '<p>'
-            this.newContent[newContentIndex] += this.text[paragraphNum].substring(lineNum * 30, (lineNum + 1) * 30)
+            this.newContent[newContentIndex] += this.text[paragraphNum].substring(lineNum * 28, ((lineNum + 1) * 28) + 2)
             this.newContent[newContentIndex] += '</p>'
           }
           newContentIndex++
