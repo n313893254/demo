@@ -1,35 +1,34 @@
-//index.js
-//获取应用实例
-var app = getApp()
-var helloData = {
-  name: 'WeChat'
-}
+var Api = require('../../utils/api.js')
+
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    name: 'WeChat'
+    title: '最新话题',
+    latest: [],
+    hidden: false
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
+  fetchData: function () {
+    var that = this
+    that.setData({
+      hidden: false
     })
-  },
-  changeName: function () {
-    this.setData({
-      name: 'poi'
+    wx.request({
+      url: Api.getLatestTopic({
+        p: 1
+      }),
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          latest: res.data
+        })
+        setTimeout(function () {
+          that.setData({
+            hidden: true
+          })
+        }, 300)
+      }
     })
   },
   onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
-    })
+    this.fetchData()
   }
 })
