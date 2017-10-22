@@ -1,0 +1,1171 @@
+{
+  "nodes": {
+    "SitePage /dev-404-page/": {
+      "component": "/Users/doublesheep/git/tutorial-part-four/.cache/dev-404-page.js",
+      "path": "/dev-404-page/",
+      "componentChunkName": "component---cache-dev-404-page-js",
+      "layout": "index",
+      "jsonName": "dev-404-page.json",
+      "internalComponentName": "ComponentDev404Page",
+      "updatedAt": 1508680113131,
+      "context": {},
+      "pluginCreator___NODE": "Plugin dev-404-page",
+      "pluginCreatorId": "Plugin dev-404-page",
+      "componentPath": "/Users/doublesheep/git/tutorial-part-four/.cache/dev-404-page.js",
+      "id": "SitePage /dev-404-page/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "c8feb00da9bbca5a3602784907bc247f",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin component-page-creator": {
+      "resolve": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "id": "Plugin component-page-creator",
+      "name": "component-page-creator",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "packageJson": {
+        "name": "component-page-creator",
+        "description": "An internal Gatsby plugin that creates pages from component files in src/pages",
+        "version": "1.0.0",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "d50eeaeb50b45cf5c3d2596d5fca6123",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin component-layout-creator": {
+      "resolve": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
+      "id": "Plugin component-layout-creator",
+      "name": "component-layout-creator",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
+      "packageJson": {
+        "name": "component-layout-creator",
+        "description": "An internal Gatsby plugin that creates pages from component files in src/layouts",
+        "version": "1.0.0",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "b0c453cdef7aff25640f2e006bf4fbd6",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin internal-data-bridge": {
+      "resolve": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "id": "Plugin internal-data-bridge",
+      "name": "internal-data-bridge",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "packageJson": {
+        "name": "internal-data-bridge",
+        "description": "An internal Gatsby plugin which creates data nodes from internal data",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "c1dc21d56f8562e2838d61e25dabffee",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin dev-404-page": {
+      "resolve": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "id": "Plugin dev-404-page",
+      "name": "dev-404-page",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "packageJson": {
+        "name": "dev-404-page",
+        "description": "Internal plugin to add a 404 page in development with helpful information",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "4f52a4aeab5b10576e5fcd971a8b4009",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin prod-404": {
+      "resolve": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "id": "Plugin prod-404",
+      "name": "prod-404",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "packageJson": {
+        "name": "prod-404",
+        "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "7c40b15a7ae4482e774dd86d21f570f1",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin query-runner": {
+      "resolve": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "id": "Plugin query-runner",
+      "name": "query-runner",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "packageJson": {
+        "name": "query-runner",
+        "description": "Internal plugin for running queries",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "c635b8ccd3c1fb26b2bb4ecc371d9df1",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-source-filesystem": {
+      "resolve": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby-source-filesystem",
+      "id": "Plugin gatsby-source-filesystem",
+      "name": "gatsby-source-filesystem",
+      "version": "1.5.5",
+      "pluginOptions": {
+        "plugins": [],
+        "name": "src",
+        "path": "/Users/doublesheep/git/tutorial-part-four/src/"
+      },
+      "pluginFilepath": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby-source-filesystem",
+      "packageJson": {
+        "name": "gatsby-source-filesystem",
+        "description": "Gatsby plugin which parses files within a directory for further parsing by other plugins",
+        "version": "1.5.5",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "chokidar",
+            "version": "^1.7.0"
+          },
+          {
+            "name": "fs-extra",
+            "version": "^4.0.1"
+          },
+          {
+            "name": "got",
+            "version": "^7.1.0"
+          },
+          {
+            "name": "md5-file",
+            "version": "^3.1.1"
+          },
+          {
+            "name": "mime",
+            "version": "^1.3.6"
+          },
+          {
+            "name": "pretty-bytes",
+            "version": "^4.0.2"
+          },
+          {
+            "name": "slash",
+            "version": "^1.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "e264887e105c2f643d353888aa256e40",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-transformer-remark": {
+      "resolve": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby-transformer-remark",
+      "id": "Plugin gatsby-transformer-remark",
+      "name": "gatsby-transformer-remark",
+      "version": "1.7.17",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby-transformer-remark",
+      "packageJson": {
+        "name": "gatsby-transformer-remark",
+        "description": "Gatsby transformer plugin for Markdown using the Remark library and ecosystem",
+        "version": "1.7.17",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "markdown",
+          "remark"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "gray-matter",
+            "version": "^2.1.0"
+          },
+          {
+            "name": "hast-util-to-html",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.4"
+          },
+          {
+            "name": "mdast-util-to-hast",
+            "version": "^2.4.0"
+          },
+          {
+            "name": "mdast-util-toc",
+            "version": "^2.0.1"
+          },
+          {
+            "name": "remark",
+            "version": "^7.0.1"
+          },
+          {
+            "name": "remark-parse",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "remark-retext",
+            "version": "^3.1.0"
+          },
+          {
+            "name": "remark-stringify",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "retext-english",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "sanitize-html",
+            "version": "^1.14.1"
+          },
+          {
+            "name": "underscore.string",
+            "version": "^3.3.4"
+          },
+          {
+            "name": "unified",
+            "version": "^6.1.5"
+          },
+          {
+            "name": "unist-util-select",
+            "version": "^1.5.0"
+          },
+          {
+            "name": "unist-util-visit",
+            "version": "^1.1.1"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "babel-plugin-transform-object-rest-spread",
+            "version": "^6.20.2"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "f5832187802dc538d29c7267d007867c",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-glamor": {
+      "resolve": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby-plugin-glamor",
+      "id": "Plugin gatsby-plugin-glamor",
+      "name": "gatsby-plugin-glamor",
+      "version": "1.6.8",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby-plugin-glamor",
+      "packageJson": {
+        "name": "gatsby-plugin-glamor",
+        "description": "Gatsby plugin to add support for Glamor",
+        "version": "1.6.8",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "glamor"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "glamor",
+            "version": "^2.20.29"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "c27e0f2ae3eec4e630b44e7dc21f5412",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-typography": {
+      "resolve": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby-plugin-typography",
+      "id": "Plugin gatsby-plugin-typography",
+      "name": "gatsby-plugin-typography",
+      "version": "1.7.10",
+      "pluginOptions": {
+        "plugins": [],
+        "pathToConfigModule": "src/utils/typography"
+      },
+      "pluginFilepath": "/Users/doublesheep/git/tutorial-part-four/node_modules/gatsby-plugin-typography",
+      "packageJson": {
+        "name": "gatsby-plugin-typography",
+        "description": "Gatsby plugin to setup server rendering of Typography.js' CSS",
+        "version": "1.7.10",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "typography",
+          "typography.js"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "react-typography",
+            "version": "^0.16.1"
+          },
+          {
+            "name": "typography",
+            "version": "^0.16.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "5031cfbce508c80fd93f09de9e03ee0e",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin default-site-plugin": {
+      "resolve": "/Users/doublesheep/git/tutorial-part-four",
+      "id": "Plugin default-site-plugin",
+      "name": "default-site-plugin",
+      "version": "aefde05479cd61b3ced34b20f25c9dbf",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "pluginFilepath": "/Users/doublesheep/git/tutorial-part-four",
+      "packageJson": {
+        "name": "gatsby-starter-hello-world",
+        "description": "Gatsby hello world starter",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "gatsby",
+            "version": "^1.9.73"
+          },
+          {
+            "name": "gatsby-link",
+            "version": "^1.6.22"
+          },
+          {
+            "name": "gatsby-plugin-glamor",
+            "version": "^1.6.8"
+          },
+          {
+            "name": "gatsby-plugin-typography",
+            "version": "^1.7.10"
+          },
+          {
+            "name": "gatsby-source-filesystem",
+            "version": "^1.5.5"
+          },
+          {
+            "name": "gatsby-transformer-remark",
+            "version": "^1.7.17"
+          },
+          {
+            "name": "glamorous",
+            "version": "^4.10.0"
+          },
+          {
+            "name": "typography-theme-kirkham",
+            "version": "^0.16.3"
+          }
+        ],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "36ce8449359d44e6a45d71a77adf1bfc",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Site": {
+      "siteMetadata": {
+        "title": "Pandas Eating Lots"
+      },
+      "port": "8000",
+      "host": "localhost",
+      "pathPrefix": "",
+      "polyfill": true,
+      "buildTime": "2017-10-22T13:48:30.437Z",
+      "id": "Site",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "5341f8a495ec968bd85482d9308d0b96",
+        "type": "Site",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/ absPath of file": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/ absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "df86652afeb51f2cb7d57a5a9fba790d",
+        "type": "Directory",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "src",
+      "absolutePath": "/Users/doublesheep/git/tutorial-part-four/src/",
+      "relativePath": "",
+      "extension": "",
+      "size": 170,
+      "prettySize": "170 B",
+      "modifiedTime": "2017-10-22T05:15:44.000Z",
+      "accessTime": "2017-10-22T13:48:32.000Z",
+      "changeTime": "2017-10-22T05:15:44.000Z",
+      "birthTime": "2017-10-22T04:38:49.000Z",
+      "root": "/",
+      "dir": "/Users/doublesheep/git/tutorial-part-four",
+      "base": "src",
+      "ext": "",
+      "name": "src",
+      "relativeDirectory": "..",
+      "dev": 16777220,
+      "mode": 16877,
+      "nlink": 5,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 6207425,
+      "blocks": 0,
+      "atime": "2017-10-22T13:48:32.000Z",
+      "mtime": "2017-10-22T05:15:44.000Z",
+      "ctime": "2017-10-22T05:15:44.000Z",
+      "birthtime": "2017-10-22T04:38:49.000Z"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/layouts absPath of file": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/layouts absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "edab3f41362339040a54b7452ef61360",
+        "type": "Directory",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "src",
+      "absolutePath": "/Users/doublesheep/git/tutorial-part-four/src/layouts",
+      "relativePath": "layouts",
+      "extension": "",
+      "size": 102,
+      "prettySize": "102 B",
+      "modifiedTime": "2017-10-22T05:03:43.000Z",
+      "accessTime": "2017-10-22T13:48:32.000Z",
+      "changeTime": "2017-10-22T05:03:43.000Z",
+      "birthTime": "2017-10-22T05:03:36.000Z",
+      "root": "/",
+      "dir": "/Users/doublesheep/git/tutorial-part-four/src",
+      "base": "layouts",
+      "ext": "",
+      "name": "layouts",
+      "relativeDirectory": "",
+      "dev": 16777220,
+      "mode": 16877,
+      "nlink": 3,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 6258678,
+      "blocks": 0,
+      "atime": "2017-10-22T13:48:32.000Z",
+      "mtime": "2017-10-22T05:03:43.000Z",
+      "ctime": "2017-10-22T05:03:43.000Z",
+      "birthtime": "2017-10-22T05:03:36.000Z"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/pages absPath of file": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/pages absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "457a8c87ec47da88ae948558decd0318",
+        "type": "Directory",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "src",
+      "absolutePath": "/Users/doublesheep/git/tutorial-part-four/src/pages",
+      "relativePath": "pages",
+      "extension": "",
+      "size": 238,
+      "prettySize": "238 B",
+      "modifiedTime": "2017-10-22T11:20:13.000Z",
+      "accessTime": "2017-10-22T13:48:32.000Z",
+      "changeTime": "2017-10-22T11:20:13.000Z",
+      "birthTime": "2017-10-22T04:38:49.000Z",
+      "root": "/",
+      "dir": "/Users/doublesheep/git/tutorial-part-four/src",
+      "base": "pages",
+      "ext": "",
+      "name": "pages",
+      "relativeDirectory": "",
+      "dev": 16777220,
+      "mode": 16877,
+      "nlink": 7,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 6207426,
+      "blocks": 0,
+      "atime": "2017-10-22T13:48:32.000Z",
+      "mtime": "2017-10-22T11:20:13.000Z",
+      "ctime": "2017-10-22T11:20:13.000Z",
+      "birthtime": "2017-10-22T04:38:49.000Z"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/utils absPath of file": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/utils absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "c439aeda6bce04dab54aea39f1365504",
+        "type": "Directory",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "src",
+      "absolutePath": "/Users/doublesheep/git/tutorial-part-four/src/utils",
+      "relativePath": "utils",
+      "extension": "",
+      "size": 102,
+      "prettySize": "102 B",
+      "modifiedTime": "2017-10-22T05:16:06.000Z",
+      "accessTime": "2017-10-22T13:48:32.000Z",
+      "changeTime": "2017-10-22T05:16:06.000Z",
+      "birthTime": "2017-10-22T05:15:44.000Z",
+      "root": "/",
+      "dir": "/Users/doublesheep/git/tutorial-part-four/src",
+      "base": "utils",
+      "ext": "",
+      "name": "utils",
+      "relativeDirectory": "",
+      "dev": 16777220,
+      "mode": 16877,
+      "nlink": 3,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 6261329,
+      "blocks": 0,
+      "atime": "2017-10-22T13:48:32.000Z",
+      "mtime": "2017-10-22T05:16:06.000Z",
+      "ctime": "2017-10-22T05:16:06.000Z",
+      "birthtime": "2017-10-22T05:15:44.000Z"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/pages/index.js absPath of file": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/pages/index.js absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "c7db2fd667528c8c926b518c9078b57b",
+        "mediaType": "application/javascript",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "src",
+      "absolutePath": "/Users/doublesheep/git/tutorial-part-four/src/pages/index.js",
+      "relativePath": "pages/index.js",
+      "extension": "js",
+      "size": 1049,
+      "prettySize": "1.05 kB",
+      "modifiedTime": "2017-10-22T13:37:44.000Z",
+      "accessTime": "2017-10-22T13:47:41.000Z",
+      "changeTime": "2017-10-22T13:37:44.000Z",
+      "birthTime": "2017-10-22T04:38:49.000Z",
+      "root": "/",
+      "dir": "/Users/doublesheep/git/tutorial-part-four/src/pages",
+      "base": "index.js",
+      "ext": ".js",
+      "name": "index",
+      "relativeDirectory": "pages",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 6207427,
+      "blocks": 8,
+      "atime": "2017-10-22T13:47:41.000Z",
+      "mtime": "2017-10-22T13:37:44.000Z",
+      "ctime": "2017-10-22T13:37:44.000Z",
+      "birthtime": "2017-10-22T04:38:49.000Z"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/pages/about.js absPath of file": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/pages/about.js absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "b51cdda12eaedc82a92eca2253feef81",
+        "mediaType": "application/javascript",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "src",
+      "absolutePath": "/Users/doublesheep/git/tutorial-part-four/src/pages/about.js",
+      "relativePath": "pages/about.js",
+      "extension": "js",
+      "size": 382,
+      "prettySize": "382 B",
+      "modifiedTime": "2017-10-22T05:26:32.000Z",
+      "accessTime": "2017-10-22T13:47:41.000Z",
+      "changeTime": "2017-10-22T05:26:32.000Z",
+      "birthTime": "2017-10-22T04:59:13.000Z",
+      "root": "/",
+      "dir": "/Users/doublesheep/git/tutorial-part-four/src/pages",
+      "base": "about.js",
+      "ext": ".js",
+      "name": "about",
+      "relativeDirectory": "pages",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 6258508,
+      "blocks": 8,
+      "atime": "2017-10-22T13:47:41.000Z",
+      "mtime": "2017-10-22T05:26:32.000Z",
+      "ctime": "2017-10-22T05:26:32.000Z",
+      "birthtime": "2017-10-22T04:59:13.000Z"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/pages/my-files.js absPath of file": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/pages/my-files.js absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "3fc94b1ed7a6ccf5f60d26e556ccb5c0",
+        "mediaType": "application/javascript",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "src",
+      "absolutePath": "/Users/doublesheep/git/tutorial-part-four/src/pages/my-files.js",
+      "relativePath": "pages/my-files.js",
+      "extension": "js",
+      "size": 323,
+      "prettySize": "323 B",
+      "modifiedTime": "2017-10-22T06:00:48.000Z",
+      "accessTime": "2017-10-22T13:47:41.000Z",
+      "changeTime": "2017-10-22T06:00:48.000Z",
+      "birthTime": "2017-10-22T05:57:34.000Z",
+      "root": "/",
+      "dir": "/Users/doublesheep/git/tutorial-part-four/src/pages",
+      "base": "my-files.js",
+      "ext": ".js",
+      "name": "my-files",
+      "relativeDirectory": "pages",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 6263783,
+      "blocks": 8,
+      "atime": "2017-10-22T13:47:41.000Z",
+      "mtime": "2017-10-22T06:00:48.000Z",
+      "ctime": "2017-10-22T06:00:48.000Z",
+      "birthtime": "2017-10-22T05:57:34.000Z"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/pages/sweet-pandas-eating-sweets.md absPath of file": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/pages/sweet-pandas-eating-sweets.md absPath of file",
+      "children": [
+        "/Users/doublesheep/git/tutorial-part-four/src/pages/sweet-pandas-eating-sweets.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "8054470c6fc44807d4ee10027a347b61",
+        "mediaType": "text/markdown",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "src",
+      "absolutePath": "/Users/doublesheep/git/tutorial-part-four/src/pages/sweet-pandas-eating-sweets.md",
+      "relativePath": "pages/sweet-pandas-eating-sweets.md",
+      "extension": "md",
+      "size": 255,
+      "prettySize": "255 B",
+      "modifiedTime": "2017-10-22T10:18:22.000Z",
+      "accessTime": "2017-10-22T13:47:41.000Z",
+      "changeTime": "2017-10-22T10:18:22.000Z",
+      "birthTime": "2017-10-22T10:18:03.000Z",
+      "root": "/",
+      "dir": "/Users/doublesheep/git/tutorial-part-four/src/pages",
+      "base": "sweet-pandas-eating-sweets.md",
+      "ext": ".md",
+      "name": "sweet-pandas-eating-sweets",
+      "relativeDirectory": "pages",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 6265918,
+      "blocks": 8,
+      "atime": "2017-10-22T13:47:41.000Z",
+      "mtime": "2017-10-22T10:18:22.000Z",
+      "ctime": "2017-10-22T10:18:22.000Z",
+      "birthtime": "2017-10-22T10:18:03.000Z"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/pages/pandas-and-bananas.md absPath of file": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/pages/pandas-and-bananas.md absPath of file",
+      "children": [
+        "/Users/doublesheep/git/tutorial-part-four/src/pages/pandas-and-bananas.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "feda6844ac71df8d09765a0200fd138c",
+        "mediaType": "text/markdown",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "src",
+      "absolutePath": "/Users/doublesheep/git/tutorial-part-four/src/pages/pandas-and-bananas.md",
+      "relativePath": "pages/pandas-and-bananas.md",
+      "extension": "md",
+      "size": 289,
+      "prettySize": "289 B",
+      "modifiedTime": "2017-10-22T11:22:19.000Z",
+      "accessTime": "2017-10-22T13:47:41.000Z",
+      "changeTime": "2017-10-22T11:22:19.000Z",
+      "birthTime": "2017-10-22T11:20:13.000Z",
+      "root": "/",
+      "dir": "/Users/doublesheep/git/tutorial-part-four/src/pages",
+      "base": "pandas-and-bananas.md",
+      "ext": ".md",
+      "name": "pandas-and-bananas",
+      "relativeDirectory": "pages",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 6279319,
+      "blocks": 8,
+      "atime": "2017-10-22T13:47:41.000Z",
+      "mtime": "2017-10-22T11:22:19.000Z",
+      "ctime": "2017-10-22T11:22:19.000Z",
+      "birthtime": "2017-10-22T11:20:13.000Z"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/utils/typography.js absPath of file": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/utils/typography.js absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "5c0ce6c9425aa000bb80341a7a2bffbe",
+        "mediaType": "application/javascript",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "src",
+      "absolutePath": "/Users/doublesheep/git/tutorial-part-four/src/utils/typography.js",
+      "relativePath": "utils/typography.js",
+      "extension": "js",
+      "size": 166,
+      "prettySize": "166 B",
+      "modifiedTime": "2017-10-22T05:17:41.000Z",
+      "accessTime": "2017-10-22T13:47:41.000Z",
+      "changeTime": "2017-10-22T05:17:41.000Z",
+      "birthTime": "2017-10-22T05:16:06.000Z",
+      "root": "/",
+      "dir": "/Users/doublesheep/git/tutorial-part-four/src/utils",
+      "base": "typography.js",
+      "ext": ".js",
+      "name": "typography",
+      "relativeDirectory": "utils",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 6261353,
+      "blocks": 8,
+      "atime": "2017-10-22T13:47:41.000Z",
+      "mtime": "2017-10-22T05:17:41.000Z",
+      "ctime": "2017-10-22T05:17:41.000Z",
+      "birthtime": "2017-10-22T05:16:06.000Z"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/layouts/index.js absPath of file": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/layouts/index.js absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "4803980d85516d28a96d2a074acf3b8f",
+        "mediaType": "application/javascript",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "src",
+      "absolutePath": "/Users/doublesheep/git/tutorial-part-four/src/layouts/index.js",
+      "relativePath": "layouts/index.js",
+      "extension": "js",
+      "size": 709,
+      "prettySize": "709 B",
+      "modifiedTime": "2017-10-22T05:35:54.000Z",
+      "accessTime": "2017-10-22T13:47:41.000Z",
+      "changeTime": "2017-10-22T05:35:54.000Z",
+      "birthTime": "2017-10-22T05:03:43.000Z",
+      "root": "/",
+      "dir": "/Users/doublesheep/git/tutorial-part-four/src/layouts",
+      "base": "index.js",
+      "ext": ".js",
+      "name": "index",
+      "relativeDirectory": "layouts",
+      "dev": 16777220,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 502,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 6258681,
+      "blocks": 8,
+      "atime": "2017-10-22T13:47:41.000Z",
+      "mtime": "2017-10-22T05:35:54.000Z",
+      "ctime": "2017-10-22T05:35:54.000Z",
+      "birthtime": "2017-10-22T05:03:43.000Z"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/pages/sweet-pandas-eating-sweets.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/pages/sweet-pandas-eating-sweets.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/doublesheep/git/tutorial-part-four/src/pages/sweet-pandas-eating-sweets.md absPath of file",
+      "internal": {
+        "content": "---\ntitle: \"Sweet Pandas Eating Sweets\"\ndate: \"2017-08-10\"\n---\n\nPandas are really sweet.\n\nHere's a video of a panda eating sweets.\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4n0xNbfJLR8\" frameborder=\"0\" allowfullscreen></iframe>\n",
+        "contentDigest": "abbda4b4d9858187419f2b06de1a2756",
+        "type": "MarkdownRemark",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Sweet Pandas Eating Sweets",
+        "date": "2017-08-10",
+        "_PARENT": "/Users/doublesheep/git/tutorial-part-four/src/pages/sweet-pandas-eating-sweets.md absPath of file",
+        "parent": "/Users/doublesheep/git/tutorial-part-four/src/pages/sweet-pandas-eating-sweets.md absPath of file"
+      },
+      "fileAbsolutePath": "/Users/doublesheep/git/tutorial-part-four/src/pages/sweet-pandas-eating-sweets.md"
+    },
+    "/Users/doublesheep/git/tutorial-part-four/src/pages/pandas-and-bananas.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/doublesheep/git/tutorial-part-four/src/pages/pandas-and-bananas.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/doublesheep/git/tutorial-part-four/src/pages/pandas-and-bananas.md absPath of file",
+      "internal": {
+        "content": "---\ntitle: Pandas and Bananas\ndate: \"2017-08-21\"\n---\n\nDo Pandas eat bananas? Check out this short video that shows that yes! pandas do seem to really enjoy bananas!\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4SZl1r2O_bY\" frameborder=\"0\" allowfullscreen></iframe>\n",
+        "contentDigest": "6dd13e6648fa32370d53452797c3a032",
+        "type": "MarkdownRemark",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Pandas and Bananas",
+        "date": "2017-08-21",
+        "_PARENT": "/Users/doublesheep/git/tutorial-part-four/src/pages/pandas-and-bananas.md absPath of file",
+        "parent": "/Users/doublesheep/git/tutorial-part-four/src/pages/pandas-and-bananas.md absPath of file"
+      },
+      "fileAbsolutePath": "/Users/doublesheep/git/tutorial-part-four/src/pages/pandas-and-bananas.md"
+    },
+    "SitePage /about/": {
+      "path": "/about/",
+      "component": "/Users/doublesheep/git/tutorial-part-four/src/pages/about.js",
+      "componentChunkName": "component---src-pages-about-js",
+      "layout": "index",
+      "jsonName": "about.json",
+      "internalComponentName": "ComponentAbout",
+      "updatedAt": 1508680113145,
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/doublesheep/git/tutorial-part-four/src/pages/about.js",
+      "id": "SitePage /about/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "10a93be1e136e599824d68e95ee13845",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /": {
+      "path": "/",
+      "component": "/Users/doublesheep/git/tutorial-part-four/src/pages/index.js",
+      "componentChunkName": "component---src-pages-index-js",
+      "layout": "index",
+      "jsonName": "index.json",
+      "internalComponentName": "ComponentIndex",
+      "updatedAt": 1508680113148,
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/doublesheep/git/tutorial-part-four/src/pages/index.js",
+      "id": "SitePage /",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "b4f88368329031cd8ba6248246765351",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /my-files/": {
+      "path": "/my-files/",
+      "component": "/Users/doublesheep/git/tutorial-part-four/src/pages/my-files.js",
+      "componentChunkName": "component---src-pages-my-files-js",
+      "layout": "index",
+      "jsonName": "my-files.json",
+      "internalComponentName": "ComponentMyFiles",
+      "updatedAt": 1508680113149,
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/doublesheep/git/tutorial-part-four/src/pages/my-files.js",
+      "id": "SitePage /my-files/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "8a34984c2471247fa51f27052896088a",
+        "owner": "internal-data-bridge"
+      }
+    }
+  },
+  "status": {
+    "plugins": {},
+    "PLUGINS_HASH": "f3932e7254e62a103d19380fc746eb6a"
+  },
+  "componentDataDependencies": {
+    "nodes": {
+      "Site": [
+        "/about/",
+        "LAYOUT___index"
+      ]
+    },
+    "connections": {
+      "MarkdownRemark": [
+        "/"
+      ],
+      "File": [
+        "/my-files/"
+      ],
+      "SitePage": [
+        "/dev-404-page/"
+      ]
+    }
+  }
+}
