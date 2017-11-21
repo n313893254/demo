@@ -6,6 +6,7 @@ import TodoInput from './TodoInput'
 import TodoItem from './TodoItem'
 import UserDialog from './UserDialog'
 import {getCurrentUser, signOut, TodoModel} from './leanCloud'
+import {Test} from './reactjs_output'
 
 class App extends Component {
   constructor (props) {
@@ -24,6 +25,16 @@ class App extends Component {
         this.setState(stateCopy)
       })
     }
+
+    let test = new Test('/api')
+    test.getProjects().then(function (res) {
+      console.log(res)
+    }, function (err) {
+      console.log(err)
+    })
+
+//       var result = fetch('/api/projects', { credentials: 'include', headers: { 'Accept': 'application/json, text/plain, */*' } })
+// result.then(res =>{return res.text();}).then(text => { console.log(text) })
   }
 
   render() {
