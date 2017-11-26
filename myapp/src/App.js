@@ -3,27 +3,44 @@ import logo from './logo.svg';
 import './App.css';
 import {Test} from './reactjs_output'
 
+import AddTodo from './components/AddTodo'
+import TodoList from './components/TodoList'
+import Footer from './components/Footer'
+
 class App extends Component {
-  constructor (props) {
-    super(props)
-    let test = new Test('http://119.23.129.240/api')
-    test.getProjects().then(function (res) {
-      console.log(res.body)
-    }, function (err) {
-      console.log(err)
-    })
-  }
+  // constructor (props) {
+  //   super(props)
+  //   let test = new Test('http://119.23.129.240/api')
+  //   test.getProjects().then(function (res) {
+  //     console.log(res.body)
+  //   }, function (err) {
+  //     console.log(err)
+  //   })
+  // }
 
   render() {
+    const { dispatch, visibleTodos, VisibilityFilter } = this.props
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <AddTodo
+          onAddClick={text =>
+            console.log('add todo', text)
+          } />
+        <TodoList
+          todos={[{
+            text: 'Use Redux',
+            completed: true
+          }, {
+            text: 'Learn to connect it to React',
+            completed: false
+          }]}
+          onTodoClick={todo =>
+            console.log('todo clicked', todo)
+          } />
+        <Footer
+          filter='SHOW_ALL'
+          onFilterChange={filter =>
+            console.log('filter change', filter)} />
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM, { render } from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
@@ -9,5 +9,13 @@ import todoApp from './reducers'
 
 let store = createStore(todoApp)
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// ReactDOM.render(<App />, document.getElementById('root'));
+// registerServiceWorker();
+
+let rootElement = document.getElementById('root')
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  rootElement
+)
