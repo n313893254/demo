@@ -10,5 +10,5 @@ export const getNavData = app => [
   {
     component: dynamicWrapper(app, ['user', 'login'], () => import('../layouts/BasicLayout')),
     layout: 'BasicLayout',
-  }
+  },
 ]
