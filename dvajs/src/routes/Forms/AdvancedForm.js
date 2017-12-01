@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { connect } from 'dva'
 
 class AdvancedForm extends PureComponent {
   render() {
@@ -6,4 +7,6 @@ class AdvancedForm extends PureComponent {
   }
 }
 
-export default AdvancedForm
+export default connect(state => ({
+  currentUser: '',
+}))(AdvancedForm)
