@@ -21,10 +21,10 @@ export const getNavData = app => [
           {
             name: '高级表单',
             path: 'advanced-form',
-            component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/AdvancedForm'))
-          }
-        ]
-      }
-    ]
+            component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/AdvancedForm')),
+          },
+        ],
+      },
+    ],
   },
 ]

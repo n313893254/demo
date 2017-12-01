@@ -31,12 +31,13 @@ class BasicLayout extends React.PureComponent {
 
   getNavMenuItems(menusData, parentPath = '') {
     return menusData.map((item) => {
-      let itemPath
-      itemPath = `${parentPath}/${item.path || ''}`.replace(/\/+/g, '/')
+      const itemPath = `${parentPath}/${item.path || ''}`.replace(/\/+/g, '/')
       if (item.children && item.children.some(child => child.name)) {
         return (
-          <SubMenu title={item.name}
-            key={item.key || item.path}>
+          <SubMenu
+            title={item.name}
+            key={item.key || item.path}
+          >
             {this.getNavMenuItems(item.children, itemPath)}
           </SubMenu>
         )
@@ -77,7 +78,7 @@ class BasicLayout extends React.PureComponent {
           </Menu>
         </Sider>
         <Layout>
-          <Header></Header>
+          <Header />
           <Content>
             <div>
               <Switch>
@@ -89,7 +90,7 @@ class BasicLayout extends React.PureComponent {
                         path={item.path}
                         component={item.component}
                       />
-                    )
+                    ),
                   )
                 }
               </Switch>

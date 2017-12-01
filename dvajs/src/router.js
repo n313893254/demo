@@ -1,8 +1,9 @@
 import React from 'react';
+import cloneDeep from 'lodash/cloneDeep'
 import { Router, Route, Switch } from 'dva/router';
 import IndexPage from './routes/IndexPage';
 import { getNavData } from './common/nav'
-import cloneDeep from 'lodash/cloneDeep'
+
 import { getPlainNode } from './utils/utils'
 
 function getRouteData(navData, path) {
@@ -31,7 +32,7 @@ function RouterConfig({ history, app }) {
     navData,
     getRouteData: (path) => {
       return getRouteData(navData, path)
-    }
+    },
   }
 
   return (
