@@ -37,6 +37,7 @@ export default class TableForm extends PureComponent {
         <Table
           columns={columns}
           dataSource={this.state.data}
+          pagination={false}
         />
       </div>
     )
