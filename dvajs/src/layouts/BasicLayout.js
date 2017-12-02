@@ -13,7 +13,6 @@ const MenuDivider = Menu.Divider
 class BasicLayout extends React.PureComponent {
   constructor(props) {
     super(props)
-    console.log(this.props.location.pathname)
     this.menus = props.navData.reduce((arr, current) => arr.concat(current.children), [])
   }
 
