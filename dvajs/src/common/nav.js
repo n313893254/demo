@@ -14,6 +14,11 @@ export const getNavData = app => [
     path: '/',
     children: [
       {
+        name: 'Dashboard',
+        icon: 'dashboard',
+        path: 'dashboard',
+      },
+      {
         name: '表单页',
         path: 'form',
         icon: 'form',
