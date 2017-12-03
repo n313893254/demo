@@ -24,6 +24,11 @@ export const getNavData = app => [
         icon: 'form',
         children: [
           {
+            name: '基础表单',
+            path: 'basic-form',
+            component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/BasicForm'))
+          },
+          {
             name: '高级表单',
             path: 'advanced-form',
             component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/AdvancedForm')),
