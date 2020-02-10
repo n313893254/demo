@@ -7,7 +7,7 @@
 - label: Usage
   items:
     - label: 'Creating docs'
-      link: '/usage/creating-docs'
+      link: '/usage/zh/creating-docs'
     - label: 'Navigation'
       link: '/usage/navigation'
     - label: 'Shadowing'
