@@ -1,15 +1,15 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { IHomeState, homeStore } from '@/store/homeStore';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+export interface RootState {
+  homeStore: IHomeState;
+}
+
+export default new Vuex.Store<RootState>({
   modules: {
+    homeStore,
   },
 });

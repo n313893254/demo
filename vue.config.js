@@ -22,4 +22,6 @@ module.exports = {
       enableInSFC: false,
     },
   },
+
+  lintOnSave: process.env.NODE_ENV !== 'production',
 };
